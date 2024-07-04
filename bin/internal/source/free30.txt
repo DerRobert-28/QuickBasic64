@@ -1,0 +1,4 @@
+if(oldstr3062){
+if(oldstr3062->fixed)qbs_set(oldstr3062,_SUB_MAKEIDREFER_STRING_REF);
+qbs_free(_SUB_MAKEIDREFER_STRING_REF);
+}

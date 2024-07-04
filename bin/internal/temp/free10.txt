@@ -1,0 +1,4 @@
+if(oldstr13){
+if(oldstr13->fixed)qbs_set(oldstr13,_SUB_CONSOLE__ASCII_CHR_046__WRITE_STRING_THIS);
+qbs_free(_SUB_CONSOLE__ASCII_CHR_046__WRITE_STRING_THIS);
+}

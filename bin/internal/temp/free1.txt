@@ -1,0 +1,4 @@
+if(oldstr3){
+if(oldstr3->fixed)qbs_set(oldstr3,_FUNC_NEW_STRING_THIS);
+qbs_free(_FUNC_NEW_STRING_THIS);
+}

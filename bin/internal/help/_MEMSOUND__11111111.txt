@@ -1,0 +1,192 @@
+{{QBDLDATE:05-15-2024}}
+{{QBDLTIME:17:59:51}}
+{{DISPLAYTITLE:_MEMSOUND}}
+The '''_MEMSOUND''' function returns a [[_MEM]] value referring to a sound's raw data in memory using a designated sound handle created by the [[_SNDOPEN]] or [[_SNDNEW]] function.
+
+
+{{PageSyntax}}
+: {{Parameter|soundBlock}} = [[_MEMSOUND]]({{Parameter|soundHandle&}}[, {{Parameter|channel&}}])
+
+
+{{PageParameters}}
+* The {{Parameter|soundBlock}} [[_MEM]] type variable holds the read-only elements .OFFSET, .SIZE, .ELEMENTSIZE, .TYPE and .SOUND.
+** '''.OFFSET''' is the starting memory address of the sound sample data.
+** '''.SIZE''' is the size of the sample data in '''bytes'''
+** '''.ELEMENTSIZE''' will contain the number of '''bytes-per-sample''' the audio contains.
+*** Can return 1 (8-bit mono), 2 (8-bit stereo), 2 (16-bit mono), 4 (16-bit stereo), 4 (32-bit mono) or 8 (32-bit stereo).
+*** Use '''.TYPE''' to determine the data type of the sample data.
+** '''.TYPE''' will contain the data type of the sample data. See [[_MEM]] for details.
+** '''.SOUND''' will contain the same handle value as returned by the [[_SNDOPEN]] function.
+* The second parameter {{Parameter|channel&}} is optional and deprecated. This was used to specify the sound channel. In '''QB64-PE v3.1.0''' and above stereo data is always interleaved. You must use '''.ELEMENTSIZE''' and '''.TYPE''' to determine the type of audio data you are dealing with.
+
+
+{{PageDescription}}
+* Use this function to obtain a pointer to the raw sound data in memory for direct access.
+* Even if the memory pointer obtained by this fuction was already freed again using [[_MEMFREE]], the respective Sound handle itself must still be freed using [[_SNDCLOSE]] when no longer required.
+* If .SIZE returns 0, that means the data could not be accessed. It may happen if you try to access the right channel in a mono file or the format simply does not support accessing raw PCM samples.
+* {{Parameter|channel&}} - 1 (left channel/mono) or 2 (right channel; for stereo files) was supported on the old OpenAL backend. For the new miniaudio backend, this must be 0.
+
+
+{{PageAvailability}}
+* '''QB64 v1.5 and up'''
+* '''QB64-PE all versions'''
+
+
+{{PageExamples}}
+;Example 1:Checking that a sound file is stereo.
+{{CodeStart}}
+{{Cl|OPTION _EXPLICIT}}
+
+{{Cl|PRINT}} "Loading...";
+{{Cl|DIM}} Song {{Cl|AS}} {{Cl|LONG}}
+Song = {{Cl|_SNDOPEN}}("onward_ride1.flac") ' Replace file name with your sound file
+{{Cl|IF}} Song < 1 {{Cl|THEN}}
+    {{Cl|PRINT}} "Failed to load sound!"
+    {{Cl|END}}
+{{Cl|END IF}}
+{{Cl|PRINT}} "Done!"
+
+{{Cl|DIM}} Channels {{Cl|AS}} {{Cl|_UNSIGNED}} {{Cl|_BYTE}}
+Channels = SndChannels(Song)
+
+{{Cl|IF}} Channels = 2 {{Cl|THEN}}
+    {{Cl|PRINT}} "This file is STEREO"
+{{Cl|ELSEIF}} Channels = 1 {{Cl|THEN}}
+    {{Cl|PRINT}} "This file is MONO"
+{{Cl|ELSE}}
+    {{Cl|PRINT}} "An error occurred."
+{{Cl|END IF}}
+
+{{Cl|_SNDCLOSE}} Song 'closing the sound releases the mem blocks
+
+{{Cl|END}}
+
+
+' This function returns the number of sound channels for a valid sound "handle"
+' 2 = stereo, 1 = mono, 0 = error
+{{Cl|FUNCTION}} SndChannels~%% (handle {{Cl|AS}} {{Cl|LONG}})
+    {{Cl|DIM}} SampleData {{Cl|AS}} {{Cl|_MEM}}
+
+    SndChannels = 0 ' Assume failure
+
+    ' Check if the sound is valid
+    SampleData = {{Cl|_MEMSOUND}}(handle, 0)
+    {{Cl|IF}} SampleData.SIZE = 0 {{Cl|THEN}}
+        {{Cl|EXIT FUNCTION}}
+    {{Cl|END IF}}
+
+    ' Check the data type and then decide if the sound is stereo or mono
+    {{Cl|IF}} SampleData.TYPE = 260 {{Cl|THEN}} ' 32-bit floating point
+        {{Cl|IF}} SampleData.ELEMENTSIZE = 4 {{Cl|THEN}}
+            SndChannels = 1
+        {{Cl|ELSEIF}} SampleData.ELEMENTSIZE = 8 {{Cl|THEN}}
+            SndChannels = 2
+        {{Cl|END IF}}
+    {{Cl|ELSEIF}} SampleData.TYPE = 132 {{Cl|THEN}} ' 32-bit integer
+        {{Cl|IF}} SampleData.ELEMENTSIZE = 4 {{Cl|THEN}}
+            SndChannels = 1
+        {{Cl|ELSEIF}} SampleData.ELEMENTSIZE = 8 {{Cl|THEN}}
+            SndChannels = 2
+        {{Cl|END IF}}
+    {{Cl|ELSEIF}} SampleData.TYPE = 130 {{Cl|THEN}} ' 16-bit integer
+        {{Cl|IF}} SampleData.ELEMENTSIZE = 2 {{Cl|THEN}}
+            SndChannels = 1
+        {{Cl|ELSEIF}} SampleData.ELEMENTSIZE = 4 {{Cl|THEN}}
+            SndChannels = 2
+        {{Cl|END IF}}
+    {{Cl|ELSEIF}} SampleData.TYPE = 1153 {{Cl|THEN}} ' 8-bit unsigned integer
+        {{Cl|IF}} SampleData.ELEMENTSIZE = 1 {{Cl|THEN}}
+            SndChannels = 1
+        {{Cl|ELSEIF}} SampleData.ELEMENTSIZE = 2 {{Cl|THEN}}
+            SndChannels = 2
+        {{Cl|END IF}}
+    {{Cl|ELSEIF}} SampleData.TYPE = 0 {{Cl|THEN}} ' This means this is an OpenAL sound handle
+        {{Cl|DIM}} RightChannel {{Cl|AS}} {{Cl|_MEM}}
+        RightChannel = {{Cl|_MEMSOUND}}(handle, 2)
+        {{Cl|IF}} RightChannel.SIZE > 0 {{Cl|THEN}}
+            SndChannels = 2
+        {{Cl|ELSE}}
+            SndChannels = 1
+        {{Cl|END IF}}
+    {{Cl|END IF}}
+{{Cl|END FUNCTION}}
+{{CodeEnd}}
+
+----
+
+;Example 2:Plotting a sound's waves.
+{{CodeStart}}
+{{Cl|OPTION}} {{Cl|_EXPLICIT}}
+
+{{Cl|DECLARE LIBRARY}}
+    {{Cm|$IF}} {{Text|32BIT|#F580B1}} {{Cm|THEN}}
+        {{Cl|FUNCTION}} {{Text|ConvertOffset~&|#55FF55}} {{Cl|ALIAS}} {{Text|<nowiki>"uintptr_t"</nowiki>|#FFB100}} ({{Cl|BYVAL}} o {{Cl|AS}} {{Cl|_UNSIGNED}} {{Cl|_OFFSET (function)|_OFFSET}})
+    {{Cm|$ELSE}}
+        {{Cl|FUNCTION}} {{Text|ConvertOffset~&&|#55FF55}} {{Cl|ALIAS}} {{Text|<nowiki>"uintptr_t"</nowiki>|#FFB100}} ({{Cl|BYVAL}} o {{Cl|AS}} {{Cl|_UNSIGNED}} {{Cl|_OFFSET (function)|_OFFSET}})
+    {{Cm|$END IF}} 
+{{Cl|END DECLARE}}
+
+{{Cl|SCREEN}} {{Cl|_NEWIMAGE}}({{Text|800|#F580B1}}, {{Text|327|#F580B1}}, {{Text|32|#F580B1}})
+
+{{Cl|PRINT}} {{Text|<nowiki>"Loading..."</nowiki>|#FFB100}};
+{{Cl|DIM}} Song {{Cl|AS}} {{Cl|LONG}}: Song = {{Cl|_SNDOPEN}}({{Text|<nowiki>"OPL3 Groove.rad"</nowiki>|#FFB100}}) {{Text|<nowiki>' replace this with your (WAV, AIFF, AIFC, FLAC, OGG, MP3, MID, IT, XM, S3M, MOD, RAD, AHX, HVL, QOA) sound file</nowiki>|#919191}}
+{{Cl|IF}} Song < {{Text|1|#F580B1}} {{Cl|THEN}}
+    {{Cl|PRINT}} {{Text|<nowiki>"Failed to load song!"</nowiki>|#FFB100}}
+    {{Cl|END}}
+{{Cl|END IF}}
+{{Cl|PRINT}} {{Text|<nowiki>"Done!"</nowiki>|#FFB100}}
+
+{{Cl|_SNDPLAY}} Song
+
+{{Cl|DIM}} SampleData {{Cl|AS}} {{Cl|_MEM}}: SampleData = {{Cl|_MEMSOUND}}(Song, {{Text|0|#F580B1}})
+{{Cl|IF}} SampleData.SIZE = {{Text|0|#F580B1}} {{Cl|THEN}}
+    {{Cl|PRINT}} {{Text|<nowiki>"Failed to access sound sample data."</nowiki>|#FFB100}}
+    {{Cl|END}}
+{{Cl|END IF}}
+
+{{Cl|DIM}} sz {{Cl|AS}} {{Cl|_UNSIGNED}} {{Cl|_INTEGER64}}: sz = {{Text|ConvertOffset|#55FF55}}(SampleData.ELEMENTSIZE) {{Text|<nowiki>' sz is the total size of the sound in bytes</nowiki>|#919191}}
+{{Cl|DIM}} x {{Cl|AS}} {{Cl|LONG}}, i {{Cl|AS}} {{Cl|_UNSIGNED}} {{Cl|_INTEGER64}}
+
+{{Cl|DO...LOOP|DO UNTIL}} {{Cl|_KEYHIT}} = {{Text|27|#F580B1}} {{Cl|OR (boolean)|OR}} {{Cl|NOT}} {{Cl|_SNDPLAYING}}(Song) {{Cl|OR (boolean)|OR}} i + ({{Cl|_WIDTH (function)|_WIDTH}} * sz) > SampleData.SIZE
+    {{Cl|CLS}}
+    {{Cl|LOCATE}} {{Text|1|#F580B1}}, {{Text|1|#F580B1}}: {{Cl|PRINT}} i; {{Text|<nowiki>"/"</nowiki>|#FFB100}}; SampleData.SIZE, {{Text|<nowiki>"Frame Size ="</nowiki>|#FFB100}}; sz, {{Text|<nowiki>"Data Type ="</nowiki>|#FFB100}}; SampleData.TYPE
+
+    {{Cm|$CHECKING}}:{{Cl|OFF}}
+    {{Cl|IF}} SampleData.TYPE = {{Text|130|#F580B1}} {{Cl|THEN}} {{Text|<nowiki>' 128 OR 2: integer stereo or mono</nowiki>|#919191}}
+        {{Cl|FOR}} x = {{Text|0|#F580B1}} {{Cl|TO}} {{Cl|_WIDTH (function)|_WIDTH}} - {{Text|1|#F580B1}}
+            {{Cl|DIM}} si {{Cl|AS}} {{Cl|INTEGER}}: si = {{Cl|_MEMGET (function)|_MEMGET}}(SampleData, SampleData.OFFSET + i + x * sz, {{Cl|INTEGER}}) {{Text|<nowiki>' get sound data</nowiki>|#919191}}
+            {{Cl|LINE}} (x, {{Cl|_HEIGHT}} / {{Text|2|#F580B1}})-{{Cl|STEP}}({{Text|0|#F580B1}}, {{Text|300|#F580B1}} * si / {{Text|32768|#F580B1}}), {{Cl|_RGB32}}({{Text|0|#F580B1}}, {{Text|111|#F580B1}}, {{Text|0|#F580B1}}) {{Text|<nowiki>'plot wave</nowiki>|#919191}}
+        {{Cl|NEXT}}
+    {{Cl|ELSEIF}} SampleData.TYPE = {{Text|260|#F580B1}} {{Cl|THEN}} {{Text|<nowiki>' 256 OR 4: floating point stereo or mono</nowiki>|#919191}}
+        {{Cl|FOR}} x = {{Text|0|#F580B1}} {{Cl|TO}} {{Cl|_WIDTH (function)|_WIDTH}} - {{Text|1|#F580B1}}
+            {{Cl|DIM}} sf {{Cl|AS}} {{Cl|SINGLE}}: sf = {{Cl|_MEMGET (function)|_MEMGET}}(SampleData, SampleData.OFFSET + i + x * sz, {{Cl|SINGLE}}) {{Text|<nowiki>' get sound data</nowiki>|#919191}}
+            {{Cl|LINE}} (x, {{Cl|_HEIGHT}} / {{Text|2|#F580B1}})-{{Cl|STEP}}({{Text|0|#F580B1}}, sf * {{Text|300|#F580B1}}), {{Cl|_RGB32}}({{Text|0|#F580B1}}, {{Text|111|#F580B1}}, {{Text|0|#F580B1}}) {{Text|<nowiki>'plot wave</nowiki>|#919191}}
+        {{Cl|NEXT}}
+    {{Cl|ELSEIF}} SampleData.TYPE = {{Text|1153|#F580B1}} {{Cl|THEN}} {{Text|<nowiki>' 128 OR 1 OR 1024: unsigned byte stereo or mono</nowiki>|#919191}}
+        {{Cl|FOR}} x = {{Text|0|#F580B1}} {{Cl|TO}} {{Cl|_WIDTH (function)|_WIDTH}} - {{Text|1|#F580B1}}
+            {{Cl|DIM}} sb {{Cl|AS}} {{Cl|_BYTE}}: sb = {{Cl|_MEMGET (function)|_MEMGET}}(SampleData, SampleData.OFFSET + i + x * sz, {{Cl|_UNSIGNED}} {{Cl|_BYTE}}) {{Cl|XOR}} {{Text|&H80|#F580B1}} {{Text|<nowiki>' get sound data and convert to signed</nowiki>|#919191}}
+            {{Cl|LINE}} (x, {{Cl|_HEIGHT}} / {{Text|2|#F580B1}})-{{Cl|STEP}}({{Text|0|#F580B1}}, {{Text|300|#F580B1}} * sb / {{Text|128|#F580B1}}), {{Cl|_RGB32}}({{Text|0|#F580B1}}, {{Text|111|#F580B1}}, {{Text|0|#F580B1}}) {{Text|<nowiki>' plot wave</nowiki>|#919191}}
+        {{Cl|NEXT}}
+    {{Cl|END IF}}
+    {{Cm|$CHECKING}}:{{Cl|ON}}
+
+    {{Cl|_DISPLAY}}
+    {{Cl|_LIMIT}} {{Text|60|#F580B1}}
+
+    i = {{Cl|FIX}}({{Cl|_SNDGETPOS}}(Song) * {{Cl|_SNDRATE}}) * sz {{Text|<nowiki>' calculate the new sample frame position</nowiki>|#919191}}
+{{Cl|LOOP}}
+
+{{Cl|_SNDCLOSE}} Song {{Text|<nowiki>' closing the sound releases the mem blocks</nowiki>|#919191}}
+{{Cl|_AUTODISPLAY}}
+{{Cl|END}}
+{{CodeEnd}}
+
+
+{{PageSeeAlso}}
+* [[_MEM]], [[_MEMFREE]]
+* [[_MEMPUT]], [[_MEMGET]], [[_MEMGET (function)]]
+* [[_SNDOPEN]], [[_SNDNEW]], [[_SNDCLOSE]], [[_SNDRAW]]
+* [[_SNDRATE]]
+
+
+{{PageNavigation}}

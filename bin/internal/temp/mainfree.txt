@@ -1,0 +1,6 @@
+if (__ARRAY_STRING_OBJECTHANDLER[2]&1){
+tmp_long=__ARRAY_STRING_OBJECTHANDLER[5];
+while(tmp_long--) qbs_free((qbs*)((uint64*)(__ARRAY_STRING_OBJECTHANDLER[0]))[tmp_long]);
+free((void*)(__ARRAY_STRING_OBJECTHANDLER[0]));
+}
+free_mem_lock( (mem_lock*)((ptrszint*)__ARRAY_STRING_OBJECTHANDLER)[8] );

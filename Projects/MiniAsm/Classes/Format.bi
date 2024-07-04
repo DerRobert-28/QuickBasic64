@@ -1,0 +1,5 @@
+'$include:'Format/BinaryNumber.bi'
+'$include:'Format/doubleQuote.bi'
+'$include:'Format/HexadecimalNumber.bi'
+'$include:'Format/OctalNumber.bi'
+'$include:'Format/quote.bi'

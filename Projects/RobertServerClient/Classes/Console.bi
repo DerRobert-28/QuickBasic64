@@ -1,0 +1,5 @@
+'$include:'./Console/Newline.bi'
+'$include:'./Console/readKey.bi'
+'$include:'./Console/readLine.bi'
+'$include:'./Console/write.bi'
+'$include:'./Console/writeLine.bi'

@@ -1,0 +1,22 @@
+{{QBDLDATE:05-15-2024}}
+{{QBDLTIME:18:00:02}}
+{{DISPLAYTITLE: _NUMLOCK (function)}}
+The [[_NUMLOCK (function)| _NUMLOCK]] function returns the current state of the Num Lock key as on (-1) or off (0).
+
+
+{{PageSyntax}}
+: {{Parameter|keyStatus%%}} = [[_NUMLOCK (function)| _NUMLOCK]]
+
+
+{{PageAvailability}}
+* '''QB64 v1.4 and up'''
+* '''QB64-PE all versions'''
+* '''[[Keywords currently not supported by QB64#Keywords_not_supported_in_Linux_or_macOS_versions|Keyword not supported in Linux or macOS versions]]'''
+
+
+{{PageSeeAlso}}
+* [[_CAPSLOCK (function)]], [[_SCROLLLOCK (function)]]
+* [[_CAPSLOCK]], [[_NUMLOCK]], [[_SCROLLLOCK]]
+
+
+{{PageNavigation}}

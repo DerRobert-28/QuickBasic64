@@ -1,0 +1,29 @@
+{{QBDLDATE:05-15-2024}}
+{{QBDLTIME:18:01:15}}
+The ({{Text|now deprecated|red}}) '''$VIRTUALKEYBOARD''' [[metacommand]] did turn the virtual keyboard ON or OFF.
+
+
+{{PageSyntax}}
+: '''$VIRTUALKEYBOARD:ON'''
+: '''$VIRTUALKEYBOARD:OFF'''
+
+
+{{PageDescription}}
+* This metacommand did not require a comment ''[[Apostrophe|&apos;]]'' or [[REM]] before it. There was no space between the metacommand name, the colon and the ON/OFF parameter.
+* It placed a virtual keyboard on screen, which could be used in touch-enabled devices like Windows tablets.
+* {{Text|Deprecated|red}}, in all current versions of QB64 it just generates a warning now, but has no other effect anymore.
+
+
+{{PageExamples}}
+{{CodeStart}}
+{{Cl|$VIRTUALKEYBOARD|$VIRTUALKEYBOARD:ON}}
+
+{{Cl|DO}}: {{Cl|LOOP}} {{Cl|UNTIL}} {{Cl|INKEY$}} = {{Cl|CHR$}}(27)
+{{CodeEnd}}
+
+
+{{PageSeeAlso}}
+* [[Metacommand]]
+
+
+{{PageNavigation}}
