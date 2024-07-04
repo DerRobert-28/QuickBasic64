@@ -1,17 +1,3 @@
 <<< LISTING DONE >>>
-INCL: A:\Development\QuickBasic\qb64pe\Libraries\Application.bi
-EBC4890A89EFE71883257BCD20DE243A
-INCL: A:\Development\QuickBasic\qb64pe\Libraries\Application\Options.bi
-F249123583505D6F07AF6FBF453A2ECC
-INCL: A:\Development\QuickBasic\qb64pe\Libraries\Application\Constants.bi
-C1FDCD569690A398D5D2681B23227E76
-INCL: A:\Development\QuickBasic\qb64pe\Libraries\Application\Shared.bi
-5F5BAFEE8D34F6333D3DE365E93254DB
-INCL: A:\Development\QuickBasic\qb64pe\Libraries\Application\ExceptionHandler.bi
-B5D01362CE36C327E0A100E004358066
-INCL: A:\Development\QuickBasic\qb64pe\Libraries\Application\Main.bi
-4F6E574B4E744A7EEC9773343A5A0778
-INCL: A:\Development\QuickBasic\qb64pe\Libraries\Application\Keywords.bi
-A02D8A82959EC4E49D9E182B64422F94
-INCL: A:\Development\QuickBasic\qb64pe\3.13.1\internal\support\vwatch\vwatch_stub.bm
+INCL: A:\Development\QuickBasic64\bin\internal\support\vwatch\vwatch_stub.bm
 FFAE9BE3DFCEBF9A8C6F17BB608EC851

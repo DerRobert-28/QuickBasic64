@@ -1,1 +1,1 @@
-'$include:'./HTMLDocument'
+'$include:'HTMLDocument'

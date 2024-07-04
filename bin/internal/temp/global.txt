@@ -1,9 +1,3 @@
-ptrszint *__ARRAY_STRING_OBJECTHANDLER=NULL;
-int32 *__LONG_OBJECTHANDLE=NULL;
-int16 *__INTEGER_EXCEPTIONHANDLE=NULL;
-int16 *__INTEGER_ARGC=NULL;
-int16 *__INTEGER_EACH=NULL;
-ptrszint *__ARRAY_STRING_ARGV=NULL;
 int32 console=0;
 int32 screen_hide_startup=0;
 int32 asserts=0;

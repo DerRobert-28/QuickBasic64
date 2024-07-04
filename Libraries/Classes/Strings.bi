@@ -1,1 +1,1 @@
-'$include:'./Strings/areEqual.bi'
+'$include:'Strings/areEqual.bi'

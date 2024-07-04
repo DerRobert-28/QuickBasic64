@@ -1,6 +1,0 @@
-'$include:'./Application/Options.bi'
-'$include:'./Application/Constants.bi'
-'$include:'./Application/Shared.bi'
-'$include:'./Application/ExceptionHandler.bi'
-'$include:'./Application/Main.bi'
-'$include:'./Application/Keywords.bi'
