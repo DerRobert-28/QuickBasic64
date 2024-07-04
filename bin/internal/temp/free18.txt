@@ -1,0 +1,4 @@
+if(oldstr24){
+if(oldstr24->fixed)qbs_set(oldstr24,_FUNC_STRING__ASCII_CHR_046__SUBSTR_STRING_THIS);
+qbs_free(_FUNC_STRING__ASCII_CHR_046__SUBSTR_STRING_THIS);
+}

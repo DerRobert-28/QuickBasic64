@@ -1,0 +1,22 @@
+{{QBDLDATE:05-15-2024}}
+{{QBDLTIME:18:00:03}}
+{{DISPLAYTITLE: _NUMLOCK}}
+The [[_NUMLOCK]] statement sets the state of the Num Lock key.
+
+
+{{PageSyntax}}
+: [[_NUMLOCK]] {ON|OFF|_TOGGLE}
+
+
+{{PageAvailability}}
+* '''QB64 v1.4 and up'''
+* '''QB64-PE all versions'''
+* '''[[Keywords currently not supported by QB64#Keywords_not_supported_in_Linux_or_macOS_versions|Keyword not supported in Linux or macOS versions]]'''
+
+
+{{PageSeeAlso}}
+* [[_CAPSLOCK (function)]], [[_NUMLOCK (function)]], [[_SCROLLLOCK (function)]]
+* [[_CAPSLOCK]], [[_SCROLLLOCK]]
+
+
+{{PageNavigation}}

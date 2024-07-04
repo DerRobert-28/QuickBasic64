@@ -1,0 +1,11 @@
+$versioninfo:Comments="Kommentar"
+$versioninfo:CompanyName="R. Lang-Kirchhöfer"
+$versioninfo:FileDescription="Yet Another FakeOS"
+$versioninfo:FileVersion#=0,1,0,0
+$versioninfo:InternalName="YAFOS"
+$versioninfo:LegalCopyright="© 2024 by R. Lang-Kirchhöfer"
+$versioninfo:LegalTrademarks="All product names, logos, and brands are property of their respective owners."
+$versioninfo:OriginalFilename="yafos.exe"
+$versioninfo:ProductName="YAFOS"
+$versioninfo:ProductVersion=0,1
+$versioninfo:Web=None

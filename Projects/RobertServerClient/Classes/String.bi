@@ -1,0 +1,7 @@
+'$include:'./String/append.bi'
+'$include:'./String/concat.bi'
+'$include:'./String/Empty.bi'
+'$include:'./String/invoke.bi'
+'$include:'./String/Length.bi'
+'$include:'./String/subStr.bi'
+'$include:'./String/trim.bi'

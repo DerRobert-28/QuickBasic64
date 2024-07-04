@@ -1,0 +1,6 @@
+'$include:'./Classes/Application.bi'
+'$include:'./Classes/Char.bi'
+'$include:'./Classes/Console.bi'
+'$include:'./Classes/Integer.bi'
+'$include:'./Classes/String.bi'
+'$include:'./Classes/Strings.bi'

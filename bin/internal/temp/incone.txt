@@ -1,0 +1,8 @@
+A:\Development\QuickBasic\qb64pe\Libraries\Application.bi
+A:\Development\QuickBasic\qb64pe\Libraries\Application\Options.bi
+A:\Development\QuickBasic\qb64pe\Libraries\Application\Constants.bi
+A:\Development\QuickBasic\qb64pe\Libraries\Application\Shared.bi
+A:\Development\QuickBasic\qb64pe\Libraries\Application\ExceptionHandler.bi
+A:\Development\QuickBasic\qb64pe\Libraries\Application\Main.bi
+A:\Development\QuickBasic\qb64pe\Libraries\Application\Keywords.bi
+A:\Development\QuickBasic\qb64pe\3.13.1\internal\support\vwatch\vwatch_stub.bm

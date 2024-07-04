@@ -1,0 +1,11 @@
+'$include:'Classes/System.bi'
+
+'$include:'Classes/Application.bi'
+'$include:'Classes/Char.bi'
+'$include:'Classes/Console.bi'
+'$include:'Classes/File.bi'
+'$include:'Classes/FileAccess.bi'
+'$include:'Classes/Format.bi'
+'$include:'Classes/Integer64.bi'
+'$include:'Classes/String.bi'
+'$include:'Classes/Strings.bi'

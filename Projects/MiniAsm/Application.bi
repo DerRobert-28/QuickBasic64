@@ -1,0 +1,5 @@
+'$include:'Application/Options.bi'
+'$include:'Application/Constants.bi'
+'$include:'Application/Arrays.bi'
+'$include:'Application/Variables.bi'
+'$include:'Application/Main.bi'

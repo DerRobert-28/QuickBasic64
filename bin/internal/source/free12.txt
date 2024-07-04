@@ -1,0 +1,4 @@
+if(oldstr2361){
+if(oldstr2361->fixed)qbs_set(oldstr2361,_SUB_VWATCHVARIABLE_STRING_THIS);
+qbs_free(_SUB_VWATCHVARIABLE_STRING_THIS);
+}

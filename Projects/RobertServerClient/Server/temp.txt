@@ -1,0 +1,16 @@
+GET /favicon.ico HTTP/1.1
+Host: 192.168.2.2:9000
+Connection: keep-alive
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36 OPR/109.0.0.0
+Accept: image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
+Referer: http://192.168.2.2:9000/
+Accept-Encoding: gzip, deflate
+Accept-Language: en-US,en;q=0.9
+
+
+HTTP/1.1 200 OK
+Content-Type: text/html
+Content-Length: 134
+
+<html><head><title>Danke.</title></head><body><h1>Mein erster Web-Server ...</h1>Vielen Dank f&uuml;r deinen Besuch.<br></body></html>
+

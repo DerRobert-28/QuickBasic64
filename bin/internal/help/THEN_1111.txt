@@ -1,0 +1,21 @@
+{{QBDLDATE:05-15-2024}}
+{{QBDLTIME:18:03:30}}
+'''THEN''' is required in [[IF...THEN]] conditional evaluation statements.
+
+
+{{PageSyntax}}
+: IF condition THEN execute_code
+
+
+{{PageDescription}}
+* THEN is required on the same code line as the IF statement.
+* The condition value must be true(-1) or <> 0 for the statement code to be executed.
+
+
+{{PageSeeAlso}}
+* [[IF...THEN]]
+* [[ELSE]], [[ELSEIF]]
+* [[END IF]]
+
+
+{{PageNavigation}}

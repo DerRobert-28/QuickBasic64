@@ -1,0 +1,5 @@
+if(oldstr5607){
+if(oldstr5607->fixed)qbs_set(oldstr5607,_SUB_IDEHPRINT_STRING_A);
+qbs_free(_SUB_IDEHPRINT_STRING_A);
+}
+qbs_free(_SUB_IDEHPRINT_STRING_C);

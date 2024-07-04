@@ -1,0 +1,10 @@
+qbs*oldstr13=NULL;
+if(_SUB_CONSOLE__ASCII_CHR_046__WRITE_STRING_THIS->tmp||_SUB_CONSOLE__ASCII_CHR_046__WRITE_STRING_THIS->fixed||_SUB_CONSOLE__ASCII_CHR_046__WRITE_STRING_THIS->readonly){
+oldstr13=_SUB_CONSOLE__ASCII_CHR_046__WRITE_STRING_THIS;
+if (oldstr13->cmem_descriptor){
+_SUB_CONSOLE__ASCII_CHR_046__WRITE_STRING_THIS=qbs_new_cmem(oldstr13->len,0);
+}else{
+_SUB_CONSOLE__ASCII_CHR_046__WRITE_STRING_THIS=qbs_new(oldstr13->len,0);
+}
+memcpy(_SUB_CONSOLE__ASCII_CHR_046__WRITE_STRING_THIS->chr,oldstr13->chr,oldstr13->len);
+}

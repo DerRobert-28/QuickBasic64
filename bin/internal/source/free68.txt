@@ -1,0 +1,14 @@
+if(oldstr3548){
+if(oldstr3548->fixed)qbs_set(oldstr3548,_FUNC_STRREPLACE_STRING_MYSTRING);
+qbs_free(_FUNC_STRREPLACE_STRING_MYSTRING);
+}
+if(oldstr3549){
+if(oldstr3549->fixed)qbs_set(oldstr3549,_FUNC_STRREPLACE_STRING_FIND);
+qbs_free(_FUNC_STRREPLACE_STRING_FIND);
+}
+if(oldstr3550){
+if(oldstr3550->fixed)qbs_set(oldstr3550,_FUNC_STRREPLACE_STRING_REPLACEWITH);
+qbs_free(_FUNC_STRREPLACE_STRING_REPLACEWITH);
+}
+qbs_free(_FUNC_STRREPLACE_STRING_A);
+qbs_free(_FUNC_STRREPLACE_STRING_B);
