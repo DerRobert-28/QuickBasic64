@@ -1,4 +1,4 @@
-function Console.readKey$(shouldWait as _bit)
+function Console.readKey%(shouldWait as _bit)
 	dim as string this, empty
 
 	empty = Console.emptyKey
@@ -7,5 +7,5 @@ function Console.readKey$(shouldWait as _bit)
 		if not(shouldWait) then exit do
 	loop while (this = empty)
 
-	Console.readKey = this
+	Console.readKey = cvi(this)
 end function
