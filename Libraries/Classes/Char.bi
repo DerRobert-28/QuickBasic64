@@ -3,3 +3,4 @@
 '$include:'./Char/Newline.bi'
 '$include:'./Char/Null.bi'
 '$include:'./Char/Return.bi'
+'$include:'./Char/Tabulator.bi'
