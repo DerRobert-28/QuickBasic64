@@ -8,6 +8,8 @@ $endif
 
 '$include:'./Classes/Char.bi'
 '$include:'./Classes/Console.bi'
+'$include:'./Classes/File.bi'
+'$include:'./Classes/FileAccess.bi'
 '$include:'./Classes/HTMLDocument.bi'
 '$include:'./Classes/Integer.bi'
 '$include:'./Classes/Keycode.bi'
