@@ -1,3 +1,9 @@
+$includeonce
+
+$if MAIN_BI=_undefined then
+$let MAIN_BI=_defined
+$endif
+
 dim argc as integer
 dim each as integer
 
@@ -9,4 +15,5 @@ for each = 0 to argc
 next
 
 ObjectHandle = NULL
+
 system Main%(argc, argv())

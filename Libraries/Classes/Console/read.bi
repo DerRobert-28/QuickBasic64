@@ -1,5 +1,7 @@
-function Console.read$()
+$includeonce
+
+function Console.read$ ()
 	dim this as string
 	line input; this
-	Console.readLine = this
+	Console.read = this
 end function

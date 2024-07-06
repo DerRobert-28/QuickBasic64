@@ -1,3 +1,5 @@
-sub Console.newLine()
+$includeonce
+
+sub Console.Newline ()
 	print
 end sub
