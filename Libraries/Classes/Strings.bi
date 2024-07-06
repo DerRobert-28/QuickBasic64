@@ -1,8 +1,9 @@
-$if SYSTEM_BI=_defined then
+$if SYSTEM_BI then
 $includeonce
 
-$if STRINGS_BI=_undefined then
-$let STRINGS_BI=_defined
+$if STRINGS_BI then
+$else
+$let STRINGS_BI=1
 $endif
 
 '$include:'./Strings/areEqual.bi'

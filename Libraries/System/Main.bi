@@ -1,8 +1,7 @@
+$if MAIN_BI then
+$else
 $includeonce
-
-$if MAIN_BI=_undefined then
-$let MAIN_BI=_defined
-$endif
+$let MAIN_BI=1
 
 dim argc as integer
 dim each as integer
@@ -17,3 +16,5 @@ next
 ObjectHandle = NULL
 
 system Main%(argc, argv())
+
+$endif

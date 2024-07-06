@@ -1,8 +1,10 @@
-$if MAIN_BI=_undefined then
+$if MAIN_BI then
+$else
 $includeonce
 
-$if EXCEPTION_HANDLER_BI=_undefined then
-$let EXCEPTION_HANDLER_BI=_defined
+$if EXCEPTION_HANDLER_BI then
+$else
+$let EXCEPTION_HANDLER_BI=1
 $endif
 
 dim shared ExceptionHandle as integer

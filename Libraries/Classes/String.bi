@@ -1,8 +1,9 @@
-$if SYSTEM_BI=_defined then
+$if SYSTEM_BI then
 $includeonce
 
-$if STRING_BI=_undefined then
-$let STRING_BI=_defined
+$if STRING_BI then
+$else
+$let STRING_BI=1
 $endif
 
 '$include:'./String/append.bi'

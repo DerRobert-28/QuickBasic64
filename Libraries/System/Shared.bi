@@ -1,8 +1,10 @@
-$if MAIN_BI=_undefined then
+$if MAIN_BI then
+$else
 $includeonce
 
-$if SHARED_BI=_undefined then
-$let SHARED_BI=_defined
+$if SHARED_BI then
+$else
+$let SHARED_BI=1
 $endif
 
 redim shared ObjectHandler(0) as string

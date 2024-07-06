@@ -1,0 +1,120 @@
+S_0:;
+do{
+if(!qbevent)break;evnt(1,7,"Main.bi");}while(r);
+do{
+if(!qbevent)break;evnt(1,8,"Main.bi");}while(r);
+do{
+*__INTEGER_ARGC=func__commandcount()- 1 ;
+if(!qbevent)break;evnt(1,10,"Main.bi");}while(r);
+do{
+
+if(!qbevent)break;evnt(1,12,"Main.bi");}while(r);
+S_5:;
+fornext_value2= 0 ;
+fornext_finalvalue2=*__INTEGER_ARGC;
+fornext_step2= 1 ;
+if (fornext_step2<0) fornext_step_negative2=1; else fornext_step_negative2=0;
+if (is_error_pending()) goto fornext_error2;
+goto fornext_entrylabel2;
+while(1){
+fornext_value2=fornext_step2+(*__INTEGER_EACH);
+fornext_entrylabel2:
+*__INTEGER_EACH=fornext_value2;
+if (fornext_step_negative2){
+if (fornext_value2<fornext_finalvalue2) break;
+}else{
+if (fornext_value2>fornext_finalvalue2) break;
+}
+fornext_error2:;
+if(qbevent){evnt(1,13,"Main.bi");if(r)goto S_5;}
+do{
+tmp_long=array_check((*__INTEGER_EACH- 1 )-__ARRAY_STRING_ARGV[4],__ARRAY_STRING_ARGV[5]);
+if (!is_error_pending()) qbs_set( ((qbs*)(((uint64*)(__ARRAY_STRING_ARGV[0]))[tmp_long])),func_command(*__INTEGER_EACH,0|1));
+qbs_cleanup(qbs_tmp_base,0);
+if(!qbevent)break;evnt(1,14,"Main.bi");}while(r);
+fornext_continue_1:;
+}
+fornext_exit_1:;
+do{
+*__SINGLE_OBJECTHANDLE=*__SINGLE_NULL;
+if(!qbevent)break;evnt(1,17,"Main.bi");}while(r);
+do{
+if(qbevent){evnt(1,19,"Main.bi");}
+exit_code=FUNC_MAIN(__INTEGER_ARGC,__ARRAY_STRING_ARGV);
+if (sub_gl_called) error(271);
+close_program=1;
+end();
+if(!qbevent)break;evnt(1,19,"Main.bi");}while(r);
+sub_end();
+return;
+}
+int16 FUNC_MAIN(int16*_FUNC_MAIN_INTEGER_ARGC,ptrszint*_FUNC_MAIN_ARRAY_STRING_ARGV){
+qbs *tqbs;
+ptrszint tmp_long;
+int32 tmp_fileno;
+uint32 qbs_tmp_base=qbs_tmp_list_nexti;
+uint8 *tmp_mem_static_pointer=mem_static_pointer;
+uint32 tmp_cmem_sp=cmem_sp;
+#include "data1.txt"
+mem_lock *sf_mem_lock;
+new_mem_lock();
+sf_mem_lock=mem_lock_tmp;
+sf_mem_lock->type=3;
+if (is_error_pending()) goto exit_subfunc;
+do{
+if(!qbevent)break;evnt(4);}while(r);
+do{
+tqbs=qbs_new(0,0);
+qbs_set(tqbs,qbs_new_txt_len("Main function should be called, ...",35));
+if (is_error_pending()) goto skip3;
+makefit(tqbs);
+qbs_print(tqbs,0);
+qbs_print(nothingstring,1);
+skip3:
+qbs_free(tqbs);
+qbs_cleanup(qbs_tmp_base,0);
+if(!qbevent)break;evnt(6);}while(r);
+do{
+tqbs=qbs_new(0,0);
+qbs_set(tqbs,qbs_new_txt_len("... so this text should be displayed.",37));
+if (is_error_pending()) goto skip4;
+makefit(tqbs);
+qbs_print(tqbs,0);
+qbs_print(nothingstring,1);
+skip4:
+qbs_free(tqbs);
+qbs_cleanup(qbs_tmp_base,0);
+if(!qbevent)break;evnt(7);}while(r);
+do{
+qbs_input_variabletypes[1]=ISSTRING+512;
+qbs_input_variableoffsets[1]=_FUNC_MAIN_STRING_DUMMY;
+qbs_input(1,1);
+if (stop_program) end();
+qbs_cleanup(qbs_tmp_base,0);
+if(!qbevent)break;evnt(9);}while(r);
+exit_subfunc:;
+free_mem_lock(sf_mem_lock);
+#include "free1.txt"
+if ((tmp_mem_static_pointer>=mem_static)&&(tmp_mem_static_pointer<=mem_static_limit)) mem_static_pointer=tmp_mem_static_pointer; else mem_static_pointer=mem_static;
+cmem_sp=tmp_cmem_sp;
+return *_FUNC_MAIN_INTEGER_MAIN;
+}
+void SUB_VWATCH(){
+qbs *tqbs;
+ptrszint tmp_long;
+int32 tmp_fileno;
+uint32 qbs_tmp_base=qbs_tmp_list_nexti;
+uint8 *tmp_mem_static_pointer=mem_static_pointer;
+uint32 tmp_cmem_sp=cmem_sp;
+#include "data2.txt"
+mem_lock *sf_mem_lock;
+new_mem_lock();
+sf_mem_lock=mem_lock_tmp;
+sf_mem_lock->type=3;
+if (is_error_pending()) goto exit_subfunc;
+exit_subfunc:;
+free_mem_lock(sf_mem_lock);
+#include "free2.txt"
+if ((tmp_mem_static_pointer>=mem_static)&&(tmp_mem_static_pointer<=mem_static_limit)) mem_static_pointer=tmp_mem_static_pointer; else mem_static_pointer=mem_static;
+cmem_sp=tmp_cmem_sp;
+}

@@ -1,8 +1,10 @@
-$if MAIN_BI=_undefined then
+$if MAIN_BI then
+$else
 $includeonce
 
-$if CONSTANTS_BI=_undefined then
-$let CONSTANTS_BI=_defined
+$if CONSTANTS_BI then
+$else
+$let CONSTANTS_BI=1
 $endif
 
 const FALSE` = 0

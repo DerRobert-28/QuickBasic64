@@ -1,18 +1,46 @@
-if(__BIT1_B==NULL){
-cmem_sp-=4;
-if (cmem_sp<qbs_cmem_sp) error(257);
-__BIT1_B=(int32*)(dblock+cmem_sp);
-*__BIT1_B=0;
+if (!__ARRAY_STRING_OBJECTHANDLER){
+__ARRAY_STRING_OBJECTHANDLER=(ptrszint*)mem_static_malloc(9*ptrsz);
+new_mem_lock();
+mem_lock_tmp->type=4;
+((ptrszint*)__ARRAY_STRING_OBJECTHANDLER)[8]=(ptrszint)mem_lock_tmp;
+__ARRAY_STRING_OBJECTHANDLER[2]=0;
+__ARRAY_STRING_OBJECTHANDLER[4]=2147483647;
+__ARRAY_STRING_OBJECTHANDLER[5]=0;
+__ARRAY_STRING_OBJECTHANDLER[6]=0;
+__ARRAY_STRING_OBJECTHANDLER[0]=(ptrszint)&nothingstring;
 }
-if(__BYTE_T==NULL){
-__BYTE_T=(int8*)mem_static_malloc(1);
-*__BYTE_T=0;
+if(__LONG_OBJECTHANDLE==NULL){
+__LONG_OBJECTHANDLE=(int32*)mem_static_malloc(4);
+*__LONG_OBJECTHANDLE=0;
 }
-if(__UBYTE_U==NULL){
-__UBYTE_U=(uint8*)mem_static_malloc(1);
-*__UBYTE_U=0;
+if(__INTEGER_EXCEPTIONHANDLE==NULL){
+__INTEGER_EXCEPTIONHANDLE=(int16*)mem_static_malloc(2);
+*__INTEGER_EXCEPTIONHANDLE=0;
 }
-if(__INTEGER_I==NULL){
-__INTEGER_I=(int16*)mem_static_malloc(2);
-*__INTEGER_I=0;
+if(__INTEGER_ARGC==NULL){
+__INTEGER_ARGC=(int16*)mem_static_malloc(2);
+*__INTEGER_ARGC=0;
 }
+if(__INTEGER_EACH==NULL){
+__INTEGER_EACH=(int16*)mem_static_malloc(2);
+*__INTEGER_EACH=0;
+}
+if (!__ARRAY_STRING_ARGV){
+__ARRAY_STRING_ARGV=(ptrszint*)mem_static_malloc(9*ptrsz);
+new_mem_lock();
+mem_lock_tmp->type=4;
+((ptrszint*)__ARRAY_STRING_ARGV)[8]=(ptrszint)mem_lock_tmp;
+__ARRAY_STRING_ARGV[4]= -1 ;
+__ARRAY_STRING_ARGV[5]=( 0 )-__ARRAY_STRING_ARGV[4]+1;
+__ARRAY_STRING_ARGV[6]=1;
+__ARRAY_STRING_ARGV[0]=(ptrszint)mem_static_malloc(__ARRAY_STRING_ARGV[5]*8);
+tmp_long=__ARRAY_STRING_ARGV[5];
+while(tmp_long--){
+((uint64*)(__ARRAY_STRING_ARGV[0]))[tmp_long]=(uint64)qbs_new(0,0);
+}
+__ARRAY_STRING_ARGV[2]=1+2;
+}
+static int32 fornext_value2;
+static int32 fornext_finalvalue2;
+static int32 fornext_step2;
+static uint8 fornext_step_negative2;

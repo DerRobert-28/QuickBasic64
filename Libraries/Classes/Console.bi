@@ -1,8 +1,9 @@
-$if SYSTEM_BI=_defined then
+$if SYSTEM_BI then
 $includeonce
 
-$if CONSOLE_BI=_undefined then
-$let CONSOLE_BI=_defined
+$if CONSOLE_BI then
+$else
+$let CONSOLE_BI=1
 $endif
 
 '$include:'./Console/Newline.bi'

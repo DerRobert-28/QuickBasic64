@@ -1,8 +1,9 @@
-$if SYSTEM_BI=_defined then
+$if SYSTEM_BI then
 $includeonce
 
-$if CHAR_BI=_undefined then
-$let CHAR_BI=_defined
+$if CHAR_BI then
+$else
+$let CHAR_BI=1
 $endif
 
 '$include:'./Char/at.bi'

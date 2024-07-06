@@ -1,3 +1,33 @@
 <<< LISTING DONE >>>
+INCL: A:\Development\QuickBasic64\Libraries\System.bi
+1FBD0A9274F2721EC5B0BFBEB44689BD
+INCL: A:\Development\QuickBasic64\Libraries\System\Options.bi
+8304417F0EF0A91A5CE0ADB412D24307
+INCL: A:\Development\QuickBasic64\Libraries\System\Constants.bi
+7D521226EB0BE58C9F9A46DF5B92D656
+INCL: A:\Development\QuickBasic64\Libraries\System\Shared.bi
+C9D58D889623EFE2F3C1F29EA0D2DBEF
+INCL: A:\Development\QuickBasic64\Libraries\System\ExceptionHandler.bi
+91CEEEB163BEF4D4EBF530CE599BD5B0
+INCL: A:\Development\QuickBasic64\Libraries\System\Main.bi
+A893CF9647380326AD94E050E924422F
+INCL: A:\Development\QuickBasic64\Libraries\System\Keywords.bi
+CDDF887FC28FE45F30606D450DFB943B
+INCL: A:\Development\QuickBasic64\Libraries\System\Keywords\catch.bi
+2AE4F6094CC8D84291C4410DF1FB9E31
+INCL: A:\Development\QuickBasic64\Libraries\System\Keywords\finally.bi
+8352377B032996EEDDBAF2CDDD7C3ACE
+INCL: A:\Development\QuickBasic64\Libraries\System\Keywords\new.bi
+D9579128A58CB47BE5FD52086D00B36C
+INCL: A:\Development\QuickBasic64\Libraries\Classes\String\equals.bi
+B6F4505E1835CB4B1DB21F79E9331D60
+INCL: A:\Development\QuickBasic64\Libraries\Classes\String\isEmpty.bi
+0AF2D63301D18F4A321D83DF1F9EB0D8
+INCL: A:\Development\QuickBasic64\Libraries\Classes\String\Empty.bi
+12DDF59BFB5B3758B2D5F9E8ED919627
+INCL: A:\Development\QuickBasic64\Libraries\System\Keywords\try.bi
+6E3A2860D388D4E669F9B0E6A7F6FA54
+INCL: A:\Development\QuickBasic64\Libraries\System\Keywords\valueOf.bi
+EF42B44B0B4D0E809CBEE10DEACBE0CE
 INCL: A:\Development\QuickBasic64\bin\internal\support\vwatch\vwatch_stub.bm
 FFAE9BE3DFCEBF9A8C6F17BB608EC851

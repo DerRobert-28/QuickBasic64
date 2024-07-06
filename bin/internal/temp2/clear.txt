@@ -1,0 +1,23 @@
+*__INTEGER_ARGC=0;
+*__INTEGER_EACH=0;
+if (__ARRAY_STRING_ARGV[2]&1){
+if (__ARRAY_STRING_ARGV[2]&2){
+tmp_long=__ARRAY_STRING_ARGV[5];
+while(tmp_long--){
+((qbs*)(((uint64*)(__ARRAY_STRING_ARGV[0]))[tmp_long]))->len=0;
+}
+}else{
+tmp_long=__ARRAY_STRING_ARGV[5];
+while(tmp_long--){
+qbs_free((qbs*)(((uint64*)(__ARRAY_STRING_ARGV[0]))[tmp_long]));
+}
+free((void*)(__ARRAY_STRING_ARGV[0]));
+__ARRAY_STRING_ARGV[2]^=1;
+__ARRAY_STRING_ARGV[4]=2147483647;
+__ARRAY_STRING_ARGV[5]=0;
+__ARRAY_STRING_ARGV[6]=0;
+__ARRAY_STRING_ARGV[0]=(ptrszint)&nothingstring;
+}
+}
+*__SINGLE_OBJECTHANDLE=0;
+*__SINGLE_NULL=0;
