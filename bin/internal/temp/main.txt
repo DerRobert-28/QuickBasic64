@@ -1,7 +1,36 @@
 S_0:;
 do{
+if(!qbevent)break;evnt(3);}while(r);
+do{
+if ((*__BIT1_B= 1 )&1){
+*__BIT1_B|=-2;
+}else{
+*__BIT1_B&=1;
+}
+if(!qbevent)break;evnt(5);}while(r);
+do{
+if(!qbevent)break;evnt(7);}while(r);
+do{
+if(!qbevent)break;evnt(8);}while(r);
+do{
+if(!qbevent)break;evnt(9);}while(r);
+do{
+*__INTEGER_I=*__BIT1_B;
+if(!qbevent)break;evnt(11);}while(r);
+do{
+*__BYTE_T=*__BIT1_B;
+if(!qbevent)break;evnt(13);}while(r);
+do{
+*__UBYTE_U=*__BIT1_B;
+if(!qbevent)break;evnt(14);}while(r);
+do{
 tqbs=qbs_new(0,0);
-qbs_set(tqbs,func_command( 0 ,0|1));
+qbs_set(tqbs,qbs_add(qbs_str((int64)(*__BIT1_B)),qbs_new_txt(" ")));
+if (is_error_pending()) goto skip1;
+makefit(tqbs);
+qbs_print(tqbs,0);
+tab();
+qbs_set(tqbs,qbs_add(qbs_str((int16)(*__INTEGER_I)),qbs_new_txt(" ")));
 if (is_error_pending()) goto skip1;
 makefit(tqbs);
 qbs_print(tqbs,0);
@@ -9,7 +38,23 @@ qbs_print(nothingstring,1);
 skip1:
 qbs_free(tqbs);
 qbs_cleanup(qbs_tmp_base,0);
-if(!qbevent)break;evnt(1);}while(r);
+if(!qbevent)break;evnt(16);}while(r);
+do{
+tqbs=qbs_new(0,0);
+qbs_set(tqbs,qbs_add(qbs_str((int8)(*__BYTE_T)),qbs_new_txt(" ")));
+if (is_error_pending()) goto skip2;
+makefit(tqbs);
+qbs_print(tqbs,0);
+tab();
+qbs_set(tqbs,qbs_add(qbs_str((uint8)(*__UBYTE_U)),qbs_new_txt(" ")));
+if (is_error_pending()) goto skip2;
+makefit(tqbs);
+qbs_print(tqbs,0);
+qbs_print(nothingstring,1);
+skip2:
+qbs_free(tqbs);
+qbs_cleanup(qbs_tmp_base,0);
+if(!qbevent)break;evnt(17);}while(r);
 sub_end();
 return;
 }

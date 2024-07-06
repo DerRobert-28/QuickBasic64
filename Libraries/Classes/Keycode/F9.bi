@@ -1,3 +1,7 @@
-function Keycode.F9%()
-	Keycode.F9 = Keycode.fromExtended(67)
+$includeonce
+
+'$include:'./internal/fromExtended.bi'
+
+function Keycode.F9$ ()
+	Keycode.F9 = Keycode.internal.fromExtended(67)
 end function

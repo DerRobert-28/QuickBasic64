@@ -1,11 +1,19 @@
-function Console.readKey%(shouldWait as _bit)
-	dim as string this, empty
+$includeonce
 
-	empty = Console.emptyKey
+'$include:'../String/concat.bi'
+'$include:'../String/equals.bi'
+'$include:'../String/subString.bi'
+'$include:'./internal/EmptyKey.bi'
+
+function Console.readKey$ (shouldWait as integer)
+	dim as string empty, this, thisKey
+
+	empty = Console.internal.EmptyKey
 	do
-		this = left$(inkey$ + empty, 2)
-		if not(shouldWait) then exit do
-	loop while (this = empty)
+		thisKey = String.concat(inkey$, empty)
+		this = String.Substring(thisKey, 0, 2)
+		if Boolean.isFalse(shouldWait) then exit do
+	loop while String.equals(this, empty)
 
-	Console.readKey = cvi(this)
+	Console.readKey = this
 end function

@@ -1,0 +1,18 @@
+if(__BIT1_B==NULL){
+cmem_sp-=4;
+if (cmem_sp<qbs_cmem_sp) error(257);
+__BIT1_B=(int32*)(dblock+cmem_sp);
+*__BIT1_B=0;
+}
+if(__BYTE_T==NULL){
+__BYTE_T=(int8*)mem_static_malloc(1);
+*__BYTE_T=0;
+}
+if(__UBYTE_U==NULL){
+__UBYTE_U=(uint8*)mem_static_malloc(1);
+*__UBYTE_U=0;
+}
+if(__INTEGER_I==NULL){
+__INTEGER_I=(int16*)mem_static_malloc(2);
+*__INTEGER_I=0;
+}
