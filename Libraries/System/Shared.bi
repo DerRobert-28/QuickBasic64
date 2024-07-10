@@ -7,7 +7,7 @@ $else
 $let SHARED_BI=1
 $endif
 
-redim shared ObjectHandler(0) as string
-dim shared ObjectHandle as long
+redim shared SharedObjectBuffer(0) as string
+redim shared SharedStringBuffer(0) as string
 
 $endif

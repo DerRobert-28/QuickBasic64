@@ -1,0 +1,87 @@
+{{QBDLDATE:07-10-2024}}
+{{QBDLTIME:00:21:17}}
+'''Boolean''' statements are evaluations that return '''true''' (-1) or '''false''' (0) values. This are for instance the [[Relational Operations]], but also functions such as [[_FILEEXISTS]], [[EOF]], [[_SCREENEXISTS]] etc. return those values when checking for certain conditions. The results of those evaluations or function calls can be used in other mathematical or logical operations.
+
+
+{| align="right" style="max-width:25%;"
+|  __TOC__
+|}
+== Relational Operations ==
+* '''True''' relational evaluations return '''-1''', which can be used to increment or decrement a value by using the appropriate operations:
+** either use addition to decrement and substraction to increment (due to the negative sign),
+** or [[ABS]] the result first and then use substraction to decrement and addition to increment.
+* '''False''' relational evaluations return '''0'''. Watch out for [[ERROR Codes|Division by 0]] errors here, if divisions are involved in the further processing.
+
+
+== Logical Operations ==
+* Any of the logical operations can be used to further process or combine several conditions, but most useful are:
+** [[AND (boolean)|AND]] to add extra conditions to a boolean statement evaluation.
+** [[OR (boolean)|OR]] to add alternate conditions to a boolean statement evaluation.
+* Parenthesis are allowed inside of boolean statements to clarify an evaluation.
+
+
+{{RelationalOperationsPlugin}}
+{{LogicalTruthPlugin}}
+
+
+{{PageExamples}}
+;Example 1:Using 2 different boolean evaluations to determine a leap year.
+;Explanation:Both boolean evaluations will return -1 if the year is a leap year. It is not simply every four years as many people think (see [[Wikipedia:Leap year#Gregorian_calendar|Wikipedia]]). That is checked by the first evaluation {{InlineCode}}(Y {{Cl|MOD}} 4 = 0){{InlineCodeEnd}} of each. In new century years like 1900 (which was not a leapyear) there is only one leap year every 400 years. 100 is used with [[MOD]] to see if there is a remainder. When that is true, the boolean return of that part of the first evaluation will be 0. The second returns -1 (which is actually added). In both evaluations the result of {{InlineCode}}(Y {{Cl|MOD}} 400 = 0){{InlineCodeEnd}} indicates a century leap year.
+{{CodeStart}}
+{{Cl|INPUT}} {{Text|<nowiki>"Enter a year greater than 1583: "</nowiki>|#FFB100}}, annum$
+Y = {{Cl|VAL}}(annum$)
+leap1 = (Y {{Cl|MOD}} {{Text|4|#F580B1}} = {{Text|0|#F580B1}} {{Cl|AND}} Y {{Cl|MOD}} {{Text|100|#F580B1}} <> {{Text|0|#F580B1}}) {{Cl|OR}} (Y {{Cl|MOD}} {{Text|400|#F580B1}} = {{Text|0|#F580B1}})
+leap2 = (Y {{Cl|MOD}} {{Text|4|#F580B1}} = {{Text|0|#F580B1}}) - (Y {{Cl|MOD}} {{Text|100|#F580B1}} = {{Text|0|#F580B1}}) + (Y {{Cl|MOD}} {{Text|400|#F580B1}} = {{Text|0|#F580B1}})
+{{Cl|PRINT}} {{Text|<nowiki>"Year = "</nowiki>|#FFB100}}; annum$, {{Text|<nowiki>"Leap1 = "</nowiki>|#FFB100}}; leap1, {{Text|<nowiki>"Leap2 = "</nowiki>|#FFB100}}; leap2
+{{CodeEnd}}
+{{PreStart}}
+'''Evaluation for year 2000'''
+ leap1 = (-1 AND 0) OR -1 = -1 'the AND evaluation is false(0), so the OR value is used
+ leap2 = (-1) - (-1) + (-1) = -1 + 1 + -1 = -1
+'''Evaluation for year 1900'''
+ leap1 = (-1 AND 0) OR 0 = 0 OR 0 = 0
+ leap2 = (-1) - (-1) + (0) = -1 + 1 + 0 = 0
+{{PreEnd}}
+
+----
+
+;Example 2
+:Moving an [[ASCII]] character using the arrow keys and boolean statements to determine the new coordinate.
+{{CodeStart}}
+{{Cl|SCREEN}} {{Text|12|#F580B1}}
+{{Cl|COLOR}} {{Text|7|#F580B1}}
+{{Cl|LOCATE}} {{Text|11|#F580B1}}, {{Text|20|#F580B1}}: {{Cl|PRINT}} {{Text|<nowiki>"Using Screen 12 here to be in 80 X 30 coordinates mode"</nowiki>|#FFB100}}
+{{Cl|LOCATE}} {{Text|13|#F580B1}}, {{Text|6|#F580B1}}: {{Cl|PRINT}} {{Text|<nowiki>"Simple Example of Alternative programming without IF-THEN-ELSE Statements"</nowiki>|#FFB100}}
+{{Cl|LOCATE}} {{Text|15|#F580B1}}, {{Text|1|#F580B1}}: {{Cl|PRINT}} {{Text|<nowiki>"Use the four Cursor keys to move the yellow cursor, text will not be disturbed"</nowiki>|#FFB100}}
+{{Cl|LOCATE}} {{Text|17|#F580B1}}, {{Text|12|#F580B1}}: {{Cl|PRINT}} {{Text|<nowiki>"When you END the program with the ESC key, cursor will disappear"</nowiki>|#FFB100}}
+
+cordx% = {{Text|40|#F580B1}}
+cordy% = {{Text|15|#F580B1}}
+
+{{Cl|DO}}
+    oldcordx% = cordx%
+    oldcordy% = cordy%
+    p% = {{Cl|SCREEN (function)|SCREEN}}(cordy%, cordx%) {{Text|<nowiki>'get ASCII character code at present position</nowiki>|#919191}}
+    {{Cl|COLOR}} {{Text|14|#F580B1}}: {{Cl|LOCATE}} cordy%, cordx%: {{Cl|PRINT}} {{Cl|CHR$}}({{Text|178|#F580B1}}); {{Text|<nowiki>'print cursor character to position</nowiki>|#919191}}
+
+    {{Cl|WHILE}} cordx% = oldcordx% {{Cl|AND (boolean)|AND}} cordy% = oldcordy% {{Cl|AND (boolean)|AND}} k$ <> {{Cl|CHR$}}({{Text|27|#F580B1}})
+        k$ = {{Cl|INKEY$}}
+        cordx% = cordx% + (k$ = ({{Cl|CHR$}}({{Text|0|#F580B1}}) + {{Text|<nowiki>"K"</nowiki>|#FFB100}}) {{Cl|AND}} cordx% > {{Text|1|#F580B1}}) + {{Cl|ABS}}(k$ = ({{Cl|CHR$}}({{Text|0|#F580B1}}) + {{Text|<nowiki>"M"</nowiki>|#FFB100}}) {{Cl|AND}} cordx% < {{Text|80|#F580B1}})
+        cordy% = cordy% + (k$ = ({{Cl|CHR$}}({{Text|0|#F580B1}}) + {{Text|<nowiki>"H"</nowiki>|#FFB100}}) {{Cl|AND}} cordy% > {{Text|1|#F580B1}}) + {{Cl|ABS}}(k$ = ({{Cl|CHR$}}({{Text|0|#F580B1}}) + {{Text|<nowiki>"P"</nowiki>|#FFB100}}) {{Cl|AND}} cordy% < {{Text|30|#F580B1}})
+    {{Cl|WEND}}
+
+    {{Cl|COLOR}} {{Text|7|#F580B1}}: {{Cl|LOCATE}} oldcordy%, oldcordx%: {{Cl|PRINT}} {{Cl|CHR$}}(p%); {{Text|<nowiki>'replace overwritten screen characters</nowiki>|#919191}}
+
+{{Cl|DO...LOOP|LOOP UNTIL}} k$ = {{Cl|CHR$}}({{Text|27|#F580B1}})
+{{CodeEnd}}
+{{Small|Code by AlgoreIthm}}
+
+
+{{PageSeeAlso}}
+* [[IF...THEN]], [[SELECT CASE]]
+* [[Binary]], [[ABS]], [[SGN]]
+* [[AND]], [[OR]], [[XOR]]
+* [[Bitwise Operators|Bitwise Operations]]
+
+
+{{PageNavigation}}

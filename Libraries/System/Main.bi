@@ -13,8 +13,6 @@ for each = 0 to argc
 	argv(each - 1) = command$(each)
 next
 
-ObjectHandle = NULL
-
 system Main%(argc, argv())
 
 $endif

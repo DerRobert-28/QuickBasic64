@@ -17,6 +17,8 @@ $endif
 '$include:'./String/startsWith.bi'
 '$include:'./String/Substr.bi'
 '$include:'./String/Substring.bi'
+'$include:'./String/toLower.bi'
+'$include:'./String/toUpper.bi'
 '$include:'./String/trim.bi'
 
 $endif

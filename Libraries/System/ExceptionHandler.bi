@@ -7,12 +7,12 @@ $else
 $let EXCEPTION_HANDLER_BI=1
 $endif
 
-dim shared ExceptionHandle as integer
+dim shared SharedExceptionHandle as integer
 
 goto onFinally
 
 ExceptionHandler:
-	ExceptionHandle = err
+	SharedExceptionHandle = err
 	resume next
 
 onFinally:

@@ -12,16 +12,16 @@ function new& (this as string)
 		exit function
 	endif
 
-	newItem = ubound(ObjectHandler) + 1
+	newItem = ubound(SharedObjectBuffer) + 1
 	for each = 1 to newItem - 1
-		if String.equals(this, ObjectHandler(each)) then
+		if String.equals(this, SharedObjectBuffer(each)) then
 			new = each
 			exit function
 		endif
 	next
 	
-	redim _preserve ObjectHandler(newItem)
-	ObjectHandler(newItem) = this
+	redim _preserve SharedObjectBuffer(newItem)
+	SharedObjectBuffer(newItem) = this
 
 	new = newItem
 end function
