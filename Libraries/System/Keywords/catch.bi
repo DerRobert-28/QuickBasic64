@@ -1,8 +1,8 @@
-$if KEYWORDS_BI=_defined then
+$if KEYWORDS_BI then
 $includeonce
 
 sub catch (handle as integer)
-	handle = ExceptionHandle
+	handle = SharedExceptionHandle
 end sub
 
 $endif

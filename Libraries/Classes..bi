@@ -1,13 +1,15 @@
-$if SYSTEM_BI=_defined then
-
+$if SYSTEM_BI then
 $includeonce
 
-$if CLASSES_BI=_undefined then
-$let CLASSES_BI=_defined
+$if CLASSES_BI then
+$else
+$let CLASSES_BI=1
 $endif
 
 '$include:'./Classes/Char.bi'
 '$include:'./Classes/Console.bi'
+'$include:'./Classes/File.bi'
+'$include:'./Classes/FileAccess.bi'
 '$include:'./Classes/HTMLDocument.bi'
 '$include:'./Classes/Integer.bi'
 '$include:'./Classes/Keycode.bi'

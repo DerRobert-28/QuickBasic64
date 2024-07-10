@@ -1,7 +1,5 @@
-int32 *__BIT1_B=NULL;
-int8 *__BYTE_T=NULL;
-uint8 *__UBYTE_U=NULL;
-int16 *__INTEGER_I=NULL;
+char *g_tmp_udt_DATENTYP=(char*)malloc(4);
+void *__UDT_V=NULL;
 int32 console=0;
 int32 screen_hide_startup=0;
 int32 asserts=0;

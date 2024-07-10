@@ -1,0 +1,8 @@
+A:\Development\QuickBasic64\Libraries\System.bi
+A:\Development\QuickBasic64\Libraries\System\Options.bi
+A:\Development\QuickBasic64\Libraries\System\Constants.bi
+A:\Development\QuickBasic64\Libraries\System\Shared.bi
+A:\Development\QuickBasic64\Libraries\System\ExceptionHandler.bi
+A:\Development\QuickBasic64\Libraries\System\Main.bi
+A:\Development\QuickBasic64\Libraries\System\Keywords.bi
+A:\Development\QuickBasic64\bin\internal\support\vwatch\vwatch_stub.bm

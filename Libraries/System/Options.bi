@@ -1,8 +1,10 @@
-$if MAIN_BI=_undefined then
+$if MAIN_BI= then
+$else
 $includeonce
 
-$if OPTIONS_BI=_undefined then
-$let OPTIONS_BI=_defined
+$if OPTIONS_BI then
+$else
+$let OPTIONS_BI=1
 $endif
 
 option _explicit

@@ -1,4 +1,4 @@
-$if KEYWORDS_BI=_defined then
+$if KEYWORDS_BI then
 $includeonce
 
 sub finally ()

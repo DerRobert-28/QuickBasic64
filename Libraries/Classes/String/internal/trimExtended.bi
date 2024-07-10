@@ -5,7 +5,8 @@ $includeonce
 '$include:'../Substring.bi'
 '$include:'../Length.bi'
 
-$if CHAR_BI=_undefined then
+$if CHAR_BI then
+$else
 '$include:'./endsWithChar.bi'
 '$include:'./startsWithChar.bi'
 $endif
@@ -16,7 +17,7 @@ function String.internal.trimExtended$(this as string)
 
 	result = this
 	do
-		$if CHAR_BI=_defined then
+		$if CHAR_BI then
 			isNoBr = String.startsWith(result, Char.NoBreak)
 			isNull = String.startsWith(result, Char.Null)
 			isSpace = String.startsWith(result, Char.Space)
@@ -31,7 +32,7 @@ function String.internal.trimExtended$(this as string)
 		result = String.Substring(result, 1)
 	loop
 	do
-		$if CHAR_BI=_defined then
+		$if CHAR_BI then
 			isNull = String.endsWith(result, Char.Null)
 			isTab = String.endsWith(result, Char.Tabulator)
 			isSpace = String.endsWith(result, Char.Space)

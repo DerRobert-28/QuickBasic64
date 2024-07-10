@@ -1,13 +1,13 @@
 '$include:'../System.bi'
 
-function Main%(argc as integer, argv() as string)
+function Main% (argc as integer, argv() as string)
 	dim as string dummy
 	dim as long a, b, c, d
 
-	a = New("Hallo")
-	b = New("Tschau")
-	c = New("Hallo")
-	d = New("Hallo, Welt")
+	a = new("Hallo")
+	b = new("Tschau")
+	c = new("Hallo")
+	d = new("Hallo, Welt")
 
 	print "A is equal to       :", a
 	print "B is equal to       :", b
@@ -23,5 +23,6 @@ function Main%(argc as integer, argv() as string)
 	print
 	print "C should not equal D:", (c <> d)
 	print
+
 	line input dummy
 end function

@@ -1,8 +1,9 @@
-$if MAIN_BI=_defined then
+$if MAIN_BI then
 $includeonce
 
-$if KEYWORDS_BI=_undefined then
-$let KEYWORDS_BI=_defined
+$if KEYWORDS_BI then
+$else
+$let KEYWORDS_BI=1
 $endif
 
 '$include:'./Keywords/catch.bi'

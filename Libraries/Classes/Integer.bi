@@ -1,8 +1,9 @@
-$if SYSTEM_BI=_defined then
+$if SYSTEM_BI then
 $includeonce
 
-$if INTEGER_BI=_undefined then
-$let INTEGER_BI=_defined
+$if INTEGER_BI then
+$else
+$let INTEGER_BI=1
 $endif
 
 '$include:'./Integer/pack.bi'

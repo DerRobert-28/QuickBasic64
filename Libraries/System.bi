@@ -1,7 +1,8 @@
 $includeonce
 
-$if SYSTEM_BI=_undefined then
-$let SYSTEM_BI=_defined
+$if SYSTEM_BI then
+$else
+$let SYSTEM_BI=1
 $endif
 
 '$include:'./System/Options.bi'

@@ -1,8 +1,8 @@
-$if SYSTEM_BI=_defined then
+$if SYSTEM_BI=defined then
 $includeonce
 
-$if KEYCODE_BI=_undefined then
-$let KEYCODE_BI=_defined
+$if KEYCODE_BI=undefined then
+$let KEYCODE_BI=defined
 $endif
 
 '$include:'./Keycode/Escape.bi'

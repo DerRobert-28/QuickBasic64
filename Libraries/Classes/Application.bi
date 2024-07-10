@@ -1,8 +1,9 @@
-$if SYSTEM_BI=_defined then
+$if SYSTEM_BI then
 $includeonce
 
-$if APPLICATION_BI=_undefined then
-$let APPLICATION_BI=_defined
+$if APPLICATION_BI then
+$else
+$let APPLICATION_BI=1
 $endif
 
 '$include:'./Application/return.bi'
