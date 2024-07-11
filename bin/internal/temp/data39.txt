@@ -1,0 +1,10 @@
+qbs*oldstr46=NULL;
+if(_SUB_FILE__ASCII_CHR_046__DELETE_STRING_THIS->tmp||_SUB_FILE__ASCII_CHR_046__DELETE_STRING_THIS->fixed||_SUB_FILE__ASCII_CHR_046__DELETE_STRING_THIS->readonly){
+oldstr46=_SUB_FILE__ASCII_CHR_046__DELETE_STRING_THIS;
+if (oldstr46->cmem_descriptor){
+_SUB_FILE__ASCII_CHR_046__DELETE_STRING_THIS=qbs_new_cmem(oldstr46->len,0);
+}else{
+_SUB_FILE__ASCII_CHR_046__DELETE_STRING_THIS=qbs_new(oldstr46->len,0);
+}
+memcpy(_SUB_FILE__ASCII_CHR_046__DELETE_STRING_THIS->chr,oldstr46->chr,oldstr46->len);
+}

@@ -1,0 +1,8 @@
+if(oldstr27){
+if(oldstr27->fixed)qbs_set(oldstr27,_FUNC_STRING__ASCII_CHR_046__CONCAT_STRING_THIS);
+qbs_free(_FUNC_STRING__ASCII_CHR_046__CONCAT_STRING_THIS);
+}
+if(oldstr28){
+if(oldstr28->fixed)qbs_set(oldstr28,_FUNC_STRING__ASCII_CHR_046__CONCAT_STRING_OTHER);
+qbs_free(_FUNC_STRING__ASCII_CHR_046__CONCAT_STRING_OTHER);
+}

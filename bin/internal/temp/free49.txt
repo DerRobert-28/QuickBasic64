@@ -1,0 +1,4 @@
+if(oldstr60){
+if(oldstr60->fixed)qbs_set(oldstr60,_SUB_FILE__ASCII_CHR_046__WRITELINE_STRING_VALUE);
+qbs_free(_SUB_FILE__ASCII_CHR_046__WRITELINE_STRING_VALUE);
+}

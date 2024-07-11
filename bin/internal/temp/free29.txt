@@ -1,0 +1,16 @@
+if(oldstr32){
+if(oldstr32->fixed)qbs_set(oldstr32,_FUNC_STRING__ASCII_CHR_046__CONCAT3_STRING_THIS);
+qbs_free(_FUNC_STRING__ASCII_CHR_046__CONCAT3_STRING_THIS);
+}
+if(oldstr33){
+if(oldstr33->fixed)qbs_set(oldstr33,_FUNC_STRING__ASCII_CHR_046__CONCAT3_STRING_FIRST);
+qbs_free(_FUNC_STRING__ASCII_CHR_046__CONCAT3_STRING_FIRST);
+}
+if(oldstr34){
+if(oldstr34->fixed)qbs_set(oldstr34,_FUNC_STRING__ASCII_CHR_046__CONCAT3_STRING_SECOND);
+qbs_free(_FUNC_STRING__ASCII_CHR_046__CONCAT3_STRING_SECOND);
+}
+if(oldstr35){
+if(oldstr35->fixed)qbs_set(oldstr35,_FUNC_STRING__ASCII_CHR_046__CONCAT3_STRING_THIRD);
+qbs_free(_FUNC_STRING__ASCII_CHR_046__CONCAT3_STRING_THIRD);
+}

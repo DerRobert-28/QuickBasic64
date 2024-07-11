@@ -1,8 +1,4 @@
-if(oldstr17){
-if(oldstr17->fixed)qbs_set(oldstr17,_SUB_STRING__ASCII_CHR_046__APPEND_STRING_FIRST);
-qbs_free(_SUB_STRING__ASCII_CHR_046__APPEND_STRING_FIRST);
-}
-if(oldstr18){
-if(oldstr18->fixed)qbs_set(oldstr18,_SUB_STRING__ASCII_CHR_046__APPEND_STRING_SECOND);
-qbs_free(_SUB_STRING__ASCII_CHR_046__APPEND_STRING_SECOND);
+if(oldstr14){
+if(oldstr14->fixed)qbs_set(oldstr14,_FUNC_STRING__ASCII_CHR_046__CHARAT_STRING_THIS);
+qbs_free(_FUNC_STRING__ASCII_CHR_046__CHARAT_STRING_THIS);
 }

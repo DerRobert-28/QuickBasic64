@@ -1,0 +1,8 @@
+if(oldstr56){
+if(oldstr56->fixed)qbs_set(oldstr56,_SUB_FILE__ASCII_CHR_046__RENAME_STRING_THIS);
+qbs_free(_SUB_FILE__ASCII_CHR_046__RENAME_STRING_THIS);
+}
+if(oldstr57){
+if(oldstr57->fixed)qbs_set(oldstr57,_SUB_FILE__ASCII_CHR_046__RENAME_STRING_OTHER);
+qbs_free(_SUB_FILE__ASCII_CHR_046__RENAME_STRING_OTHER);
+}

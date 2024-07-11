@@ -1,0 +1,4 @@
+if(oldstr3){
+if(oldstr3->fixed)qbs_set(oldstr3,_SUB_INVOKES_STRING_THIS);
+qbs_free(_SUB_INVOKES_STRING_THIS);
+}

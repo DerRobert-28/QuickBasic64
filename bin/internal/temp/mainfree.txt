@@ -1,0 +1,12 @@
+if (__ARRAY_STRING_SHAREDOBJECTBUFFER[2]&1){
+tmp_long=__ARRAY_STRING_SHAREDOBJECTBUFFER[5];
+while(tmp_long--) qbs_free((qbs*)((uint64*)(__ARRAY_STRING_SHAREDOBJECTBUFFER[0]))[tmp_long]);
+free((void*)(__ARRAY_STRING_SHAREDOBJECTBUFFER[0]));
+}
+free_mem_lock( (mem_lock*)((ptrszint*)__ARRAY_STRING_SHAREDOBJECTBUFFER)[8] );
+if (__ARRAY_STRING_SHAREDSTRINGBUFFER[2]&1){
+tmp_long=__ARRAY_STRING_SHAREDSTRINGBUFFER[5];
+while(tmp_long--) qbs_free((qbs*)((uint64*)(__ARRAY_STRING_SHAREDSTRINGBUFFER[0]))[tmp_long]);
+free((void*)(__ARRAY_STRING_SHAREDSTRINGBUFFER[0]));
+}
+free_mem_lock( (mem_lock*)((ptrszint*)__ARRAY_STRING_SHAREDSTRINGBUFFER)[8] );

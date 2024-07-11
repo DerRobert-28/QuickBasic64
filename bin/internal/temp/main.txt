@@ -1,24 +1,122 @@
 S_0:;
 do{
-if(!qbevent)break;evnt(1);}while(r);
+if(!qbevent)break;evnt(1,10,"Options.bi");}while(r);
 do{
-SUB_DATENTYP((void*)( ((char*)(__UDT_V)) + (0) ),&(pass1= 12000 ));
-if(!qbevent)break;evnt(3);}while(r);
+if(!qbevent)break;evnt(1,11,"Options.bi");}while(r);
 do{
-tqbs=qbs_new(0,0);
-qbs_set(tqbs,qbs_add(qbs_str((int32)(*(int32*)(((char*)__UDT_V)+(0)))),qbs_new_txt(" ")));
-if (is_error_pending()) goto skip2;
-makefit(tqbs);
-qbs_print(tqbs,0);
-qbs_print(nothingstring,1);
-skip2:
-qbs_free(tqbs);
+if(!qbevent)break;evnt(1,12,"Options.bi");}while(r);
+do{
+
+if (__ARRAY_STRING_SHAREDOBJECTBUFFER[2]&2){
+error(10);
+}else{
+((mem_lock*)((ptrszint*)__ARRAY_STRING_SHAREDOBJECTBUFFER)[8])->id=(++mem_lock_id);
+if (__ARRAY_STRING_SHAREDOBJECTBUFFER[2]&1){
+tmp_long=__ARRAY_STRING_SHAREDOBJECTBUFFER[5];
+while(tmp_long--) qbs_free((qbs*)((uint64*)(__ARRAY_STRING_SHAREDOBJECTBUFFER[0]))[tmp_long]);
+free((void*)(__ARRAY_STRING_SHAREDOBJECTBUFFER[0]));
+}
+__ARRAY_STRING_SHAREDOBJECTBUFFER[4]= 0 ;
+__ARRAY_STRING_SHAREDOBJECTBUFFER[5]=( 0 )-__ARRAY_STRING_SHAREDOBJECTBUFFER[4]+1;
+__ARRAY_STRING_SHAREDOBJECTBUFFER[6]=1;
+__ARRAY_STRING_SHAREDOBJECTBUFFER[0]=(ptrszint)malloc(__ARRAY_STRING_SHAREDOBJECTBUFFER[5]*8);
+if (!__ARRAY_STRING_SHAREDOBJECTBUFFER[0]) error(257);
+__ARRAY_STRING_SHAREDOBJECTBUFFER[2]|=1;
+tmp_long=__ARRAY_STRING_SHAREDOBJECTBUFFER[5];
+if (__ARRAY_STRING_SHAREDOBJECTBUFFER[2]&4){
+while(tmp_long--) ((uint64*)(__ARRAY_STRING_SHAREDOBJECTBUFFER[0]))[tmp_long]=(uint64)qbs_new_cmem(0,0);
+}else{
+while(tmp_long--) ((uint64*)(__ARRAY_STRING_SHAREDOBJECTBUFFER[0]))[tmp_long]=(uint64)qbs_new(0,0);
+}
+}
+if(!qbevent)break;evnt(1,10,"Shared.bi");}while(r);
+do{
+
+if (__ARRAY_STRING_SHAREDSTRINGBUFFER[2]&2){
+error(10);
+}else{
+((mem_lock*)((ptrszint*)__ARRAY_STRING_SHAREDSTRINGBUFFER)[8])->id=(++mem_lock_id);
+if (__ARRAY_STRING_SHAREDSTRINGBUFFER[2]&1){
+tmp_long=__ARRAY_STRING_SHAREDSTRINGBUFFER[5];
+while(tmp_long--) qbs_free((qbs*)((uint64*)(__ARRAY_STRING_SHAREDSTRINGBUFFER[0]))[tmp_long]);
+free((void*)(__ARRAY_STRING_SHAREDSTRINGBUFFER[0]));
+}
+__ARRAY_STRING_SHAREDSTRINGBUFFER[4]= 0 ;
+__ARRAY_STRING_SHAREDSTRINGBUFFER[5]=( 0 )-__ARRAY_STRING_SHAREDSTRINGBUFFER[4]+1;
+__ARRAY_STRING_SHAREDSTRINGBUFFER[6]=1;
+__ARRAY_STRING_SHAREDSTRINGBUFFER[0]=(ptrszint)malloc(__ARRAY_STRING_SHAREDSTRINGBUFFER[5]*8);
+if (!__ARRAY_STRING_SHAREDSTRINGBUFFER[0]) error(257);
+__ARRAY_STRING_SHAREDSTRINGBUFFER[2]|=1;
+tmp_long=__ARRAY_STRING_SHAREDSTRINGBUFFER[5];
+if (__ARRAY_STRING_SHAREDSTRINGBUFFER[2]&4){
+while(tmp_long--) ((uint64*)(__ARRAY_STRING_SHAREDSTRINGBUFFER[0]))[tmp_long]=(uint64)qbs_new_cmem(0,0);
+}else{
+while(tmp_long--) ((uint64*)(__ARRAY_STRING_SHAREDSTRINGBUFFER[0]))[tmp_long]=(uint64)qbs_new(0,0);
+}
+}
+if(!qbevent)break;evnt(1,11,"Shared.bi");}while(r);
+do{
+if(!qbevent)break;evnt(1,10,"ExceptionHandler.bi");}while(r);
+do{
+goto LABEL_ONFINALLY;
+if(!qbevent)break;evnt(1,12,"ExceptionHandler.bi");}while(r);
+LABEL_EXCEPTIONHANDLER:;
+if(qbevent){evnt(1,14,"ExceptionHandler.bi");r=0;}
+do{
+*__INTEGER_SHAREDEXCEPTIONHANDLE=get_error_err();
+if(!qbevent)break;evnt(1,15,"ExceptionHandler.bi");}while(r);
+do{
+if (!error_handling){error(20);}else{error_handling=0; error_err=0; return;}
+if(!qbevent)break;evnt(1,16,"ExceptionHandler.bi");}while(r);
+LABEL_ONFINALLY:;
+if(qbevent){evnt(1,18,"ExceptionHandler.bi");r=0;}
+do{
+if(!qbevent)break;evnt(1,6,"Main.bi");}while(r);
+do{
+if(!qbevent)break;evnt(1,7,"Main.bi");}while(r);
+do{
+*__INTEGER_ARGC=func__commandcount()- 1 ;
+if(!qbevent)break;evnt(1,9,"Main.bi");}while(r);
+do{
+
+if(!qbevent)break;evnt(1,11,"Main.bi");}while(r);
+S_14:;
+fornext_value2= 0 ;
+fornext_finalvalue2=*__INTEGER_ARGC;
+fornext_step2= 1 ;
+if (fornext_step2<0) fornext_step_negative2=1; else fornext_step_negative2=0;
+if (is_error_pending()) goto fornext_error2;
+goto fornext_entrylabel2;
+while(1){
+fornext_value2=fornext_step2+(*__INTEGER_EACH);
+fornext_entrylabel2:
+*__INTEGER_EACH=fornext_value2;
+if (fornext_step_negative2){
+if (fornext_value2<fornext_finalvalue2) break;
+}else{
+if (fornext_value2>fornext_finalvalue2) break;
+}
+fornext_error2:;
+if(qbevent){evnt(1,12,"Main.bi");if(r)goto S_14;}
+do{
+tmp_long=array_check((*__INTEGER_EACH- 1 )-__ARRAY_STRING_ARGV[4],__ARRAY_STRING_ARGV[5]);
+if (!is_error_pending()) qbs_set( ((qbs*)(((uint64*)(__ARRAY_STRING_ARGV[0]))[tmp_long])),func_command(*__INTEGER_EACH,0|1));
 qbs_cleanup(qbs_tmp_base,0);
-if(!qbevent)break;evnt(5);}while(r);
+if(!qbevent)break;evnt(1,13,"Main.bi");}while(r);
+fornext_continue_1:;
+}
+fornext_exit_1:;
+do{
+if(qbevent){evnt(1,16,"Main.bi");}
+exit_code=FUNC_MAIN(__INTEGER_ARGC,__ARRAY_STRING_ARGV);
+if (sub_gl_called) error(271);
+close_program=1;
+end();
+if(!qbevent)break;evnt(1,16,"Main.bi");}while(r);
 sub_end();
 return;
 }
-void SUB_DATENTYP(void*_SUB_DATENTYP_UDT_X,int32*_SUB_DATENTYP_LONG_B){
+void SUB_CATCH(int16*_SUB_CATCH_INTEGER_HANDLE){
 qbs *tqbs;
 ptrszint tmp_long;
 int32 tmp_fileno;
@@ -32,15 +130,15 @@ sf_mem_lock=mem_lock_tmp;
 sf_mem_lock->type=3;
 if (is_error_pending()) goto exit_subfunc;
 do{
-*(int32*)(((char*)_SUB_DATENTYP_UDT_X)+(0))=*_SUB_DATENTYP_LONG_B;
-if(!qbevent)break;evnt(14);}while(r);
+*_SUB_CATCH_INTEGER_HANDLE=*__INTEGER_SHAREDEXCEPTIONHANDLE;
+if(!qbevent)break;evnt(1,5,"catch.bi");}while(r);
 exit_subfunc:;
 free_mem_lock(sf_mem_lock);
 #include "free1.txt"
 if ((tmp_mem_static_pointer>=mem_static)&&(tmp_mem_static_pointer<=mem_static_limit)) mem_static_pointer=tmp_mem_static_pointer; else mem_static_pointer=mem_static;
 cmem_sp=tmp_cmem_sp;
 }
-void SUB_VWATCH(){
+void SUB_FINALLY(){
 qbs *tqbs;
 ptrszint tmp_long;
 int32 tmp_fileno;
@@ -53,9 +151,3494 @@ new_mem_lock();
 sf_mem_lock=mem_lock_tmp;
 sf_mem_lock->type=3;
 if (is_error_pending()) goto exit_subfunc;
+do{
+error_goto_line=0;
+if(!qbevent)break;evnt(1,5,"finally.bi");}while(r);
 exit_subfunc:;
 free_mem_lock(sf_mem_lock);
 #include "free2.txt"
+if ((tmp_mem_static_pointer>=mem_static)&&(tmp_mem_static_pointer<=mem_static_limit)) mem_static_pointer=tmp_mem_static_pointer; else mem_static_pointer=mem_static;
+cmem_sp=tmp_cmem_sp;
+}
+void SUB_INVOKE(int16*_SUB_INVOKE_INTEGER_THIS){
+qbs *tqbs;
+ptrszint tmp_long;
+int32 tmp_fileno;
+uint32 qbs_tmp_base=qbs_tmp_list_nexti;
+uint8 *tmp_mem_static_pointer=mem_static_pointer;
+uint32 tmp_cmem_sp=cmem_sp;
+#include "data3.txt"
+mem_lock *sf_mem_lock;
+new_mem_lock();
+sf_mem_lock=mem_lock_tmp;
+sf_mem_lock->type=3;
+if (is_error_pending()) goto exit_subfunc;
+exit_subfunc:;
+free_mem_lock(sf_mem_lock);
+#include "free3.txt"
+if ((tmp_mem_static_pointer>=mem_static)&&(tmp_mem_static_pointer<=mem_static_limit)) mem_static_pointer=tmp_mem_static_pointer; else mem_static_pointer=mem_static;
+cmem_sp=tmp_cmem_sp;
+}
+void SUB_INVOKES(qbs*_SUB_INVOKES_STRING_THIS){
+qbs *tqbs;
+ptrszint tmp_long;
+int32 tmp_fileno;
+uint32 qbs_tmp_base=qbs_tmp_list_nexti;
+uint8 *tmp_mem_static_pointer=mem_static_pointer;
+uint32 tmp_cmem_sp=cmem_sp;
+#include "data4.txt"
+mem_lock *sf_mem_lock;
+new_mem_lock();
+sf_mem_lock=mem_lock_tmp;
+sf_mem_lock->type=3;
+if (is_error_pending()) goto exit_subfunc;
+exit_subfunc:;
+free_mem_lock(sf_mem_lock);
+#include "free4.txt"
+if ((tmp_mem_static_pointer>=mem_static)&&(tmp_mem_static_pointer<=mem_static_limit)) mem_static_pointer=tmp_mem_static_pointer; else mem_static_pointer=mem_static;
+cmem_sp=tmp_cmem_sp;
+}
+int32 FUNC_STRING__ASCII_CHR_046__EQUALS(qbs*_FUNC_STRING__ASCII_CHR_046__EQUALS_STRING_THIS,qbs*_FUNC_STRING__ASCII_CHR_046__EQUALS_STRING_OTHER){
+qbs *tqbs;
+ptrszint tmp_long;
+int32 tmp_fileno;
+uint32 qbs_tmp_base=qbs_tmp_list_nexti;
+uint8 *tmp_mem_static_pointer=mem_static_pointer;
+uint32 tmp_cmem_sp=cmem_sp;
+#include "data5.txt"
+mem_lock *sf_mem_lock;
+new_mem_lock();
+sf_mem_lock=mem_lock_tmp;
+sf_mem_lock->type=3;
+if (is_error_pending()) goto exit_subfunc;
+do{
+if ((*_FUNC_STRING__ASCII_CHR_046__EQUALS_BIT1_STRING__ASCII_CHR_046__EQUALS=(qbs_equal(_FUNC_STRING__ASCII_CHR_046__EQUALS_STRING_THIS,_FUNC_STRING__ASCII_CHR_046__EQUALS_STRING_OTHER)))&1){
+*_FUNC_STRING__ASCII_CHR_046__EQUALS_BIT1_STRING__ASCII_CHR_046__EQUALS|=-2;
+}else{
+*_FUNC_STRING__ASCII_CHR_046__EQUALS_BIT1_STRING__ASCII_CHR_046__EQUALS&=1;
+}
+qbs_cleanup(qbs_tmp_base,0);
+if(!qbevent)break;evnt(1,4,"equals.bi");}while(r);
+exit_subfunc:;
+free_mem_lock(sf_mem_lock);
+#include "free5.txt"
+if ((tmp_mem_static_pointer>=mem_static)&&(tmp_mem_static_pointer<=mem_static_limit)) mem_static_pointer=tmp_mem_static_pointer; else mem_static_pointer=mem_static;
+cmem_sp=tmp_cmem_sp;
+return *_FUNC_STRING__ASCII_CHR_046__EQUALS_BIT1_STRING__ASCII_CHR_046__EQUALS;
+}
+qbs* FUNC_STRING__ASCII_CHR_046__EMPTY(){
+qbs *tqbs;
+ptrszint tmp_long;
+int32 tmp_fileno;
+uint32 qbs_tmp_base=qbs_tmp_list_nexti;
+uint8 *tmp_mem_static_pointer=mem_static_pointer;
+uint32 tmp_cmem_sp=cmem_sp;
+#include "data6.txt"
+mem_lock *sf_mem_lock;
+new_mem_lock();
+sf_mem_lock=mem_lock_tmp;
+sf_mem_lock->type=3;
+if (is_error_pending()) goto exit_subfunc;
+do{
+qbs_set(_FUNC_STRING__ASCII_CHR_046__EMPTY_STRING_STRING__ASCII_CHR_046__EMPTY,qbs_new_txt_len("",0));
+qbs_cleanup(qbs_tmp_base,0);
+if(!qbevent)break;evnt(1,4,"Empty.bi");}while(r);
+exit_subfunc:;
+free_mem_lock(sf_mem_lock);
+#include "free6.txt"
+if ((tmp_mem_static_pointer>=mem_static)&&(tmp_mem_static_pointer<=mem_static_limit)) mem_static_pointer=tmp_mem_static_pointer; else mem_static_pointer=mem_static;
+cmem_sp=tmp_cmem_sp;
+qbs_maketmp(_FUNC_STRING__ASCII_CHR_046__EMPTY_STRING_STRING__ASCII_CHR_046__EMPTY);return _FUNC_STRING__ASCII_CHR_046__EMPTY_STRING_STRING__ASCII_CHR_046__EMPTY;
+}
+int32 FUNC_STRING__ASCII_CHR_046__ISEMPTY(qbs*_FUNC_STRING__ASCII_CHR_046__ISEMPTY_STRING_THIS){
+qbs *tqbs;
+ptrszint tmp_long;
+int32 tmp_fileno;
+uint32 qbs_tmp_base=qbs_tmp_list_nexti;
+uint8 *tmp_mem_static_pointer=mem_static_pointer;
+uint32 tmp_cmem_sp=cmem_sp;
+#include "data7.txt"
+mem_lock *sf_mem_lock;
+new_mem_lock();
+sf_mem_lock=mem_lock_tmp;
+sf_mem_lock->type=3;
+if (is_error_pending()) goto exit_subfunc;
+do{
+if ((*_FUNC_STRING__ASCII_CHR_046__ISEMPTY_BIT1_STRING__ASCII_CHR_046__ISEMPTY=FUNC_STRING__ASCII_CHR_046__EQUALS(_FUNC_STRING__ASCII_CHR_046__ISEMPTY_STRING_THIS,FUNC_STRING__ASCII_CHR_046__EMPTY()))&1){
+*_FUNC_STRING__ASCII_CHR_046__ISEMPTY_BIT1_STRING__ASCII_CHR_046__ISEMPTY|=-2;
+}else{
+*_FUNC_STRING__ASCII_CHR_046__ISEMPTY_BIT1_STRING__ASCII_CHR_046__ISEMPTY&=1;
+}
+qbs_cleanup(qbs_tmp_base,0);
+if(!qbevent)break;evnt(1,7,"isEmpty.bi");}while(r);
+exit_subfunc:;
+free_mem_lock(sf_mem_lock);
+#include "free7.txt"
+if ((tmp_mem_static_pointer>=mem_static)&&(tmp_mem_static_pointer<=mem_static_limit)) mem_static_pointer=tmp_mem_static_pointer; else mem_static_pointer=mem_static;
+cmem_sp=tmp_cmem_sp;
+return *_FUNC_STRING__ASCII_CHR_046__ISEMPTY_BIT1_STRING__ASCII_CHR_046__ISEMPTY;
+}
+int32 FUNC_NEW(qbs*_FUNC_NEW_STRING_THIS){
+qbs *tqbs;
+ptrszint tmp_long;
+int32 tmp_fileno;
+uint32 qbs_tmp_base=qbs_tmp_list_nexti;
+uint8 *tmp_mem_static_pointer=mem_static_pointer;
+uint32 tmp_cmem_sp=cmem_sp;
+#include "data8.txt"
+mem_lock *sf_mem_lock;
+new_mem_lock();
+sf_mem_lock=mem_lock_tmp;
+sf_mem_lock->type=3;
+if (is_error_pending()) goto exit_subfunc;
+do{
+if(!qbevent)break;evnt(1,8,"new.bi");}while(r);
+S_24:;
+if ((qbs_cleanup(qbs_tmp_base,FUNC_STRING__ASCII_CHR_046__ISEMPTY(_FUNC_NEW_STRING_THIS)))||is_error_pending()){
+if(qbevent){evnt(1,10,"new.bi");if(r)goto S_24;}
+do{
+*_FUNC_NEW_LONG_NEW= 0 ;
+if(!qbevent)break;evnt(1,11,"new.bi");}while(r);
+do{
+goto exit_subfunc;
+if(!qbevent)break;evnt(1,12,"new.bi");}while(r);
+}
+do{
+*_FUNC_NEW_LONG_NEWITEM=func_ubound(__ARRAY_STRING_SHAREDOBJECTBUFFER,1,1)+ 1 ;
+qbs_cleanup(qbs_tmp_base,0);
+if(!qbevent)break;evnt(1,15,"new.bi");}while(r);
+S_29:;
+fornext_value9= 1 ;
+fornext_finalvalue9=*_FUNC_NEW_LONG_NEWITEM- 1 ;
+fornext_step9= 1 ;
+if (fornext_step9<0) fornext_step_negative9=1; else fornext_step_negative9=0;
+if (is_error_pending()) goto fornext_error9;
+goto fornext_entrylabel9;
+while(1){
+fornext_value9=fornext_step9+(*_FUNC_NEW_LONG_EACH);
+fornext_entrylabel9:
+*_FUNC_NEW_LONG_EACH=fornext_value9;
+if (fornext_step_negative9){
+if (fornext_value9<fornext_finalvalue9) break;
+}else{
+if (fornext_value9>fornext_finalvalue9) break;
+}
+fornext_error9:;
+if(qbevent){evnt(1,16,"new.bi");if(r)goto S_29;}
+S_30:;
+if ((qbs_cleanup(qbs_tmp_base,FUNC_STRING__ASCII_CHR_046__EQUALS(_FUNC_NEW_STRING_THIS,((qbs*)(((uint64*)(__ARRAY_STRING_SHAREDOBJECTBUFFER[0]))[array_check((*_FUNC_NEW_LONG_EACH)-__ARRAY_STRING_SHAREDOBJECTBUFFER[4],__ARRAY_STRING_SHAREDOBJECTBUFFER[5])])))))||is_error_pending()){
+if(qbevent){evnt(1,17,"new.bi");if(r)goto S_30;}
+do{
+*_FUNC_NEW_LONG_NEW=*_FUNC_NEW_LONG_EACH;
+if(!qbevent)break;evnt(1,18,"new.bi");}while(r);
+do{
+goto exit_subfunc;
+if(!qbevent)break;evnt(1,19,"new.bi");}while(r);
+}
+fornext_continue_8:;
+}
+fornext_exit_8:;
+do{
+
+if (__ARRAY_STRING_SHAREDOBJECTBUFFER[2]&2){
+error(10);
+}else{
+((mem_lock*)((ptrszint*)__ARRAY_STRING_SHAREDOBJECTBUFFER)[8])->id=(++mem_lock_id);
+static int32 preserved_elements;
+if (__ARRAY_STRING_SHAREDOBJECTBUFFER[2]&1){
+preserved_elements=__ARRAY_STRING_SHAREDOBJECTBUFFER[5];
+}
+else preserved_elements=0;
+__ARRAY_STRING_SHAREDOBJECTBUFFER[4]= 0 ;
+__ARRAY_STRING_SHAREDOBJECTBUFFER[5]=(*_FUNC_NEW_LONG_NEWITEM)-__ARRAY_STRING_SHAREDOBJECTBUFFER[4]+1;
+__ARRAY_STRING_SHAREDOBJECTBUFFER[6]=1;
+if (preserved_elements){
+static ptrszint tmp_long2;
+tmp_long2=__ARRAY_STRING_SHAREDOBJECTBUFFER[5];
+if (tmp_long2<preserved_elements){
+for(tmp_long=tmp_long2;tmp_long<preserved_elements;tmp_long++) {
+qbs_free((qbs*)((uint64*)(__ARRAY_STRING_SHAREDOBJECTBUFFER[0]))[tmp_long]);
+}}
+__ARRAY_STRING_SHAREDOBJECTBUFFER[0]=(ptrszint)realloc((void*)(__ARRAY_STRING_SHAREDOBJECTBUFFER[0]),tmp_long2*8);
+if (!__ARRAY_STRING_SHAREDOBJECTBUFFER[0]) error(257);
+if (preserved_elements<tmp_long2){
+for(tmp_long=preserved_elements;tmp_long<tmp_long2;tmp_long++){
+if (__ARRAY_STRING_SHAREDOBJECTBUFFER[2]&4){
+((uint64*)(__ARRAY_STRING_SHAREDOBJECTBUFFER[0]))[tmp_long]=(uint64)qbs_new_cmem(0,0);
+}else{
+((uint64*)(__ARRAY_STRING_SHAREDOBJECTBUFFER[0]))[tmp_long]=(uint64)qbs_new(0,0);
+}
+}
+}
+}else{
+__ARRAY_STRING_SHAREDOBJECTBUFFER[0]=(ptrszint)malloc(__ARRAY_STRING_SHAREDOBJECTBUFFER[5]*8);
+if (!__ARRAY_STRING_SHAREDOBJECTBUFFER[0]) error(257);
+__ARRAY_STRING_SHAREDOBJECTBUFFER[2]|=1;
+tmp_long=__ARRAY_STRING_SHAREDOBJECTBUFFER[5];
+if (__ARRAY_STRING_SHAREDOBJECTBUFFER[2]&4){
+while(tmp_long--) ((uint64*)(__ARRAY_STRING_SHAREDOBJECTBUFFER[0]))[tmp_long]=(uint64)qbs_new_cmem(0,0);
+}else{
+while(tmp_long--) ((uint64*)(__ARRAY_STRING_SHAREDOBJECTBUFFER[0]))[tmp_long]=(uint64)qbs_new(0,0);
+}
+}
+}
+if(!qbevent)break;evnt(1,23,"new.bi");}while(r);
+do{
+tmp_long=array_check((*_FUNC_NEW_LONG_NEWITEM)-__ARRAY_STRING_SHAREDOBJECTBUFFER[4],__ARRAY_STRING_SHAREDOBJECTBUFFER[5]);
+if (!is_error_pending()) qbs_set( ((qbs*)(((uint64*)(__ARRAY_STRING_SHAREDOBJECTBUFFER[0]))[tmp_long])),_FUNC_NEW_STRING_THIS);
+qbs_cleanup(qbs_tmp_base,0);
+if(!qbevent)break;evnt(1,24,"new.bi");}while(r);
+do{
+*_FUNC_NEW_LONG_NEW=*_FUNC_NEW_LONG_NEWITEM;
+if(!qbevent)break;evnt(1,26,"new.bi");}while(r);
+exit_subfunc:;
+free_mem_lock(sf_mem_lock);
+#include "free8.txt"
+if ((tmp_mem_static_pointer>=mem_static)&&(tmp_mem_static_pointer<=mem_static_limit)) mem_static_pointer=tmp_mem_static_pointer; else mem_static_pointer=mem_static;
+cmem_sp=tmp_cmem_sp;
+return *_FUNC_NEW_LONG_NEW;
+}
+void SUB_TRY(){
+qbs *tqbs;
+ptrszint tmp_long;
+int32 tmp_fileno;
+uint32 qbs_tmp_base=qbs_tmp_list_nexti;
+uint8 *tmp_mem_static_pointer=mem_static_pointer;
+uint32 tmp_cmem_sp=cmem_sp;
+#include "data9.txt"
+mem_lock *sf_mem_lock;
+new_mem_lock();
+sf_mem_lock=mem_lock_tmp;
+sf_mem_lock->type=3;
+if (is_error_pending()) goto exit_subfunc;
+do{
+error_goto_line=1;
+if(!qbevent)break;evnt(1,5,"try.bi");}while(r);
+exit_subfunc:;
+free_mem_lock(sf_mem_lock);
+#include "free9.txt"
+if ((tmp_mem_static_pointer>=mem_static)&&(tmp_mem_static_pointer<=mem_static_limit)) mem_static_pointer=tmp_mem_static_pointer; else mem_static_pointer=mem_static;
+cmem_sp=tmp_cmem_sp;
+}
+qbs* FUNC_VALUEOF(int32*_FUNC_VALUEOF_LONG_THIS){
+qbs *tqbs;
+ptrszint tmp_long;
+int32 tmp_fileno;
+uint32 qbs_tmp_base=qbs_tmp_list_nexti;
+uint8 *tmp_mem_static_pointer=mem_static_pointer;
+uint32 tmp_cmem_sp=cmem_sp;
+#include "data10.txt"
+mem_lock *sf_mem_lock;
+new_mem_lock();
+sf_mem_lock=mem_lock_tmp;
+sf_mem_lock->type=3;
+if (is_error_pending()) goto exit_subfunc;
+do{
+if(!qbevent)break;evnt(1,7,"valueOf.bi");}while(r);
+S_40:;
+if (((-(*_FUNC_VALUEOF_LONG_THIS< 1 )))||is_error_pending()){
+if(qbevent){evnt(1,9,"valueOf.bi");if(r)goto S_40;}
+do{
+qbs_set(_FUNC_VALUEOF_STRING_VALUEOF,FUNC_STRING__ASCII_CHR_046__EMPTY());
+qbs_cleanup(qbs_tmp_base,0);
+if(!qbevent)break;evnt(1,10,"valueOf.bi");}while(r);
+do{
+goto exit_subfunc;
+if(!qbevent)break;evnt(1,11,"valueOf.bi");}while(r);
+}
+do{
+*_FUNC_VALUEOF_LONG_OBJECTCOUNT=func_ubound(__ARRAY_STRING_SHAREDOBJECTBUFFER,1,1);
+qbs_cleanup(qbs_tmp_base,0);
+if(!qbevent)break;evnt(1,14,"valueOf.bi");}while(r);
+S_45:;
+if (((-(*_FUNC_VALUEOF_LONG_THIS>*_FUNC_VALUEOF_LONG_OBJECTCOUNT)))||is_error_pending()){
+if(qbevent){evnt(1,15,"valueOf.bi");if(r)goto S_45;}
+do{
+qbs_set(_FUNC_VALUEOF_STRING_VALUEOF,FUNC_STRING__ASCII_CHR_046__EMPTY());
+qbs_cleanup(qbs_tmp_base,0);
+if(!qbevent)break;evnt(1,16,"valueOf.bi");}while(r);
+do{
+goto exit_subfunc;
+if(!qbevent)break;evnt(1,17,"valueOf.bi");}while(r);
+}
+do{
+qbs_set(_FUNC_VALUEOF_STRING_VALUEOF,((qbs*)(((uint64*)(__ARRAY_STRING_SHAREDOBJECTBUFFER[0]))[array_check((*_FUNC_VALUEOF_LONG_THIS)-__ARRAY_STRING_SHAREDOBJECTBUFFER[4],__ARRAY_STRING_SHAREDOBJECTBUFFER[5])])));
+qbs_cleanup(qbs_tmp_base,0);
+if(!qbevent)break;evnt(1,20,"valueOf.bi");}while(r);
+exit_subfunc:;
+free_mem_lock(sf_mem_lock);
+#include "free10.txt"
+if ((tmp_mem_static_pointer>=mem_static)&&(tmp_mem_static_pointer<=mem_static_limit)) mem_static_pointer=tmp_mem_static_pointer; else mem_static_pointer=mem_static;
+cmem_sp=tmp_cmem_sp;
+qbs_maketmp(_FUNC_VALUEOF_STRING_VALUEOF);return _FUNC_VALUEOF_STRING_VALUEOF;
+}
+int32 FUNC_STRING__ASCII_CHR_046__LENGTH(qbs*_FUNC_STRING__ASCII_CHR_046__LENGTH_STRING_THIS){
+qbs *tqbs;
+ptrszint tmp_long;
+int32 tmp_fileno;
+uint32 qbs_tmp_base=qbs_tmp_list_nexti;
+uint8 *tmp_mem_static_pointer=mem_static_pointer;
+uint32 tmp_cmem_sp=cmem_sp;
+#include "data11.txt"
+mem_lock *sf_mem_lock;
+new_mem_lock();
+sf_mem_lock=mem_lock_tmp;
+sf_mem_lock->type=3;
+if (is_error_pending()) goto exit_subfunc;
+do{
+*_FUNC_STRING__ASCII_CHR_046__LENGTH_LONG_STRING__ASCII_CHR_046__LENGTH=_FUNC_STRING__ASCII_CHR_046__LENGTH_STRING_THIS->len;
+qbs_cleanup(qbs_tmp_base,0);
+if(!qbevent)break;evnt(2,4,"Length.bi");}while(r);
+exit_subfunc:;
+free_mem_lock(sf_mem_lock);
+#include "free11.txt"
+if ((tmp_mem_static_pointer>=mem_static)&&(tmp_mem_static_pointer<=mem_static_limit)) mem_static_pointer=tmp_mem_static_pointer; else mem_static_pointer=mem_static;
+cmem_sp=tmp_cmem_sp;
+return *_FUNC_STRING__ASCII_CHR_046__LENGTH_LONG_STRING__ASCII_CHR_046__LENGTH;
+}
+qbs* FUNC_STRING__ASCII_CHR_046__SUBSTR(qbs*_FUNC_STRING__ASCII_CHR_046__SUBSTR_STRING_THIS,int32*_FUNC_STRING__ASCII_CHR_046__SUBSTR_LONG_INDEX,int32*_FUNC_STRING__ASCII_CHR_046__SUBSTR_LONG_LENGTH){
+qbs *tqbs;
+ptrszint tmp_long;
+int32 tmp_fileno;
+uint32 qbs_tmp_base=qbs_tmp_list_nexti;
+uint8 *tmp_mem_static_pointer=mem_static_pointer;
+uint32 tmp_cmem_sp=cmem_sp;
+#include "data12.txt"
+mem_lock *sf_mem_lock;
+new_mem_lock();
+sf_mem_lock=mem_lock_tmp;
+sf_mem_lock->type=3;
+if (is_error_pending()) goto exit_subfunc;
+do{
+if(!qbevent)break;evnt(2,6,"Substr.bi");}while(r);
+do{
+*_FUNC_STRING__ASCII_CHR_046__SUBSTR_LONG_STRLENGTH=FUNC_STRING__ASCII_CHR_046__LENGTH(_FUNC_STRING__ASCII_CHR_046__SUBSTR_STRING_THIS);
+qbs_cleanup(qbs_tmp_base,0);
+if(!qbevent)break;evnt(2,8,"Substr.bi");}while(r);
+S_53:;
+do{
+if(qbevent){evnt(2,9,"Substr.bi");if(r)goto S_53;}
+do{
+*_FUNC_STRING__ASCII_CHR_046__SUBSTR_LONG_POSITION=*_FUNC_STRING__ASCII_CHR_046__SUBSTR_LONG_POSITION+*_FUNC_STRING__ASCII_CHR_046__SUBSTR_LONG_STRLENGTH;
+if(!qbevent)break;evnt(2,10,"Substr.bi");}while(r);
+S_55:;
+dl_continue_13:;
+}while(((-(*_FUNC_STRING__ASCII_CHR_046__SUBSTR_LONG_POSITION< 0 )))&&(!is_error_pending()));
+dl_exit_13:;
+if(qbevent){evnt(2,11,"Substr.bi");if(r)goto S_55;}
+do{
+*_FUNC_STRING__ASCII_CHR_046__SUBSTR_LONG_POSITION=*_FUNC_STRING__ASCII_CHR_046__SUBSTR_LONG_POSITION%*_FUNC_STRING__ASCII_CHR_046__SUBSTR_LONG_STRLENGTH;
+if(!qbevent)break;evnt(2,12,"Substr.bi");}while(r);
+do{
+qbs_set(_FUNC_STRING__ASCII_CHR_046__SUBSTR_STRING_STRING__ASCII_CHR_046__SUBSTR,func_mid(_FUNC_STRING__ASCII_CHR_046__SUBSTR_STRING_THIS,*_FUNC_STRING__ASCII_CHR_046__SUBSTR_LONG_POSITION+ 1 ,*_FUNC_STRING__ASCII_CHR_046__SUBSTR_LONG_LENGTH,0|1));
+qbs_cleanup(qbs_tmp_base,0);
+if(!qbevent)break;evnt(2,14,"Substr.bi");}while(r);
+exit_subfunc:;
+free_mem_lock(sf_mem_lock);
+#include "free12.txt"
+if ((tmp_mem_static_pointer>=mem_static)&&(tmp_mem_static_pointer<=mem_static_limit)) mem_static_pointer=tmp_mem_static_pointer; else mem_static_pointer=mem_static;
+cmem_sp=tmp_cmem_sp;
+qbs_maketmp(_FUNC_STRING__ASCII_CHR_046__SUBSTR_STRING_STRING__ASCII_CHR_046__SUBSTR);return _FUNC_STRING__ASCII_CHR_046__SUBSTR_STRING_STRING__ASCII_CHR_046__SUBSTR;
+}
+qbs* FUNC_STRING__ASCII_CHR_046__CHARAT(qbs*_FUNC_STRING__ASCII_CHR_046__CHARAT_STRING_THIS,int32*_FUNC_STRING__ASCII_CHR_046__CHARAT_LONG_INDEX){
+qbs *tqbs;
+ptrszint tmp_long;
+int32 tmp_fileno;
+uint32 qbs_tmp_base=qbs_tmp_list_nexti;
+uint8 *tmp_mem_static_pointer=mem_static_pointer;
+uint32 tmp_cmem_sp=cmem_sp;
+#include "data13.txt"
+mem_lock *sf_mem_lock;
+new_mem_lock();
+sf_mem_lock=mem_lock_tmp;
+sf_mem_lock->type=3;
+if (is_error_pending()) goto exit_subfunc;
+do{
+qbs_set(_FUNC_STRING__ASCII_CHR_046__CHARAT_STRING_STRING__ASCII_CHR_046__CHARAT,FUNC_STRING__ASCII_CHR_046__SUBSTR(_FUNC_STRING__ASCII_CHR_046__CHARAT_STRING_THIS,_FUNC_STRING__ASCII_CHR_046__CHARAT_LONG_INDEX,&(pass15= 1 )));
+qbs_cleanup(qbs_tmp_base,0);
+if(!qbevent)break;evnt(2,6,"CharAt.bi");}while(r);
+exit_subfunc:;
+free_mem_lock(sf_mem_lock);
+#include "free13.txt"
+if ((tmp_mem_static_pointer>=mem_static)&&(tmp_mem_static_pointer<=mem_static_limit)) mem_static_pointer=tmp_mem_static_pointer; else mem_static_pointer=mem_static;
+cmem_sp=tmp_cmem_sp;
+qbs_maketmp(_FUNC_STRING__ASCII_CHR_046__CHARAT_STRING_STRING__ASCII_CHR_046__CHARAT);return _FUNC_STRING__ASCII_CHR_046__CHARAT_STRING_STRING__ASCII_CHR_046__CHARAT;
+}
+qbs* FUNC_CHAR__ASCII_CHR_046__AT(qbs*_FUNC_CHAR__ASCII_CHR_046__AT_STRING_THIS,int32*_FUNC_CHAR__ASCII_CHR_046__AT_LONG_INDEX){
+qbs *tqbs;
+ptrszint tmp_long;
+int32 tmp_fileno;
+uint32 qbs_tmp_base=qbs_tmp_list_nexti;
+uint8 *tmp_mem_static_pointer=mem_static_pointer;
+uint32 tmp_cmem_sp=cmem_sp;
+#include "data14.txt"
+mem_lock *sf_mem_lock;
+new_mem_lock();
+sf_mem_lock=mem_lock_tmp;
+sf_mem_lock->type=3;
+if (is_error_pending()) goto exit_subfunc;
+do{
+qbs_set(_FUNC_CHAR__ASCII_CHR_046__AT_STRING_CHAR__ASCII_CHR_046__AT,FUNC_STRING__ASCII_CHR_046__CHARAT(_FUNC_CHAR__ASCII_CHR_046__AT_STRING_THIS,_FUNC_CHAR__ASCII_CHR_046__AT_LONG_INDEX));
+qbs_cleanup(qbs_tmp_base,0);
+if(!qbevent)break;evnt(2,6,"at.bi");}while(r);
+exit_subfunc:;
+free_mem_lock(sf_mem_lock);
+#include "free14.txt"
+if ((tmp_mem_static_pointer>=mem_static)&&(tmp_mem_static_pointer<=mem_static_limit)) mem_static_pointer=tmp_mem_static_pointer; else mem_static_pointer=mem_static;
+cmem_sp=tmp_cmem_sp;
+qbs_maketmp(_FUNC_CHAR__ASCII_CHR_046__AT_STRING_CHAR__ASCII_CHR_046__AT);return _FUNC_CHAR__ASCII_CHR_046__AT_STRING_CHAR__ASCII_CHR_046__AT;
+}
+qbs* FUNC_CHAR__ASCII_CHR_046__FROM(int16*_FUNC_CHAR__ASCII_CHR_046__FROM_INTEGER_THIS){
+qbs *tqbs;
+ptrszint tmp_long;
+int32 tmp_fileno;
+uint32 qbs_tmp_base=qbs_tmp_list_nexti;
+uint8 *tmp_mem_static_pointer=mem_static_pointer;
+uint32 tmp_cmem_sp=cmem_sp;
+#include "data15.txt"
+mem_lock *sf_mem_lock;
+new_mem_lock();
+sf_mem_lock=mem_lock_tmp;
+sf_mem_lock->type=3;
+if (is_error_pending()) goto exit_subfunc;
+do{
+qbs_set(_FUNC_CHAR__ASCII_CHR_046__FROM_STRING_CHAR__ASCII_CHR_046__FROM,func_chr(*_FUNC_CHAR__ASCII_CHR_046__FROM_INTEGER_THIS& 255 ));
+qbs_cleanup(qbs_tmp_base,0);
+if(!qbevent)break;evnt(2,4,"from.bi");}while(r);
+exit_subfunc:;
+free_mem_lock(sf_mem_lock);
+#include "free15.txt"
+if ((tmp_mem_static_pointer>=mem_static)&&(tmp_mem_static_pointer<=mem_static_limit)) mem_static_pointer=tmp_mem_static_pointer; else mem_static_pointer=mem_static;
+cmem_sp=tmp_cmem_sp;
+qbs_maketmp(_FUNC_CHAR__ASCII_CHR_046__FROM_STRING_CHAR__ASCII_CHR_046__FROM);return _FUNC_CHAR__ASCII_CHR_046__FROM_STRING_CHAR__ASCII_CHR_046__FROM;
+}
+qbs* FUNC_CHAR__ASCII_CHR_046__ESCAPE(){
+qbs *tqbs;
+ptrszint tmp_long;
+int32 tmp_fileno;
+uint32 qbs_tmp_base=qbs_tmp_list_nexti;
+uint8 *tmp_mem_static_pointer=mem_static_pointer;
+uint32 tmp_cmem_sp=cmem_sp;
+#include "data16.txt"
+mem_lock *sf_mem_lock;
+new_mem_lock();
+sf_mem_lock=mem_lock_tmp;
+sf_mem_lock->type=3;
+if (is_error_pending()) goto exit_subfunc;
+do{
+qbs_set(_FUNC_CHAR__ASCII_CHR_046__ESCAPE_STRING_CHAR__ASCII_CHR_046__ESCAPE,FUNC_CHAR__ASCII_CHR_046__FROM(&(pass17= 27 )));
+qbs_cleanup(qbs_tmp_base,0);
+if(!qbevent)break;evnt(2,6,"Escape.bi");}while(r);
+exit_subfunc:;
+free_mem_lock(sf_mem_lock);
+#include "free16.txt"
+if ((tmp_mem_static_pointer>=mem_static)&&(tmp_mem_static_pointer<=mem_static_limit)) mem_static_pointer=tmp_mem_static_pointer; else mem_static_pointer=mem_static;
+cmem_sp=tmp_cmem_sp;
+qbs_maketmp(_FUNC_CHAR__ASCII_CHR_046__ESCAPE_STRING_CHAR__ASCII_CHR_046__ESCAPE);return _FUNC_CHAR__ASCII_CHR_046__ESCAPE_STRING_CHAR__ASCII_CHR_046__ESCAPE;
+}
+qbs* FUNC_CHAR__ASCII_CHR_046__NEWLINE(){
+qbs *tqbs;
+ptrszint tmp_long;
+int32 tmp_fileno;
+uint32 qbs_tmp_base=qbs_tmp_list_nexti;
+uint8 *tmp_mem_static_pointer=mem_static_pointer;
+uint32 tmp_cmem_sp=cmem_sp;
+#include "data17.txt"
+mem_lock *sf_mem_lock;
+new_mem_lock();
+sf_mem_lock=mem_lock_tmp;
+sf_mem_lock->type=3;
+if (is_error_pending()) goto exit_subfunc;
+do{
+qbs_set(_FUNC_CHAR__ASCII_CHR_046__NEWLINE_STRING_CHAR__ASCII_CHR_046__NEWLINE,FUNC_CHAR__ASCII_CHR_046__FROM(&(pass18= 10 )));
+qbs_cleanup(qbs_tmp_base,0);
+if(!qbevent)break;evnt(2,6,"Newline.bi");}while(r);
+exit_subfunc:;
+free_mem_lock(sf_mem_lock);
+#include "free17.txt"
+if ((tmp_mem_static_pointer>=mem_static)&&(tmp_mem_static_pointer<=mem_static_limit)) mem_static_pointer=tmp_mem_static_pointer; else mem_static_pointer=mem_static;
+cmem_sp=tmp_cmem_sp;
+qbs_maketmp(_FUNC_CHAR__ASCII_CHR_046__NEWLINE_STRING_CHAR__ASCII_CHR_046__NEWLINE);return _FUNC_CHAR__ASCII_CHR_046__NEWLINE_STRING_CHAR__ASCII_CHR_046__NEWLINE;
+}
+qbs* FUNC_CHAR__ASCII_CHR_046__NOBR(){
+qbs *tqbs;
+ptrszint tmp_long;
+int32 tmp_fileno;
+uint32 qbs_tmp_base=qbs_tmp_list_nexti;
+uint8 *tmp_mem_static_pointer=mem_static_pointer;
+uint32 tmp_cmem_sp=cmem_sp;
+#include "data18.txt"
+mem_lock *sf_mem_lock;
+new_mem_lock();
+sf_mem_lock=mem_lock_tmp;
+sf_mem_lock->type=3;
+if (is_error_pending()) goto exit_subfunc;
+do{
+qbs_set(_FUNC_CHAR__ASCII_CHR_046__NOBR_STRING_CHAR__ASCII_CHR_046__NOBR,FUNC_CHAR__ASCII_CHR_046__FROM(&(pass19= 255 )));
+qbs_cleanup(qbs_tmp_base,0);
+if(!qbevent)break;evnt(2,6,"NoBr.bi");}while(r);
+exit_subfunc:;
+free_mem_lock(sf_mem_lock);
+#include "free18.txt"
+if ((tmp_mem_static_pointer>=mem_static)&&(tmp_mem_static_pointer<=mem_static_limit)) mem_static_pointer=tmp_mem_static_pointer; else mem_static_pointer=mem_static;
+cmem_sp=tmp_cmem_sp;
+qbs_maketmp(_FUNC_CHAR__ASCII_CHR_046__NOBR_STRING_CHAR__ASCII_CHR_046__NOBR);return _FUNC_CHAR__ASCII_CHR_046__NOBR_STRING_CHAR__ASCII_CHR_046__NOBR;
+}
+qbs* FUNC_CHAR__ASCII_CHR_046__NOBREAK(){
+qbs *tqbs;
+ptrszint tmp_long;
+int32 tmp_fileno;
+uint32 qbs_tmp_base=qbs_tmp_list_nexti;
+uint8 *tmp_mem_static_pointer=mem_static_pointer;
+uint32 tmp_cmem_sp=cmem_sp;
+#include "data19.txt"
+mem_lock *sf_mem_lock;
+new_mem_lock();
+sf_mem_lock=mem_lock_tmp;
+sf_mem_lock->type=3;
+if (is_error_pending()) goto exit_subfunc;
+do{
+qbs_set(_FUNC_CHAR__ASCII_CHR_046__NOBREAK_STRING_CHAR__ASCII_CHR_046__NOBREAK,FUNC_CHAR__ASCII_CHR_046__FROM(&(pass20= 255 )));
+qbs_cleanup(qbs_tmp_base,0);
+if(!qbevent)break;evnt(2,6,"NoBreak.bi");}while(r);
+exit_subfunc:;
+free_mem_lock(sf_mem_lock);
+#include "free19.txt"
+if ((tmp_mem_static_pointer>=mem_static)&&(tmp_mem_static_pointer<=mem_static_limit)) mem_static_pointer=tmp_mem_static_pointer; else mem_static_pointer=mem_static;
+cmem_sp=tmp_cmem_sp;
+qbs_maketmp(_FUNC_CHAR__ASCII_CHR_046__NOBREAK_STRING_CHAR__ASCII_CHR_046__NOBREAK);return _FUNC_CHAR__ASCII_CHR_046__NOBREAK_STRING_CHAR__ASCII_CHR_046__NOBREAK;
+}
+qbs* FUNC_CHAR__ASCII_CHR_046__NULL(){
+qbs *tqbs;
+ptrszint tmp_long;
+int32 tmp_fileno;
+uint32 qbs_tmp_base=qbs_tmp_list_nexti;
+uint8 *tmp_mem_static_pointer=mem_static_pointer;
+uint32 tmp_cmem_sp=cmem_sp;
+#include "data20.txt"
+mem_lock *sf_mem_lock;
+new_mem_lock();
+sf_mem_lock=mem_lock_tmp;
+sf_mem_lock->type=3;
+if (is_error_pending()) goto exit_subfunc;
+do{
+qbs_set(_FUNC_CHAR__ASCII_CHR_046__NULL_STRING_CHAR__ASCII_CHR_046__NULL,FUNC_CHAR__ASCII_CHR_046__FROM(&(pass21= 0 )));
+qbs_cleanup(qbs_tmp_base,0);
+if(!qbevent)break;evnt(2,6,"Null.bi");}while(r);
+exit_subfunc:;
+free_mem_lock(sf_mem_lock);
+#include "free20.txt"
+if ((tmp_mem_static_pointer>=mem_static)&&(tmp_mem_static_pointer<=mem_static_limit)) mem_static_pointer=tmp_mem_static_pointer; else mem_static_pointer=mem_static;
+cmem_sp=tmp_cmem_sp;
+qbs_maketmp(_FUNC_CHAR__ASCII_CHR_046__NULL_STRING_CHAR__ASCII_CHR_046__NULL);return _FUNC_CHAR__ASCII_CHR_046__NULL_STRING_CHAR__ASCII_CHR_046__NULL;
+}
+qbs* FUNC_CHAR__ASCII_CHR_046__RETURN(){
+qbs *tqbs;
+ptrszint tmp_long;
+int32 tmp_fileno;
+uint32 qbs_tmp_base=qbs_tmp_list_nexti;
+uint8 *tmp_mem_static_pointer=mem_static_pointer;
+uint32 tmp_cmem_sp=cmem_sp;
+#include "data21.txt"
+mem_lock *sf_mem_lock;
+new_mem_lock();
+sf_mem_lock=mem_lock_tmp;
+sf_mem_lock->type=3;
+if (is_error_pending()) goto exit_subfunc;
+do{
+qbs_set(_FUNC_CHAR__ASCII_CHR_046__RETURN_STRING_CHAR__ASCII_CHR_046__RETURN,FUNC_CHAR__ASCII_CHR_046__FROM(&(pass22= 13 )));
+qbs_cleanup(qbs_tmp_base,0);
+if(!qbevent)break;evnt(2,6,"Return.bi");}while(r);
+exit_subfunc:;
+free_mem_lock(sf_mem_lock);
+#include "free21.txt"
+if ((tmp_mem_static_pointer>=mem_static)&&(tmp_mem_static_pointer<=mem_static_limit)) mem_static_pointer=tmp_mem_static_pointer; else mem_static_pointer=mem_static;
+cmem_sp=tmp_cmem_sp;
+qbs_maketmp(_FUNC_CHAR__ASCII_CHR_046__RETURN_STRING_CHAR__ASCII_CHR_046__RETURN);return _FUNC_CHAR__ASCII_CHR_046__RETURN_STRING_CHAR__ASCII_CHR_046__RETURN;
+}
+qbs* FUNC_CHAR__ASCII_CHR_046__SPACE(){
+qbs *tqbs;
+ptrszint tmp_long;
+int32 tmp_fileno;
+uint32 qbs_tmp_base=qbs_tmp_list_nexti;
+uint8 *tmp_mem_static_pointer=mem_static_pointer;
+uint32 tmp_cmem_sp=cmem_sp;
+#include "data22.txt"
+mem_lock *sf_mem_lock;
+new_mem_lock();
+sf_mem_lock=mem_lock_tmp;
+sf_mem_lock->type=3;
+if (is_error_pending()) goto exit_subfunc;
+do{
+qbs_set(_FUNC_CHAR__ASCII_CHR_046__SPACE_STRING_CHAR__ASCII_CHR_046__SPACE,FUNC_CHAR__ASCII_CHR_046__FROM(&(pass23= 32 )));
+qbs_cleanup(qbs_tmp_base,0);
+if(!qbevent)break;evnt(2,6,"Space.bi");}while(r);
+exit_subfunc:;
+free_mem_lock(sf_mem_lock);
+#include "free22.txt"
+if ((tmp_mem_static_pointer>=mem_static)&&(tmp_mem_static_pointer<=mem_static_limit)) mem_static_pointer=tmp_mem_static_pointer; else mem_static_pointer=mem_static;
+cmem_sp=tmp_cmem_sp;
+qbs_maketmp(_FUNC_CHAR__ASCII_CHR_046__SPACE_STRING_CHAR__ASCII_CHR_046__SPACE);return _FUNC_CHAR__ASCII_CHR_046__SPACE_STRING_CHAR__ASCII_CHR_046__SPACE;
+}
+qbs* FUNC_CHAR__ASCII_CHR_046__TABULATOR(){
+qbs *tqbs;
+ptrszint tmp_long;
+int32 tmp_fileno;
+uint32 qbs_tmp_base=qbs_tmp_list_nexti;
+uint8 *tmp_mem_static_pointer=mem_static_pointer;
+uint32 tmp_cmem_sp=cmem_sp;
+#include "data23.txt"
+mem_lock *sf_mem_lock;
+new_mem_lock();
+sf_mem_lock=mem_lock_tmp;
+sf_mem_lock->type=3;
+if (is_error_pending()) goto exit_subfunc;
+do{
+qbs_set(_FUNC_CHAR__ASCII_CHR_046__TABULATOR_STRING_CHAR__ASCII_CHR_046__TABULATOR,FUNC_CHAR__ASCII_CHR_046__FROM(&(pass24= 9 )));
+qbs_cleanup(qbs_tmp_base,0);
+if(!qbevent)break;evnt(2,6,"Tabulator.bi");}while(r);
+exit_subfunc:;
+free_mem_lock(sf_mem_lock);
+#include "free23.txt"
+if ((tmp_mem_static_pointer>=mem_static)&&(tmp_mem_static_pointer<=mem_static_limit)) mem_static_pointer=tmp_mem_static_pointer; else mem_static_pointer=mem_static;
+cmem_sp=tmp_cmem_sp;
+qbs_maketmp(_FUNC_CHAR__ASCII_CHR_046__TABULATOR_STRING_CHAR__ASCII_CHR_046__TABULATOR);return _FUNC_CHAR__ASCII_CHR_046__TABULATOR_STRING_CHAR__ASCII_CHR_046__TABULATOR;
+}
+qbs* FUNC_CHAR__ASCII_CHR_046__ZERO(){
+qbs *tqbs;
+ptrszint tmp_long;
+int32 tmp_fileno;
+uint32 qbs_tmp_base=qbs_tmp_list_nexti;
+uint8 *tmp_mem_static_pointer=mem_static_pointer;
+uint32 tmp_cmem_sp=cmem_sp;
+#include "data24.txt"
+mem_lock *sf_mem_lock;
+new_mem_lock();
+sf_mem_lock=mem_lock_tmp;
+sf_mem_lock->type=3;
+if (is_error_pending()) goto exit_subfunc;
+do{
+qbs_set(_FUNC_CHAR__ASCII_CHR_046__ZERO_STRING_CHAR__ASCII_CHR_046__ZERO,FUNC_CHAR__ASCII_CHR_046__FROM(&(pass25= 48 )));
+qbs_cleanup(qbs_tmp_base,0);
+if(!qbevent)break;evnt(2,6,"Zero.bi");}while(r);
+exit_subfunc:;
+free_mem_lock(sf_mem_lock);
+#include "free24.txt"
+if ((tmp_mem_static_pointer>=mem_static)&&(tmp_mem_static_pointer<=mem_static_limit)) mem_static_pointer=tmp_mem_static_pointer; else mem_static_pointer=mem_static;
+cmem_sp=tmp_cmem_sp;
+qbs_maketmp(_FUNC_CHAR__ASCII_CHR_046__ZERO_STRING_CHAR__ASCII_CHR_046__ZERO);return _FUNC_CHAR__ASCII_CHR_046__ZERO_STRING_CHAR__ASCII_CHR_046__ZERO;
+}
+void SUB_CONSOLE__ASCII_CHR_046__NEWLINE(){
+qbs *tqbs;
+ptrszint tmp_long;
+int32 tmp_fileno;
+uint32 qbs_tmp_base=qbs_tmp_list_nexti;
+uint8 *tmp_mem_static_pointer=mem_static_pointer;
+uint32 tmp_cmem_sp=cmem_sp;
+#include "data25.txt"
+mem_lock *sf_mem_lock;
+new_mem_lock();
+sf_mem_lock=mem_lock_tmp;
+sf_mem_lock->type=3;
+if (is_error_pending()) goto exit_subfunc;
+do{
+tqbs=qbs_new(0,0);
+qbs_print(nothingstring,1);
+skip26:
+qbs_free(tqbs);
+qbs_cleanup(qbs_tmp_base,0);
+if(!qbevent)break;evnt(2,4,"Newline.bi");}while(r);
+exit_subfunc:;
+free_mem_lock(sf_mem_lock);
+#include "free25.txt"
+if ((tmp_mem_static_pointer>=mem_static)&&(tmp_mem_static_pointer<=mem_static_limit)) mem_static_pointer=tmp_mem_static_pointer; else mem_static_pointer=mem_static;
+cmem_sp=tmp_cmem_sp;
+}
+qbs* FUNC_CONSOLE__ASCII_CHR_046__READ(){
+qbs *tqbs;
+ptrszint tmp_long;
+int32 tmp_fileno;
+uint32 qbs_tmp_base=qbs_tmp_list_nexti;
+uint8 *tmp_mem_static_pointer=mem_static_pointer;
+uint32 tmp_cmem_sp=cmem_sp;
+#include "data26.txt"
+mem_lock *sf_mem_lock;
+new_mem_lock();
+sf_mem_lock=mem_lock_tmp;
+sf_mem_lock->type=3;
+if (is_error_pending()) goto exit_subfunc;
+do{
+if(!qbevent)break;evnt(2,4,"read.bi");}while(r);
+do{
+qbs_input_variabletypes[1]=ISSTRING+512;
+qbs_input_variableoffsets[1]=_FUNC_CONSOLE__ASCII_CHR_046__READ_STRING_THIS;
+qbs_input(1,0);
+if (stop_program) end();
+qbs_cleanup(qbs_tmp_base,0);
+if(!qbevent)break;evnt(2,5,"read.bi");}while(r);
+do{
+qbs_set(_FUNC_CONSOLE__ASCII_CHR_046__READ_STRING_CONSOLE__ASCII_CHR_046__READ,_FUNC_CONSOLE__ASCII_CHR_046__READ_STRING_THIS);
+qbs_cleanup(qbs_tmp_base,0);
+if(!qbevent)break;evnt(2,6,"read.bi");}while(r);
+exit_subfunc:;
+free_mem_lock(sf_mem_lock);
+#include "free26.txt"
+if ((tmp_mem_static_pointer>=mem_static)&&(tmp_mem_static_pointer<=mem_static_limit)) mem_static_pointer=tmp_mem_static_pointer; else mem_static_pointer=mem_static;
+cmem_sp=tmp_cmem_sp;
+qbs_maketmp(_FUNC_CONSOLE__ASCII_CHR_046__READ_STRING_CONSOLE__ASCII_CHR_046__READ);return _FUNC_CONSOLE__ASCII_CHR_046__READ_STRING_CONSOLE__ASCII_CHR_046__READ;
+}
+qbs* FUNC_STRING__ASCII_CHR_046__CONCAT(qbs*_FUNC_STRING__ASCII_CHR_046__CONCAT_STRING_THIS,qbs*_FUNC_STRING__ASCII_CHR_046__CONCAT_STRING_OTHER){
+qbs *tqbs;
+ptrszint tmp_long;
+int32 tmp_fileno;
+uint32 qbs_tmp_base=qbs_tmp_list_nexti;
+uint8 *tmp_mem_static_pointer=mem_static_pointer;
+uint32 tmp_cmem_sp=cmem_sp;
+#include "data27.txt"
+mem_lock *sf_mem_lock;
+new_mem_lock();
+sf_mem_lock=mem_lock_tmp;
+sf_mem_lock->type=3;
+if (is_error_pending()) goto exit_subfunc;
+do{
+qbs_set(_FUNC_STRING__ASCII_CHR_046__CONCAT_STRING_STRING__ASCII_CHR_046__CONCAT,qbs_add(_FUNC_STRING__ASCII_CHR_046__CONCAT_STRING_THIS,_FUNC_STRING__ASCII_CHR_046__CONCAT_STRING_OTHER));
+qbs_cleanup(qbs_tmp_base,0);
+if(!qbevent)break;evnt(2,4,"concat.bi");}while(r);
+exit_subfunc:;
+free_mem_lock(sf_mem_lock);
+#include "free27.txt"
+if ((tmp_mem_static_pointer>=mem_static)&&(tmp_mem_static_pointer<=mem_static_limit)) mem_static_pointer=tmp_mem_static_pointer; else mem_static_pointer=mem_static;
+cmem_sp=tmp_cmem_sp;
+qbs_maketmp(_FUNC_STRING__ASCII_CHR_046__CONCAT_STRING_STRING__ASCII_CHR_046__CONCAT);return _FUNC_STRING__ASCII_CHR_046__CONCAT_STRING_STRING__ASCII_CHR_046__CONCAT;
+}
+qbs* FUNC_STRING__ASCII_CHR_046__CONCAT2(qbs*_FUNC_STRING__ASCII_CHR_046__CONCAT2_STRING_THIS,qbs*_FUNC_STRING__ASCII_CHR_046__CONCAT2_STRING_FIRST,qbs*_FUNC_STRING__ASCII_CHR_046__CONCAT2_STRING_SECOND){
+qbs *tqbs;
+ptrszint tmp_long;
+int32 tmp_fileno;
+uint32 qbs_tmp_base=qbs_tmp_list_nexti;
+uint8 *tmp_mem_static_pointer=mem_static_pointer;
+uint32 tmp_cmem_sp=cmem_sp;
+#include "data28.txt"
+mem_lock *sf_mem_lock;
+new_mem_lock();
+sf_mem_lock=mem_lock_tmp;
+sf_mem_lock->type=3;
+if (is_error_pending()) goto exit_subfunc;
+do{
+qbs_set(_FUNC_STRING__ASCII_CHR_046__CONCAT2_STRING_STRING__ASCII_CHR_046__CONCAT2,qbs_add(qbs_add(_FUNC_STRING__ASCII_CHR_046__CONCAT2_STRING_THIS,_FUNC_STRING__ASCII_CHR_046__CONCAT2_STRING_FIRST),_FUNC_STRING__ASCII_CHR_046__CONCAT2_STRING_SECOND));
+qbs_cleanup(qbs_tmp_base,0);
+if(!qbevent)break;evnt(2,8,"concat.bi");}while(r);
+exit_subfunc:;
+free_mem_lock(sf_mem_lock);
+#include "free28.txt"
+if ((tmp_mem_static_pointer>=mem_static)&&(tmp_mem_static_pointer<=mem_static_limit)) mem_static_pointer=tmp_mem_static_pointer; else mem_static_pointer=mem_static;
+cmem_sp=tmp_cmem_sp;
+qbs_maketmp(_FUNC_STRING__ASCII_CHR_046__CONCAT2_STRING_STRING__ASCII_CHR_046__CONCAT2);return _FUNC_STRING__ASCII_CHR_046__CONCAT2_STRING_STRING__ASCII_CHR_046__CONCAT2;
+}
+qbs* FUNC_STRING__ASCII_CHR_046__CONCAT3(qbs*_FUNC_STRING__ASCII_CHR_046__CONCAT3_STRING_THIS,qbs*_FUNC_STRING__ASCII_CHR_046__CONCAT3_STRING_FIRST,qbs*_FUNC_STRING__ASCII_CHR_046__CONCAT3_STRING_SECOND,qbs*_FUNC_STRING__ASCII_CHR_046__CONCAT3_STRING_THIRD){
+qbs *tqbs;
+ptrszint tmp_long;
+int32 tmp_fileno;
+uint32 qbs_tmp_base=qbs_tmp_list_nexti;
+uint8 *tmp_mem_static_pointer=mem_static_pointer;
+uint32 tmp_cmem_sp=cmem_sp;
+#include "data29.txt"
+mem_lock *sf_mem_lock;
+new_mem_lock();
+sf_mem_lock=mem_lock_tmp;
+sf_mem_lock->type=3;
+if (is_error_pending()) goto exit_subfunc;
+do{
+qbs_set(_FUNC_STRING__ASCII_CHR_046__CONCAT3_STRING_STRING__ASCII_CHR_046__CONCAT3,qbs_add(qbs_add(qbs_add(_FUNC_STRING__ASCII_CHR_046__CONCAT3_STRING_THIS,_FUNC_STRING__ASCII_CHR_046__CONCAT3_STRING_FIRST),_FUNC_STRING__ASCII_CHR_046__CONCAT3_STRING_SECOND),_FUNC_STRING__ASCII_CHR_046__CONCAT3_STRING_THIRD));
+qbs_cleanup(qbs_tmp_base,0);
+if(!qbevent)break;evnt(2,12,"concat.bi");}while(r);
+exit_subfunc:;
+free_mem_lock(sf_mem_lock);
+#include "free29.txt"
+if ((tmp_mem_static_pointer>=mem_static)&&(tmp_mem_static_pointer<=mem_static_limit)) mem_static_pointer=tmp_mem_static_pointer; else mem_static_pointer=mem_static;
+cmem_sp=tmp_cmem_sp;
+qbs_maketmp(_FUNC_STRING__ASCII_CHR_046__CONCAT3_STRING_STRING__ASCII_CHR_046__CONCAT3);return _FUNC_STRING__ASCII_CHR_046__CONCAT3_STRING_STRING__ASCII_CHR_046__CONCAT3;
+}
+qbs* FUNC_INTEGER__ASCII_CHR_046__PACK(int16*_FUNC_INTEGER__ASCII_CHR_046__PACK_INTEGER_THIS){
+qbs *tqbs;
+ptrszint tmp_long;
+int32 tmp_fileno;
+uint32 qbs_tmp_base=qbs_tmp_list_nexti;
+uint8 *tmp_mem_static_pointer=mem_static_pointer;
+uint32 tmp_cmem_sp=cmem_sp;
+#include "data30.txt"
+mem_lock *sf_mem_lock;
+new_mem_lock();
+sf_mem_lock=mem_lock_tmp;
+sf_mem_lock->type=3;
+if (is_error_pending()) goto exit_subfunc;
+do{
+qbs_set(_FUNC_INTEGER__ASCII_CHR_046__PACK_STRING_INTEGER__ASCII_CHR_046__PACK,i2string(*_FUNC_INTEGER__ASCII_CHR_046__PACK_INTEGER_THIS));
+qbs_cleanup(qbs_tmp_base,0);
+if(!qbevent)break;evnt(2,4,"pack.bi");}while(r);
+exit_subfunc:;
+free_mem_lock(sf_mem_lock);
+#include "free30.txt"
+if ((tmp_mem_static_pointer>=mem_static)&&(tmp_mem_static_pointer<=mem_static_limit)) mem_static_pointer=tmp_mem_static_pointer; else mem_static_pointer=mem_static;
+cmem_sp=tmp_cmem_sp;
+qbs_maketmp(_FUNC_INTEGER__ASCII_CHR_046__PACK_STRING_INTEGER__ASCII_CHR_046__PACK);return _FUNC_INTEGER__ASCII_CHR_046__PACK_STRING_INTEGER__ASCII_CHR_046__PACK;
+}
+qbs* FUNC_CONSOLE__ASCII_CHR_046__INTERNAL__ASCII_CHR_046__EMPTYKEY(){
+qbs *tqbs;
+ptrszint tmp_long;
+int32 tmp_fileno;
+uint32 qbs_tmp_base=qbs_tmp_list_nexti;
+uint8 *tmp_mem_static_pointer=mem_static_pointer;
+uint32 tmp_cmem_sp=cmem_sp;
+#include "data31.txt"
+mem_lock *sf_mem_lock;
+new_mem_lock();
+sf_mem_lock=mem_lock_tmp;
+sf_mem_lock->type=3;
+if (is_error_pending()) goto exit_subfunc;
+do{
+qbs_set(_FUNC_CONSOLE__ASCII_CHR_046__INTERNAL__ASCII_CHR_046__EMPTYKEY_STRING_CONSOLE__ASCII_CHR_046__INTERNAL__ASCII_CHR_046__EMPTYKEY,FUNC_INTEGER__ASCII_CHR_046__PACK(&(pass36= 0 )));
+qbs_cleanup(qbs_tmp_base,0);
+if(!qbevent)break;evnt(2,6,"EmptyKey.bi");}while(r);
+exit_subfunc:;
+free_mem_lock(sf_mem_lock);
+#include "free31.txt"
+if ((tmp_mem_static_pointer>=mem_static)&&(tmp_mem_static_pointer<=mem_static_limit)) mem_static_pointer=tmp_mem_static_pointer; else mem_static_pointer=mem_static;
+cmem_sp=tmp_cmem_sp;
+qbs_maketmp(_FUNC_CONSOLE__ASCII_CHR_046__INTERNAL__ASCII_CHR_046__EMPTYKEY_STRING_CONSOLE__ASCII_CHR_046__INTERNAL__ASCII_CHR_046__EMPTYKEY);return _FUNC_CONSOLE__ASCII_CHR_046__INTERNAL__ASCII_CHR_046__EMPTYKEY_STRING_CONSOLE__ASCII_CHR_046__INTERNAL__ASCII_CHR_046__EMPTYKEY;
+}
+qbs* FUNC_CONSOLE__ASCII_CHR_046__READKEY(int16*_FUNC_CONSOLE__ASCII_CHR_046__READKEY_INTEGER_SHOULDWAIT){
+qbs *tqbs;
+ptrszint tmp_long;
+int32 tmp_fileno;
+uint32 qbs_tmp_base=qbs_tmp_list_nexti;
+uint8 *tmp_mem_static_pointer=mem_static_pointer;
+uint32 tmp_cmem_sp=cmem_sp;
+#include "data32.txt"
+mem_lock *sf_mem_lock;
+new_mem_lock();
+sf_mem_lock=mem_lock_tmp;
+sf_mem_lock->type=3;
+if (is_error_pending()) goto exit_subfunc;
+do{
+if(!qbevent)break;evnt(2,9,"readKey.bi");}while(r);
+do{
+qbs_set(_FUNC_CONSOLE__ASCII_CHR_046__READKEY_STRING_EMPTY,FUNC_CONSOLE__ASCII_CHR_046__INTERNAL__ASCII_CHR_046__EMPTYKEY());
+qbs_cleanup(qbs_tmp_base,0);
+if(!qbevent)break;evnt(2,11,"readKey.bi");}while(r);
+S_81:;
+do{
+if(qbevent){evnt(2,12,"readKey.bi");if(r)goto S_81;}
+do{
+qbs_set(_FUNC_CONSOLE__ASCII_CHR_046__READKEY_STRING_THISKEY,FUNC_STRING__ASCII_CHR_046__CONCAT(qbs_inkey(),_FUNC_CONSOLE__ASCII_CHR_046__READKEY_STRING_EMPTY));
+qbs_cleanup(qbs_tmp_base,0);
+if(!qbevent)break;evnt(2,13,"readKey.bi");}while(r);
+do{
+qbs_set(_FUNC_CONSOLE__ASCII_CHR_046__READKEY_STRING_THIS,FUNC_STRING__ASCII_CHR_046__SUBSTR(_FUNC_CONSOLE__ASCII_CHR_046__READKEY_STRING_THISKEY,&(pass38= 0 ),&(pass39= 2 )));
+qbs_cleanup(qbs_tmp_base,0);
+if(!qbevent)break;evnt(2,14,"readKey.bi");}while(r);
+S_84:;
+if ((FUNC_BOOLEAN__ASCII_CHR_046__ISFALSE(&(pass40=*_FUNC_CONSOLE__ASCII_CHR_046__READKEY_INTEGER_SHOULDWAIT)))||is_error_pending()){
+if(qbevent){evnt(2,15,"readKey.bi");if(r)goto S_84;}
+do{
+goto dl_exit_37;
+if(!qbevent)break;evnt(2,15,"readKey.bi");}while(r);
+}
+S_87:;
+dl_continue_37:;
+}while((qbs_cleanup(qbs_tmp_base,FUNC_STRING__ASCII_CHR_046__EQUALS(_FUNC_CONSOLE__ASCII_CHR_046__READKEY_STRING_THIS,_FUNC_CONSOLE__ASCII_CHR_046__READKEY_STRING_EMPTY)))&&(!is_error_pending()));
+dl_exit_37:;
+if(qbevent){evnt(2,16,"readKey.bi");if(r)goto S_87;}
+do{
+qbs_set(_FUNC_CONSOLE__ASCII_CHR_046__READKEY_STRING_CONSOLE__ASCII_CHR_046__READKEY,_FUNC_CONSOLE__ASCII_CHR_046__READKEY_STRING_THIS);
+qbs_cleanup(qbs_tmp_base,0);
+if(!qbevent)break;evnt(2,18,"readKey.bi");}while(r);
+exit_subfunc:;
+free_mem_lock(sf_mem_lock);
+#include "free32.txt"
+if ((tmp_mem_static_pointer>=mem_static)&&(tmp_mem_static_pointer<=mem_static_limit)) mem_static_pointer=tmp_mem_static_pointer; else mem_static_pointer=mem_static;
+cmem_sp=tmp_cmem_sp;
+qbs_maketmp(_FUNC_CONSOLE__ASCII_CHR_046__READKEY_STRING_CONSOLE__ASCII_CHR_046__READKEY);return _FUNC_CONSOLE__ASCII_CHR_046__READKEY_STRING_CONSOLE__ASCII_CHR_046__READKEY;
+}
+qbs* FUNC_CONSOLE__ASCII_CHR_046__READLINE(){
+qbs *tqbs;
+ptrszint tmp_long;
+int32 tmp_fileno;
+uint32 qbs_tmp_base=qbs_tmp_list_nexti;
+uint8 *tmp_mem_static_pointer=mem_static_pointer;
+uint32 tmp_cmem_sp=cmem_sp;
+#include "data33.txt"
+mem_lock *sf_mem_lock;
+new_mem_lock();
+sf_mem_lock=mem_lock_tmp;
+sf_mem_lock->type=3;
+if (is_error_pending()) goto exit_subfunc;
+do{
+if(!qbevent)break;evnt(2,4,"readLine.bi");}while(r);
+do{
+qbs_input_variabletypes[1]=ISSTRING+512;
+qbs_input_variableoffsets[1]=_FUNC_CONSOLE__ASCII_CHR_046__READLINE_STRING_THIS;
+qbs_input(1,1);
+if (stop_program) end();
+qbs_cleanup(qbs_tmp_base,0);
+if(!qbevent)break;evnt(2,5,"readLine.bi");}while(r);
+do{
+qbs_set(_FUNC_CONSOLE__ASCII_CHR_046__READLINE_STRING_CONSOLE__ASCII_CHR_046__READLINE,_FUNC_CONSOLE__ASCII_CHR_046__READLINE_STRING_THIS);
+qbs_cleanup(qbs_tmp_base,0);
+if(!qbevent)break;evnt(2,6,"readLine.bi");}while(r);
+exit_subfunc:;
+free_mem_lock(sf_mem_lock);
+#include "free33.txt"
+if ((tmp_mem_static_pointer>=mem_static)&&(tmp_mem_static_pointer<=mem_static_limit)) mem_static_pointer=tmp_mem_static_pointer; else mem_static_pointer=mem_static;
+cmem_sp=tmp_cmem_sp;
+qbs_maketmp(_FUNC_CONSOLE__ASCII_CHR_046__READLINE_STRING_CONSOLE__ASCII_CHR_046__READLINE);return _FUNC_CONSOLE__ASCII_CHR_046__READLINE_STRING_CONSOLE__ASCII_CHR_046__READLINE;
+}
+void SUB_CONSOLE__ASCII_CHR_046__WRITE(qbs*_SUB_CONSOLE__ASCII_CHR_046__WRITE_STRING_THIS){
+qbs *tqbs;
+ptrszint tmp_long;
+int32 tmp_fileno;
+uint32 qbs_tmp_base=qbs_tmp_list_nexti;
+uint8 *tmp_mem_static_pointer=mem_static_pointer;
+uint32 tmp_cmem_sp=cmem_sp;
+#include "data34.txt"
+mem_lock *sf_mem_lock;
+new_mem_lock();
+sf_mem_lock=mem_lock_tmp;
+sf_mem_lock->type=3;
+if (is_error_pending()) goto exit_subfunc;
+do{
+tqbs=qbs_new(0,0);
+qbs_set(tqbs,_SUB_CONSOLE__ASCII_CHR_046__WRITE_STRING_THIS);
+if (is_error_pending()) goto skip42;
+makefit(tqbs);
+qbs_print(tqbs,0);
+skip42:
+qbs_free(tqbs);
+qbs_cleanup(qbs_tmp_base,0);
+if(!qbevent)break;evnt(2,4,"write.bi");}while(r);
+exit_subfunc:;
+free_mem_lock(sf_mem_lock);
+#include "free34.txt"
+if ((tmp_mem_static_pointer>=mem_static)&&(tmp_mem_static_pointer<=mem_static_limit)) mem_static_pointer=tmp_mem_static_pointer; else mem_static_pointer=mem_static;
+cmem_sp=tmp_cmem_sp;
+}
+void SUB_CONSOLE__ASCII_CHR_046__WRITELINE(qbs*_SUB_CONSOLE__ASCII_CHR_046__WRITELINE_STRING_THIS){
+qbs *tqbs;
+ptrszint tmp_long;
+int32 tmp_fileno;
+uint32 qbs_tmp_base=qbs_tmp_list_nexti;
+uint8 *tmp_mem_static_pointer=mem_static_pointer;
+uint32 tmp_cmem_sp=cmem_sp;
+#include "data35.txt"
+mem_lock *sf_mem_lock;
+new_mem_lock();
+sf_mem_lock=mem_lock_tmp;
+sf_mem_lock->type=3;
+if (is_error_pending()) goto exit_subfunc;
+do{
+tqbs=qbs_new(0,0);
+qbs_set(tqbs,_SUB_CONSOLE__ASCII_CHR_046__WRITELINE_STRING_THIS);
+if (is_error_pending()) goto skip44;
+makefit(tqbs);
+qbs_print(tqbs,0);
+qbs_print(nothingstring,1);
+skip44:
+qbs_free(tqbs);
+qbs_cleanup(qbs_tmp_base,0);
+if(!qbevent)break;evnt(2,4,"writeLine.bi");}while(r);
+exit_subfunc:;
+free_mem_lock(sf_mem_lock);
+#include "free35.txt"
+if ((tmp_mem_static_pointer>=mem_static)&&(tmp_mem_static_pointer<=mem_static_limit)) mem_static_pointer=tmp_mem_static_pointer; else mem_static_pointer=mem_static;
+cmem_sp=tmp_cmem_sp;
+}
+void SUB_FILE__ASCII_CHR_046__CLOSE(int16*_SUB_FILE__ASCII_CHR_046__CLOSE_INTEGER_THIS){
+qbs *tqbs;
+ptrszint tmp_long;
+int32 tmp_fileno;
+uint32 qbs_tmp_base=qbs_tmp_list_nexti;
+uint8 *tmp_mem_static_pointer=mem_static_pointer;
+uint32 tmp_cmem_sp=cmem_sp;
+#include "data36.txt"
+mem_lock *sf_mem_lock;
+new_mem_lock();
+sf_mem_lock=mem_lock_tmp;
+sf_mem_lock->type=3;
+if (is_error_pending()) goto exit_subfunc;
+S_94:;
+if ((-(*_SUB_FILE__ASCII_CHR_046__CLOSE_INTEGER_THIS> 0 ))||is_error_pending()){
+if(qbevent){evnt(2,4,"close.bi");if(r)goto S_94;}
+do{
+sub_close(*_SUB_FILE__ASCII_CHR_046__CLOSE_INTEGER_THIS,1);
+if(!qbevent)break;evnt(2,4,"close.bi");}while(r);
+}
+exit_subfunc:;
+free_mem_lock(sf_mem_lock);
+#include "free36.txt"
+if ((tmp_mem_static_pointer>=mem_static)&&(tmp_mem_static_pointer<=mem_static_limit)) mem_static_pointer=tmp_mem_static_pointer; else mem_static_pointer=mem_static;
+cmem_sp=tmp_cmem_sp;
+}
+void SUB_FILE__ASCII_CHR_046__CLOSEALL(){
+qbs *tqbs;
+ptrszint tmp_long;
+int32 tmp_fileno;
+uint32 qbs_tmp_base=qbs_tmp_list_nexti;
+uint8 *tmp_mem_static_pointer=mem_static_pointer;
+uint32 tmp_cmem_sp=cmem_sp;
+#include "data37.txt"
+mem_lock *sf_mem_lock;
+new_mem_lock();
+sf_mem_lock=mem_lock_tmp;
+sf_mem_lock->type=3;
+if (is_error_pending()) goto exit_subfunc;
+do{
+sub_close(NULL,0);
+if(!qbevent)break;evnt(2,4,"closeAll.bi");}while(r);
+exit_subfunc:;
+free_mem_lock(sf_mem_lock);
+#include "free37.txt"
+if ((tmp_mem_static_pointer>=mem_static)&&(tmp_mem_static_pointer<=mem_static_limit)) mem_static_pointer=tmp_mem_static_pointer; else mem_static_pointer=mem_static;
+cmem_sp=tmp_cmem_sp;
+}
+int32 FUNC_FILE__ASCII_CHR_046__EXISTS(qbs*_FUNC_FILE__ASCII_CHR_046__EXISTS_STRING_THIS){
+qbs *tqbs;
+ptrszint tmp_long;
+int32 tmp_fileno;
+uint32 qbs_tmp_base=qbs_tmp_list_nexti;
+uint8 *tmp_mem_static_pointer=mem_static_pointer;
+uint32 tmp_cmem_sp=cmem_sp;
+#include "data38.txt"
+mem_lock *sf_mem_lock;
+new_mem_lock();
+sf_mem_lock=mem_lock_tmp;
+sf_mem_lock->type=3;
+if (is_error_pending()) goto exit_subfunc;
+do{
+if ((*_FUNC_FILE__ASCII_CHR_046__EXISTS_BIT1_FILE__ASCII_CHR_046__EXISTS=func__fileexists(_FUNC_FILE__ASCII_CHR_046__EXISTS_STRING_THIS))&1){
+*_FUNC_FILE__ASCII_CHR_046__EXISTS_BIT1_FILE__ASCII_CHR_046__EXISTS|=-2;
+}else{
+*_FUNC_FILE__ASCII_CHR_046__EXISTS_BIT1_FILE__ASCII_CHR_046__EXISTS&=1;
+}
+qbs_cleanup(qbs_tmp_base,0);
+if(!qbevent)break;evnt(2,4,"exists.bi");}while(r);
+exit_subfunc:;
+free_mem_lock(sf_mem_lock);
+#include "free38.txt"
+if ((tmp_mem_static_pointer>=mem_static)&&(tmp_mem_static_pointer<=mem_static_limit)) mem_static_pointer=tmp_mem_static_pointer; else mem_static_pointer=mem_static;
+cmem_sp=tmp_cmem_sp;
+return *_FUNC_FILE__ASCII_CHR_046__EXISTS_BIT1_FILE__ASCII_CHR_046__EXISTS;
+}
+void SUB_FILE__ASCII_CHR_046__DELETE(qbs*_SUB_FILE__ASCII_CHR_046__DELETE_STRING_THIS){
+qbs *tqbs;
+ptrszint tmp_long;
+int32 tmp_fileno;
+uint32 qbs_tmp_base=qbs_tmp_list_nexti;
+uint8 *tmp_mem_static_pointer=mem_static_pointer;
+uint32 tmp_cmem_sp=cmem_sp;
+#include "data39.txt"
+mem_lock *sf_mem_lock;
+new_mem_lock();
+sf_mem_lock=mem_lock_tmp;
+sf_mem_lock->type=3;
+if (is_error_pending()) goto exit_subfunc;
+S_99:;
+if ((qbs_cleanup(qbs_tmp_base,FUNC_FILE__ASCII_CHR_046__EXISTS(_SUB_FILE__ASCII_CHR_046__DELETE_STRING_THIS)))||is_error_pending()){
+if(qbevent){evnt(2,6,"delete.bi");if(r)goto S_99;}
+do{
+sub_kill(_SUB_FILE__ASCII_CHR_046__DELETE_STRING_THIS);
+qbs_cleanup(qbs_tmp_base,0);
+if(!qbevent)break;evnt(2,6,"delete.bi");}while(r);
+}
+exit_subfunc:;
+free_mem_lock(sf_mem_lock);
+#include "free39.txt"
+if ((tmp_mem_static_pointer>=mem_static)&&(tmp_mem_static_pointer<=mem_static_limit)) mem_static_pointer=tmp_mem_static_pointer; else mem_static_pointer=mem_static;
+cmem_sp=tmp_cmem_sp;
+}
+void SUB_FILE__ASCII_CHR_046__CLOSEALLANDDELETE(qbs*_SUB_FILE__ASCII_CHR_046__CLOSEALLANDDELETE_STRING_THIS){
+qbs *tqbs;
+ptrszint tmp_long;
+int32 tmp_fileno;
+uint32 qbs_tmp_base=qbs_tmp_list_nexti;
+uint8 *tmp_mem_static_pointer=mem_static_pointer;
+uint32 tmp_cmem_sp=cmem_sp;
+#include "data40.txt"
+mem_lock *sf_mem_lock;
+new_mem_lock();
+sf_mem_lock=mem_lock_tmp;
+sf_mem_lock->type=3;
+if (is_error_pending()) goto exit_subfunc;
+do{
+SUB_FILE__ASCII_CHR_046__CLOSEALL();
+if(!qbevent)break;evnt(2,8,"closeAllAndDelete.bi");}while(r);
+do{
+SUB_FILE__ASCII_CHR_046__DELETE(_SUB_FILE__ASCII_CHR_046__CLOSEALLANDDELETE_STRING_THIS);
+qbs_cleanup(qbs_tmp_base,0);
+if(!qbevent)break;evnt(2,9,"closeAllAndDelete.bi");}while(r);
+exit_subfunc:;
+free_mem_lock(sf_mem_lock);
+#include "free40.txt"
+if ((tmp_mem_static_pointer>=mem_static)&&(tmp_mem_static_pointer<=mem_static_limit)) mem_static_pointer=tmp_mem_static_pointer; else mem_static_pointer=mem_static;
+cmem_sp=tmp_cmem_sp;
+}
+int32 FUNC_FILE__ASCII_CHR_046__ENDOF(int16*_FUNC_FILE__ASCII_CHR_046__ENDOF_INTEGER_THIS){
+qbs *tqbs;
+ptrszint tmp_long;
+int32 tmp_fileno;
+uint32 qbs_tmp_base=qbs_tmp_list_nexti;
+uint8 *tmp_mem_static_pointer=mem_static_pointer;
+uint32 tmp_cmem_sp=cmem_sp;
+#include "data41.txt"
+mem_lock *sf_mem_lock;
+new_mem_lock();
+sf_mem_lock=mem_lock_tmp;
+sf_mem_lock->type=3;
+if (is_error_pending()) goto exit_subfunc;
+do{
+if ((*_FUNC_FILE__ASCII_CHR_046__ENDOF_BIT1_FILE__ASCII_CHR_046__ENDOF=func_eof(*_FUNC_FILE__ASCII_CHR_046__ENDOF_INTEGER_THIS))&1){
+*_FUNC_FILE__ASCII_CHR_046__ENDOF_BIT1_FILE__ASCII_CHR_046__ENDOF|=-2;
+}else{
+*_FUNC_FILE__ASCII_CHR_046__ENDOF_BIT1_FILE__ASCII_CHR_046__ENDOF&=1;
+}
+if(!qbevent)break;evnt(2,4,"EndOf.bi");}while(r);
+exit_subfunc:;
+free_mem_lock(sf_mem_lock);
+#include "free41.txt"
+if ((tmp_mem_static_pointer>=mem_static)&&(tmp_mem_static_pointer<=mem_static_limit)) mem_static_pointer=tmp_mem_static_pointer; else mem_static_pointer=mem_static;
+cmem_sp=tmp_cmem_sp;
+return *_FUNC_FILE__ASCII_CHR_046__ENDOF_BIT1_FILE__ASCII_CHR_046__ENDOF;
+}
+int32 FUNC_BOOLEAN__ASCII_CHR_046__ISTRUE(int8*_FUNC_BOOLEAN__ASCII_CHR_046__ISTRUE_BYTE_THIS){
+qbs *tqbs;
+ptrszint tmp_long;
+int32 tmp_fileno;
+uint32 qbs_tmp_base=qbs_tmp_list_nexti;
+uint8 *tmp_mem_static_pointer=mem_static_pointer;
+uint32 tmp_cmem_sp=cmem_sp;
+#include "data42.txt"
+mem_lock *sf_mem_lock;
+new_mem_lock();
+sf_mem_lock=mem_lock_tmp;
+sf_mem_lock->type=3;
+if (is_error_pending()) goto exit_subfunc;
+do{
+if ((*_FUNC_BOOLEAN__ASCII_CHR_046__ISTRUE_BIT1_BOOLEAN__ASCII_CHR_046__ISTRUE=(-(*_FUNC_BOOLEAN__ASCII_CHR_046__ISTRUE_BYTE_THIS!= 0 )))&1){
+*_FUNC_BOOLEAN__ASCII_CHR_046__ISTRUE_BIT1_BOOLEAN__ASCII_CHR_046__ISTRUE|=-2;
+}else{
+*_FUNC_BOOLEAN__ASCII_CHR_046__ISTRUE_BIT1_BOOLEAN__ASCII_CHR_046__ISTRUE&=1;
+}
+if(!qbevent)break;evnt(2,4,"isTrue.bi");}while(r);
+exit_subfunc:;
+free_mem_lock(sf_mem_lock);
+#include "free42.txt"
+if ((tmp_mem_static_pointer>=mem_static)&&(tmp_mem_static_pointer<=mem_static_limit)) mem_static_pointer=tmp_mem_static_pointer; else mem_static_pointer=mem_static;
+cmem_sp=tmp_cmem_sp;
+return *_FUNC_BOOLEAN__ASCII_CHR_046__ISTRUE_BIT1_BOOLEAN__ASCII_CHR_046__ISTRUE;
+}
+qbs* FUNC_FILEACCESS__ASCII_CHR_046__OF(int8*_FUNC_FILEACCESS__ASCII_CHR_046__OF_BYTE_FILEACCESS){
+qbs *tqbs;
+ptrszint tmp_long;
+int32 tmp_fileno;
+uint32 qbs_tmp_base=qbs_tmp_list_nexti;
+uint8 *tmp_mem_static_pointer=mem_static_pointer;
+uint32 tmp_cmem_sp=cmem_sp;
+#include "data43.txt"
+mem_lock *sf_mem_lock;
+new_mem_lock();
+sf_mem_lock=mem_lock_tmp;
+sf_mem_lock->type=3;
+if (is_error_pending()) goto exit_subfunc;
+do{
+qbs_set(_FUNC_FILEACCESS__ASCII_CHR_046__OF_STRING_FILEACCESS__ASCII_CHR_046__OF,FUNC_CHAR__ASCII_CHR_046__FROM(&(pass48=(*_FUNC_FILEACCESS__ASCII_CHR_046__OF_BYTE_FILEACCESS& 31 )+ 64 )));
+qbs_cleanup(qbs_tmp_base,0);
+if(!qbevent)break;evnt(2,6,"of.bi");}while(r);
+exit_subfunc:;
+free_mem_lock(sf_mem_lock);
+#include "free43.txt"
+if ((tmp_mem_static_pointer>=mem_static)&&(tmp_mem_static_pointer<=mem_static_limit)) mem_static_pointer=tmp_mem_static_pointer; else mem_static_pointer=mem_static;
+cmem_sp=tmp_cmem_sp;
+qbs_maketmp(_FUNC_FILEACCESS__ASCII_CHR_046__OF_STRING_FILEACCESS__ASCII_CHR_046__OF);return _FUNC_FILEACCESS__ASCII_CHR_046__OF_STRING_FILEACCESS__ASCII_CHR_046__OF;
+}
+int16 FUNC_FILE__ASCII_CHR_046__OPEN(qbs*_FUNC_FILE__ASCII_CHR_046__OPEN_STRING_FILENAME,int16*_FUNC_FILE__ASCII_CHR_046__OPEN_INTEGER_FILEACCESSTYPE){
+qbs *tqbs;
+ptrszint tmp_long;
+int32 tmp_fileno;
+uint32 qbs_tmp_base=qbs_tmp_list_nexti;
+uint8 *tmp_mem_static_pointer=mem_static_pointer;
+uint32 tmp_cmem_sp=cmem_sp;
+#include "data44.txt"
+mem_lock *sf_mem_lock;
+new_mem_lock();
+sf_mem_lock=mem_lock_tmp;
+sf_mem_lock->type=3;
+if (is_error_pending()) goto exit_subfunc;
+do{
+if(!qbevent)break;evnt(2,8,"open.bi");}while(r);
+do{
+*_FUNC_FILE__ASCII_CHR_046__OPEN_INTEGER_HANDLE=func_freefile();
+if(!qbevent)break;evnt(2,10,"open.bi");}while(r);
+do{
+SUB_TRY();
+if(!qbevent)break;evnt(2,11,"open.bi");}while(r);
+do{
+sub_open_gwbasic(FUNC_FILEACCESS__ASCII_CHR_046__OF(&(pass50=*_FUNC_FILE__ASCII_CHR_046__OPEN_INTEGER_FILEACCESSTYPE)),*_FUNC_FILE__ASCII_CHR_046__OPEN_INTEGER_HANDLE,_FUNC_FILE__ASCII_CHR_046__OPEN_STRING_FILENAME,NULL,0);
+qbs_cleanup(qbs_tmp_base,0);
+if(!qbevent)break;evnt(2,12,"open.bi");}while(r);
+do{
+SUB_FINALLY();
+if(!qbevent)break;evnt(2,13,"open.bi");}while(r);
+do{
+SUB_CATCH(_FUNC_FILE__ASCII_CHR_046__OPEN_INTEGER_EXCEPTION);
+if(!qbevent)break;evnt(2,14,"open.bi");}while(r);
+S_113:;
+if ((FUNC_BOOLEAN__ASCII_CHR_046__ISTRUE(&(pass51=*_FUNC_FILE__ASCII_CHR_046__OPEN_INTEGER_EXCEPTION)))||is_error_pending()){
+if(qbevent){evnt(2,15,"open.bi");if(r)goto S_113;}
+do{
+*_FUNC_FILE__ASCII_CHR_046__OPEN_INTEGER_HANDLE= 0 ;
+if(!qbevent)break;evnt(2,15,"open.bi");}while(r);
+}
+do{
+*_FUNC_FILE__ASCII_CHR_046__OPEN_INTEGER_FILE__ASCII_CHR_046__OPEN=*_FUNC_FILE__ASCII_CHR_046__OPEN_INTEGER_HANDLE;
+if(!qbevent)break;evnt(2,17,"open.bi");}while(r);
+exit_subfunc:;
+free_mem_lock(sf_mem_lock);
+#include "free44.txt"
+if ((tmp_mem_static_pointer>=mem_static)&&(tmp_mem_static_pointer<=mem_static_limit)) mem_static_pointer=tmp_mem_static_pointer; else mem_static_pointer=mem_static;
+cmem_sp=tmp_cmem_sp;
+return *_FUNC_FILE__ASCII_CHR_046__OPEN_INTEGER_FILE__ASCII_CHR_046__OPEN;
+}
+qbs* FUNC_FILE__ASCII_CHR_046__READ(int16*_FUNC_FILE__ASCII_CHR_046__READ_INTEGER_THIS){
+qbs *tqbs;
+ptrszint tmp_long;
+int32 tmp_fileno;
+uint32 qbs_tmp_base=qbs_tmp_list_nexti;
+uint8 *tmp_mem_static_pointer=mem_static_pointer;
+uint32 tmp_cmem_sp=cmem_sp;
+#include "data45.txt"
+mem_lock *sf_mem_lock;
+new_mem_lock();
+sf_mem_lock=mem_lock_tmp;
+sf_mem_lock->type=3;
+if (is_error_pending()) goto exit_subfunc;
+do{
+if(!qbevent)break;evnt(2,8,"read.bi");}while(r);
+do{
+if(!qbevent)break;evnt(2,9,"read.bi");}while(r);
+do{
+SUB_TRY();
+if(!qbevent)break;evnt(2,11,"read.bi");}while(r);
+do{
+tmp_fileno=*_FUNC_FILE__ASCII_CHR_046__READ_INTEGER_THIS;
+if (is_error_pending()) goto skip52;
+sub_file_input_string(tmp_fileno,_FUNC_FILE__ASCII_CHR_046__READ_STRING_RESULT);
+if (is_error_pending()) goto skip52;
+skip52:
+qbs_cleanup(qbs_tmp_base,0);
+if(!qbevent)break;evnt(2,12,"read.bi");}while(r);
+do{
+SUB_FINALLY();
+if(!qbevent)break;evnt(2,13,"read.bi");}while(r);
+do{
+SUB_CATCH(_FUNC_FILE__ASCII_CHR_046__READ_INTEGER_EXCEPTION);
+if(!qbevent)break;evnt(2,14,"read.bi");}while(r);
+S_123:;
+if ((FUNC_BOOLEAN__ASCII_CHR_046__ISTRUE(&(pass53=*_FUNC_FILE__ASCII_CHR_046__READ_INTEGER_EXCEPTION)))||is_error_pending()){
+if(qbevent){evnt(2,15,"read.bi");if(r)goto S_123;}
+do{
+qbs_set(_FUNC_FILE__ASCII_CHR_046__READ_STRING_RESULT,FUNC_STRING__ASCII_CHR_046__EMPTY());
+qbs_cleanup(qbs_tmp_base,0);
+if(!qbevent)break;evnt(2,15,"read.bi");}while(r);
+}
+do{
+qbs_set(_FUNC_FILE__ASCII_CHR_046__READ_STRING_FILE__ASCII_CHR_046__READ,_FUNC_FILE__ASCII_CHR_046__READ_STRING_RESULT);
+qbs_cleanup(qbs_tmp_base,0);
+if(!qbevent)break;evnt(2,17,"read.bi");}while(r);
+exit_subfunc:;
+free_mem_lock(sf_mem_lock);
+#include "free45.txt"
+if ((tmp_mem_static_pointer>=mem_static)&&(tmp_mem_static_pointer<=mem_static_limit)) mem_static_pointer=tmp_mem_static_pointer; else mem_static_pointer=mem_static;
+cmem_sp=tmp_cmem_sp;
+qbs_maketmp(_FUNC_FILE__ASCII_CHR_046__READ_STRING_FILE__ASCII_CHR_046__READ);return _FUNC_FILE__ASCII_CHR_046__READ_STRING_FILE__ASCII_CHR_046__READ;
+}
+qbs* FUNC_FILE__ASCII_CHR_046__READLINE(int16*_FUNC_FILE__ASCII_CHR_046__READLINE_INTEGER_THIS){
+qbs *tqbs;
+ptrszint tmp_long;
+int32 tmp_fileno;
+uint32 qbs_tmp_base=qbs_tmp_list_nexti;
+uint8 *tmp_mem_static_pointer=mem_static_pointer;
+uint32 tmp_cmem_sp=cmem_sp;
+#include "data46.txt"
+mem_lock *sf_mem_lock;
+new_mem_lock();
+sf_mem_lock=mem_lock_tmp;
+sf_mem_lock->type=3;
+if (is_error_pending()) goto exit_subfunc;
+do{
+if(!qbevent)break;evnt(2,8,"readLine.bi");}while(r);
+do{
+if(!qbevent)break;evnt(2,9,"readLine.bi");}while(r);
+do{
+SUB_TRY();
+if(!qbevent)break;evnt(2,11,"readLine.bi");}while(r);
+do{
+tmp_fileno=*_FUNC_FILE__ASCII_CHR_046__READLINE_INTEGER_THIS;
+if (is_error_pending()) goto skip54;
+sub_file_line_input_string(tmp_fileno,_FUNC_FILE__ASCII_CHR_046__READLINE_STRING_READLINE);
+if (is_error_pending()) goto skip54;
+skip54:
+qbs_cleanup(qbs_tmp_base,0);
+if(!qbevent)break;evnt(2,12,"readLine.bi");}while(r);
+do{
+SUB_FINALLY();
+if(!qbevent)break;evnt(2,13,"readLine.bi");}while(r);
+do{
+SUB_CATCH(_FUNC_FILE__ASCII_CHR_046__READLINE_INTEGER_EXCEPTION);
+if(!qbevent)break;evnt(2,14,"readLine.bi");}while(r);
+S_133:;
+if ((FUNC_BOOLEAN__ASCII_CHR_046__ISTRUE(&(pass55=*_FUNC_FILE__ASCII_CHR_046__READLINE_INTEGER_EXCEPTION)))||is_error_pending()){
+if(qbevent){evnt(2,15,"readLine.bi");if(r)goto S_133;}
+do{
+qbs_set(_FUNC_FILE__ASCII_CHR_046__READLINE_STRING_READLINE,FUNC_STRING__ASCII_CHR_046__EMPTY());
+qbs_cleanup(qbs_tmp_base,0);
+if(!qbevent)break;evnt(2,15,"readLine.bi");}while(r);
+}
+do{
+qbs_set(_FUNC_FILE__ASCII_CHR_046__READLINE_STRING_FILE__ASCII_CHR_046__READLINE,_FUNC_FILE__ASCII_CHR_046__READLINE_STRING_READLINE);
+qbs_cleanup(qbs_tmp_base,0);
+if(!qbevent)break;evnt(2,17,"readLine.bi");}while(r);
+exit_subfunc:;
+free_mem_lock(sf_mem_lock);
+#include "free46.txt"
+if ((tmp_mem_static_pointer>=mem_static)&&(tmp_mem_static_pointer<=mem_static_limit)) mem_static_pointer=tmp_mem_static_pointer; else mem_static_pointer=mem_static;
+cmem_sp=tmp_cmem_sp;
+qbs_maketmp(_FUNC_FILE__ASCII_CHR_046__READLINE_STRING_FILE__ASCII_CHR_046__READLINE);return _FUNC_FILE__ASCII_CHR_046__READLINE_STRING_FILE__ASCII_CHR_046__READLINE;
+}
+void SUB_FILE__ASCII_CHR_046__RENAME(qbs*_SUB_FILE__ASCII_CHR_046__RENAME_STRING_THIS,qbs*_SUB_FILE__ASCII_CHR_046__RENAME_STRING_OTHER){
+qbs *tqbs;
+ptrszint tmp_long;
+int32 tmp_fileno;
+uint32 qbs_tmp_base=qbs_tmp_list_nexti;
+uint8 *tmp_mem_static_pointer=mem_static_pointer;
+uint32 tmp_cmem_sp=cmem_sp;
+#include "data47.txt"
+mem_lock *sf_mem_lock;
+new_mem_lock();
+sf_mem_lock=mem_lock_tmp;
+sf_mem_lock->type=3;
+if (is_error_pending()) goto exit_subfunc;
+S_137:;
+if ((qbs_cleanup(qbs_tmp_base,FUNC_FILE__ASCII_CHR_046__EXISTS(_SUB_FILE__ASCII_CHR_046__RENAME_STRING_THIS)))||is_error_pending()){
+if(qbevent){evnt(2,4,"rename.bi");if(r)goto S_137;}
+do{
+sub_name(_SUB_FILE__ASCII_CHR_046__RENAME_STRING_THIS,_SUB_FILE__ASCII_CHR_046__RENAME_STRING_OTHER);
+qbs_cleanup(qbs_tmp_base,0);
+if(!qbevent)break;evnt(2,4,"rename.bi");}while(r);
+}
+exit_subfunc:;
+free_mem_lock(sf_mem_lock);
+#include "free47.txt"
+if ((tmp_mem_static_pointer>=mem_static)&&(tmp_mem_static_pointer<=mem_static_limit)) mem_static_pointer=tmp_mem_static_pointer; else mem_static_pointer=mem_static;
+cmem_sp=tmp_cmem_sp;
+}
+void SUB_FILE__ASCII_CHR_046__WRITE(int16*_SUB_FILE__ASCII_CHR_046__WRITE_INTEGER_THIS,qbs*_SUB_FILE__ASCII_CHR_046__WRITE_STRING_VALUE){
+qbs *tqbs;
+ptrszint tmp_long;
+int32 tmp_fileno;
+uint32 qbs_tmp_base=qbs_tmp_list_nexti;
+uint8 *tmp_mem_static_pointer=mem_static_pointer;
+uint32 tmp_cmem_sp=cmem_sp;
+#include "data48.txt"
+mem_lock *sf_mem_lock;
+new_mem_lock();
+sf_mem_lock=mem_lock_tmp;
+sf_mem_lock->type=3;
+if (is_error_pending()) goto exit_subfunc;
+do{
+tab_spc_cr_size=2;
+tab_fileno=tmp_fileno=*_SUB_FILE__ASCII_CHR_046__WRITE_INTEGER_THIS;
+if (is_error_pending()) goto skip59;
+sub_file_print(tmp_fileno,_SUB_FILE__ASCII_CHR_046__WRITE_STRING_VALUE, 0, 0, 0);
+if (is_error_pending()) goto skip59;
+skip59:
+qbs_cleanup(qbs_tmp_base,0);
+tab_spc_cr_size=1;
+if(!qbevent)break;evnt(2,4,"write.bi");}while(r);
+exit_subfunc:;
+free_mem_lock(sf_mem_lock);
+#include "free48.txt"
+if ((tmp_mem_static_pointer>=mem_static)&&(tmp_mem_static_pointer<=mem_static_limit)) mem_static_pointer=tmp_mem_static_pointer; else mem_static_pointer=mem_static;
+cmem_sp=tmp_cmem_sp;
+}
+void SUB_FILE__ASCII_CHR_046__WRITELINE(int16*_SUB_FILE__ASCII_CHR_046__WRITELINE_INTEGER_THIS,qbs*_SUB_FILE__ASCII_CHR_046__WRITELINE_STRING_VALUE){
+qbs *tqbs;
+ptrszint tmp_long;
+int32 tmp_fileno;
+uint32 qbs_tmp_base=qbs_tmp_list_nexti;
+uint8 *tmp_mem_static_pointer=mem_static_pointer;
+uint32 tmp_cmem_sp=cmem_sp;
+#include "data49.txt"
+mem_lock *sf_mem_lock;
+new_mem_lock();
+sf_mem_lock=mem_lock_tmp;
+sf_mem_lock->type=3;
+if (is_error_pending()) goto exit_subfunc;
+do{
+tab_spc_cr_size=2;
+tab_fileno=tmp_fileno=*_SUB_FILE__ASCII_CHR_046__WRITELINE_INTEGER_THIS;
+if (is_error_pending()) goto skip61;
+sub_file_print(tmp_fileno,_SUB_FILE__ASCII_CHR_046__WRITELINE_STRING_VALUE, 0, 0, 1);
+if (is_error_pending()) goto skip61;
+skip61:
+qbs_cleanup(qbs_tmp_base,0);
+tab_spc_cr_size=1;
+if(!qbevent)break;evnt(2,4,"writeLine.bi");}while(r);
+exit_subfunc:;
+free_mem_lock(sf_mem_lock);
+#include "free49.txt"
+if ((tmp_mem_static_pointer>=mem_static)&&(tmp_mem_static_pointer<=mem_static_limit)) mem_static_pointer=tmp_mem_static_pointer; else mem_static_pointer=mem_static;
+cmem_sp=tmp_cmem_sp;
+}
+int16 FUNC_FILEACCESS__ASCII_CHR_046__READ(){
+qbs *tqbs;
+ptrszint tmp_long;
+int32 tmp_fileno;
+uint32 qbs_tmp_base=qbs_tmp_list_nexti;
+uint8 *tmp_mem_static_pointer=mem_static_pointer;
+uint32 tmp_cmem_sp=cmem_sp;
+#include "data50.txt"
+mem_lock *sf_mem_lock;
+new_mem_lock();
+sf_mem_lock=mem_lock_tmp;
+sf_mem_lock->type=3;
+if (is_error_pending()) goto exit_subfunc;
+do{
+*_FUNC_FILEACCESS__ASCII_CHR_046__READ_INTEGER_FILEACCESS__ASCII_CHR_046__READ= 9 ;
+if(!qbevent)break;evnt(2,4,"Read.bi");}while(r);
+exit_subfunc:;
+free_mem_lock(sf_mem_lock);
+#include "free50.txt"
+if ((tmp_mem_static_pointer>=mem_static)&&(tmp_mem_static_pointer<=mem_static_limit)) mem_static_pointer=tmp_mem_static_pointer; else mem_static_pointer=mem_static;
+cmem_sp=tmp_cmem_sp;
+return *_FUNC_FILEACCESS__ASCII_CHR_046__READ_INTEGER_FILEACCESS__ASCII_CHR_046__READ;
+}
+int16 FUNC_FILEACCESS__ASCII_CHR_046__WRITE(){
+qbs *tqbs;
+ptrszint tmp_long;
+int32 tmp_fileno;
+uint32 qbs_tmp_base=qbs_tmp_list_nexti;
+uint8 *tmp_mem_static_pointer=mem_static_pointer;
+uint32 tmp_cmem_sp=cmem_sp;
+#include "data51.txt"
+mem_lock *sf_mem_lock;
+new_mem_lock();
+sf_mem_lock=mem_lock_tmp;
+sf_mem_lock->type=3;
+if (is_error_pending()) goto exit_subfunc;
+do{
+*_FUNC_FILEACCESS__ASCII_CHR_046__WRITE_INTEGER_FILEACCESS__ASCII_CHR_046__WRITE= 15 ;
+if(!qbevent)break;evnt(2,4,"Write.bi");}while(r);
+exit_subfunc:;
+free_mem_lock(sf_mem_lock);
+#include "free51.txt"
+if ((tmp_mem_static_pointer>=mem_static)&&(tmp_mem_static_pointer<=mem_static_limit)) mem_static_pointer=tmp_mem_static_pointer; else mem_static_pointer=mem_static;
+cmem_sp=tmp_cmem_sp;
+return *_FUNC_FILEACCESS__ASCII_CHR_046__WRITE_INTEGER_FILEACCESS__ASCII_CHR_046__WRITE;
+}
+void SUB_INTEGER__ASCII_CHR_046__INVOKE(int16*_SUB_INTEGER__ASCII_CHR_046__INVOKE_INTEGER_THIS){
+qbs *tqbs;
+ptrszint tmp_long;
+int32 tmp_fileno;
+uint32 qbs_tmp_base=qbs_tmp_list_nexti;
+uint8 *tmp_mem_static_pointer=mem_static_pointer;
+uint32 tmp_cmem_sp=cmem_sp;
+#include "data52.txt"
+mem_lock *sf_mem_lock;
+new_mem_lock();
+sf_mem_lock=mem_lock_tmp;
+sf_mem_lock->type=3;
+if (is_error_pending()) goto exit_subfunc;
+do{
+SUB_INVOKE(_SUB_INTEGER__ASCII_CHR_046__INVOKE_INTEGER_THIS);
+if(!qbevent)break;evnt(2,5,"invoke.bi");}while(r);
+exit_subfunc:;
+free_mem_lock(sf_mem_lock);
+#include "free52.txt"
+if ((tmp_mem_static_pointer>=mem_static)&&(tmp_mem_static_pointer<=mem_static_limit)) mem_static_pointer=tmp_mem_static_pointer; else mem_static_pointer=mem_static;
+cmem_sp=tmp_cmem_sp;
+}
+int32 FUNC_BOOLEAN__ASCII_CHR_046__ISFALSE(int8*_FUNC_BOOLEAN__ASCII_CHR_046__ISFALSE_BYTE_THIS){
+qbs *tqbs;
+ptrszint tmp_long;
+int32 tmp_fileno;
+uint32 qbs_tmp_base=qbs_tmp_list_nexti;
+uint8 *tmp_mem_static_pointer=mem_static_pointer;
+uint32 tmp_cmem_sp=cmem_sp;
+#include "data53.txt"
+mem_lock *sf_mem_lock;
+new_mem_lock();
+sf_mem_lock=mem_lock_tmp;
+sf_mem_lock->type=3;
+if (is_error_pending()) goto exit_subfunc;
+do{
+if ((*_FUNC_BOOLEAN__ASCII_CHR_046__ISFALSE_BIT1_BOOLEAN__ASCII_CHR_046__ISFALSE=(-(*_FUNC_BOOLEAN__ASCII_CHR_046__ISFALSE_BYTE_THIS== 0 )))&1){
+*_FUNC_BOOLEAN__ASCII_CHR_046__ISFALSE_BIT1_BOOLEAN__ASCII_CHR_046__ISFALSE|=-2;
+}else{
+*_FUNC_BOOLEAN__ASCII_CHR_046__ISFALSE_BIT1_BOOLEAN__ASCII_CHR_046__ISFALSE&=1;
+}
+if(!qbevent)break;evnt(2,4,"isFalse.bi");}while(r);
+exit_subfunc:;
+free_mem_lock(sf_mem_lock);
+#include "free53.txt"
+if ((tmp_mem_static_pointer>=mem_static)&&(tmp_mem_static_pointer<=mem_static_limit)) mem_static_pointer=tmp_mem_static_pointer; else mem_static_pointer=mem_static;
+cmem_sp=tmp_cmem_sp;
+return *_FUNC_BOOLEAN__ASCII_CHR_046__ISFALSE_BIT1_BOOLEAN__ASCII_CHR_046__ISFALSE;
+}
+int32 FUNC_BOOLEAN__ASCII_CHR_046__NEITHER(int8*_FUNC_BOOLEAN__ASCII_CHR_046__NEITHER_BYTE_FIRST,int8*_FUNC_BOOLEAN__ASCII_CHR_046__NEITHER_BYTE_SECOND){
+qbs *tqbs;
+ptrszint tmp_long;
+int32 tmp_fileno;
+uint32 qbs_tmp_base=qbs_tmp_list_nexti;
+uint8 *tmp_mem_static_pointer=mem_static_pointer;
+uint32 tmp_cmem_sp=cmem_sp;
+#include "data54.txt"
+mem_lock *sf_mem_lock;
+new_mem_lock();
+sf_mem_lock=mem_lock_tmp;
+sf_mem_lock->type=3;
+if (is_error_pending()) goto exit_subfunc;
+do{
+if ((*_FUNC_BOOLEAN__ASCII_CHR_046__NEITHER_BIT1_BOOLEAN__ASCII_CHR_046__NEITHER=FUNC_BOOLEAN__ASCII_CHR_046__ISFALSE(_FUNC_BOOLEAN__ASCII_CHR_046__NEITHER_BYTE_FIRST)&FUNC_BOOLEAN__ASCII_CHR_046__ISFALSE(_FUNC_BOOLEAN__ASCII_CHR_046__NEITHER_BYTE_SECOND))&1){
+*_FUNC_BOOLEAN__ASCII_CHR_046__NEITHER_BIT1_BOOLEAN__ASCII_CHR_046__NEITHER|=-2;
+}else{
+*_FUNC_BOOLEAN__ASCII_CHR_046__NEITHER_BIT1_BOOLEAN__ASCII_CHR_046__NEITHER&=1;
+}
+if(!qbevent)break;evnt(2,6,"neither.bi");}while(r);
+exit_subfunc:;
+free_mem_lock(sf_mem_lock);
+#include "free54.txt"
+if ((tmp_mem_static_pointer>=mem_static)&&(tmp_mem_static_pointer<=mem_static_limit)) mem_static_pointer=tmp_mem_static_pointer; else mem_static_pointer=mem_static;
+cmem_sp=tmp_cmem_sp;
+return *_FUNC_BOOLEAN__ASCII_CHR_046__NEITHER_BIT1_BOOLEAN__ASCII_CHR_046__NEITHER;
+}
+int32 FUNC_BOOLEAN__ASCII_CHR_046__NEITHER2(int8*_FUNC_BOOLEAN__ASCII_CHR_046__NEITHER2_BYTE_FIRST,int8*_FUNC_BOOLEAN__ASCII_CHR_046__NEITHER2_BYTE_SECOND,int8*_FUNC_BOOLEAN__ASCII_CHR_046__NEITHER2_BYTE_THIRD){
+qbs *tqbs;
+ptrszint tmp_long;
+int32 tmp_fileno;
+uint32 qbs_tmp_base=qbs_tmp_list_nexti;
+uint8 *tmp_mem_static_pointer=mem_static_pointer;
+uint32 tmp_cmem_sp=cmem_sp;
+#include "data55.txt"
+mem_lock *sf_mem_lock;
+new_mem_lock();
+sf_mem_lock=mem_lock_tmp;
+sf_mem_lock->type=3;
+if (is_error_pending()) goto exit_subfunc;
+do{
+if ((*_FUNC_BOOLEAN__ASCII_CHR_046__NEITHER2_BIT1_BOOLEAN__ASCII_CHR_046__NEITHER2=FUNC_BOOLEAN__ASCII_CHR_046__NEITHER(&(pass62=FUNC_BOOLEAN__ASCII_CHR_046__NEITHER(_FUNC_BOOLEAN__ASCII_CHR_046__NEITHER2_BYTE_FIRST,_FUNC_BOOLEAN__ASCII_CHR_046__NEITHER2_BYTE_SECOND)),_FUNC_BOOLEAN__ASCII_CHR_046__NEITHER2_BYTE_THIRD))&1){
+*_FUNC_BOOLEAN__ASCII_CHR_046__NEITHER2_BIT1_BOOLEAN__ASCII_CHR_046__NEITHER2|=-2;
+}else{
+*_FUNC_BOOLEAN__ASCII_CHR_046__NEITHER2_BIT1_BOOLEAN__ASCII_CHR_046__NEITHER2&=1;
+}
+if(!qbevent)break;evnt(2,10,"neither.bi");}while(r);
+exit_subfunc:;
+free_mem_lock(sf_mem_lock);
+#include "free55.txt"
+if ((tmp_mem_static_pointer>=mem_static)&&(tmp_mem_static_pointer<=mem_static_limit)) mem_static_pointer=tmp_mem_static_pointer; else mem_static_pointer=mem_static;
+cmem_sp=tmp_cmem_sp;
+return *_FUNC_BOOLEAN__ASCII_CHR_046__NEITHER2_BIT1_BOOLEAN__ASCII_CHR_046__NEITHER2;
+}
+int32 FUNC_BOOLEAN__ASCII_CHR_046__NEITHER3(int8*_FUNC_BOOLEAN__ASCII_CHR_046__NEITHER3_BYTE_FIRST,int8*_FUNC_BOOLEAN__ASCII_CHR_046__NEITHER3_BYTE_SECOND,int8*_FUNC_BOOLEAN__ASCII_CHR_046__NEITHER3_BYTE_THIRD,int8*_FUNC_BOOLEAN__ASCII_CHR_046__NEITHER3_BYTE_FOURTH){
+qbs *tqbs;
+ptrszint tmp_long;
+int32 tmp_fileno;
+uint32 qbs_tmp_base=qbs_tmp_list_nexti;
+uint8 *tmp_mem_static_pointer=mem_static_pointer;
+uint32 tmp_cmem_sp=cmem_sp;
+#include "data56.txt"
+mem_lock *sf_mem_lock;
+new_mem_lock();
+sf_mem_lock=mem_lock_tmp;
+sf_mem_lock->type=3;
+if (is_error_pending()) goto exit_subfunc;
+do{
+if ((*_FUNC_BOOLEAN__ASCII_CHR_046__NEITHER3_BIT1_BOOLEAN__ASCII_CHR_046__NEITHER3=FUNC_BOOLEAN__ASCII_CHR_046__NEITHER(&(pass63=FUNC_BOOLEAN__ASCII_CHR_046__NEITHER2(_FUNC_BOOLEAN__ASCII_CHR_046__NEITHER3_BYTE_FIRST,_FUNC_BOOLEAN__ASCII_CHR_046__NEITHER3_BYTE_SECOND,_FUNC_BOOLEAN__ASCII_CHR_046__NEITHER3_BYTE_THIRD)),_FUNC_BOOLEAN__ASCII_CHR_046__NEITHER3_BYTE_FOURTH))&1){
+*_FUNC_BOOLEAN__ASCII_CHR_046__NEITHER3_BIT1_BOOLEAN__ASCII_CHR_046__NEITHER3|=-2;
+}else{
+*_FUNC_BOOLEAN__ASCII_CHR_046__NEITHER3_BIT1_BOOLEAN__ASCII_CHR_046__NEITHER3&=1;
+}
+if(!qbevent)break;evnt(2,14,"neither.bi");}while(r);
+exit_subfunc:;
+free_mem_lock(sf_mem_lock);
+#include "free56.txt"
+if ((tmp_mem_static_pointer>=mem_static)&&(tmp_mem_static_pointer<=mem_static_limit)) mem_static_pointer=tmp_mem_static_pointer; else mem_static_pointer=mem_static;
+cmem_sp=tmp_cmem_sp;
+return *_FUNC_BOOLEAN__ASCII_CHR_046__NEITHER3_BIT1_BOOLEAN__ASCII_CHR_046__NEITHER3;
+}
+qbs* FUNC_STRING__ASCII_CHR_046__SUBSTRING(qbs*_FUNC_STRING__ASCII_CHR_046__SUBSTRING_STRING_THIS,int16*_FUNC_STRING__ASCII_CHR_046__SUBSTRING_INTEGER_INDEX){
+qbs *tqbs;
+ptrszint tmp_long;
+int32 tmp_fileno;
+uint32 qbs_tmp_base=qbs_tmp_list_nexti;
+uint8 *tmp_mem_static_pointer=mem_static_pointer;
+uint32 tmp_cmem_sp=cmem_sp;
+#include "data57.txt"
+mem_lock *sf_mem_lock;
+new_mem_lock();
+sf_mem_lock=mem_lock_tmp;
+sf_mem_lock->type=3;
+if (is_error_pending()) goto exit_subfunc;
+do{
+if(!qbevent)break;evnt(2,6,"Substring.bi");}while(r);
+do{
+*_FUNC_STRING__ASCII_CHR_046__SUBSTRING_LONG_STRLENGTH=FUNC_STRING__ASCII_CHR_046__LENGTH(_FUNC_STRING__ASCII_CHR_046__SUBSTRING_STRING_THIS);
+qbs_cleanup(qbs_tmp_base,0);
+if(!qbevent)break;evnt(2,8,"Substring.bi");}while(r);
+S_151:;
+do{
+if(qbevent){evnt(2,9,"Substring.bi");if(r)goto S_151;}
+do{
+*_FUNC_STRING__ASCII_CHR_046__SUBSTRING_LONG_POSITION=*_FUNC_STRING__ASCII_CHR_046__SUBSTRING_LONG_POSITION+*_FUNC_STRING__ASCII_CHR_046__SUBSTRING_LONG_STRLENGTH;
+if(!qbevent)break;evnt(2,10,"Substring.bi");}while(r);
+S_153:;
+dl_continue_65:;
+}while(((-(*_FUNC_STRING__ASCII_CHR_046__SUBSTRING_LONG_POSITION< 0 )))&&(!is_error_pending()));
+dl_exit_65:;
+if(qbevent){evnt(2,11,"Substring.bi");if(r)goto S_153;}
+do{
+*_FUNC_STRING__ASCII_CHR_046__SUBSTRING_LONG_POSITION=*_FUNC_STRING__ASCII_CHR_046__SUBSTRING_LONG_POSITION%*_FUNC_STRING__ASCII_CHR_046__SUBSTRING_LONG_STRLENGTH;
+if(!qbevent)break;evnt(2,12,"Substring.bi");}while(r);
+do{
+qbs_set(_FUNC_STRING__ASCII_CHR_046__SUBSTRING_STRING_STRING__ASCII_CHR_046__SUBSTRING,func_mid(_FUNC_STRING__ASCII_CHR_046__SUBSTRING_STRING_THIS,*_FUNC_STRING__ASCII_CHR_046__SUBSTRING_LONG_POSITION+ 1 ,NULL,0));
+qbs_cleanup(qbs_tmp_base,0);
+if(!qbevent)break;evnt(2,14,"Substring.bi");}while(r);
+exit_subfunc:;
+free_mem_lock(sf_mem_lock);
+#include "free57.txt"
+if ((tmp_mem_static_pointer>=mem_static)&&(tmp_mem_static_pointer<=mem_static_limit)) mem_static_pointer=tmp_mem_static_pointer; else mem_static_pointer=mem_static;
+cmem_sp=tmp_cmem_sp;
+qbs_maketmp(_FUNC_STRING__ASCII_CHR_046__SUBSTRING_STRING_STRING__ASCII_CHR_046__SUBSTRING);return _FUNC_STRING__ASCII_CHR_046__SUBSTRING_STRING_STRING__ASCII_CHR_046__SUBSTRING;
+}
+qbs* FUNC_STRING__ASCII_CHR_046__INTERNAL__ASCII_CHR_046__TRIMEXTENDED(qbs*_FUNC_STRING__ASCII_CHR_046__INTERNAL__ASCII_CHR_046__TRIMEXTENDED_STRING_THIS){
+qbs *tqbs;
+ptrszint tmp_long;
+int32 tmp_fileno;
+uint32 qbs_tmp_base=qbs_tmp_list_nexti;
+uint8 *tmp_mem_static_pointer=mem_static_pointer;
+uint32 tmp_cmem_sp=cmem_sp;
+#include "data58.txt"
+mem_lock *sf_mem_lock;
+new_mem_lock();
+sf_mem_lock=mem_lock_tmp;
+sf_mem_lock->type=3;
+if (is_error_pending()) goto exit_subfunc;
+do{
+if(!qbevent)break;evnt(2,15,"trimExtended.bi");}while(r);
+do{
+if(!qbevent)break;evnt(2,16,"trimExtended.bi");}while(r);
+do{
+qbs_set(_FUNC_STRING__ASCII_CHR_046__INTERNAL__ASCII_CHR_046__TRIMEXTENDED_STRING_RESULT,_FUNC_STRING__ASCII_CHR_046__INTERNAL__ASCII_CHR_046__TRIMEXTENDED_STRING_THIS);
+qbs_cleanup(qbs_tmp_base,0);
+if(!qbevent)break;evnt(2,18,"trimExtended.bi");}while(r);
+S_159:;
+do{
+if(qbevent){evnt(2,19,"trimExtended.bi");if(r)goto S_159;}
+do{
+if ((*_FUNC_STRING__ASCII_CHR_046__INTERNAL__ASCII_CHR_046__TRIMEXTENDED_BIT1_ISNOBR=FUNC_STRING__ASCII_CHR_046__STARTSWITH(_FUNC_STRING__ASCII_CHR_046__INTERNAL__ASCII_CHR_046__TRIMEXTENDED_STRING_RESULT,FUNC_CHAR__ASCII_CHR_046__NOBREAK()))&1){
+*_FUNC_STRING__ASCII_CHR_046__INTERNAL__ASCII_CHR_046__TRIMEXTENDED_BIT1_ISNOBR|=-2;
+}else{
+*_FUNC_STRING__ASCII_CHR_046__INTERNAL__ASCII_CHR_046__TRIMEXTENDED_BIT1_ISNOBR&=1;
+}
+qbs_cleanup(qbs_tmp_base,0);
+if(!qbevent)break;evnt(2,21,"trimExtended.bi");}while(r);
+do{
+if ((*_FUNC_STRING__ASCII_CHR_046__INTERNAL__ASCII_CHR_046__TRIMEXTENDED_BIT1_ISNULL=FUNC_STRING__ASCII_CHR_046__STARTSWITH(_FUNC_STRING__ASCII_CHR_046__INTERNAL__ASCII_CHR_046__TRIMEXTENDED_STRING_RESULT,FUNC_CHAR__ASCII_CHR_046__NULL()))&1){
+*_FUNC_STRING__ASCII_CHR_046__INTERNAL__ASCII_CHR_046__TRIMEXTENDED_BIT1_ISNULL|=-2;
+}else{
+*_FUNC_STRING__ASCII_CHR_046__INTERNAL__ASCII_CHR_046__TRIMEXTENDED_BIT1_ISNULL&=1;
+}
+qbs_cleanup(qbs_tmp_base,0);
+if(!qbevent)break;evnt(2,22,"trimExtended.bi");}while(r);
+do{
+if ((*_FUNC_STRING__ASCII_CHR_046__INTERNAL__ASCII_CHR_046__TRIMEXTENDED_BIT1_ISSPACE=FUNC_STRING__ASCII_CHR_046__STARTSWITH(_FUNC_STRING__ASCII_CHR_046__INTERNAL__ASCII_CHR_046__TRIMEXTENDED_STRING_RESULT,FUNC_CHAR__ASCII_CHR_046__SPACE()))&1){
+*_FUNC_STRING__ASCII_CHR_046__INTERNAL__ASCII_CHR_046__TRIMEXTENDED_BIT1_ISSPACE|=-2;
+}else{
+*_FUNC_STRING__ASCII_CHR_046__INTERNAL__ASCII_CHR_046__TRIMEXTENDED_BIT1_ISSPACE&=1;
+}
+qbs_cleanup(qbs_tmp_base,0);
+if(!qbevent)break;evnt(2,23,"trimExtended.bi");}while(r);
+do{
+if ((*_FUNC_STRING__ASCII_CHR_046__INTERNAL__ASCII_CHR_046__TRIMEXTENDED_BIT1_ISTAB=FUNC_STRING__ASCII_CHR_046__STARTSWITH(_FUNC_STRING__ASCII_CHR_046__INTERNAL__ASCII_CHR_046__TRIMEXTENDED_STRING_RESULT,FUNC_CHAR__ASCII_CHR_046__TABULATOR()))&1){
+*_FUNC_STRING__ASCII_CHR_046__INTERNAL__ASCII_CHR_046__TRIMEXTENDED_BIT1_ISTAB|=-2;
+}else{
+*_FUNC_STRING__ASCII_CHR_046__INTERNAL__ASCII_CHR_046__TRIMEXTENDED_BIT1_ISTAB&=1;
+}
+qbs_cleanup(qbs_tmp_base,0);
+if(!qbevent)break;evnt(2,24,"trimExtended.bi");}while(r);
+S_164:;
+if ((FUNC_BOOLEAN__ASCII_CHR_046__NEITHER3(&(pass68=*_FUNC_STRING__ASCII_CHR_046__INTERNAL__ASCII_CHR_046__TRIMEXTENDED_BIT1_ISNOBR),&(pass69=*_FUNC_STRING__ASCII_CHR_046__INTERNAL__ASCII_CHR_046__TRIMEXTENDED_BIT1_ISNULL),&(pass70=*_FUNC_STRING__ASCII_CHR_046__INTERNAL__ASCII_CHR_046__TRIMEXTENDED_BIT1_ISSPACE),&(pass71=*_FUNC_STRING__ASCII_CHR_046__INTERNAL__ASCII_CHR_046__TRIMEXTENDED_BIT1_ISTAB)))||is_error_pending()){
+if(qbevent){evnt(2,31,"trimExtended.bi");if(r)goto S_164;}
+do{
+goto dl_exit_67;
+if(!qbevent)break;evnt(2,31,"trimExtended.bi");}while(r);
+}
+do{
+qbs_set(_FUNC_STRING__ASCII_CHR_046__INTERNAL__ASCII_CHR_046__TRIMEXTENDED_STRING_RESULT,FUNC_STRING__ASCII_CHR_046__SUBSTRING(_FUNC_STRING__ASCII_CHR_046__INTERNAL__ASCII_CHR_046__TRIMEXTENDED_STRING_RESULT,&(pass72= 1 )));
+qbs_cleanup(qbs_tmp_base,0);
+if(!qbevent)break;evnt(2,32,"trimExtended.bi");}while(r);
+dl_continue_67:;
+}while(1);
+dl_exit_67:;
+S_169:;
+do{
+if(qbevent){evnt(2,34,"trimExtended.bi");if(r)goto S_169;}
+do{
+if ((*_FUNC_STRING__ASCII_CHR_046__INTERNAL__ASCII_CHR_046__TRIMEXTENDED_BIT1_ISNULL=FUNC_STRING__ASCII_CHR_046__ENDSWITH(_FUNC_STRING__ASCII_CHR_046__INTERNAL__ASCII_CHR_046__TRIMEXTENDED_STRING_RESULT,FUNC_CHAR__ASCII_CHR_046__NULL()))&1){
+*_FUNC_STRING__ASCII_CHR_046__INTERNAL__ASCII_CHR_046__TRIMEXTENDED_BIT1_ISNULL|=-2;
+}else{
+*_FUNC_STRING__ASCII_CHR_046__INTERNAL__ASCII_CHR_046__TRIMEXTENDED_BIT1_ISNULL&=1;
+}
+qbs_cleanup(qbs_tmp_base,0);
+if(!qbevent)break;evnt(2,36,"trimExtended.bi");}while(r);
+do{
+if ((*_FUNC_STRING__ASCII_CHR_046__INTERNAL__ASCII_CHR_046__TRIMEXTENDED_BIT1_ISTAB=FUNC_STRING__ASCII_CHR_046__ENDSWITH(_FUNC_STRING__ASCII_CHR_046__INTERNAL__ASCII_CHR_046__TRIMEXTENDED_STRING_RESULT,FUNC_CHAR__ASCII_CHR_046__TABULATOR()))&1){
+*_FUNC_STRING__ASCII_CHR_046__INTERNAL__ASCII_CHR_046__TRIMEXTENDED_BIT1_ISTAB|=-2;
+}else{
+*_FUNC_STRING__ASCII_CHR_046__INTERNAL__ASCII_CHR_046__TRIMEXTENDED_BIT1_ISTAB&=1;
+}
+qbs_cleanup(qbs_tmp_base,0);
+if(!qbevent)break;evnt(2,37,"trimExtended.bi");}while(r);
+do{
+if ((*_FUNC_STRING__ASCII_CHR_046__INTERNAL__ASCII_CHR_046__TRIMEXTENDED_BIT1_ISSPACE=FUNC_STRING__ASCII_CHR_046__ENDSWITH(_FUNC_STRING__ASCII_CHR_046__INTERNAL__ASCII_CHR_046__TRIMEXTENDED_STRING_RESULT,FUNC_CHAR__ASCII_CHR_046__SPACE()))&1){
+*_FUNC_STRING__ASCII_CHR_046__INTERNAL__ASCII_CHR_046__TRIMEXTENDED_BIT1_ISSPACE|=-2;
+}else{
+*_FUNC_STRING__ASCII_CHR_046__INTERNAL__ASCII_CHR_046__TRIMEXTENDED_BIT1_ISSPACE&=1;
+}
+qbs_cleanup(qbs_tmp_base,0);
+if(!qbevent)break;evnt(2,38,"trimExtended.bi");}while(r);
+do{
+if ((*_FUNC_STRING__ASCII_CHR_046__INTERNAL__ASCII_CHR_046__TRIMEXTENDED_BIT1_ISNOBR=FUNC_STRING__ASCII_CHR_046__ENDSWITH(_FUNC_STRING__ASCII_CHR_046__INTERNAL__ASCII_CHR_046__TRIMEXTENDED_STRING_RESULT,FUNC_CHAR__ASCII_CHR_046__NOBREAK()))&1){
+*_FUNC_STRING__ASCII_CHR_046__INTERNAL__ASCII_CHR_046__TRIMEXTENDED_BIT1_ISNOBR|=-2;
+}else{
+*_FUNC_STRING__ASCII_CHR_046__INTERNAL__ASCII_CHR_046__TRIMEXTENDED_BIT1_ISNOBR&=1;
+}
+qbs_cleanup(qbs_tmp_base,0);
+if(!qbevent)break;evnt(2,39,"trimExtended.bi");}while(r);
+S_174:;
+if ((FUNC_BOOLEAN__ASCII_CHR_046__NEITHER3(&(pass74=*_FUNC_STRING__ASCII_CHR_046__INTERNAL__ASCII_CHR_046__TRIMEXTENDED_BIT1_ISNOBR),&(pass75=*_FUNC_STRING__ASCII_CHR_046__INTERNAL__ASCII_CHR_046__TRIMEXTENDED_BIT1_ISNULL),&(pass76=*_FUNC_STRING__ASCII_CHR_046__INTERNAL__ASCII_CHR_046__TRIMEXTENDED_BIT1_ISSPACE),&(pass77=*_FUNC_STRING__ASCII_CHR_046__INTERNAL__ASCII_CHR_046__TRIMEXTENDED_BIT1_ISTAB)))||is_error_pending()){
+if(qbevent){evnt(2,46,"trimExtended.bi");if(r)goto S_174;}
+do{
+goto dl_exit_73;
+if(!qbevent)break;evnt(2,46,"trimExtended.bi");}while(r);
+}
+do{
+qbs_set(_FUNC_STRING__ASCII_CHR_046__INTERNAL__ASCII_CHR_046__TRIMEXTENDED_STRING_RESULT,FUNC_STRING__ASCII_CHR_046__SUBSTR(_FUNC_STRING__ASCII_CHR_046__INTERNAL__ASCII_CHR_046__TRIMEXTENDED_STRING_RESULT,&(pass78= 0 ),&(pass79=FUNC_STRING__ASCII_CHR_046__LENGTH(_FUNC_STRING__ASCII_CHR_046__INTERNAL__ASCII_CHR_046__TRIMEXTENDED_STRING_RESULT)- 1 )));
+qbs_cleanup(qbs_tmp_base,0);
+if(!qbevent)break;evnt(2,47,"trimExtended.bi");}while(r);
+dl_continue_73:;
+}while(1);
+dl_exit_73:;
+do{
+qbs_set(_FUNC_STRING__ASCII_CHR_046__INTERNAL__ASCII_CHR_046__TRIMEXTENDED_STRING_STRING__ASCII_CHR_046__INTERNAL__ASCII_CHR_046__TRIMEXTENDED,_FUNC_STRING__ASCII_CHR_046__INTERNAL__ASCII_CHR_046__TRIMEXTENDED_STRING_RESULT);
+qbs_cleanup(qbs_tmp_base,0);
+if(!qbevent)break;evnt(2,50,"trimExtended.bi");}while(r);
+exit_subfunc:;
+free_mem_lock(sf_mem_lock);
+#include "free58.txt"
+if ((tmp_mem_static_pointer>=mem_static)&&(tmp_mem_static_pointer<=mem_static_limit)) mem_static_pointer=tmp_mem_static_pointer; else mem_static_pointer=mem_static;
+cmem_sp=tmp_cmem_sp;
+qbs_maketmp(_FUNC_STRING__ASCII_CHR_046__INTERNAL__ASCII_CHR_046__TRIMEXTENDED_STRING_STRING__ASCII_CHR_046__INTERNAL__ASCII_CHR_046__TRIMEXTENDED);return _FUNC_STRING__ASCII_CHR_046__INTERNAL__ASCII_CHR_046__TRIMEXTENDED_STRING_STRING__ASCII_CHR_046__INTERNAL__ASCII_CHR_046__TRIMEXTENDED;
+}
+qbs* FUNC_STRING__ASCII_CHR_046__INTERNAL__ASCII_CHR_046__TRIMSIMPLE(qbs*_FUNC_STRING__ASCII_CHR_046__INTERNAL__ASCII_CHR_046__TRIMSIMPLE_STRING_THIS){
+qbs *tqbs;
+ptrszint tmp_long;
+int32 tmp_fileno;
+uint32 qbs_tmp_base=qbs_tmp_list_nexti;
+uint8 *tmp_mem_static_pointer=mem_static_pointer;
+uint32 tmp_cmem_sp=cmem_sp;
+#include "data59.txt"
+mem_lock *sf_mem_lock;
+new_mem_lock();
+sf_mem_lock=mem_lock_tmp;
+sf_mem_lock->type=3;
+if (is_error_pending()) goto exit_subfunc;
+do{
+qbs_set(_FUNC_STRING__ASCII_CHR_046__INTERNAL__ASCII_CHR_046__TRIMSIMPLE_STRING_STRING__ASCII_CHR_046__INTERNAL__ASCII_CHR_046__TRIMSIMPLE,qbs_ltrim(qbs_rtrim(_FUNC_STRING__ASCII_CHR_046__INTERNAL__ASCII_CHR_046__TRIMSIMPLE_STRING_THIS)));
+qbs_cleanup(qbs_tmp_base,0);
+if(!qbevent)break;evnt(2,4,"trimSimple.bi");}while(r);
+exit_subfunc:;
+free_mem_lock(sf_mem_lock);
+#include "free59.txt"
+if ((tmp_mem_static_pointer>=mem_static)&&(tmp_mem_static_pointer<=mem_static_limit)) mem_static_pointer=tmp_mem_static_pointer; else mem_static_pointer=mem_static;
+cmem_sp=tmp_cmem_sp;
+qbs_maketmp(_FUNC_STRING__ASCII_CHR_046__INTERNAL__ASCII_CHR_046__TRIMSIMPLE_STRING_STRING__ASCII_CHR_046__INTERNAL__ASCII_CHR_046__TRIMSIMPLE);return _FUNC_STRING__ASCII_CHR_046__INTERNAL__ASCII_CHR_046__TRIMSIMPLE_STRING_STRING__ASCII_CHR_046__INTERNAL__ASCII_CHR_046__TRIMSIMPLE;
+}
+qbs* FUNC_STRING__ASCII_CHR_046__TRIM(qbs*_FUNC_STRING__ASCII_CHR_046__TRIM_STRING_THIS,int16*_FUNC_STRING__ASCII_CHR_046__TRIM_INTEGER_ISEXTENDED){
+qbs *tqbs;
+ptrszint tmp_long;
+int32 tmp_fileno;
+uint32 qbs_tmp_base=qbs_tmp_list_nexti;
+uint8 *tmp_mem_static_pointer=mem_static_pointer;
+uint32 tmp_cmem_sp=cmem_sp;
+#include "data60.txt"
+mem_lock *sf_mem_lock;
+new_mem_lock();
+sf_mem_lock=mem_lock_tmp;
+sf_mem_lock->type=3;
+if (is_error_pending()) goto exit_subfunc;
+S_181:;
+if ((FUNC_BOOLEAN__ASCII_CHR_046__ISTRUE(&(pass82=*_FUNC_STRING__ASCII_CHR_046__TRIM_INTEGER_ISEXTENDED)))||is_error_pending()){
+if(qbevent){evnt(2,8,"trim.bi");if(r)goto S_181;}
+do{
+qbs_set(_FUNC_STRING__ASCII_CHR_046__TRIM_STRING_STRING__ASCII_CHR_046__TRIM,FUNC_STRING__ASCII_CHR_046__INTERNAL__ASCII_CHR_046__TRIMEXTENDED(_FUNC_STRING__ASCII_CHR_046__TRIM_STRING_THIS));
+qbs_cleanup(qbs_tmp_base,0);
+if(!qbevent)break;evnt(2,9,"trim.bi");}while(r);
+}else{
+do{
+qbs_set(_FUNC_STRING__ASCII_CHR_046__TRIM_STRING_STRING__ASCII_CHR_046__TRIM,FUNC_STRING__ASCII_CHR_046__INTERNAL__ASCII_CHR_046__TRIMSIMPLE(_FUNC_STRING__ASCII_CHR_046__TRIM_STRING_THIS));
+qbs_cleanup(qbs_tmp_base,0);
+if(!qbevent)break;evnt(2,11,"trim.bi");}while(r);
+}
+exit_subfunc:;
+free_mem_lock(sf_mem_lock);
+#include "free60.txt"
+if ((tmp_mem_static_pointer>=mem_static)&&(tmp_mem_static_pointer<=mem_static_limit)) mem_static_pointer=tmp_mem_static_pointer; else mem_static_pointer=mem_static;
+cmem_sp=tmp_cmem_sp;
+qbs_maketmp(_FUNC_STRING__ASCII_CHR_046__TRIM_STRING_STRING__ASCII_CHR_046__TRIM);return _FUNC_STRING__ASCII_CHR_046__TRIM_STRING_STRING__ASCII_CHR_046__TRIM;
+}
+qbs* FUNC_INTEGER__ASCII_CHR_046__TOSTRING(int16*_FUNC_INTEGER__ASCII_CHR_046__TOSTRING_INTEGER_THIS){
+qbs *tqbs;
+ptrszint tmp_long;
+int32 tmp_fileno;
+uint32 qbs_tmp_base=qbs_tmp_list_nexti;
+uint8 *tmp_mem_static_pointer=mem_static_pointer;
+uint32 tmp_cmem_sp=cmem_sp;
+#include "data61.txt"
+mem_lock *sf_mem_lock;
+new_mem_lock();
+sf_mem_lock=mem_lock_tmp;
+sf_mem_lock->type=3;
+if (is_error_pending()) goto exit_subfunc;
+do{
+qbs_set(_FUNC_INTEGER__ASCII_CHR_046__TOSTRING_STRING_INTEGER__ASCII_CHR_046__TOSTRING,FUNC_STRING__ASCII_CHR_046__TRIM(qbs_str((int16)(*_FUNC_INTEGER__ASCII_CHR_046__TOSTRING_INTEGER_THIS)),&(pass83= 0 )));
+qbs_cleanup(qbs_tmp_base,0);
+if(!qbevent)break;evnt(2,6,"toString.bi");}while(r);
+exit_subfunc:;
+free_mem_lock(sf_mem_lock);
+#include "free61.txt"
+if ((tmp_mem_static_pointer>=mem_static)&&(tmp_mem_static_pointer<=mem_static_limit)) mem_static_pointer=tmp_mem_static_pointer; else mem_static_pointer=mem_static;
+cmem_sp=tmp_cmem_sp;
+qbs_maketmp(_FUNC_INTEGER__ASCII_CHR_046__TOSTRING_STRING_INTEGER__ASCII_CHR_046__TOSTRING);return _FUNC_INTEGER__ASCII_CHR_046__TOSTRING_STRING_INTEGER__ASCII_CHR_046__TOSTRING;
+}
+int16 FUNC_INTEGER__ASCII_CHR_046__UNPACK(qbs*_FUNC_INTEGER__ASCII_CHR_046__UNPACK_STRING_INTEGERSTRING){
+qbs *tqbs;
+ptrszint tmp_long;
+int32 tmp_fileno;
+uint32 qbs_tmp_base=qbs_tmp_list_nexti;
+uint8 *tmp_mem_static_pointer=mem_static_pointer;
+uint32 tmp_cmem_sp=cmem_sp;
+#include "data62.txt"
+mem_lock *sf_mem_lock;
+new_mem_lock();
+sf_mem_lock=mem_lock_tmp;
+sf_mem_lock->type=3;
+if (is_error_pending()) goto exit_subfunc;
+do{
+if(!qbevent)break;evnt(2,8,"unpack.bi");}while(r);
+do{
+qbs_set(_FUNC_INTEGER__ASCII_CHR_046__UNPACK_STRING_THIS,FUNC_STRING__ASCII_CHR_046__CONCAT(_FUNC_INTEGER__ASCII_CHR_046__UNPACK_STRING_INTEGERSTRING,FUNC_INTEGER__ASCII_CHR_046__PACK(&(pass85= 0 ))));
+qbs_cleanup(qbs_tmp_base,0);
+if(!qbevent)break;evnt(2,9,"unpack.bi");}while(r);
+do{
+*_FUNC_INTEGER__ASCII_CHR_046__UNPACK_INTEGER_INTEGER__ASCII_CHR_046__UNPACK=string2i(FUNC_STRING__ASCII_CHR_046__SUBSTR(_FUNC_INTEGER__ASCII_CHR_046__UNPACK_STRING_THIS,&(pass86= 0 ),&(pass87= 2 )));
+qbs_cleanup(qbs_tmp_base,0);
+if(!qbevent)break;evnt(2,10,"unpack.bi");}while(r);
+exit_subfunc:;
+free_mem_lock(sf_mem_lock);
+#include "free62.txt"
+if ((tmp_mem_static_pointer>=mem_static)&&(tmp_mem_static_pointer<=mem_static_limit)) mem_static_pointer=tmp_mem_static_pointer; else mem_static_pointer=mem_static;
+cmem_sp=tmp_cmem_sp;
+return *_FUNC_INTEGER__ASCII_CHR_046__UNPACK_INTEGER_INTEGER__ASCII_CHR_046__UNPACK;
+}
+qbs* FUNC_KEYCODE__ASCII_CHR_046__INTERNAL__ASCII_CHR_046__FROM(int16*_FUNC_KEYCODE__ASCII_CHR_046__INTERNAL__ASCII_CHR_046__FROM_INTEGER_THIS){
+qbs *tqbs;
+ptrszint tmp_long;
+int32 tmp_fileno;
+uint32 qbs_tmp_base=qbs_tmp_list_nexti;
+uint8 *tmp_mem_static_pointer=mem_static_pointer;
+uint32 tmp_cmem_sp=cmem_sp;
+#include "data63.txt"
+mem_lock *sf_mem_lock;
+new_mem_lock();
+sf_mem_lock=mem_lock_tmp;
+sf_mem_lock->type=3;
+if (is_error_pending()) goto exit_subfunc;
+do{
+qbs_set(_FUNC_KEYCODE__ASCII_CHR_046__INTERNAL__ASCII_CHR_046__FROM_STRING_KEYCODE__ASCII_CHR_046__INTERNAL__ASCII_CHR_046__FROM,FUNC_STRING__ASCII_CHR_046__CONCAT(FUNC_CHAR__ASCII_CHR_046__FROM(_FUNC_KEYCODE__ASCII_CHR_046__INTERNAL__ASCII_CHR_046__FROM_INTEGER_THIS),FUNC_CHAR__ASCII_CHR_046__NULL()));
+qbs_cleanup(qbs_tmp_base,0);
+if(!qbevent)break;evnt(2,8,"from.bi");}while(r);
+exit_subfunc:;
+free_mem_lock(sf_mem_lock);
+#include "free63.txt"
+if ((tmp_mem_static_pointer>=mem_static)&&(tmp_mem_static_pointer<=mem_static_limit)) mem_static_pointer=tmp_mem_static_pointer; else mem_static_pointer=mem_static;
+cmem_sp=tmp_cmem_sp;
+qbs_maketmp(_FUNC_KEYCODE__ASCII_CHR_046__INTERNAL__ASCII_CHR_046__FROM_STRING_KEYCODE__ASCII_CHR_046__INTERNAL__ASCII_CHR_046__FROM);return _FUNC_KEYCODE__ASCII_CHR_046__INTERNAL__ASCII_CHR_046__FROM_STRING_KEYCODE__ASCII_CHR_046__INTERNAL__ASCII_CHR_046__FROM;
+}
+qbs* FUNC_KEYCODE__ASCII_CHR_046__ESCAPE(){
+qbs *tqbs;
+ptrszint tmp_long;
+int32 tmp_fileno;
+uint32 qbs_tmp_base=qbs_tmp_list_nexti;
+uint8 *tmp_mem_static_pointer=mem_static_pointer;
+uint32 tmp_cmem_sp=cmem_sp;
+#include "data64.txt"
+mem_lock *sf_mem_lock;
+new_mem_lock();
+sf_mem_lock=mem_lock_tmp;
+sf_mem_lock->type=3;
+if (is_error_pending()) goto exit_subfunc;
+do{
+qbs_set(_FUNC_KEYCODE__ASCII_CHR_046__ESCAPE_STRING_KEYCODE__ASCII_CHR_046__ESCAPE,FUNC_KEYCODE__ASCII_CHR_046__INTERNAL__ASCII_CHR_046__FROM(&(pass88= 27 )));
+qbs_cleanup(qbs_tmp_base,0);
+if(!qbevent)break;evnt(2,6,"Escape.bi");}while(r);
+exit_subfunc:;
+free_mem_lock(sf_mem_lock);
+#include "free64.txt"
+if ((tmp_mem_static_pointer>=mem_static)&&(tmp_mem_static_pointer<=mem_static_limit)) mem_static_pointer=tmp_mem_static_pointer; else mem_static_pointer=mem_static;
+cmem_sp=tmp_cmem_sp;
+qbs_maketmp(_FUNC_KEYCODE__ASCII_CHR_046__ESCAPE_STRING_KEYCODE__ASCII_CHR_046__ESCAPE);return _FUNC_KEYCODE__ASCII_CHR_046__ESCAPE_STRING_KEYCODE__ASCII_CHR_046__ESCAPE;
+}
+qbs* FUNC_KEYCODE__ASCII_CHR_046__INTERNAL__ASCII_CHR_046__FROMEXTENDED(int16*_FUNC_KEYCODE__ASCII_CHR_046__INTERNAL__ASCII_CHR_046__FROMEXTENDED_INTEGER_THIS){
+qbs *tqbs;
+ptrszint tmp_long;
+int32 tmp_fileno;
+uint32 qbs_tmp_base=qbs_tmp_list_nexti;
+uint8 *tmp_mem_static_pointer=mem_static_pointer;
+uint32 tmp_cmem_sp=cmem_sp;
+#include "data65.txt"
+mem_lock *sf_mem_lock;
+new_mem_lock();
+sf_mem_lock=mem_lock_tmp;
+sf_mem_lock->type=3;
+if (is_error_pending()) goto exit_subfunc;
+do{
+qbs_set(_FUNC_KEYCODE__ASCII_CHR_046__INTERNAL__ASCII_CHR_046__FROMEXTENDED_STRING_KEYCODE__ASCII_CHR_046__INTERNAL__ASCII_CHR_046__FROMEXTENDED,FUNC_STRING__ASCII_CHR_046__CONCAT(FUNC_CHAR__ASCII_CHR_046__NULL(),FUNC_CHAR__ASCII_CHR_046__FROM(_FUNC_KEYCODE__ASCII_CHR_046__INTERNAL__ASCII_CHR_046__FROMEXTENDED_INTEGER_THIS)));
+qbs_cleanup(qbs_tmp_base,0);
+if(!qbevent)break;evnt(2,8,"fromExtended.bi");}while(r);
+exit_subfunc:;
+free_mem_lock(sf_mem_lock);
+#include "free65.txt"
+if ((tmp_mem_static_pointer>=mem_static)&&(tmp_mem_static_pointer<=mem_static_limit)) mem_static_pointer=tmp_mem_static_pointer; else mem_static_pointer=mem_static;
+cmem_sp=tmp_cmem_sp;
+qbs_maketmp(_FUNC_KEYCODE__ASCII_CHR_046__INTERNAL__ASCII_CHR_046__FROMEXTENDED_STRING_KEYCODE__ASCII_CHR_046__INTERNAL__ASCII_CHR_046__FROMEXTENDED);return _FUNC_KEYCODE__ASCII_CHR_046__INTERNAL__ASCII_CHR_046__FROMEXTENDED_STRING_KEYCODE__ASCII_CHR_046__INTERNAL__ASCII_CHR_046__FROMEXTENDED;
+}
+qbs* FUNC_KEYCODE__ASCII_CHR_046__F1(){
+qbs *tqbs;
+ptrszint tmp_long;
+int32 tmp_fileno;
+uint32 qbs_tmp_base=qbs_tmp_list_nexti;
+uint8 *tmp_mem_static_pointer=mem_static_pointer;
+uint32 tmp_cmem_sp=cmem_sp;
+#include "data66.txt"
+mem_lock *sf_mem_lock;
+new_mem_lock();
+sf_mem_lock=mem_lock_tmp;
+sf_mem_lock->type=3;
+if (is_error_pending()) goto exit_subfunc;
+do{
+qbs_set(_FUNC_KEYCODE__ASCII_CHR_046__F1_STRING_KEYCODE__ASCII_CHR_046__F1,FUNC_KEYCODE__ASCII_CHR_046__INTERNAL__ASCII_CHR_046__FROMEXTENDED(&(pass89= 59 )));
+qbs_cleanup(qbs_tmp_base,0);
+if(!qbevent)break;evnt(2,6,"F1.bi");}while(r);
+exit_subfunc:;
+free_mem_lock(sf_mem_lock);
+#include "free66.txt"
+if ((tmp_mem_static_pointer>=mem_static)&&(tmp_mem_static_pointer<=mem_static_limit)) mem_static_pointer=tmp_mem_static_pointer; else mem_static_pointer=mem_static;
+cmem_sp=tmp_cmem_sp;
+qbs_maketmp(_FUNC_KEYCODE__ASCII_CHR_046__F1_STRING_KEYCODE__ASCII_CHR_046__F1);return _FUNC_KEYCODE__ASCII_CHR_046__F1_STRING_KEYCODE__ASCII_CHR_046__F1;
+}
+qbs* FUNC_KEYCODE__ASCII_CHR_046__F2(){
+qbs *tqbs;
+ptrszint tmp_long;
+int32 tmp_fileno;
+uint32 qbs_tmp_base=qbs_tmp_list_nexti;
+uint8 *tmp_mem_static_pointer=mem_static_pointer;
+uint32 tmp_cmem_sp=cmem_sp;
+#include "data67.txt"
+mem_lock *sf_mem_lock;
+new_mem_lock();
+sf_mem_lock=mem_lock_tmp;
+sf_mem_lock->type=3;
+if (is_error_pending()) goto exit_subfunc;
+do{
+qbs_set(_FUNC_KEYCODE__ASCII_CHR_046__F2_STRING_KEYCODE__ASCII_CHR_046__F2,FUNC_KEYCODE__ASCII_CHR_046__INTERNAL__ASCII_CHR_046__FROMEXTENDED(&(pass90= 60 )));
+qbs_cleanup(qbs_tmp_base,0);
+if(!qbevent)break;evnt(2,6,"F2.bi");}while(r);
+exit_subfunc:;
+free_mem_lock(sf_mem_lock);
+#include "free67.txt"
+if ((tmp_mem_static_pointer>=mem_static)&&(tmp_mem_static_pointer<=mem_static_limit)) mem_static_pointer=tmp_mem_static_pointer; else mem_static_pointer=mem_static;
+cmem_sp=tmp_cmem_sp;
+qbs_maketmp(_FUNC_KEYCODE__ASCII_CHR_046__F2_STRING_KEYCODE__ASCII_CHR_046__F2);return _FUNC_KEYCODE__ASCII_CHR_046__F2_STRING_KEYCODE__ASCII_CHR_046__F2;
+}
+qbs* FUNC_KEYCODE__ASCII_CHR_046__F3(){
+qbs *tqbs;
+ptrszint tmp_long;
+int32 tmp_fileno;
+uint32 qbs_tmp_base=qbs_tmp_list_nexti;
+uint8 *tmp_mem_static_pointer=mem_static_pointer;
+uint32 tmp_cmem_sp=cmem_sp;
+#include "data68.txt"
+mem_lock *sf_mem_lock;
+new_mem_lock();
+sf_mem_lock=mem_lock_tmp;
+sf_mem_lock->type=3;
+if (is_error_pending()) goto exit_subfunc;
+do{
+qbs_set(_FUNC_KEYCODE__ASCII_CHR_046__F3_STRING_KEYCODE__ASCII_CHR_046__F3,FUNC_KEYCODE__ASCII_CHR_046__INTERNAL__ASCII_CHR_046__FROMEXTENDED(&(pass91= 61 )));
+qbs_cleanup(qbs_tmp_base,0);
+if(!qbevent)break;evnt(2,6,"F3.bi");}while(r);
+exit_subfunc:;
+free_mem_lock(sf_mem_lock);
+#include "free68.txt"
+if ((tmp_mem_static_pointer>=mem_static)&&(tmp_mem_static_pointer<=mem_static_limit)) mem_static_pointer=tmp_mem_static_pointer; else mem_static_pointer=mem_static;
+cmem_sp=tmp_cmem_sp;
+qbs_maketmp(_FUNC_KEYCODE__ASCII_CHR_046__F3_STRING_KEYCODE__ASCII_CHR_046__F3);return _FUNC_KEYCODE__ASCII_CHR_046__F3_STRING_KEYCODE__ASCII_CHR_046__F3;
+}
+qbs* FUNC_KEYCODE__ASCII_CHR_046__F4(){
+qbs *tqbs;
+ptrszint tmp_long;
+int32 tmp_fileno;
+uint32 qbs_tmp_base=qbs_tmp_list_nexti;
+uint8 *tmp_mem_static_pointer=mem_static_pointer;
+uint32 tmp_cmem_sp=cmem_sp;
+#include "data69.txt"
+mem_lock *sf_mem_lock;
+new_mem_lock();
+sf_mem_lock=mem_lock_tmp;
+sf_mem_lock->type=3;
+if (is_error_pending()) goto exit_subfunc;
+do{
+qbs_set(_FUNC_KEYCODE__ASCII_CHR_046__F4_STRING_KEYCODE__ASCII_CHR_046__F4,FUNC_KEYCODE__ASCII_CHR_046__INTERNAL__ASCII_CHR_046__FROMEXTENDED(&(pass92= 62 )));
+qbs_cleanup(qbs_tmp_base,0);
+if(!qbevent)break;evnt(2,6,"F4.bi");}while(r);
+exit_subfunc:;
+free_mem_lock(sf_mem_lock);
+#include "free69.txt"
+if ((tmp_mem_static_pointer>=mem_static)&&(tmp_mem_static_pointer<=mem_static_limit)) mem_static_pointer=tmp_mem_static_pointer; else mem_static_pointer=mem_static;
+cmem_sp=tmp_cmem_sp;
+qbs_maketmp(_FUNC_KEYCODE__ASCII_CHR_046__F4_STRING_KEYCODE__ASCII_CHR_046__F4);return _FUNC_KEYCODE__ASCII_CHR_046__F4_STRING_KEYCODE__ASCII_CHR_046__F4;
+}
+qbs* FUNC_KEYCODE__ASCII_CHR_046__F5(){
+qbs *tqbs;
+ptrszint tmp_long;
+int32 tmp_fileno;
+uint32 qbs_tmp_base=qbs_tmp_list_nexti;
+uint8 *tmp_mem_static_pointer=mem_static_pointer;
+uint32 tmp_cmem_sp=cmem_sp;
+#include "data70.txt"
+mem_lock *sf_mem_lock;
+new_mem_lock();
+sf_mem_lock=mem_lock_tmp;
+sf_mem_lock->type=3;
+if (is_error_pending()) goto exit_subfunc;
+do{
+qbs_set(_FUNC_KEYCODE__ASCII_CHR_046__F5_STRING_KEYCODE__ASCII_CHR_046__F5,FUNC_KEYCODE__ASCII_CHR_046__INTERNAL__ASCII_CHR_046__FROMEXTENDED(&(pass93= 63 )));
+qbs_cleanup(qbs_tmp_base,0);
+if(!qbevent)break;evnt(2,6,"F5.bi");}while(r);
+exit_subfunc:;
+free_mem_lock(sf_mem_lock);
+#include "free70.txt"
+if ((tmp_mem_static_pointer>=mem_static)&&(tmp_mem_static_pointer<=mem_static_limit)) mem_static_pointer=tmp_mem_static_pointer; else mem_static_pointer=mem_static;
+cmem_sp=tmp_cmem_sp;
+qbs_maketmp(_FUNC_KEYCODE__ASCII_CHR_046__F5_STRING_KEYCODE__ASCII_CHR_046__F5);return _FUNC_KEYCODE__ASCII_CHR_046__F5_STRING_KEYCODE__ASCII_CHR_046__F5;
+}
+qbs* FUNC_KEYCODE__ASCII_CHR_046__F6(){
+qbs *tqbs;
+ptrszint tmp_long;
+int32 tmp_fileno;
+uint32 qbs_tmp_base=qbs_tmp_list_nexti;
+uint8 *tmp_mem_static_pointer=mem_static_pointer;
+uint32 tmp_cmem_sp=cmem_sp;
+#include "data71.txt"
+mem_lock *sf_mem_lock;
+new_mem_lock();
+sf_mem_lock=mem_lock_tmp;
+sf_mem_lock->type=3;
+if (is_error_pending()) goto exit_subfunc;
+do{
+qbs_set(_FUNC_KEYCODE__ASCII_CHR_046__F6_STRING_KEYCODE__ASCII_CHR_046__F6,FUNC_KEYCODE__ASCII_CHR_046__INTERNAL__ASCII_CHR_046__FROMEXTENDED(&(pass94= 64 )));
+qbs_cleanup(qbs_tmp_base,0);
+if(!qbevent)break;evnt(2,6,"F6.bi");}while(r);
+exit_subfunc:;
+free_mem_lock(sf_mem_lock);
+#include "free71.txt"
+if ((tmp_mem_static_pointer>=mem_static)&&(tmp_mem_static_pointer<=mem_static_limit)) mem_static_pointer=tmp_mem_static_pointer; else mem_static_pointer=mem_static;
+cmem_sp=tmp_cmem_sp;
+qbs_maketmp(_FUNC_KEYCODE__ASCII_CHR_046__F6_STRING_KEYCODE__ASCII_CHR_046__F6);return _FUNC_KEYCODE__ASCII_CHR_046__F6_STRING_KEYCODE__ASCII_CHR_046__F6;
+}
+qbs* FUNC_KEYCODE__ASCII_CHR_046__F7(){
+qbs *tqbs;
+ptrszint tmp_long;
+int32 tmp_fileno;
+uint32 qbs_tmp_base=qbs_tmp_list_nexti;
+uint8 *tmp_mem_static_pointer=mem_static_pointer;
+uint32 tmp_cmem_sp=cmem_sp;
+#include "data72.txt"
+mem_lock *sf_mem_lock;
+new_mem_lock();
+sf_mem_lock=mem_lock_tmp;
+sf_mem_lock->type=3;
+if (is_error_pending()) goto exit_subfunc;
+do{
+qbs_set(_FUNC_KEYCODE__ASCII_CHR_046__F7_STRING_KEYCODE__ASCII_CHR_046__F7,FUNC_KEYCODE__ASCII_CHR_046__INTERNAL__ASCII_CHR_046__FROMEXTENDED(&(pass95= 65 )));
+qbs_cleanup(qbs_tmp_base,0);
+if(!qbevent)break;evnt(2,6,"F7.bi");}while(r);
+exit_subfunc:;
+free_mem_lock(sf_mem_lock);
+#include "free72.txt"
+if ((tmp_mem_static_pointer>=mem_static)&&(tmp_mem_static_pointer<=mem_static_limit)) mem_static_pointer=tmp_mem_static_pointer; else mem_static_pointer=mem_static;
+cmem_sp=tmp_cmem_sp;
+qbs_maketmp(_FUNC_KEYCODE__ASCII_CHR_046__F7_STRING_KEYCODE__ASCII_CHR_046__F7);return _FUNC_KEYCODE__ASCII_CHR_046__F7_STRING_KEYCODE__ASCII_CHR_046__F7;
+}
+qbs* FUNC_KEYCODE__ASCII_CHR_046__F8(){
+qbs *tqbs;
+ptrszint tmp_long;
+int32 tmp_fileno;
+uint32 qbs_tmp_base=qbs_tmp_list_nexti;
+uint8 *tmp_mem_static_pointer=mem_static_pointer;
+uint32 tmp_cmem_sp=cmem_sp;
+#include "data73.txt"
+mem_lock *sf_mem_lock;
+new_mem_lock();
+sf_mem_lock=mem_lock_tmp;
+sf_mem_lock->type=3;
+if (is_error_pending()) goto exit_subfunc;
+do{
+qbs_set(_FUNC_KEYCODE__ASCII_CHR_046__F8_STRING_KEYCODE__ASCII_CHR_046__F8,FUNC_KEYCODE__ASCII_CHR_046__INTERNAL__ASCII_CHR_046__FROMEXTENDED(&(pass96= 66 )));
+qbs_cleanup(qbs_tmp_base,0);
+if(!qbevent)break;evnt(2,6,"F8.bi");}while(r);
+exit_subfunc:;
+free_mem_lock(sf_mem_lock);
+#include "free73.txt"
+if ((tmp_mem_static_pointer>=mem_static)&&(tmp_mem_static_pointer<=mem_static_limit)) mem_static_pointer=tmp_mem_static_pointer; else mem_static_pointer=mem_static;
+cmem_sp=tmp_cmem_sp;
+qbs_maketmp(_FUNC_KEYCODE__ASCII_CHR_046__F8_STRING_KEYCODE__ASCII_CHR_046__F8);return _FUNC_KEYCODE__ASCII_CHR_046__F8_STRING_KEYCODE__ASCII_CHR_046__F8;
+}
+qbs* FUNC_KEYCODE__ASCII_CHR_046__F9(){
+qbs *tqbs;
+ptrszint tmp_long;
+int32 tmp_fileno;
+uint32 qbs_tmp_base=qbs_tmp_list_nexti;
+uint8 *tmp_mem_static_pointer=mem_static_pointer;
+uint32 tmp_cmem_sp=cmem_sp;
+#include "data74.txt"
+mem_lock *sf_mem_lock;
+new_mem_lock();
+sf_mem_lock=mem_lock_tmp;
+sf_mem_lock->type=3;
+if (is_error_pending()) goto exit_subfunc;
+do{
+qbs_set(_FUNC_KEYCODE__ASCII_CHR_046__F9_STRING_KEYCODE__ASCII_CHR_046__F9,FUNC_KEYCODE__ASCII_CHR_046__INTERNAL__ASCII_CHR_046__FROMEXTENDED(&(pass97= 67 )));
+qbs_cleanup(qbs_tmp_base,0);
+if(!qbevent)break;evnt(2,6,"F9.bi");}while(r);
+exit_subfunc:;
+free_mem_lock(sf_mem_lock);
+#include "free74.txt"
+if ((tmp_mem_static_pointer>=mem_static)&&(tmp_mem_static_pointer<=mem_static_limit)) mem_static_pointer=tmp_mem_static_pointer; else mem_static_pointer=mem_static;
+cmem_sp=tmp_cmem_sp;
+qbs_maketmp(_FUNC_KEYCODE__ASCII_CHR_046__F9_STRING_KEYCODE__ASCII_CHR_046__F9);return _FUNC_KEYCODE__ASCII_CHR_046__F9_STRING_KEYCODE__ASCII_CHR_046__F9;
+}
+qbs* FUNC_KEYCODE__ASCII_CHR_046__F10(){
+qbs *tqbs;
+ptrszint tmp_long;
+int32 tmp_fileno;
+uint32 qbs_tmp_base=qbs_tmp_list_nexti;
+uint8 *tmp_mem_static_pointer=mem_static_pointer;
+uint32 tmp_cmem_sp=cmem_sp;
+#include "data75.txt"
+mem_lock *sf_mem_lock;
+new_mem_lock();
+sf_mem_lock=mem_lock_tmp;
+sf_mem_lock->type=3;
+if (is_error_pending()) goto exit_subfunc;
+do{
+qbs_set(_FUNC_KEYCODE__ASCII_CHR_046__F10_STRING_KEYCODE__ASCII_CHR_046__F10,FUNC_KEYCODE__ASCII_CHR_046__INTERNAL__ASCII_CHR_046__FROMEXTENDED(&(pass98= 68 )));
+qbs_cleanup(qbs_tmp_base,0);
+if(!qbevent)break;evnt(2,6,"F10.bi");}while(r);
+exit_subfunc:;
+free_mem_lock(sf_mem_lock);
+#include "free75.txt"
+if ((tmp_mem_static_pointer>=mem_static)&&(tmp_mem_static_pointer<=mem_static_limit)) mem_static_pointer=tmp_mem_static_pointer; else mem_static_pointer=mem_static;
+cmem_sp=tmp_cmem_sp;
+qbs_maketmp(_FUNC_KEYCODE__ASCII_CHR_046__F10_STRING_KEYCODE__ASCII_CHR_046__F10);return _FUNC_KEYCODE__ASCII_CHR_046__F10_STRING_KEYCODE__ASCII_CHR_046__F10;
+}
+qbs* FUNC_KEYCODE__ASCII_CHR_046__NEWLINE(){
+qbs *tqbs;
+ptrszint tmp_long;
+int32 tmp_fileno;
+uint32 qbs_tmp_base=qbs_tmp_list_nexti;
+uint8 *tmp_mem_static_pointer=mem_static_pointer;
+uint32 tmp_cmem_sp=cmem_sp;
+#include "data76.txt"
+mem_lock *sf_mem_lock;
+new_mem_lock();
+sf_mem_lock=mem_lock_tmp;
+sf_mem_lock->type=3;
+if (is_error_pending()) goto exit_subfunc;
+do{
+qbs_set(_FUNC_KEYCODE__ASCII_CHR_046__NEWLINE_STRING_KEYCODE__ASCII_CHR_046__NEWLINE,FUNC_KEYCODE__ASCII_CHR_046__INTERNAL__ASCII_CHR_046__FROM(&(pass99= 10 )));
+qbs_cleanup(qbs_tmp_base,0);
+if(!qbevent)break;evnt(2,6,"Newline.bi");}while(r);
+exit_subfunc:;
+free_mem_lock(sf_mem_lock);
+#include "free76.txt"
+if ((tmp_mem_static_pointer>=mem_static)&&(tmp_mem_static_pointer<=mem_static_limit)) mem_static_pointer=tmp_mem_static_pointer; else mem_static_pointer=mem_static;
+cmem_sp=tmp_cmem_sp;
+qbs_maketmp(_FUNC_KEYCODE__ASCII_CHR_046__NEWLINE_STRING_KEYCODE__ASCII_CHR_046__NEWLINE);return _FUNC_KEYCODE__ASCII_CHR_046__NEWLINE_STRING_KEYCODE__ASCII_CHR_046__NEWLINE;
+}
+qbs* FUNC_KEYCODE__ASCII_CHR_046__NULL(){
+qbs *tqbs;
+ptrszint tmp_long;
+int32 tmp_fileno;
+uint32 qbs_tmp_base=qbs_tmp_list_nexti;
+uint8 *tmp_mem_static_pointer=mem_static_pointer;
+uint32 tmp_cmem_sp=cmem_sp;
+#include "data77.txt"
+mem_lock *sf_mem_lock;
+new_mem_lock();
+sf_mem_lock=mem_lock_tmp;
+sf_mem_lock->type=3;
+if (is_error_pending()) goto exit_subfunc;
+do{
+qbs_set(_FUNC_KEYCODE__ASCII_CHR_046__NULL_STRING_KEYCODE__ASCII_CHR_046__NULL,FUNC_INTEGER__ASCII_CHR_046__PACK(&(pass100= 0 )));
+qbs_cleanup(qbs_tmp_base,0);
+if(!qbevent)break;evnt(2,6,"Null.bi");}while(r);
+exit_subfunc:;
+free_mem_lock(sf_mem_lock);
+#include "free77.txt"
+if ((tmp_mem_static_pointer>=mem_static)&&(tmp_mem_static_pointer<=mem_static_limit)) mem_static_pointer=tmp_mem_static_pointer; else mem_static_pointer=mem_static;
+cmem_sp=tmp_cmem_sp;
+qbs_maketmp(_FUNC_KEYCODE__ASCII_CHR_046__NULL_STRING_KEYCODE__ASCII_CHR_046__NULL);return _FUNC_KEYCODE__ASCII_CHR_046__NULL_STRING_KEYCODE__ASCII_CHR_046__NULL;
+}
+qbs* FUNC_KEYCODE__ASCII_CHR_046__RETURN(){
+qbs *tqbs;
+ptrszint tmp_long;
+int32 tmp_fileno;
+uint32 qbs_tmp_base=qbs_tmp_list_nexti;
+uint8 *tmp_mem_static_pointer=mem_static_pointer;
+uint32 tmp_cmem_sp=cmem_sp;
+#include "data78.txt"
+mem_lock *sf_mem_lock;
+new_mem_lock();
+sf_mem_lock=mem_lock_tmp;
+sf_mem_lock->type=3;
+if (is_error_pending()) goto exit_subfunc;
+do{
+qbs_set(_FUNC_KEYCODE__ASCII_CHR_046__RETURN_STRING_KEYCODE__ASCII_CHR_046__RETURN,FUNC_KEYCODE__ASCII_CHR_046__INTERNAL__ASCII_CHR_046__FROM(&(pass101= 13 )));
+qbs_cleanup(qbs_tmp_base,0);
+if(!qbevent)break;evnt(2,6,"Return.bi");}while(r);
+exit_subfunc:;
+free_mem_lock(sf_mem_lock);
+#include "free78.txt"
+if ((tmp_mem_static_pointer>=mem_static)&&(tmp_mem_static_pointer<=mem_static_limit)) mem_static_pointer=tmp_mem_static_pointer; else mem_static_pointer=mem_static;
+cmem_sp=tmp_cmem_sp;
+qbs_maketmp(_FUNC_KEYCODE__ASCII_CHR_046__RETURN_STRING_KEYCODE__ASCII_CHR_046__RETURN);return _FUNC_KEYCODE__ASCII_CHR_046__RETURN_STRING_KEYCODE__ASCII_CHR_046__RETURN;
+}
+qbs* FUNC_KEYCODE__ASCII_CHR_046__TABULATOR(){
+qbs *tqbs;
+ptrszint tmp_long;
+int32 tmp_fileno;
+uint32 qbs_tmp_base=qbs_tmp_list_nexti;
+uint8 *tmp_mem_static_pointer=mem_static_pointer;
+uint32 tmp_cmem_sp=cmem_sp;
+#include "data79.txt"
+mem_lock *sf_mem_lock;
+new_mem_lock();
+sf_mem_lock=mem_lock_tmp;
+sf_mem_lock->type=3;
+if (is_error_pending()) goto exit_subfunc;
+do{
+qbs_set(_FUNC_KEYCODE__ASCII_CHR_046__TABULATOR_STRING_KEYCODE__ASCII_CHR_046__TABULATOR,FUNC_KEYCODE__ASCII_CHR_046__INTERNAL__ASCII_CHR_046__FROM(&(pass102= 9 )));
+qbs_cleanup(qbs_tmp_base,0);
+if(!qbevent)break;evnt(2,6,"Tabulator.bi");}while(r);
+exit_subfunc:;
+free_mem_lock(sf_mem_lock);
+#include "free79.txt"
+if ((tmp_mem_static_pointer>=mem_static)&&(tmp_mem_static_pointer<=mem_static_limit)) mem_static_pointer=tmp_mem_static_pointer; else mem_static_pointer=mem_static;
+cmem_sp=tmp_cmem_sp;
+qbs_maketmp(_FUNC_KEYCODE__ASCII_CHR_046__TABULATOR_STRING_KEYCODE__ASCII_CHR_046__TABULATOR);return _FUNC_KEYCODE__ASCII_CHR_046__TABULATOR_STRING_KEYCODE__ASCII_CHR_046__TABULATOR;
+}
+void SUB_LONG__ASCII_CHR_046__INVOKE(int32*_SUB_LONG__ASCII_CHR_046__INVOKE_LONG_THIS){
+qbs *tqbs;
+ptrszint tmp_long;
+int32 tmp_fileno;
+uint32 qbs_tmp_base=qbs_tmp_list_nexti;
+uint8 *tmp_mem_static_pointer=mem_static_pointer;
+uint32 tmp_cmem_sp=cmem_sp;
+#include "data80.txt"
+mem_lock *sf_mem_lock;
+new_mem_lock();
+sf_mem_lock=mem_lock_tmp;
+sf_mem_lock->type=3;
+if (is_error_pending()) goto exit_subfunc;
+exit_subfunc:;
+free_mem_lock(sf_mem_lock);
+#include "free80.txt"
+if ((tmp_mem_static_pointer>=mem_static)&&(tmp_mem_static_pointer<=mem_static_limit)) mem_static_pointer=tmp_mem_static_pointer; else mem_static_pointer=mem_static;
+cmem_sp=tmp_cmem_sp;
+}
+qbs* FUNC_LONG__ASCII_CHR_046__PACK(int32*_FUNC_LONG__ASCII_CHR_046__PACK_LONG_THIS){
+qbs *tqbs;
+ptrszint tmp_long;
+int32 tmp_fileno;
+uint32 qbs_tmp_base=qbs_tmp_list_nexti;
+uint8 *tmp_mem_static_pointer=mem_static_pointer;
+uint32 tmp_cmem_sp=cmem_sp;
+#include "data81.txt"
+mem_lock *sf_mem_lock;
+new_mem_lock();
+sf_mem_lock=mem_lock_tmp;
+sf_mem_lock->type=3;
+if (is_error_pending()) goto exit_subfunc;
+do{
+qbs_set(_FUNC_LONG__ASCII_CHR_046__PACK_STRING_LONG__ASCII_CHR_046__PACK,l2string(*_FUNC_LONG__ASCII_CHR_046__PACK_LONG_THIS));
+qbs_cleanup(qbs_tmp_base,0);
+if(!qbevent)break;evnt(2,4,"pack.bi");}while(r);
+exit_subfunc:;
+free_mem_lock(sf_mem_lock);
+#include "free81.txt"
+if ((tmp_mem_static_pointer>=mem_static)&&(tmp_mem_static_pointer<=mem_static_limit)) mem_static_pointer=tmp_mem_static_pointer; else mem_static_pointer=mem_static;
+cmem_sp=tmp_cmem_sp;
+qbs_maketmp(_FUNC_LONG__ASCII_CHR_046__PACK_STRING_LONG__ASCII_CHR_046__PACK);return _FUNC_LONG__ASCII_CHR_046__PACK_STRING_LONG__ASCII_CHR_046__PACK;
+}
+qbs* FUNC_LONG__ASCII_CHR_046__TOSTRING(int32*_FUNC_LONG__ASCII_CHR_046__TOSTRING_LONG_THIS){
+qbs *tqbs;
+ptrszint tmp_long;
+int32 tmp_fileno;
+uint32 qbs_tmp_base=qbs_tmp_list_nexti;
+uint8 *tmp_mem_static_pointer=mem_static_pointer;
+uint32 tmp_cmem_sp=cmem_sp;
+#include "data82.txt"
+mem_lock *sf_mem_lock;
+new_mem_lock();
+sf_mem_lock=mem_lock_tmp;
+sf_mem_lock->type=3;
+if (is_error_pending()) goto exit_subfunc;
+do{
+qbs_set(_FUNC_LONG__ASCII_CHR_046__TOSTRING_STRING_LONG__ASCII_CHR_046__TOSTRING,FUNC_STRING__ASCII_CHR_046__TRIM(qbs_str((int32)(*_FUNC_LONG__ASCII_CHR_046__TOSTRING_LONG_THIS)),&(pass103= 0 )));
+qbs_cleanup(qbs_tmp_base,0);
+if(!qbevent)break;evnt(2,6,"toString.bi");}while(r);
+exit_subfunc:;
+free_mem_lock(sf_mem_lock);
+#include "free82.txt"
+if ((tmp_mem_static_pointer>=mem_static)&&(tmp_mem_static_pointer<=mem_static_limit)) mem_static_pointer=tmp_mem_static_pointer; else mem_static_pointer=mem_static;
+cmem_sp=tmp_cmem_sp;
+qbs_maketmp(_FUNC_LONG__ASCII_CHR_046__TOSTRING_STRING_LONG__ASCII_CHR_046__TOSTRING);return _FUNC_LONG__ASCII_CHR_046__TOSTRING_STRING_LONG__ASCII_CHR_046__TOSTRING;
+}
+int16 FUNC_LONG__ASCII_CHR_046__UNPACK(qbs*_FUNC_LONG__ASCII_CHR_046__UNPACK_STRING_LONGSTRING){
+qbs *tqbs;
+ptrszint tmp_long;
+int32 tmp_fileno;
+uint32 qbs_tmp_base=qbs_tmp_list_nexti;
+uint8 *tmp_mem_static_pointer=mem_static_pointer;
+uint32 tmp_cmem_sp=cmem_sp;
+#include "data83.txt"
+mem_lock *sf_mem_lock;
+new_mem_lock();
+sf_mem_lock=mem_lock_tmp;
+sf_mem_lock->type=3;
+if (is_error_pending()) goto exit_subfunc;
+do{
+if(!qbevent)break;evnt(2,8,"unpack.bi");}while(r);
+do{
+qbs_set(_FUNC_LONG__ASCII_CHR_046__UNPACK_STRING_THIS,FUNC_STRING__ASCII_CHR_046__CONCAT(_FUNC_LONG__ASCII_CHR_046__UNPACK_STRING_LONGSTRING,FUNC_LONG__ASCII_CHR_046__PACK(&(pass105= 0 ))));
+qbs_cleanup(qbs_tmp_base,0);
+if(!qbevent)break;evnt(2,9,"unpack.bi");}while(r);
+do{
+*_FUNC_LONG__ASCII_CHR_046__UNPACK_INTEGER_LONG__ASCII_CHR_046__UNPACK=string2l(FUNC_STRING__ASCII_CHR_046__SUBSTR(_FUNC_LONG__ASCII_CHR_046__UNPACK_STRING_THIS,&(pass106= 0 ),&(pass107= 4 )));
+qbs_cleanup(qbs_tmp_base,0);
+if(!qbevent)break;evnt(2,10,"unpack.bi");}while(r);
+exit_subfunc:;
+free_mem_lock(sf_mem_lock);
+#include "free83.txt"
+if ((tmp_mem_static_pointer>=mem_static)&&(tmp_mem_static_pointer<=mem_static_limit)) mem_static_pointer=tmp_mem_static_pointer; else mem_static_pointer=mem_static;
+cmem_sp=tmp_cmem_sp;
+return *_FUNC_LONG__ASCII_CHR_046__UNPACK_INTEGER_LONG__ASCII_CHR_046__UNPACK;
+}
+void SUB_STRING__ASCII_CHR_046__APPEND(qbs*_SUB_STRING__ASCII_CHR_046__APPEND_STRING_THIS,qbs*_SUB_STRING__ASCII_CHR_046__APPEND_STRING_OTHER){
+qbs *tqbs;
+ptrszint tmp_long;
+int32 tmp_fileno;
+uint32 qbs_tmp_base=qbs_tmp_list_nexti;
+uint8 *tmp_mem_static_pointer=mem_static_pointer;
+uint32 tmp_cmem_sp=cmem_sp;
+#include "data84.txt"
+mem_lock *sf_mem_lock;
+new_mem_lock();
+sf_mem_lock=mem_lock_tmp;
+sf_mem_lock->type=3;
+if (is_error_pending()) goto exit_subfunc;
+do{
+qbs_set(_SUB_STRING__ASCII_CHR_046__APPEND_STRING_THIS,FUNC_STRING__ASCII_CHR_046__CONCAT(_SUB_STRING__ASCII_CHR_046__APPEND_STRING_THIS,_SUB_STRING__ASCII_CHR_046__APPEND_STRING_OTHER));
+qbs_cleanup(qbs_tmp_base,0);
+if(!qbevent)break;evnt(2,6,"append.bi");}while(r);
+exit_subfunc:;
+free_mem_lock(sf_mem_lock);
+#include "free84.txt"
+if ((tmp_mem_static_pointer>=mem_static)&&(tmp_mem_static_pointer<=mem_static_limit)) mem_static_pointer=tmp_mem_static_pointer; else mem_static_pointer=mem_static;
+cmem_sp=tmp_cmem_sp;
+}
+int32 FUNC_STRING__ASCII_CHR_046__ENDSWITH(qbs*_FUNC_STRING__ASCII_CHR_046__ENDSWITH_STRING_THIS,qbs*_FUNC_STRING__ASCII_CHR_046__ENDSWITH_STRING_SEARCH){
+qbs *tqbs;
+ptrszint tmp_long;
+int32 tmp_fileno;
+uint32 qbs_tmp_base=qbs_tmp_list_nexti;
+uint8 *tmp_mem_static_pointer=mem_static_pointer;
+uint32 tmp_cmem_sp=cmem_sp;
+#include "data85.txt"
+mem_lock *sf_mem_lock;
+new_mem_lock();
+sf_mem_lock=mem_lock_tmp;
+sf_mem_lock->type=3;
+if (is_error_pending()) goto exit_subfunc;
+do{
+if(!qbevent)break;evnt(2,8,"endsWith.bi");}while(r);
+do{
+qbs_set(_FUNC_STRING__ASCII_CHR_046__ENDSWITH_STRING_OTHER,FUNC_STRING__ASCII_CHR_046__SUBSTRING(_FUNC_STRING__ASCII_CHR_046__ENDSWITH_STRING_THIS,&(pass112=-(FUNC_STRING__ASCII_CHR_046__LENGTH(_FUNC_STRING__ASCII_CHR_046__ENDSWITH_STRING_SEARCH)))));
+qbs_cleanup(qbs_tmp_base,0);
+if(!qbevent)break;evnt(2,9,"endsWith.bi");}while(r);
+do{
+if ((*_FUNC_STRING__ASCII_CHR_046__ENDSWITH_BIT1_STRING__ASCII_CHR_046__ENDSWITH=FUNC_STRING__ASCII_CHR_046__EQUALS(_FUNC_STRING__ASCII_CHR_046__ENDSWITH_STRING_SEARCH,_FUNC_STRING__ASCII_CHR_046__ENDSWITH_STRING_OTHER))&1){
+*_FUNC_STRING__ASCII_CHR_046__ENDSWITH_BIT1_STRING__ASCII_CHR_046__ENDSWITH|=-2;
+}else{
+*_FUNC_STRING__ASCII_CHR_046__ENDSWITH_BIT1_STRING__ASCII_CHR_046__ENDSWITH&=1;
+}
+qbs_cleanup(qbs_tmp_base,0);
+if(!qbevent)break;evnt(2,10,"endsWith.bi");}while(r);
+exit_subfunc:;
+free_mem_lock(sf_mem_lock);
+#include "free85.txt"
+if ((tmp_mem_static_pointer>=mem_static)&&(tmp_mem_static_pointer<=mem_static_limit)) mem_static_pointer=tmp_mem_static_pointer; else mem_static_pointer=mem_static;
+cmem_sp=tmp_cmem_sp;
+return *_FUNC_STRING__ASCII_CHR_046__ENDSWITH_BIT1_STRING__ASCII_CHR_046__ENDSWITH;
+}
+void SUB_STRING__ASCII_CHR_046__INVOKE(qbs*_SUB_STRING__ASCII_CHR_046__INVOKE_STRING_THIS){
+qbs *tqbs;
+ptrszint tmp_long;
+int32 tmp_fileno;
+uint32 qbs_tmp_base=qbs_tmp_list_nexti;
+uint8 *tmp_mem_static_pointer=mem_static_pointer;
+uint32 tmp_cmem_sp=cmem_sp;
+#include "data86.txt"
+mem_lock *sf_mem_lock;
+new_mem_lock();
+sf_mem_lock=mem_lock_tmp;
+sf_mem_lock->type=3;
+if (is_error_pending()) goto exit_subfunc;
+do{
+SUB_INVOKES(_SUB_STRING__ASCII_CHR_046__INVOKE_STRING_THIS);
+qbs_cleanup(qbs_tmp_base,0);
+if(!qbevent)break;evnt(2,5,"invoke.bi");}while(r);
+exit_subfunc:;
+free_mem_lock(sf_mem_lock);
+#include "free86.txt"
+if ((tmp_mem_static_pointer>=mem_static)&&(tmp_mem_static_pointer<=mem_static_limit)) mem_static_pointer=tmp_mem_static_pointer; else mem_static_pointer=mem_static;
+cmem_sp=tmp_cmem_sp;
+}
+int32 FUNC_STRING__ASCII_CHR_046__STARTSWITH(qbs*_FUNC_STRING__ASCII_CHR_046__STARTSWITH_STRING_THIS,qbs*_FUNC_STRING__ASCII_CHR_046__STARTSWITH_STRING_SEARCH){
+qbs *tqbs;
+ptrszint tmp_long;
+int32 tmp_fileno;
+uint32 qbs_tmp_base=qbs_tmp_list_nexti;
+uint8 *tmp_mem_static_pointer=mem_static_pointer;
+uint32 tmp_cmem_sp=cmem_sp;
+#include "data87.txt"
+mem_lock *sf_mem_lock;
+new_mem_lock();
+sf_mem_lock=mem_lock_tmp;
+sf_mem_lock->type=3;
+if (is_error_pending()) goto exit_subfunc;
+do{
+if(!qbevent)break;evnt(2,8,"startsWith.bi");}while(r);
+do{
+qbs_set(_FUNC_STRING__ASCII_CHR_046__STARTSWITH_STRING_OTHER,FUNC_STRING__ASCII_CHR_046__SUBSTR(_FUNC_STRING__ASCII_CHR_046__STARTSWITH_STRING_THIS,&(pass116= 0 ),&(pass117=FUNC_STRING__ASCII_CHR_046__LENGTH(_FUNC_STRING__ASCII_CHR_046__STARTSWITH_STRING_SEARCH))));
+qbs_cleanup(qbs_tmp_base,0);
+if(!qbevent)break;evnt(2,9,"startsWith.bi");}while(r);
+do{
+if ((*_FUNC_STRING__ASCII_CHR_046__STARTSWITH_BIT1_STRING__ASCII_CHR_046__STARTSWITH=FUNC_STRING__ASCII_CHR_046__EQUALS(_FUNC_STRING__ASCII_CHR_046__STARTSWITH_STRING_SEARCH,_FUNC_STRING__ASCII_CHR_046__STARTSWITH_STRING_OTHER))&1){
+*_FUNC_STRING__ASCII_CHR_046__STARTSWITH_BIT1_STRING__ASCII_CHR_046__STARTSWITH|=-2;
+}else{
+*_FUNC_STRING__ASCII_CHR_046__STARTSWITH_BIT1_STRING__ASCII_CHR_046__STARTSWITH&=1;
+}
+qbs_cleanup(qbs_tmp_base,0);
+if(!qbevent)break;evnt(2,10,"startsWith.bi");}while(r);
+exit_subfunc:;
+free_mem_lock(sf_mem_lock);
+#include "free87.txt"
+if ((tmp_mem_static_pointer>=mem_static)&&(tmp_mem_static_pointer<=mem_static_limit)) mem_static_pointer=tmp_mem_static_pointer; else mem_static_pointer=mem_static;
+cmem_sp=tmp_cmem_sp;
+return *_FUNC_STRING__ASCII_CHR_046__STARTSWITH_BIT1_STRING__ASCII_CHR_046__STARTSWITH;
+}
+qbs* FUNC_STRING__ASCII_CHR_046__TOLOWER(qbs*_FUNC_STRING__ASCII_CHR_046__TOLOWER_STRING_THIS){
+qbs *tqbs;
+ptrszint tmp_long;
+int32 tmp_fileno;
+uint32 qbs_tmp_base=qbs_tmp_list_nexti;
+uint8 *tmp_mem_static_pointer=mem_static_pointer;
+uint32 tmp_cmem_sp=cmem_sp;
+#include "data88.txt"
+mem_lock *sf_mem_lock;
+new_mem_lock();
+sf_mem_lock=mem_lock_tmp;
+sf_mem_lock->type=3;
+if (is_error_pending()) goto exit_subfunc;
+do{
+qbs_set(_FUNC_STRING__ASCII_CHR_046__TOLOWER_STRING_STRING__ASCII_CHR_046__TOLOWER,qbs_lcase(_FUNC_STRING__ASCII_CHR_046__TOLOWER_STRING_THIS));
+qbs_cleanup(qbs_tmp_base,0);
+if(!qbevent)break;evnt(2,4,"toLower.bi");}while(r);
+exit_subfunc:;
+free_mem_lock(sf_mem_lock);
+#include "free88.txt"
+if ((tmp_mem_static_pointer>=mem_static)&&(tmp_mem_static_pointer<=mem_static_limit)) mem_static_pointer=tmp_mem_static_pointer; else mem_static_pointer=mem_static;
+cmem_sp=tmp_cmem_sp;
+qbs_maketmp(_FUNC_STRING__ASCII_CHR_046__TOLOWER_STRING_STRING__ASCII_CHR_046__TOLOWER);return _FUNC_STRING__ASCII_CHR_046__TOLOWER_STRING_STRING__ASCII_CHR_046__TOLOWER;
+}
+qbs* FUNC_STRING__ASCII_CHR_046__TOSTRING(qbs*_FUNC_STRING__ASCII_CHR_046__TOSTRING_STRING_THIS){
+qbs *tqbs;
+ptrszint tmp_long;
+int32 tmp_fileno;
+uint32 qbs_tmp_base=qbs_tmp_list_nexti;
+uint8 *tmp_mem_static_pointer=mem_static_pointer;
+uint32 tmp_cmem_sp=cmem_sp;
+#include "data89.txt"
+mem_lock *sf_mem_lock;
+new_mem_lock();
+sf_mem_lock=mem_lock_tmp;
+sf_mem_lock->type=3;
+if (is_error_pending()) goto exit_subfunc;
+do{
+if(!qbevent)break;evnt(2,8,"toString.bi");}while(r);
+do{
+if(!qbevent)break;evnt(2,9,"toString.bi");}while(r);
+do{
+*_FUNC_STRING__ASCII_CHR_046__TOSTRING_LONG_LENGTH=FUNC_STRING__ASCII_CHR_046__LENGTH(_FUNC_STRING__ASCII_CHR_046__TOSTRING_STRING_THIS);
+qbs_cleanup(qbs_tmp_base,0);
+if(!qbevent)break;evnt(2,11,"toString.bi");}while(r);
+do{
+qbs_set(_FUNC_STRING__ASCII_CHR_046__TOSTRING_STRING_LENGTHSTR,FUNC_LONG__ASCII_CHR_046__PACK(_FUNC_STRING__ASCII_CHR_046__TOSTRING_LONG_LENGTH));
+qbs_cleanup(qbs_tmp_base,0);
+if(!qbevent)break;evnt(2,12,"toString.bi");}while(r);
+do{
+qbs_set(_FUNC_STRING__ASCII_CHR_046__TOSTRING_STRING_STRING__ASCII_CHR_046__TOSTRING,FUNC_STRING__ASCII_CHR_046__CONCAT(_FUNC_STRING__ASCII_CHR_046__TOSTRING_STRING_LENGTHSTR,_FUNC_STRING__ASCII_CHR_046__TOSTRING_STRING_THIS));
+qbs_cleanup(qbs_tmp_base,0);
+if(!qbevent)break;evnt(2,14,"toString.bi");}while(r);
+exit_subfunc:;
+free_mem_lock(sf_mem_lock);
+#include "free89.txt"
+if ((tmp_mem_static_pointer>=mem_static)&&(tmp_mem_static_pointer<=mem_static_limit)) mem_static_pointer=tmp_mem_static_pointer; else mem_static_pointer=mem_static;
+cmem_sp=tmp_cmem_sp;
+qbs_maketmp(_FUNC_STRING__ASCII_CHR_046__TOSTRING_STRING_STRING__ASCII_CHR_046__TOSTRING);return _FUNC_STRING__ASCII_CHR_046__TOSTRING_STRING_STRING__ASCII_CHR_046__TOSTRING;
+}
+qbs* FUNC_STRING__ASCII_CHR_046__TOUPPER(qbs*_FUNC_STRING__ASCII_CHR_046__TOUPPER_STRING_THIS){
+qbs *tqbs;
+ptrszint tmp_long;
+int32 tmp_fileno;
+uint32 qbs_tmp_base=qbs_tmp_list_nexti;
+uint8 *tmp_mem_static_pointer=mem_static_pointer;
+uint32 tmp_cmem_sp=cmem_sp;
+#include "data90.txt"
+mem_lock *sf_mem_lock;
+new_mem_lock();
+sf_mem_lock=mem_lock_tmp;
+sf_mem_lock->type=3;
+if (is_error_pending()) goto exit_subfunc;
+do{
+qbs_set(_FUNC_STRING__ASCII_CHR_046__TOUPPER_STRING_STRING__ASCII_CHR_046__TOUPPER,qbs_ucase(_FUNC_STRING__ASCII_CHR_046__TOUPPER_STRING_THIS));
+qbs_cleanup(qbs_tmp_base,0);
+if(!qbevent)break;evnt(2,4,"toUpper.bi");}while(r);
+exit_subfunc:;
+free_mem_lock(sf_mem_lock);
+#include "free90.txt"
+if ((tmp_mem_static_pointer>=mem_static)&&(tmp_mem_static_pointer<=mem_static_limit)) mem_static_pointer=tmp_mem_static_pointer; else mem_static_pointer=mem_static;
+cmem_sp=tmp_cmem_sp;
+qbs_maketmp(_FUNC_STRING__ASCII_CHR_046__TOUPPER_STRING_STRING__ASCII_CHR_046__TOUPPER);return _FUNC_STRING__ASCII_CHR_046__TOUPPER_STRING_STRING__ASCII_CHR_046__TOUPPER;
+}
+int32 FUNC_STRINGS__ASCII_CHR_046__AREEQUAL(qbs*_FUNC_STRINGS__ASCII_CHR_046__AREEQUAL_STRING_FIRST,qbs*_FUNC_STRINGS__ASCII_CHR_046__AREEQUAL_STRING_SECOND){
+qbs *tqbs;
+ptrszint tmp_long;
+int32 tmp_fileno;
+uint32 qbs_tmp_base=qbs_tmp_list_nexti;
+uint8 *tmp_mem_static_pointer=mem_static_pointer;
+uint32 tmp_cmem_sp=cmem_sp;
+#include "data91.txt"
+mem_lock *sf_mem_lock;
+new_mem_lock();
+sf_mem_lock=mem_lock_tmp;
+sf_mem_lock->type=3;
+if (is_error_pending()) goto exit_subfunc;
+do{
+if ((*_FUNC_STRINGS__ASCII_CHR_046__AREEQUAL_BIT1_STRINGS__ASCII_CHR_046__AREEQUAL=FUNC_STRING__ASCII_CHR_046__EQUALS(_FUNC_STRINGS__ASCII_CHR_046__AREEQUAL_STRING_FIRST,_FUNC_STRINGS__ASCII_CHR_046__AREEQUAL_STRING_SECOND))&1){
+*_FUNC_STRINGS__ASCII_CHR_046__AREEQUAL_BIT1_STRINGS__ASCII_CHR_046__AREEQUAL|=-2;
+}else{
+*_FUNC_STRINGS__ASCII_CHR_046__AREEQUAL_BIT1_STRINGS__ASCII_CHR_046__AREEQUAL&=1;
+}
+qbs_cleanup(qbs_tmp_base,0);
+if(!qbevent)break;evnt(2,6,"areEqual.bi");}while(r);
+exit_subfunc:;
+free_mem_lock(sf_mem_lock);
+#include "free91.txt"
+if ((tmp_mem_static_pointer>=mem_static)&&(tmp_mem_static_pointer<=mem_static_limit)) mem_static_pointer=tmp_mem_static_pointer; else mem_static_pointer=mem_static;
+cmem_sp=tmp_cmem_sp;
+return *_FUNC_STRINGS__ASCII_CHR_046__AREEQUAL_BIT1_STRINGS__ASCII_CHR_046__AREEQUAL;
+}
+void SUB_STRINGOBJECT(void*_SUB_STRINGOBJECT_UDT_THIS,qbs*_SUB_STRINGOBJECT_STRING_VALUE){
+qbs *tqbs;
+ptrszint tmp_long;
+int32 tmp_fileno;
+uint32 qbs_tmp_base=qbs_tmp_list_nexti;
+uint8 *tmp_mem_static_pointer=mem_static_pointer;
+uint32 tmp_cmem_sp=cmem_sp;
+#include "data92.txt"
+mem_lock *sf_mem_lock;
+new_mem_lock();
+sf_mem_lock=mem_lock_tmp;
+sf_mem_lock->type=3;
+if (is_error_pending()) goto exit_subfunc;
+do{
+if(!qbevent)break;evnt(2,7,"_constructor.bi");}while(r);
+S_229:;
+if ((qbs_cleanup(qbs_tmp_base,FUNC_STRING__ASCII_CHR_046__ISEMPTY(_SUB_STRINGOBJECT_STRING_VALUE)))||is_error_pending()){
+if(qbevent){evnt(2,9,"_constructor.bi");if(r)goto S_229;}
+do{
+*(int32*)(((char*)_SUB_STRINGOBJECT_UDT_THIS)+(0))= 0 ;
+if(!qbevent)break;evnt(2,10,"_constructor.bi");}while(r);
+do{
+*(int32*)(((char*)_SUB_STRINGOBJECT_UDT_THIS)+(4))= 0 ;
+if(!qbevent)break;evnt(2,11,"_constructor.bi");}while(r);
+do{
+goto exit_subfunc;
+if(!qbevent)break;evnt(2,12,"_constructor.bi");}while(r);
+}
+do{
+*_SUB_STRINGOBJECT_LONG_NEWITEM=func_ubound(__ARRAY_STRING_SHAREDSTRINGBUFFER,1,1)+ 1 ;
+qbs_cleanup(qbs_tmp_base,0);
+if(!qbevent)break;evnt(2,15,"_constructor.bi");}while(r);
+do{
+*(int32*)(((char*)_SUB_STRINGOBJECT_UDT_THIS)+(4))=_SUB_STRINGOBJECT_STRING_VALUE->len;
+if(!qbevent)break;evnt(2,16,"_constructor.bi");}while(r);
+S_236:;
+fornext_value126= 1 ;
+fornext_finalvalue126=*_SUB_STRINGOBJECT_LONG_NEWITEM- 1 ;
+fornext_step126= 1 ;
+if (fornext_step126<0) fornext_step_negative126=1; else fornext_step_negative126=0;
+if (is_error_pending()) goto fornext_error126;
+goto fornext_entrylabel126;
+while(1){
+fornext_value126=fornext_step126+(*_SUB_STRINGOBJECT_LONG_EACH);
+fornext_entrylabel126:
+*_SUB_STRINGOBJECT_LONG_EACH=fornext_value126;
+if (fornext_step_negative126){
+if (fornext_value126<fornext_finalvalue126) break;
+}else{
+if (fornext_value126>fornext_finalvalue126) break;
+}
+fornext_error126:;
+if(qbevent){evnt(2,17,"_constructor.bi");if(r)goto S_236;}
+S_237:;
+if ((qbs_cleanup(qbs_tmp_base,FUNC_STRING__ASCII_CHR_046__EQUALS(_SUB_STRINGOBJECT_STRING_VALUE,((qbs*)(((uint64*)(__ARRAY_STRING_SHAREDSTRINGBUFFER[0]))[array_check((*_SUB_STRINGOBJECT_LONG_EACH)-__ARRAY_STRING_SHAREDSTRINGBUFFER[4],__ARRAY_STRING_SHAREDSTRINGBUFFER[5])])))))||is_error_pending()){
+if(qbevent){evnt(2,18,"_constructor.bi");if(r)goto S_237;}
+do{
+*(int32*)(((char*)_SUB_STRINGOBJECT_UDT_THIS)+(0))=*_SUB_STRINGOBJECT_LONG_EACH;
+if(!qbevent)break;evnt(2,19,"_constructor.bi");}while(r);
+do{
+goto exit_subfunc;
+if(!qbevent)break;evnt(2,20,"_constructor.bi");}while(r);
+}
+fornext_continue_125:;
+}
+fornext_exit_125:;
+do{
+
+if (__ARRAY_STRING_SHAREDSTRINGBUFFER[2]&2){
+error(10);
+}else{
+((mem_lock*)((ptrszint*)__ARRAY_STRING_SHAREDSTRINGBUFFER)[8])->id=(++mem_lock_id);
+static int32 preserved_elements;
+if (__ARRAY_STRING_SHAREDSTRINGBUFFER[2]&1){
+preserved_elements=__ARRAY_STRING_SHAREDSTRINGBUFFER[5];
+}
+else preserved_elements=0;
+__ARRAY_STRING_SHAREDSTRINGBUFFER[4]= 0 ;
+__ARRAY_STRING_SHAREDSTRINGBUFFER[5]=(*_SUB_STRINGOBJECT_LONG_NEWITEM)-__ARRAY_STRING_SHAREDSTRINGBUFFER[4]+1;
+__ARRAY_STRING_SHAREDSTRINGBUFFER[6]=1;
+if (preserved_elements){
+static ptrszint tmp_long2;
+tmp_long2=__ARRAY_STRING_SHAREDSTRINGBUFFER[5];
+if (tmp_long2<preserved_elements){
+for(tmp_long=tmp_long2;tmp_long<preserved_elements;tmp_long++) {
+qbs_free((qbs*)((uint64*)(__ARRAY_STRING_SHAREDSTRINGBUFFER[0]))[tmp_long]);
+}}
+__ARRAY_STRING_SHAREDSTRINGBUFFER[0]=(ptrszint)realloc((void*)(__ARRAY_STRING_SHAREDSTRINGBUFFER[0]),tmp_long2*8);
+if (!__ARRAY_STRING_SHAREDSTRINGBUFFER[0]) error(257);
+if (preserved_elements<tmp_long2){
+for(tmp_long=preserved_elements;tmp_long<tmp_long2;tmp_long++){
+if (__ARRAY_STRING_SHAREDSTRINGBUFFER[2]&4){
+((uint64*)(__ARRAY_STRING_SHAREDSTRINGBUFFER[0]))[tmp_long]=(uint64)qbs_new_cmem(0,0);
+}else{
+((uint64*)(__ARRAY_STRING_SHAREDSTRINGBUFFER[0]))[tmp_long]=(uint64)qbs_new(0,0);
+}
+}
+}
+}else{
+__ARRAY_STRING_SHAREDSTRINGBUFFER[0]=(ptrszint)malloc(__ARRAY_STRING_SHAREDSTRINGBUFFER[5]*8);
+if (!__ARRAY_STRING_SHAREDSTRINGBUFFER[0]) error(257);
+__ARRAY_STRING_SHAREDSTRINGBUFFER[2]|=1;
+tmp_long=__ARRAY_STRING_SHAREDSTRINGBUFFER[5];
+if (__ARRAY_STRING_SHAREDSTRINGBUFFER[2]&4){
+while(tmp_long--) ((uint64*)(__ARRAY_STRING_SHAREDSTRINGBUFFER[0]))[tmp_long]=(uint64)qbs_new_cmem(0,0);
+}else{
+while(tmp_long--) ((uint64*)(__ARRAY_STRING_SHAREDSTRINGBUFFER[0]))[tmp_long]=(uint64)qbs_new(0,0);
+}
+}
+}
+if(!qbevent)break;evnt(2,24,"_constructor.bi");}while(r);
+do{
+tmp_long=array_check((*_SUB_STRINGOBJECT_LONG_NEWITEM)-__ARRAY_STRING_SHAREDSTRINGBUFFER[4],__ARRAY_STRING_SHAREDSTRINGBUFFER[5]);
+if (!is_error_pending()) qbs_set( ((qbs*)(((uint64*)(__ARRAY_STRING_SHAREDSTRINGBUFFER[0]))[tmp_long])),_SUB_STRINGOBJECT_STRING_VALUE);
+qbs_cleanup(qbs_tmp_base,0);
+if(!qbevent)break;evnt(2,25,"_constructor.bi");}while(r);
+do{
+*(int32*)(((char*)_SUB_STRINGOBJECT_UDT_THIS)+(0))=*_SUB_STRINGOBJECT_LONG_NEWITEM;
+if(!qbevent)break;evnt(2,27,"_constructor.bi");}while(r);
+exit_subfunc:;
+free_mem_lock(sf_mem_lock);
+#include "free92.txt"
+if ((tmp_mem_static_pointer>=mem_static)&&(tmp_mem_static_pointer<=mem_static_limit)) mem_static_pointer=tmp_mem_static_pointer; else mem_static_pointer=mem_static;
+cmem_sp=tmp_cmem_sp;
+}
+void SUB_STRINGOBJECT__ASCII_CHR_046__EMPTY(void*_SUB_STRINGOBJECT__ASCII_CHR_046__EMPTY_UDT_THIS){
+qbs *tqbs;
+ptrszint tmp_long;
+int32 tmp_fileno;
+uint32 qbs_tmp_base=qbs_tmp_list_nexti;
+uint8 *tmp_mem_static_pointer=mem_static_pointer;
+uint32 tmp_cmem_sp=cmem_sp;
+#include "data93.txt"
+mem_lock *sf_mem_lock;
+new_mem_lock();
+sf_mem_lock=mem_lock_tmp;
+sf_mem_lock->type=3;
+if (is_error_pending()) goto exit_subfunc;
+do{
+tmp_long=array_check((*(int32*)(((char*)_SUB_STRINGOBJECT__ASCII_CHR_046__EMPTY_UDT_THIS)+(0)))-__ARRAY_STRING_SHAREDSTRINGBUFFER[4],__ARRAY_STRING_SHAREDSTRINGBUFFER[5]);
+if (!is_error_pending()) qbs_set( ((qbs*)(((uint64*)(__ARRAY_STRING_SHAREDSTRINGBUFFER[0]))[tmp_long])),FUNC_STRING__ASCII_CHR_046__EMPTY());
+qbs_cleanup(qbs_tmp_base,0);
+if(!qbevent)break;evnt(2,6,"empty.bi");}while(r);
+do{
+*(int32*)(((char*)_SUB_STRINGOBJECT__ASCII_CHR_046__EMPTY_UDT_THIS)+(4))= 0 ;
+if(!qbevent)break;evnt(2,7,"empty.bi");}while(r);
+exit_subfunc:;
+free_mem_lock(sf_mem_lock);
+#include "free93.txt"
+if ((tmp_mem_static_pointer>=mem_static)&&(tmp_mem_static_pointer<=mem_static_limit)) mem_static_pointer=tmp_mem_static_pointer; else mem_static_pointer=mem_static;
+cmem_sp=tmp_cmem_sp;
+}
+int32 FUNC_BOOLEAN__ASCII_CHR_046__AND(int8*_FUNC_BOOLEAN__ASCII_CHR_046__AND_BYTE_FIRST,int8*_FUNC_BOOLEAN__ASCII_CHR_046__AND_BYTE_SECOND){
+qbs *tqbs;
+ptrszint tmp_long;
+int32 tmp_fileno;
+uint32 qbs_tmp_base=qbs_tmp_list_nexti;
+uint8 *tmp_mem_static_pointer=mem_static_pointer;
+uint32 tmp_cmem_sp=cmem_sp;
+#include "data94.txt"
+mem_lock *sf_mem_lock;
+new_mem_lock();
+sf_mem_lock=mem_lock_tmp;
+sf_mem_lock->type=3;
+if (is_error_pending()) goto exit_subfunc;
+do{
+if ((*_FUNC_BOOLEAN__ASCII_CHR_046__AND_BIT1_BOOLEAN__ASCII_CHR_046__AND=FUNC_BOOLEAN__ASCII_CHR_046__ISTRUE(_FUNC_BOOLEAN__ASCII_CHR_046__AND_BYTE_FIRST)&FUNC_BOOLEAN__ASCII_CHR_046__ISTRUE(_FUNC_BOOLEAN__ASCII_CHR_046__AND_BYTE_SECOND))&1){
+*_FUNC_BOOLEAN__ASCII_CHR_046__AND_BIT1_BOOLEAN__ASCII_CHR_046__AND|=-2;
+}else{
+*_FUNC_BOOLEAN__ASCII_CHR_046__AND_BIT1_BOOLEAN__ASCII_CHR_046__AND&=1;
+}
+if(!qbevent)break;evnt(2,6,"and.bi");}while(r);
+exit_subfunc:;
+free_mem_lock(sf_mem_lock);
+#include "free94.txt"
+if ((tmp_mem_static_pointer>=mem_static)&&(tmp_mem_static_pointer<=mem_static_limit)) mem_static_pointer=tmp_mem_static_pointer; else mem_static_pointer=mem_static;
+cmem_sp=tmp_cmem_sp;
+return *_FUNC_BOOLEAN__ASCII_CHR_046__AND_BIT1_BOOLEAN__ASCII_CHR_046__AND;
+}
+int32 FUNC_BOOLEAN__ASCII_CHR_046__AND2(int8*_FUNC_BOOLEAN__ASCII_CHR_046__AND2_BYTE_FIRST,int8*_FUNC_BOOLEAN__ASCII_CHR_046__AND2_BYTE_SECOND,int8*_FUNC_BOOLEAN__ASCII_CHR_046__AND2_BYTE_THIRD){
+qbs *tqbs;
+ptrszint tmp_long;
+int32 tmp_fileno;
+uint32 qbs_tmp_base=qbs_tmp_list_nexti;
+uint8 *tmp_mem_static_pointer=mem_static_pointer;
+uint32 tmp_cmem_sp=cmem_sp;
+#include "data95.txt"
+mem_lock *sf_mem_lock;
+new_mem_lock();
+sf_mem_lock=mem_lock_tmp;
+sf_mem_lock->type=3;
+if (is_error_pending()) goto exit_subfunc;
+do{
+if ((*_FUNC_BOOLEAN__ASCII_CHR_046__AND2_BIT1_BOOLEAN__ASCII_CHR_046__AND2=FUNC_BOOLEAN__ASCII_CHR_046__AND(&(pass127=FUNC_BOOLEAN__ASCII_CHR_046__AND(_FUNC_BOOLEAN__ASCII_CHR_046__AND2_BYTE_FIRST,_FUNC_BOOLEAN__ASCII_CHR_046__AND2_BYTE_SECOND)),_FUNC_BOOLEAN__ASCII_CHR_046__AND2_BYTE_THIRD))&1){
+*_FUNC_BOOLEAN__ASCII_CHR_046__AND2_BIT1_BOOLEAN__ASCII_CHR_046__AND2|=-2;
+}else{
+*_FUNC_BOOLEAN__ASCII_CHR_046__AND2_BIT1_BOOLEAN__ASCII_CHR_046__AND2&=1;
+}
+if(!qbevent)break;evnt(2,10,"and.bi");}while(r);
+exit_subfunc:;
+free_mem_lock(sf_mem_lock);
+#include "free95.txt"
+if ((tmp_mem_static_pointer>=mem_static)&&(tmp_mem_static_pointer<=mem_static_limit)) mem_static_pointer=tmp_mem_static_pointer; else mem_static_pointer=mem_static;
+cmem_sp=tmp_cmem_sp;
+return *_FUNC_BOOLEAN__ASCII_CHR_046__AND2_BIT1_BOOLEAN__ASCII_CHR_046__AND2;
+}
+int32 FUNC_BOOLEAN__ASCII_CHR_046__AND3(int8*_FUNC_BOOLEAN__ASCII_CHR_046__AND3_BYTE_FIRST,int8*_FUNC_BOOLEAN__ASCII_CHR_046__AND3_BYTE_SECOND,int8*_FUNC_BOOLEAN__ASCII_CHR_046__AND3_BYTE_THIRD,int8*_FUNC_BOOLEAN__ASCII_CHR_046__AND3_BYTE_FOURTH){
+qbs *tqbs;
+ptrszint tmp_long;
+int32 tmp_fileno;
+uint32 qbs_tmp_base=qbs_tmp_list_nexti;
+uint8 *tmp_mem_static_pointer=mem_static_pointer;
+uint32 tmp_cmem_sp=cmem_sp;
+#include "data96.txt"
+mem_lock *sf_mem_lock;
+new_mem_lock();
+sf_mem_lock=mem_lock_tmp;
+sf_mem_lock->type=3;
+if (is_error_pending()) goto exit_subfunc;
+do{
+if ((*_FUNC_BOOLEAN__ASCII_CHR_046__AND3_BIT1_BOOLEAN__ASCII_CHR_046__AND3=FUNC_BOOLEAN__ASCII_CHR_046__AND(&(pass128=FUNC_BOOLEAN__ASCII_CHR_046__AND2(_FUNC_BOOLEAN__ASCII_CHR_046__AND3_BYTE_FIRST,_FUNC_BOOLEAN__ASCII_CHR_046__AND3_BYTE_SECOND,_FUNC_BOOLEAN__ASCII_CHR_046__AND3_BYTE_THIRD)),_FUNC_BOOLEAN__ASCII_CHR_046__AND3_BYTE_FOURTH))&1){
+*_FUNC_BOOLEAN__ASCII_CHR_046__AND3_BIT1_BOOLEAN__ASCII_CHR_046__AND3|=-2;
+}else{
+*_FUNC_BOOLEAN__ASCII_CHR_046__AND3_BIT1_BOOLEAN__ASCII_CHR_046__AND3&=1;
+}
+if(!qbevent)break;evnt(2,14,"and.bi");}while(r);
+exit_subfunc:;
+free_mem_lock(sf_mem_lock);
+#include "free96.txt"
+if ((tmp_mem_static_pointer>=mem_static)&&(tmp_mem_static_pointer<=mem_static_limit)) mem_static_pointer=tmp_mem_static_pointer; else mem_static_pointer=mem_static;
+cmem_sp=tmp_cmem_sp;
+return *_FUNC_BOOLEAN__ASCII_CHR_046__AND3_BIT1_BOOLEAN__ASCII_CHR_046__AND3;
+}
+int32 FUNC_STRINGOBJECT__ASCII_CHR_046__ISEMPTY(void*_FUNC_STRINGOBJECT__ASCII_CHR_046__ISEMPTY_UDT_THIS){
+qbs *tqbs;
+ptrszint tmp_long;
+int32 tmp_fileno;
+uint32 qbs_tmp_base=qbs_tmp_list_nexti;
+uint8 *tmp_mem_static_pointer=mem_static_pointer;
+uint32 tmp_cmem_sp=cmem_sp;
+#include "data97.txt"
+mem_lock *sf_mem_lock;
+new_mem_lock();
+sf_mem_lock=mem_lock_tmp;
+sf_mem_lock->type=3;
+if (is_error_pending()) goto exit_subfunc;
+do{
+if(!qbevent)break;evnt(2,7,"isEmpty.bi");}while(r);
+do{
+if ((*_FUNC_STRINGOBJECT__ASCII_CHR_046__ISEMPTY_BIT1_CONDITION1=FUNC_BOOLEAN__ASCII_CHR_046__ISTRUE(&(pass129=-(*(int32*)(((char*)_FUNC_STRINGOBJECT__ASCII_CHR_046__ISEMPTY_UDT_THIS)+(0))> 0 ))))&1){
+*_FUNC_STRINGOBJECT__ASCII_CHR_046__ISEMPTY_BIT1_CONDITION1|=-2;
+}else{
+*_FUNC_STRINGOBJECT__ASCII_CHR_046__ISEMPTY_BIT1_CONDITION1&=1;
+}
+if(!qbevent)break;evnt(2,9,"isEmpty.bi");}while(r);
+do{
+if ((*_FUNC_STRINGOBJECT__ASCII_CHR_046__ISEMPTY_BIT1_CONDITION2=FUNC_BOOLEAN__ASCII_CHR_046__ISTRUE(&(pass130=-(*(int32*)(((char*)_FUNC_STRINGOBJECT__ASCII_CHR_046__ISEMPTY_UDT_THIS)+(0))<=func_ubound(__ARRAY_STRING_SHAREDSTRINGBUFFER,1,1)))))&1){
+*_FUNC_STRINGOBJECT__ASCII_CHR_046__ISEMPTY_BIT1_CONDITION2|=-2;
+}else{
+*_FUNC_STRINGOBJECT__ASCII_CHR_046__ISEMPTY_BIT1_CONDITION2&=1;
+}
+qbs_cleanup(qbs_tmp_base,0);
+if(!qbevent)break;evnt(2,10,"isEmpty.bi");}while(r);
+S_253:;
+if ((FUNC_BOOLEAN__ASCII_CHR_046__AND(&(pass131=*_FUNC_STRINGOBJECT__ASCII_CHR_046__ISEMPTY_BIT1_CONDITION1),&(pass132=*_FUNC_STRINGOBJECT__ASCII_CHR_046__ISEMPTY_BIT1_CONDITION2)))||is_error_pending()){
+if(qbevent){evnt(2,12,"isEmpty.bi");if(r)goto S_253;}
+do{
+if ((*_FUNC_STRINGOBJECT__ASCII_CHR_046__ISEMPTY_BIT1_STRINGOBJECT__ASCII_CHR_046__ISEMPTY=FUNC_STRING__ASCII_CHR_046__ISEMPTY(((qbs*)(((uint64*)(__ARRAY_STRING_SHAREDSTRINGBUFFER[0]))[array_check((*(int32*)(((char*)_FUNC_STRINGOBJECT__ASCII_CHR_046__ISEMPTY_UDT_THIS)+(0)))-__ARRAY_STRING_SHAREDSTRINGBUFFER[4],__ARRAY_STRING_SHAREDSTRINGBUFFER[5])]))))&1){
+*_FUNC_STRINGOBJECT__ASCII_CHR_046__ISEMPTY_BIT1_STRINGOBJECT__ASCII_CHR_046__ISEMPTY|=-2;
+}else{
+*_FUNC_STRINGOBJECT__ASCII_CHR_046__ISEMPTY_BIT1_STRINGOBJECT__ASCII_CHR_046__ISEMPTY&=1;
+}
+qbs_cleanup(qbs_tmp_base,0);
+if(!qbevent)break;evnt(2,13,"isEmpty.bi");}while(r);
+}else{
+do{
+if ((*_FUNC_STRINGOBJECT__ASCII_CHR_046__ISEMPTY_BIT1_STRINGOBJECT__ASCII_CHR_046__ISEMPTY= 0 )&1){
+*_FUNC_STRINGOBJECT__ASCII_CHR_046__ISEMPTY_BIT1_STRINGOBJECT__ASCII_CHR_046__ISEMPTY|=-2;
+}else{
+*_FUNC_STRINGOBJECT__ASCII_CHR_046__ISEMPTY_BIT1_STRINGOBJECT__ASCII_CHR_046__ISEMPTY&=1;
+}
+if(!qbevent)break;evnt(2,15,"isEmpty.bi");}while(r);
+}
+exit_subfunc:;
+free_mem_lock(sf_mem_lock);
+#include "free97.txt"
+if ((tmp_mem_static_pointer>=mem_static)&&(tmp_mem_static_pointer<=mem_static_limit)) mem_static_pointer=tmp_mem_static_pointer; else mem_static_pointer=mem_static;
+cmem_sp=tmp_cmem_sp;
+return *_FUNC_STRINGOBJECT__ASCII_CHR_046__ISEMPTY_BIT1_STRINGOBJECT__ASCII_CHR_046__ISEMPTY;
+}
+int32 FUNC_STRINGOBJECT__ASCII_CHR_046__ISNULL(void*_FUNC_STRINGOBJECT__ASCII_CHR_046__ISNULL_UDT_THIS){
+qbs *tqbs;
+ptrszint tmp_long;
+int32 tmp_fileno;
+uint32 qbs_tmp_base=qbs_tmp_list_nexti;
+uint8 *tmp_mem_static_pointer=mem_static_pointer;
+uint32 tmp_cmem_sp=cmem_sp;
+#include "data98.txt"
+mem_lock *sf_mem_lock;
+new_mem_lock();
+sf_mem_lock=mem_lock_tmp;
+sf_mem_lock->type=3;
+if (is_error_pending()) goto exit_subfunc;
+do{
+if ((*_FUNC_STRINGOBJECT__ASCII_CHR_046__ISNULL_BIT1_STRINGOBJECT__ASCII_CHR_046__ISNULL=(-(*(int32*)(((char*)_FUNC_STRINGOBJECT__ASCII_CHR_046__ISNULL_UDT_THIS)+(0))< 1 )))&1){
+*_FUNC_STRINGOBJECT__ASCII_CHR_046__ISNULL_BIT1_STRINGOBJECT__ASCII_CHR_046__ISNULL|=-2;
+}else{
+*_FUNC_STRINGOBJECT__ASCII_CHR_046__ISNULL_BIT1_STRINGOBJECT__ASCII_CHR_046__ISNULL&=1;
+}
+if(!qbevent)break;evnt(2,4,"isNull.bi");}while(r);
+exit_subfunc:;
+free_mem_lock(sf_mem_lock);
+#include "free98.txt"
+if ((tmp_mem_static_pointer>=mem_static)&&(tmp_mem_static_pointer<=mem_static_limit)) mem_static_pointer=tmp_mem_static_pointer; else mem_static_pointer=mem_static;
+cmem_sp=tmp_cmem_sp;
+return *_FUNC_STRINGOBJECT__ASCII_CHR_046__ISNULL_BIT1_STRINGOBJECT__ASCII_CHR_046__ISNULL;
+}
+int32 FUNC_BOOLEAN__ASCII_CHR_046__OR(int8*_FUNC_BOOLEAN__ASCII_CHR_046__OR_BYTE_FIRST,int8*_FUNC_BOOLEAN__ASCII_CHR_046__OR_BYTE_SECOND){
+qbs *tqbs;
+ptrszint tmp_long;
+int32 tmp_fileno;
+uint32 qbs_tmp_base=qbs_tmp_list_nexti;
+uint8 *tmp_mem_static_pointer=mem_static_pointer;
+uint32 tmp_cmem_sp=cmem_sp;
+#include "data99.txt"
+mem_lock *sf_mem_lock;
+new_mem_lock();
+sf_mem_lock=mem_lock_tmp;
+sf_mem_lock->type=3;
+if (is_error_pending()) goto exit_subfunc;
+do{
+if ((*_FUNC_BOOLEAN__ASCII_CHR_046__OR_BIT1_BOOLEAN__ASCII_CHR_046__OR=FUNC_BOOLEAN__ASCII_CHR_046__ISTRUE(_FUNC_BOOLEAN__ASCII_CHR_046__OR_BYTE_FIRST)|FUNC_BOOLEAN__ASCII_CHR_046__ISTRUE(_FUNC_BOOLEAN__ASCII_CHR_046__OR_BYTE_SECOND))&1){
+*_FUNC_BOOLEAN__ASCII_CHR_046__OR_BIT1_BOOLEAN__ASCII_CHR_046__OR|=-2;
+}else{
+*_FUNC_BOOLEAN__ASCII_CHR_046__OR_BIT1_BOOLEAN__ASCII_CHR_046__OR&=1;
+}
+if(!qbevent)break;evnt(2,6,"or.bi");}while(r);
+exit_subfunc:;
+free_mem_lock(sf_mem_lock);
+#include "free99.txt"
+if ((tmp_mem_static_pointer>=mem_static)&&(tmp_mem_static_pointer<=mem_static_limit)) mem_static_pointer=tmp_mem_static_pointer; else mem_static_pointer=mem_static;
+cmem_sp=tmp_cmem_sp;
+return *_FUNC_BOOLEAN__ASCII_CHR_046__OR_BIT1_BOOLEAN__ASCII_CHR_046__OR;
+}
+int32 FUNC_BOOLEAN__ASCII_CHR_046__OR2(int8*_FUNC_BOOLEAN__ASCII_CHR_046__OR2_BYTE_FIRST,int8*_FUNC_BOOLEAN__ASCII_CHR_046__OR2_BYTE_SECOND,int8*_FUNC_BOOLEAN__ASCII_CHR_046__OR2_BYTE_THIRD){
+qbs *tqbs;
+ptrszint tmp_long;
+int32 tmp_fileno;
+uint32 qbs_tmp_base=qbs_tmp_list_nexti;
+uint8 *tmp_mem_static_pointer=mem_static_pointer;
+uint32 tmp_cmem_sp=cmem_sp;
+#include "data100.txt"
+mem_lock *sf_mem_lock;
+new_mem_lock();
+sf_mem_lock=mem_lock_tmp;
+sf_mem_lock->type=3;
+if (is_error_pending()) goto exit_subfunc;
+do{
+if ((*_FUNC_BOOLEAN__ASCII_CHR_046__OR2_BIT1_BOOLEAN__ASCII_CHR_046__OR2=FUNC_BOOLEAN__ASCII_CHR_046__OR(&(pass133=FUNC_BOOLEAN__ASCII_CHR_046__OR(_FUNC_BOOLEAN__ASCII_CHR_046__OR2_BYTE_FIRST,_FUNC_BOOLEAN__ASCII_CHR_046__OR2_BYTE_SECOND)),_FUNC_BOOLEAN__ASCII_CHR_046__OR2_BYTE_THIRD))&1){
+*_FUNC_BOOLEAN__ASCII_CHR_046__OR2_BIT1_BOOLEAN__ASCII_CHR_046__OR2|=-2;
+}else{
+*_FUNC_BOOLEAN__ASCII_CHR_046__OR2_BIT1_BOOLEAN__ASCII_CHR_046__OR2&=1;
+}
+if(!qbevent)break;evnt(2,10,"or.bi");}while(r);
+exit_subfunc:;
+free_mem_lock(sf_mem_lock);
+#include "free100.txt"
+if ((tmp_mem_static_pointer>=mem_static)&&(tmp_mem_static_pointer<=mem_static_limit)) mem_static_pointer=tmp_mem_static_pointer; else mem_static_pointer=mem_static;
+cmem_sp=tmp_cmem_sp;
+return *_FUNC_BOOLEAN__ASCII_CHR_046__OR2_BIT1_BOOLEAN__ASCII_CHR_046__OR2;
+}
+int32 FUNC_BOOLEAN__ASCII_CHR_046__OR3(int8*_FUNC_BOOLEAN__ASCII_CHR_046__OR3_BYTE_FIRST,int8*_FUNC_BOOLEAN__ASCII_CHR_046__OR3_BYTE_SECOND,int8*_FUNC_BOOLEAN__ASCII_CHR_046__OR3_BYTE_THIRD,int8*_FUNC_BOOLEAN__ASCII_CHR_046__OR3_BYTE_FOURTH){
+qbs *tqbs;
+ptrszint tmp_long;
+int32 tmp_fileno;
+uint32 qbs_tmp_base=qbs_tmp_list_nexti;
+uint8 *tmp_mem_static_pointer=mem_static_pointer;
+uint32 tmp_cmem_sp=cmem_sp;
+#include "data101.txt"
+mem_lock *sf_mem_lock;
+new_mem_lock();
+sf_mem_lock=mem_lock_tmp;
+sf_mem_lock->type=3;
+if (is_error_pending()) goto exit_subfunc;
+do{
+if ((*_FUNC_BOOLEAN__ASCII_CHR_046__OR3_BIT1_BOOLEAN__ASCII_CHR_046__OR3=FUNC_BOOLEAN__ASCII_CHR_046__OR(&(pass134=FUNC_BOOLEAN__ASCII_CHR_046__OR2(_FUNC_BOOLEAN__ASCII_CHR_046__OR3_BYTE_FIRST,_FUNC_BOOLEAN__ASCII_CHR_046__OR3_BYTE_SECOND,_FUNC_BOOLEAN__ASCII_CHR_046__OR3_BYTE_THIRD)),_FUNC_BOOLEAN__ASCII_CHR_046__OR3_BYTE_FOURTH))&1){
+*_FUNC_BOOLEAN__ASCII_CHR_046__OR3_BIT1_BOOLEAN__ASCII_CHR_046__OR3|=-2;
+}else{
+*_FUNC_BOOLEAN__ASCII_CHR_046__OR3_BIT1_BOOLEAN__ASCII_CHR_046__OR3&=1;
+}
+if(!qbevent)break;evnt(2,14,"or.bi");}while(r);
+exit_subfunc:;
+free_mem_lock(sf_mem_lock);
+#include "free101.txt"
+if ((tmp_mem_static_pointer>=mem_static)&&(tmp_mem_static_pointer<=mem_static_limit)) mem_static_pointer=tmp_mem_static_pointer; else mem_static_pointer=mem_static;
+cmem_sp=tmp_cmem_sp;
+return *_FUNC_BOOLEAN__ASCII_CHR_046__OR3_BIT1_BOOLEAN__ASCII_CHR_046__OR3;
+}
+int32 FUNC_STRINGOBJECT__ASCII_CHR_046__ISNULLOREMPTY(void*_FUNC_STRINGOBJECT__ASCII_CHR_046__ISNULLOREMPTY_UDT_THIS){
+qbs *tqbs;
+ptrszint tmp_long;
+int32 tmp_fileno;
+uint32 qbs_tmp_base=qbs_tmp_list_nexti;
+uint8 *tmp_mem_static_pointer=mem_static_pointer;
+uint32 tmp_cmem_sp=cmem_sp;
+#include "data102.txt"
+mem_lock *sf_mem_lock;
+new_mem_lock();
+sf_mem_lock=mem_lock_tmp;
+sf_mem_lock->type=3;
+if (is_error_pending()) goto exit_subfunc;
+do{
+if ((*_FUNC_STRINGOBJECT__ASCII_CHR_046__ISNULLOREMPTY_BIT1_STRINGOBJECT__ASCII_CHR_046__ISNULLOREMPTY=FUNC_BOOLEAN__ASCII_CHR_046__OR(&(pass135=FUNC_STRINGOBJECT__ASCII_CHR_046__ISNULL((void*)( ((char*)(_FUNC_STRINGOBJECT__ASCII_CHR_046__ISNULLOREMPTY_UDT_THIS)) + (0) ))),&(pass136=FUNC_STRINGOBJECT__ASCII_CHR_046__ISEMPTY((void*)( ((char*)(_FUNC_STRINGOBJECT__ASCII_CHR_046__ISNULLOREMPTY_UDT_THIS)) + (0) )))))&1){
+*_FUNC_STRINGOBJECT__ASCII_CHR_046__ISNULLOREMPTY_BIT1_STRINGOBJECT__ASCII_CHR_046__ISNULLOREMPTY|=-2;
+}else{
+*_FUNC_STRINGOBJECT__ASCII_CHR_046__ISNULLOREMPTY_BIT1_STRINGOBJECT__ASCII_CHR_046__ISNULLOREMPTY&=1;
+}
+if(!qbevent)break;evnt(2,8,"isNullOrEmpty.bi");}while(r);
+exit_subfunc:;
+free_mem_lock(sf_mem_lock);
+#include "free102.txt"
+if ((tmp_mem_static_pointer>=mem_static)&&(tmp_mem_static_pointer<=mem_static_limit)) mem_static_pointer=tmp_mem_static_pointer; else mem_static_pointer=mem_static;
+cmem_sp=tmp_cmem_sp;
+return *_FUNC_STRINGOBJECT__ASCII_CHR_046__ISNULLOREMPTY_BIT1_STRINGOBJECT__ASCII_CHR_046__ISNULLOREMPTY;
+}
+int32 FUNC_STRINGOBJECT__ASCII_CHR_046__REFERENCEOF(void*_FUNC_STRINGOBJECT__ASCII_CHR_046__REFERENCEOF_UDT_THIS){
+qbs *tqbs;
+ptrszint tmp_long;
+int32 tmp_fileno;
+uint32 qbs_tmp_base=qbs_tmp_list_nexti;
+uint8 *tmp_mem_static_pointer=mem_static_pointer;
+uint32 tmp_cmem_sp=cmem_sp;
+#include "data103.txt"
+mem_lock *sf_mem_lock;
+new_mem_lock();
+sf_mem_lock=mem_lock_tmp;
+sf_mem_lock->type=3;
+if (is_error_pending()) goto exit_subfunc;
+do{
+if(!qbevent)break;evnt(2,7,"ReferenceOf.bi");}while(r);
+do{
+if ((*_FUNC_STRINGOBJECT__ASCII_CHR_046__REFERENCEOF_BIT1_CONDITION1=FUNC_BOOLEAN__ASCII_CHR_046__ISTRUE(&(pass137=-(*(int32*)(((char*)_FUNC_STRINGOBJECT__ASCII_CHR_046__REFERENCEOF_UDT_THIS)+(0))> 0 ))))&1){
+*_FUNC_STRINGOBJECT__ASCII_CHR_046__REFERENCEOF_BIT1_CONDITION1|=-2;
+}else{
+*_FUNC_STRINGOBJECT__ASCII_CHR_046__REFERENCEOF_BIT1_CONDITION1&=1;
+}
+if(!qbevent)break;evnt(2,9,"ReferenceOf.bi");}while(r);
+do{
+if ((*_FUNC_STRINGOBJECT__ASCII_CHR_046__REFERENCEOF_BIT1_CONDITION2=FUNC_BOOLEAN__ASCII_CHR_046__ISTRUE(&(pass138=-(*(int32*)(((char*)_FUNC_STRINGOBJECT__ASCII_CHR_046__REFERENCEOF_UDT_THIS)+(0))<=func_ubound(__ARRAY_STRING_SHAREDSTRINGBUFFER,1,1)))))&1){
+*_FUNC_STRINGOBJECT__ASCII_CHR_046__REFERENCEOF_BIT1_CONDITION2|=-2;
+}else{
+*_FUNC_STRINGOBJECT__ASCII_CHR_046__REFERENCEOF_BIT1_CONDITION2&=1;
+}
+qbs_cleanup(qbs_tmp_base,0);
+if(!qbevent)break;evnt(2,10,"ReferenceOf.bi");}while(r);
+S_266:;
+if ((FUNC_BOOLEAN__ASCII_CHR_046__AND(&(pass139=*_FUNC_STRINGOBJECT__ASCII_CHR_046__REFERENCEOF_BIT1_CONDITION1),&(pass140=*_FUNC_STRINGOBJECT__ASCII_CHR_046__REFERENCEOF_BIT1_CONDITION2)))||is_error_pending()){
+if(qbevent){evnt(2,12,"ReferenceOf.bi");if(r)goto S_266;}
+do{
+*_FUNC_STRINGOBJECT__ASCII_CHR_046__REFERENCEOF_LONG_STRINGOBJECT__ASCII_CHR_046__REFERENCEOF=*(int32*)(((char*)_FUNC_STRINGOBJECT__ASCII_CHR_046__REFERENCEOF_UDT_THIS)+(0));
+if(!qbevent)break;evnt(2,13,"ReferenceOf.bi");}while(r);
+}else{
+do{
+*_FUNC_STRINGOBJECT__ASCII_CHR_046__REFERENCEOF_LONG_STRINGOBJECT__ASCII_CHR_046__REFERENCEOF= 0 ;
+if(!qbevent)break;evnt(2,15,"ReferenceOf.bi");}while(r);
+}
+exit_subfunc:;
+free_mem_lock(sf_mem_lock);
+#include "free103.txt"
+if ((tmp_mem_static_pointer>=mem_static)&&(tmp_mem_static_pointer<=mem_static_limit)) mem_static_pointer=tmp_mem_static_pointer; else mem_static_pointer=mem_static;
+cmem_sp=tmp_cmem_sp;
+return *_FUNC_STRINGOBJECT__ASCII_CHR_046__REFERENCEOF_LONG_STRINGOBJECT__ASCII_CHR_046__REFERENCEOF;
+}
+qbs* FUNC_STRINGOBJECT__ASCII_CHR_046__VALUEOF(void*_FUNC_STRINGOBJECT__ASCII_CHR_046__VALUEOF_UDT_THIS){
+qbs *tqbs;
+ptrszint tmp_long;
+int32 tmp_fileno;
+uint32 qbs_tmp_base=qbs_tmp_list_nexti;
+uint8 *tmp_mem_static_pointer=mem_static_pointer;
+uint32 tmp_cmem_sp=cmem_sp;
+#include "data104.txt"
+mem_lock *sf_mem_lock;
+new_mem_lock();
+sf_mem_lock=mem_lock_tmp;
+sf_mem_lock->type=3;
+if (is_error_pending()) goto exit_subfunc;
+do{
+if(!qbevent)break;evnt(2,8,"ValueOf.bi");}while(r);
+do{
+if(!qbevent)break;evnt(2,9,"ValueOf.bi");}while(r);
+do{
+if ((*_FUNC_STRINGOBJECT__ASCII_CHR_046__VALUEOF_BIT1_CONDITION1=FUNC_BOOLEAN__ASCII_CHR_046__ISTRUE(&(pass141=-(*(int32*)(((char*)_FUNC_STRINGOBJECT__ASCII_CHR_046__VALUEOF_UDT_THIS)+(0))< 1 ))))&1){
+*_FUNC_STRINGOBJECT__ASCII_CHR_046__VALUEOF_BIT1_CONDITION1|=-2;
+}else{
+*_FUNC_STRINGOBJECT__ASCII_CHR_046__VALUEOF_BIT1_CONDITION1&=1;
+}
+if(!qbevent)break;evnt(2,11,"ValueOf.bi");}while(r);
+do{
+if ((*_FUNC_STRINGOBJECT__ASCII_CHR_046__VALUEOF_BIT1_CONDITION2=FUNC_BOOLEAN__ASCII_CHR_046__ISTRUE(&(pass142=-(*(int32*)(((char*)_FUNC_STRINGOBJECT__ASCII_CHR_046__VALUEOF_UDT_THIS)+(0))>func_ubound(__ARRAY_STRING_SHAREDSTRINGBUFFER,1,1)))))&1){
+*_FUNC_STRINGOBJECT__ASCII_CHR_046__VALUEOF_BIT1_CONDITION2|=-2;
+}else{
+*_FUNC_STRINGOBJECT__ASCII_CHR_046__VALUEOF_BIT1_CONDITION2&=1;
+}
+qbs_cleanup(qbs_tmp_base,0);
+if(!qbevent)break;evnt(2,12,"ValueOf.bi");}while(r);
+do{
+if ((*_FUNC_STRINGOBJECT__ASCII_CHR_046__VALUEOF_BIT1_CONDITION3=FUNC_BOOLEAN__ASCII_CHR_046__ISTRUE(&(pass143=-(*(int32*)(((char*)_FUNC_STRINGOBJECT__ASCII_CHR_046__VALUEOF_UDT_THIS)+(4))== 0 ))))&1){
+*_FUNC_STRINGOBJECT__ASCII_CHR_046__VALUEOF_BIT1_CONDITION3|=-2;
+}else{
+*_FUNC_STRINGOBJECT__ASCII_CHR_046__VALUEOF_BIT1_CONDITION3&=1;
+}
+if(!qbevent)break;evnt(2,13,"ValueOf.bi");}while(r);
+S_276:;
+if ((FUNC_BOOLEAN__ASCII_CHR_046__OR2(&(pass144=*_FUNC_STRINGOBJECT__ASCII_CHR_046__VALUEOF_BIT1_CONDITION1),&(pass145=*_FUNC_STRINGOBJECT__ASCII_CHR_046__VALUEOF_BIT1_CONDITION2),&(pass146=*_FUNC_STRINGOBJECT__ASCII_CHR_046__VALUEOF_BIT1_CONDITION3)))||is_error_pending()){
+if(qbevent){evnt(2,14,"ValueOf.bi");if(r)goto S_276;}
+do{
+qbs_set(_FUNC_STRINGOBJECT__ASCII_CHR_046__VALUEOF_STRING_STRINGOBJECT__ASCII_CHR_046__VALUEOF,FUNC_STRING__ASCII_CHR_046__EMPTY());
+qbs_cleanup(qbs_tmp_base,0);
+if(!qbevent)break;evnt(2,15,"ValueOf.bi");}while(r);
+do{
+goto exit_subfunc;
+if(!qbevent)break;evnt(2,16,"ValueOf.bi");}while(r);
+}
+do{
+qbs_set(_FUNC_STRINGOBJECT__ASCII_CHR_046__VALUEOF_STRING_VALUE,((qbs*)(((uint64*)(__ARRAY_STRING_SHAREDSTRINGBUFFER[0]))[array_check((*(int32*)(((char*)_FUNC_STRINGOBJECT__ASCII_CHR_046__VALUEOF_UDT_THIS)+(0)))-__ARRAY_STRING_SHAREDSTRINGBUFFER[4],__ARRAY_STRING_SHAREDSTRINGBUFFER[5])])));
+qbs_cleanup(qbs_tmp_base,0);
+if(!qbevent)break;evnt(2,19,"ValueOf.bi");}while(r);
+do{
+qbs_set(_FUNC_STRINGOBJECT__ASCII_CHR_046__VALUEOF_STRING_VALUE,FUNC_STRING__ASCII_CHR_046__SUBSTR(_FUNC_STRINGOBJECT__ASCII_CHR_046__VALUEOF_STRING_VALUE,&(pass147= 0 ),(int32*)(void*)( ((char*)(_FUNC_STRINGOBJECT__ASCII_CHR_046__VALUEOF_UDT_THIS)) + (4) )));
+qbs_cleanup(qbs_tmp_base,0);
+if(!qbevent)break;evnt(2,20,"ValueOf.bi");}while(r);
+do{
+qbs_set(_FUNC_STRINGOBJECT__ASCII_CHR_046__VALUEOF_STRING_STRINGOBJECT__ASCII_CHR_046__VALUEOF,_FUNC_STRINGOBJECT__ASCII_CHR_046__VALUEOF_STRING_VALUE);
+qbs_cleanup(qbs_tmp_base,0);
+if(!qbevent)break;evnt(2,22,"ValueOf.bi");}while(r);
+exit_subfunc:;
+free_mem_lock(sf_mem_lock);
+#include "free104.txt"
+if ((tmp_mem_static_pointer>=mem_static)&&(tmp_mem_static_pointer<=mem_static_limit)) mem_static_pointer=tmp_mem_static_pointer; else mem_static_pointer=mem_static;
+cmem_sp=tmp_cmem_sp;
+qbs_maketmp(_FUNC_STRINGOBJECT__ASCII_CHR_046__VALUEOF_STRING_STRINGOBJECT__ASCII_CHR_046__VALUEOF);return _FUNC_STRINGOBJECT__ASCII_CHR_046__VALUEOF_STRING_STRINGOBJECT__ASCII_CHR_046__VALUEOF;
+}
+int32 FUNC_APPLICATION__ASCII_CHR_046__ISRUNNING(void*_FUNC_APPLICATION__ASCII_CHR_046__ISRUNNING_UDT_THIS){
+qbs *tqbs;
+ptrszint tmp_long;
+int32 tmp_fileno;
+uint32 qbs_tmp_base=qbs_tmp_list_nexti;
+uint8 *tmp_mem_static_pointer=mem_static_pointer;
+uint32 tmp_cmem_sp=cmem_sp;
+#include "data105.txt"
+mem_lock *sf_mem_lock;
+new_mem_lock();
+sf_mem_lock=mem_lock_tmp;
+sf_mem_lock->type=3;
+if (is_error_pending()) goto exit_subfunc;
+do{
+if ((*_FUNC_APPLICATION__ASCII_CHR_046__ISRUNNING_BIT1_APPLICATION__ASCII_CHR_046__ISRUNNING=*(int16*)(((char*)_FUNC_APPLICATION__ASCII_CHR_046__ISRUNNING_UDT_THIS)+(0)))&1){
+*_FUNC_APPLICATION__ASCII_CHR_046__ISRUNNING_BIT1_APPLICATION__ASCII_CHR_046__ISRUNNING|=-2;
+}else{
+*_FUNC_APPLICATION__ASCII_CHR_046__ISRUNNING_BIT1_APPLICATION__ASCII_CHR_046__ISRUNNING&=1;
+}
+if(!qbevent)break;evnt(3,4,"isRunning.bi");}while(r);
+exit_subfunc:;
+free_mem_lock(sf_mem_lock);
+#include "free105.txt"
+if ((tmp_mem_static_pointer>=mem_static)&&(tmp_mem_static_pointer<=mem_static_limit)) mem_static_pointer=tmp_mem_static_pointer; else mem_static_pointer=mem_static;
+cmem_sp=tmp_cmem_sp;
+return *_FUNC_APPLICATION__ASCII_CHR_046__ISRUNNING_BIT1_APPLICATION__ASCII_CHR_046__ISRUNNING;
+}
+void SUB_APPLICATION(void*_SUB_APPLICATION_UDT_THIS,qbs*_SUB_APPLICATION_STRING_APPNAME){
+qbs *tqbs;
+ptrszint tmp_long;
+int32 tmp_fileno;
+uint32 qbs_tmp_base=qbs_tmp_list_nexti;
+uint8 *tmp_mem_static_pointer=mem_static_pointer;
+uint32 tmp_cmem_sp=cmem_sp;
+#include "data106.txt"
+mem_lock *sf_mem_lock;
+new_mem_lock();
+sf_mem_lock=mem_lock_tmp;
+sf_mem_lock->type=3;
+if (is_error_pending()) goto exit_subfunc;
+do{
+*(int16*)(((char*)_SUB_APPLICATION_UDT_THIS)+(0))= -1 ;
+if(!qbevent)break;evnt(3,6,"_constructor.bi");}while(r);
+do{
+*(int32*)(((char*)_SUB_APPLICATION_UDT_THIS)+(2))=FUNC_NEW(FUNC_STRING__ASCII_CHR_046__TOSTRING(_SUB_APPLICATION_STRING_APPNAME));
+if(!qbevent)break;evnt(3,7,"_constructor.bi");}while(r);
+do{
+*(int16*)(((char*)_SUB_APPLICATION_UDT_THIS)+(6))= 0 ;
+if(!qbevent)break;evnt(3,8,"_constructor.bi");}while(r);
+exit_subfunc:;
+free_mem_lock(sf_mem_lock);
+#include "free106.txt"
+if ((tmp_mem_static_pointer>=mem_static)&&(tmp_mem_static_pointer<=mem_static_limit)) mem_static_pointer=tmp_mem_static_pointer; else mem_static_pointer=mem_static;
+cmem_sp=tmp_cmem_sp;
+}
+int16 FUNC_APPLICATION__ASCII_CHR_046__VALUEOF(void*_FUNC_APPLICATION__ASCII_CHR_046__VALUEOF_UDT_THIS){
+qbs *tqbs;
+ptrszint tmp_long;
+int32 tmp_fileno;
+uint32 qbs_tmp_base=qbs_tmp_list_nexti;
+uint8 *tmp_mem_static_pointer=mem_static_pointer;
+uint32 tmp_cmem_sp=cmem_sp;
+#include "data107.txt"
+mem_lock *sf_mem_lock;
+new_mem_lock();
+sf_mem_lock=mem_lock_tmp;
+sf_mem_lock->type=3;
+if (is_error_pending()) goto exit_subfunc;
+do{
+*_FUNC_APPLICATION__ASCII_CHR_046__VALUEOF_INTEGER_APPLICATION__ASCII_CHR_046__VALUEOF=*(int16*)(((char*)_FUNC_APPLICATION__ASCII_CHR_046__VALUEOF_UDT_THIS)+(6));
+if(!qbevent)break;evnt(3,4,"ValueOf.bi");}while(r);
+exit_subfunc:;
+free_mem_lock(sf_mem_lock);
+#include "free107.txt"
+if ((tmp_mem_static_pointer>=mem_static)&&(tmp_mem_static_pointer<=mem_static_limit)) mem_static_pointer=tmp_mem_static_pointer; else mem_static_pointer=mem_static;
+cmem_sp=tmp_cmem_sp;
+return *_FUNC_APPLICATION__ASCII_CHR_046__VALUEOF_INTEGER_APPLICATION__ASCII_CHR_046__VALUEOF;
+}
+int16 FUNC_MAIN(int16*_FUNC_MAIN_INTEGER_ARGC,ptrszint*_FUNC_MAIN_ARRAY_STRING_ARGV){
+qbs *tqbs;
+ptrszint tmp_long;
+int32 tmp_fileno;
+uint32 qbs_tmp_base=qbs_tmp_list_nexti;
+uint8 *tmp_mem_static_pointer=mem_static_pointer;
+uint32 tmp_cmem_sp=cmem_sp;
+#include "data108.txt"
+mem_lock *sf_mem_lock;
+new_mem_lock();
+sf_mem_lock=mem_lock_tmp;
+sf_mem_lock->type=3;
+if (is_error_pending()) goto exit_subfunc;
+do{
+if(!qbevent)break;evnt(3,8,"Main.bi");}while(r);
+do{
+SUB_APPLICATION((void*)( ((char*)(_FUNC_MAIN_UDT_THIS)) + (0) ),((qbs*)(((uint64*)(_FUNC_MAIN_ARRAY_STRING_ARGV[0]))[array_check(( -1 )-_FUNC_MAIN_ARRAY_STRING_ARGV[4],_FUNC_MAIN_ARRAY_STRING_ARGV[5])])));
+qbs_cleanup(qbs_tmp_base,0);
+if(!qbevent)break;evnt(3,10,"Main.bi");}while(r);
+do{
+SUB_APPLICATION__ASCII_CHR_046__INITIALIZE((void*)( ((char*)(_FUNC_MAIN_UDT_THIS)) + (0) ));
+if(!qbevent)break;evnt(3,12,"Main.bi");}while(r);
+S_291:;
+while((FUNC_APPLICATION__ASCII_CHR_046__ISRUNNING((void*)( ((char*)(_FUNC_MAIN_UDT_THIS)) + (0) )))||is_error_pending()){
+if(qbevent){evnt(3,13,"Main.bi");if(r)goto S_291;}
+do{
+SUB_APPLICATION__ASCII_CHR_046__RUN((void*)( ((char*)(_FUNC_MAIN_UDT_THIS)) + (0) ));
+if(!qbevent)break;evnt(3,14,"Main.bi");}while(r);
+ww_continue_149:;
+}
+ww_exit_149:;
+do{
+SUB_APPLICATION__ASCII_CHR_046__DISPOSE((void*)( ((char*)(_FUNC_MAIN_UDT_THIS)) + (0) ));
+if(!qbevent)break;evnt(3,16,"Main.bi");}while(r);
+do{
+*_FUNC_MAIN_INTEGER_MAIN=FUNC_APPLICATION__ASCII_CHR_046__VALUEOF((void*)( ((char*)(_FUNC_MAIN_UDT_THIS)) + (0) ));
+if(!qbevent)break;evnt(3,18,"Main.bi");}while(r);
+exit_subfunc:;
+free_mem_lock(sf_mem_lock);
+#include "free108.txt"
+if ((tmp_mem_static_pointer>=mem_static)&&(tmp_mem_static_pointer<=mem_static_limit)) mem_static_pointer=tmp_mem_static_pointer; else mem_static_pointer=mem_static;
+cmem_sp=tmp_cmem_sp;
+return *_FUNC_MAIN_INTEGER_MAIN;
+}
+void SUB_APPLICATION__ASCII_CHR_046__RETURN(void*_SUB_APPLICATION__ASCII_CHR_046__RETURN_UDT_THIS,int16*_SUB_APPLICATION__ASCII_CHR_046__RETURN_INTEGER_VALUE){
+qbs *tqbs;
+ptrszint tmp_long;
+int32 tmp_fileno;
+uint32 qbs_tmp_base=qbs_tmp_list_nexti;
+uint8 *tmp_mem_static_pointer=mem_static_pointer;
+uint32 tmp_cmem_sp=cmem_sp;
+#include "data109.txt"
+mem_lock *sf_mem_lock;
+new_mem_lock();
+sf_mem_lock=mem_lock_tmp;
+sf_mem_lock->type=3;
+if (is_error_pending()) goto exit_subfunc;
+do{
+*(int16*)(((char*)_SUB_APPLICATION__ASCII_CHR_046__RETURN_UDT_THIS)+(0))= 0 ;
+if(!qbevent)break;evnt(3,4,"return.bi");}while(r);
+do{
+*(int16*)(((char*)_SUB_APPLICATION__ASCII_CHR_046__RETURN_UDT_THIS)+(6))=*_SUB_APPLICATION__ASCII_CHR_046__RETURN_INTEGER_VALUE;
+if(!qbevent)break;evnt(3,5,"return.bi");}while(r);
+exit_subfunc:;
+free_mem_lock(sf_mem_lock);
+#include "free109.txt"
+if ((tmp_mem_static_pointer>=mem_static)&&(tmp_mem_static_pointer<=mem_static_limit)) mem_static_pointer=tmp_mem_static_pointer; else mem_static_pointer=mem_static;
+cmem_sp=tmp_cmem_sp;
+}
+void SUB_APPLICATION__ASCII_CHR_046__TERMINATE(void*_SUB_APPLICATION__ASCII_CHR_046__TERMINATE_UDT_THIS,int16*_SUB_APPLICATION__ASCII_CHR_046__TERMINATE_INTEGER_VALUE){
+qbs *tqbs;
+ptrszint tmp_long;
+int32 tmp_fileno;
+uint32 qbs_tmp_base=qbs_tmp_list_nexti;
+uint8 *tmp_mem_static_pointer=mem_static_pointer;
+uint32 tmp_cmem_sp=cmem_sp;
+#include "data110.txt"
+mem_lock *sf_mem_lock;
+new_mem_lock();
+sf_mem_lock=mem_lock_tmp;
+sf_mem_lock->type=3;
+if (is_error_pending()) goto exit_subfunc;
+do{
+SUB_APPLICATION__ASCII_CHR_046__RETURN((void*)( ((char*)(_SUB_APPLICATION__ASCII_CHR_046__TERMINATE_UDT_THIS)) + (0) ),_SUB_APPLICATION__ASCII_CHR_046__TERMINATE_INTEGER_VALUE);
+if(!qbevent)break;evnt(3,7,"terminate.bi");}while(r);
+do{
+SUB_APPLICATION__ASCII_CHR_046__DISPOSE((void*)( ((char*)(_SUB_APPLICATION__ASCII_CHR_046__TERMINATE_UDT_THIS)) + (0) ));
+if(!qbevent)break;evnt(3,8,"terminate.bi");}while(r);
+do{
+if(qbevent){evnt(3,9,"terminate.bi");}
+exit_code=FUNC_APPLICATION__ASCII_CHR_046__VALUEOF((void*)( ((char*)(_SUB_APPLICATION__ASCII_CHR_046__TERMINATE_UDT_THIS)) + (0) ));
+if (sub_gl_called) error(271);
+close_program=1;
+end();
+if(!qbevent)break;evnt(3,9,"terminate.bi");}while(r);
+exit_subfunc:;
+free_mem_lock(sf_mem_lock);
+#include "free110.txt"
+if ((tmp_mem_static_pointer>=mem_static)&&(tmp_mem_static_pointer<=mem_static_limit)) mem_static_pointer=tmp_mem_static_pointer; else mem_static_pointer=mem_static;
+cmem_sp=tmp_cmem_sp;
+}
+void SUB_APPLICATION__ASCII_CHR_046__INITIALIZE(void*_SUB_APPLICATION__ASCII_CHR_046__INITIALIZE_UDT_THIS){
+qbs *tqbs;
+ptrszint tmp_long;
+int32 tmp_fileno;
+uint32 qbs_tmp_base=qbs_tmp_list_nexti;
+uint8 *tmp_mem_static_pointer=mem_static_pointer;
+uint32 tmp_cmem_sp=cmem_sp;
+#include "data111.txt"
+mem_lock *sf_mem_lock;
+new_mem_lock();
+sf_mem_lock=mem_lock_tmp;
+sf_mem_lock->type=3;
+if (is_error_pending()) goto exit_subfunc;
+exit_subfunc:;
+free_mem_lock(sf_mem_lock);
+#include "free111.txt"
+if ((tmp_mem_static_pointer>=mem_static)&&(tmp_mem_static_pointer<=mem_static_limit)) mem_static_pointer=tmp_mem_static_pointer; else mem_static_pointer=mem_static;
+cmem_sp=tmp_cmem_sp;
+}
+void SUB_APPLICATION__ASCII_CHR_046__RUN(void*_SUB_APPLICATION__ASCII_CHR_046__RUN_UDT_THIS){
+qbs *tqbs;
+ptrszint tmp_long;
+int32 tmp_fileno;
+uint32 qbs_tmp_base=qbs_tmp_list_nexti;
+uint8 *tmp_mem_static_pointer=mem_static_pointer;
+uint32 tmp_cmem_sp=cmem_sp;
+#include "data112.txt"
+mem_lock *sf_mem_lock;
+new_mem_lock();
+sf_mem_lock=mem_lock_tmp;
+sf_mem_lock->type=3;
+if (is_error_pending()) goto exit_subfunc;
+do{
+SUB_APPLICATION__ASCII_CHR_046__EXECUTE((void*)( ((char*)(_SUB_APPLICATION__ASCII_CHR_046__RUN_UDT_THIS)) + (0) ));
+if(!qbevent)break;evnt(4,10,"execute.bi");}while(r);
+do{
+SUB_APPLICATION__ASCII_CHR_046__RETURN((void*)( ((char*)(_SUB_APPLICATION__ASCII_CHR_046__RUN_UDT_THIS)) + (0) ),&(pass150=FUNC_APPLICATION__ASCII_CHR_046__VALUEOF((void*)( ((char*)(_SUB_APPLICATION__ASCII_CHR_046__RUN_UDT_THIS)) + (0) ))));
+if(!qbevent)break;evnt(4,11,"execute.bi");}while(r);
+exit_subfunc:;
+free_mem_lock(sf_mem_lock);
+#include "free112.txt"
+if ((tmp_mem_static_pointer>=mem_static)&&(tmp_mem_static_pointer<=mem_static_limit)) mem_static_pointer=tmp_mem_static_pointer; else mem_static_pointer=mem_static;
+cmem_sp=tmp_cmem_sp;
+}
+void SUB_APPLICATION__ASCII_CHR_046__DISPOSE(void*_SUB_APPLICATION__ASCII_CHR_046__DISPOSE_UDT_THIS){
+qbs *tqbs;
+ptrszint tmp_long;
+int32 tmp_fileno;
+uint32 qbs_tmp_base=qbs_tmp_list_nexti;
+uint8 *tmp_mem_static_pointer=mem_static_pointer;
+uint32 tmp_cmem_sp=cmem_sp;
+#include "data113.txt"
+mem_lock *sf_mem_lock;
+new_mem_lock();
+sf_mem_lock=mem_lock_tmp;
+sf_mem_lock->type=3;
+if (is_error_pending()) goto exit_subfunc;
+exit_subfunc:;
+free_mem_lock(sf_mem_lock);
+#include "free113.txt"
+if ((tmp_mem_static_pointer>=mem_static)&&(tmp_mem_static_pointer<=mem_static_limit)) mem_static_pointer=tmp_mem_static_pointer; else mem_static_pointer=mem_static;
+cmem_sp=tmp_cmem_sp;
+}
+void SUB_APPLICATION__ASCII_CHR_046__EXECUTE(void*_SUB_APPLICATION__ASCII_CHR_046__EXECUTE_UDT_THIS){
+qbs *tqbs;
+ptrszint tmp_long;
+int32 tmp_fileno;
+uint32 qbs_tmp_base=qbs_tmp_list_nexti;
+uint8 *tmp_mem_static_pointer=mem_static_pointer;
+uint32 tmp_cmem_sp=cmem_sp;
+#include "data114.txt"
+mem_lock *sf_mem_lock;
+new_mem_lock();
+sf_mem_lock=mem_lock_tmp;
+sf_mem_lock->type=3;
+if (is_error_pending()) goto exit_subfunc;
+do{
+if(!qbevent)break;evnt(8);}while(r);
+do{
+SUB_STRINGOBJECT((void*)( ((char*)(_SUB_APPLICATION__ASCII_CHR_046__EXECUTE_UDT_SO1)) + (0) ),qbs_new_txt_len("Hallo",5));
+qbs_cleanup(qbs_tmp_base,0);
+if(!qbevent)break;evnt(10);}while(r);
+do{
+SUB_STRINGOBJECT((void*)( ((char*)(_SUB_APPLICATION__ASCII_CHR_046__EXECUTE_UDT_SO2)) + (0) ),qbs_new_txt_len("Ciao.",5));
+qbs_cleanup(qbs_tmp_base,0);
+if(!qbevent)break;evnt(11);}while(r);
+do{
+SUB_CONSOLE__ASCII_CHR_046__WRITELINE(FUNC_STRINGOBJECT__ASCII_CHR_046__VALUEOF((void*)( ((char*)(_SUB_APPLICATION__ASCII_CHR_046__EXECUTE_UDT_SO1)) + (0) )));
+qbs_cleanup(qbs_tmp_base,0);
+if(!qbevent)break;evnt(13);}while(r);
+do{
+SUB_CONSOLE__ASCII_CHR_046__WRITELINE(FUNC_STRINGOBJECT__ASCII_CHR_046__VALUEOF((void*)( ((char*)(_SUB_APPLICATION__ASCII_CHR_046__EXECUTE_UDT_SO2)) + (0) )));
+qbs_cleanup(qbs_tmp_base,0);
+if(!qbevent)break;evnt(14);}while(r);
+do{
+SUB_CONSOLE__ASCII_CHR_046__WRITELINE(FUNC_LONG__ASCII_CHR_046__TOSTRING(&(pass151=FUNC_STRINGOBJECT__ASCII_CHR_046__REFERENCEOF((void*)( ((char*)(_SUB_APPLICATION__ASCII_CHR_046__EXECUTE_UDT_SO1)) + (0) )))));
+qbs_cleanup(qbs_tmp_base,0);
+if(!qbevent)break;evnt(16);}while(r);
+do{
+SUB_CONSOLE__ASCII_CHR_046__WRITELINE(FUNC_LONG__ASCII_CHR_046__TOSTRING(&(pass152=FUNC_STRINGOBJECT__ASCII_CHR_046__REFERENCEOF((void*)( ((char*)(_SUB_APPLICATION__ASCII_CHR_046__EXECUTE_UDT_SO2)) + (0) )))));
+qbs_cleanup(qbs_tmp_base,0);
+if(!qbevent)break;evnt(17);}while(r);
+do{
+SUB_INVOKES(FUNC_CONSOLE__ASCII_CHR_046__READLINE());
+qbs_cleanup(qbs_tmp_base,0);
+if(!qbevent)break;evnt(19);}while(r);
+exit_subfunc:;
+free_mem_lock(sf_mem_lock);
+#include "free114.txt"
+if ((tmp_mem_static_pointer>=mem_static)&&(tmp_mem_static_pointer<=mem_static_limit)) mem_static_pointer=tmp_mem_static_pointer; else mem_static_pointer=mem_static;
+cmem_sp=tmp_cmem_sp;
+}
+void SUB_VWATCH(){
+qbs *tqbs;
+ptrszint tmp_long;
+int32 tmp_fileno;
+uint32 qbs_tmp_base=qbs_tmp_list_nexti;
+uint8 *tmp_mem_static_pointer=mem_static_pointer;
+uint32 tmp_cmem_sp=cmem_sp;
+#include "data115.txt"
+mem_lock *sf_mem_lock;
+new_mem_lock();
+sf_mem_lock=mem_lock_tmp;
+sf_mem_lock->type=3;
+if (is_error_pending()) goto exit_subfunc;
+exit_subfunc:;
+free_mem_lock(sf_mem_lock);
+#include "free115.txt"
 if ((tmp_mem_static_pointer>=mem_static)&&(tmp_mem_static_pointer<=mem_static_limit)) mem_static_pointer=tmp_mem_static_pointer; else mem_static_pointer=mem_static;
 cmem_sp=tmp_cmem_sp;
 }

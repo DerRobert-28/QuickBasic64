@@ -1,0 +1,8 @@
+if(oldstr108){
+if(oldstr108->fixed)qbs_set(oldstr108,_SUB_STRING__ASCII_CHR_046__APPEND_STRING_THIS);
+qbs_free(_SUB_STRING__ASCII_CHR_046__APPEND_STRING_THIS);
+}
+if(oldstr109){
+if(oldstr109->fixed)qbs_set(oldstr109,_SUB_STRING__ASCII_CHR_046__APPEND_STRING_OTHER);
+qbs_free(_SUB_STRING__ASCII_CHR_046__APPEND_STRING_OTHER);
+}

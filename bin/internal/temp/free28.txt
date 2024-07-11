@@ -1,0 +1,12 @@
+if(oldstr29){
+if(oldstr29->fixed)qbs_set(oldstr29,_FUNC_STRING__ASCII_CHR_046__CONCAT2_STRING_THIS);
+qbs_free(_FUNC_STRING__ASCII_CHR_046__CONCAT2_STRING_THIS);
+}
+if(oldstr30){
+if(oldstr30->fixed)qbs_set(oldstr30,_FUNC_STRING__ASCII_CHR_046__CONCAT2_STRING_FIRST);
+qbs_free(_FUNC_STRING__ASCII_CHR_046__CONCAT2_STRING_FIRST);
+}
+if(oldstr31){
+if(oldstr31->fixed)qbs_set(oldstr31,_FUNC_STRING__ASCII_CHR_046__CONCAT2_STRING_SECOND);
+qbs_free(_FUNC_STRING__ASCII_CHR_046__CONCAT2_STRING_SECOND);
+}

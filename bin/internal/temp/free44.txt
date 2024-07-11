@@ -1,0 +1,4 @@
+if(oldstr49){
+if(oldstr49->fixed)qbs_set(oldstr49,_FUNC_FILE__ASCII_CHR_046__OPEN_STRING_FILENAME);
+qbs_free(_FUNC_FILE__ASCII_CHR_046__OPEN_STRING_FILENAME);
+}

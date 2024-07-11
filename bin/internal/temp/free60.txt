@@ -1,0 +1,4 @@
+if(oldstr81){
+if(oldstr81->fixed)qbs_set(oldstr81,_FUNC_STRING__ASCII_CHR_046__TRIM_STRING_THIS);
+qbs_free(_FUNC_STRING__ASCII_CHR_046__TRIM_STRING_THIS);
+}

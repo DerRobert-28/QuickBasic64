@@ -1,4 +1,0 @@
-if(oldstr22){
-if(oldstr22->fixed)qbs_set(oldstr22,_FUNC_STRING__ASCII_CHR_046__LENGTH_STRING_THIS);
-qbs_free(_FUNC_STRING__ASCII_CHR_046__LENGTH_STRING_THIS);
-}

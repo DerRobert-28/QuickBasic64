@@ -1,7 +1,29 @@
-qbs *_FUNC_VALUEOF_STRING_VALUEOF=NULL;
-if (!_FUNC_VALUEOF_STRING_VALUEOF)_FUNC_VALUEOF_STRING_VALUEOF=qbs_new(0,0);
-int32 *_FUNC_VALUEOF_LONG_OBJECTCOUNT=NULL;
-if(_FUNC_VALUEOF_LONG_OBJECTCOUNT==NULL){
-_FUNC_VALUEOF_LONG_OBJECTCOUNT=(int32*)mem_static_malloc(4);
-*_FUNC_VALUEOF_LONG_OBJECTCOUNT=0;
+int32 *_FUNC_NEW_LONG_NEW=NULL;
+if(_FUNC_NEW_LONG_NEW==NULL){
+_FUNC_NEW_LONG_NEW=(int32*)mem_static_malloc(4);
+*_FUNC_NEW_LONG_NEW=0;
 }
+qbs*oldstr7=NULL;
+if(_FUNC_NEW_STRING_THIS->tmp||_FUNC_NEW_STRING_THIS->fixed||_FUNC_NEW_STRING_THIS->readonly){
+oldstr7=_FUNC_NEW_STRING_THIS;
+if (oldstr7->cmem_descriptor){
+_FUNC_NEW_STRING_THIS=qbs_new_cmem(oldstr7->len,0);
+}else{
+_FUNC_NEW_STRING_THIS=qbs_new(oldstr7->len,0);
+}
+memcpy(_FUNC_NEW_STRING_THIS->chr,oldstr7->chr,oldstr7->len);
+}
+int32 *_FUNC_NEW_LONG_EACH=NULL;
+if(_FUNC_NEW_LONG_EACH==NULL){
+_FUNC_NEW_LONG_EACH=(int32*)mem_static_malloc(4);
+*_FUNC_NEW_LONG_EACH=0;
+}
+int32 *_FUNC_NEW_LONG_NEWITEM=NULL;
+if(_FUNC_NEW_LONG_NEWITEM==NULL){
+_FUNC_NEW_LONG_NEWITEM=(int32*)mem_static_malloc(4);
+*_FUNC_NEW_LONG_NEWITEM=0;
+}
+int64 fornext_value9;
+int64 fornext_finalvalue9;
+int64 fornext_step9;
+uint8 fornext_step_negative9;
