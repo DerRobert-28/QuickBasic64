@@ -1,10 +1,9 @@
 '$include:'../System.bi'
 '$include:'../System/Classes.bi'
-'$include:'../Application.bi'
-'$include:'../Application/execute.bi'
+'$include:'../Extended.bi'
 
 
-sub Application.execute(this as Application)
+function Main%(argc as integer, argv() as string)
 	dim as StringObject so1, so2
 	
 	StringObject so1, "Hallo"
@@ -17,4 +16,5 @@ sub Application.execute(this as Application)
 	Console.writeLine Long.toString(StringObject.ReferenceOf(so2))
 
 	invokes Console.readLine
-end sub
+end function
+
