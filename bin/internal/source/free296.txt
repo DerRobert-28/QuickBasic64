@@ -1,4 +1,0 @@
-if(oldstr6420){
-if(oldstr6420->fixed)qbs_set(oldstr6420,_FUNC_REMOVEDOUBLESLASHES_STRING_F);
-qbs_free(_FUNC_REMOVEDOUBLESLASHES_STRING_F);
-}

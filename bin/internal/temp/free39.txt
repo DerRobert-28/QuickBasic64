@@ -1,4 +1,0 @@
-if(oldstr46){
-if(oldstr46->fixed)qbs_set(oldstr46,_SUB_FILE__ASCII_CHR_046__DELETE_STRING_THIS);
-qbs_free(_SUB_FILE__ASCII_CHR_046__DELETE_STRING_THIS);
-}

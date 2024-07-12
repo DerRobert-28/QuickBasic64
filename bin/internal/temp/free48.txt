@@ -1,4 +1,0 @@
-if(oldstr58){
-if(oldstr58->fixed)qbs_set(oldstr58,_SUB_FILE__ASCII_CHR_046__WRITE_STRING_VALUE);
-qbs_free(_SUB_FILE__ASCII_CHR_046__WRITE_STRING_VALUE);
-}

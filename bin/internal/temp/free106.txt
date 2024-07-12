@@ -1,4 +1,0 @@
-if(oldstr148){
-if(oldstr148->fixed)qbs_set(oldstr148,_SUB_APPLICATION_STRING_APPNAME);
-qbs_free(_SUB_APPLICATION_STRING_APPNAME);
-}

@@ -1,4 +1,0 @@
-if(oldstr45){
-if(oldstr45->fixed)qbs_set(oldstr45,_FUNC_FILE__ASCII_CHR_046__EXISTS_STRING_THIS);
-qbs_free(_FUNC_FILE__ASCII_CHR_046__EXISTS_STRING_THIS);
-}

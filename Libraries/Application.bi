@@ -12,8 +12,9 @@ type Application
 	returnValue as integer
 end type
 
+'$include:'./Application/_constructor.bi'
+'$include:'./Application/_Main.bi'
 '$include:'./Application/isRunning.bi'
-'$include:'./Application/Main.bi'
 '$include:'./Application/return.bi'
 '$include:'./Application/terminate.bi'
 '$include:'./Application/ValueOf.bi'

@@ -1,4 +1,0 @@
-if(oldstr41){
-if(oldstr41->fixed)qbs_set(oldstr41,_SUB_CONSOLE__ASCII_CHR_046__WRITE_STRING_THIS);
-qbs_free(_SUB_CONSOLE__ASCII_CHR_046__WRITE_STRING_THIS);
-}

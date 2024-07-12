@@ -1,6 +1,0 @@
-if(oldstr3505){
-if(oldstr3505->fixed)qbs_set(oldstr3505,_FUNC_VERIFYNUMBER_STRING_TEXT);
-qbs_free(_FUNC_VERIFYNUMBER_STRING_TEXT);
-}
-qbs_free(_FUNC_VERIFYNUMBER_STRING_T);
-qbs_free(_FUNC_VERIFYNUMBER_STRING_T1);

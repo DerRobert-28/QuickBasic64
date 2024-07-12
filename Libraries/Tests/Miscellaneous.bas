@@ -18,4 +18,3 @@ sub Application.execute(this as Application)
 
 	invokes Console.readLine
 end sub
-

@@ -1,5 +1,0 @@
-if(oldstr3834){
-if(oldstr3834->fixed)qbs_set(oldstr3834,_SUB_BUFTOFILE_STRING_FILESPEC);
-qbs_free(_SUB_BUFTOFILE_STRING_FILESPEC);
-}
-qbs_free(_SUB_BUFTOFILE_STRING_DAT);

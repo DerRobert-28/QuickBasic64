@@ -1,4 +1,0 @@
-if(oldstr16){
-if(oldstr16->fixed)qbs_set(oldstr16,_FUNC_CHAR__ASCII_CHR_046__AT_STRING_THIS);
-qbs_free(_FUNC_CHAR__ASCII_CHR_046__AT_STRING_THIS);
-}

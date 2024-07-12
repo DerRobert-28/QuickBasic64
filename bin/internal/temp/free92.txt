@@ -1,4 +1,0 @@
-if(oldstr123){
-if(oldstr123->fixed)qbs_set(oldstr123,_SUB_STRINGOBJECT_STRING_VALUE);
-qbs_free(_SUB_STRINGOBJECT_STRING_VALUE);
-}
