@@ -1,4 +1,0 @@
-if(oldstr6546){
-if(oldstr6546->fixed)qbs_set(oldstr6546,_SUB_CLEANSUBNAME_STRING_N);
-qbs_free(_SUB_CLEANSUBNAME_STRING_N);
-}

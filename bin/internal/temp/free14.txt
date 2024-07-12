@@ -1,8 +1,0 @@
-if(oldstr19){
-if(oldstr19->fixed)qbs_set(oldstr19,_FUNC_STRING__ASCII_CHR_046__CONCAT_STRING_FIRST);
-qbs_free(_FUNC_STRING__ASCII_CHR_046__CONCAT_STRING_FIRST);
-}
-if(oldstr20){
-if(oldstr20->fixed)qbs_set(oldstr20,_FUNC_STRING__ASCII_CHR_046__CONCAT_STRING_SECOND);
-qbs_free(_FUNC_STRING__ASCII_CHR_046__CONCAT_STRING_SECOND);
-}

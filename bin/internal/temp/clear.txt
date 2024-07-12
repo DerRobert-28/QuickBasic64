@@ -1,1 +1,0 @@
-memset((void*)__UDT_V,0,4);

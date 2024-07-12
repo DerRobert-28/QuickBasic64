@@ -1,5 +1,0 @@
-if(__UDT_V==NULL){
-__UDT_V=(void*)mem_static_malloc(4);
-memset(__UDT_V,0,4);
-}
-int32 pass1;

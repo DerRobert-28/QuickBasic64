@@ -1,8 +1,0 @@
-if(oldstr26){
-if(oldstr26->fixed)qbs_set(oldstr26,_FUNC_STRINGS__ASCII_CHR_046__AREEQUAL_STRING_FIRST);
-qbs_free(_FUNC_STRINGS__ASCII_CHR_046__AREEQUAL_STRING_FIRST);
-}
-if(oldstr27){
-if(oldstr27->fixed)qbs_set(oldstr27,_FUNC_STRINGS__ASCII_CHR_046__AREEQUAL_STRING_SECOND);
-qbs_free(_FUNC_STRINGS__ASCII_CHR_046__AREEQUAL_STRING_SECOND);
-}

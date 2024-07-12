@@ -1,4 +1,0 @@
-if(oldstr3689){
-if(oldstr3689->fixed)qbs_set(oldstr3689,_FUNC_COUNTFUNCTIONELEMENTS_STRING_A);
-qbs_free(_FUNC_COUNTFUNCTIONELEMENTS_STRING_A);
-}

@@ -1,3 +1,0 @@
-{{QBDLDATE:05-15-2024}}
-{{QBDLTIME:18:03:40}}
-See page [[WHILE...WEND]]

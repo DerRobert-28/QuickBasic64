@@ -1,8 +1,8 @@
 $if KEYWORDS_BI then
 $includeonce
 
-'$include:'../../Classes/String/equals.bi'
-'$include:'../../Classes/String/isEmpty.bi'
+'$include:'../Classes/String/equals.bi'
+'$include:'../Classes/String/isEmpty.bi'
 
 function new& (this as string)
 	dim as long each, newItem

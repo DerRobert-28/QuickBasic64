@@ -8,6 +8,7 @@ $endif
 
 '$include:'./Keywords/catch.bi'
 '$include:'./Keywords/finally.bi'
+'$include:'./Keywords/invoke.bi'
 '$include:'./Keywords/new.bi'
 '$include:'./Keywords/try.bi'
 '$include:'./Keywords/valueOf.bi'

@@ -1,3 +1,0 @@
-<<< LISTING DONE >>>
-INCL: A:\Development\QuickBasic64\bin\internal\support\vwatch\vwatch_stub.bm
-FFAE9BE3DFCEBF9A8C6F17BB608EC851

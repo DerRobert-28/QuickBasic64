@@ -1,4 +1,0 @@
-if(oldstr15){
-if(oldstr15->fixed)qbs_set(oldstr15,_SUB_CONSOLE__ASCII_CHR_046__WRITELINE_STRING_THIS);
-qbs_free(_SUB_CONSOLE__ASCII_CHR_046__WRITELINE_STRING_THIS);
-}
