@@ -1,6 +1,6 @@
 $includeonce
 
-'$include:'../String/Empty.bi'
+'$include:'../../System/Classes/String/Empty.bi'
 
 sub StringObject.empty (this as StringObject)
 	SharedStringBuffer(this.Reference) = String.Empty

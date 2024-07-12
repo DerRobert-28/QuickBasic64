@@ -1,6 +1,6 @@
 $includeonce
 
-'$include:'../Boolean/or.bi'
+'$include:'../../System/Classes/Boolean/or.bi'
 '$include:'./isEmpty.bi'
 '$include:'./isNull.bi'
 

@@ -1,7 +1,7 @@
 $includeonce
 
-'$include:'../Boolean/and.bi'
-'$include:'../String/isEmpty.bi'
+'$include:'../../System/Classes/Boolean/and.bi'
+'$include:'../../System/Classes/String/isEmpty.bi'
 
 function StringObject.isEmpty` (this as StringObject)
 	dim as _bit condition1, condition2

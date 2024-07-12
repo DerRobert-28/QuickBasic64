@@ -1,7 +1,7 @@
 $includeonce
 
-'$include:'../../Classes/String/equals.bi'
-'$include:'../../Classes/String/isEmpty.bi'
+'$include:'../../System/Classes/String/equals.bi'
+'$include:'../../System/Classes/String/isEmpty.bi'
 
 sub StringObject (this as StringObject, value as string)
 	dim as long each, newItem
