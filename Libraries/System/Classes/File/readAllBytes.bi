@@ -19,8 +19,8 @@ function File.readAllBytes$ (sourceFile as string)
 	endif
 
 	fileSize = File.Length(sourceHandle)
-	readAllBytes = File.readBytes(sourceHandlem fileSize)
+	readAllBytes = File.readBytes(sourceHandle, fileSize)
 	File.close sourceHandle
 
-	File.readAllLines = readAllBytes
+	File.readAllBytes = readAllBytes
 end function
