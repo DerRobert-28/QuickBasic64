@@ -15,6 +15,5 @@ $endif
 '$include:'./Classes/Long.bi'
 '$include:'./Classes/String.bi'
 '$include:'./Classes/Strings.bi'
-'$include:'./Classes/StringObject.bi'
 
 $endif

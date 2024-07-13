@@ -1,8 +1,10 @@
 $if SYSTEM_BI then
 $includeonce
 
+'$include:'./pack.bi'
+
 sub Integer.invoke (this as integer)
-	invoke this
+	invokes Integer.pack(this)
 end sub
 
 $endif

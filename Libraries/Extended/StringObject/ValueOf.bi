@@ -1,8 +1,8 @@
 $includeonce
 
-'$include:'../Boolean/isTrue.bi'
-'$include:'../String/Empty.bi'
-'$include:'../String/Substr.bi'
+'$include:'../../System/Classes/Boolean/isTrue.bi'
+'$include:'../../System/Classes/String/Empty.bi'
+'$include:'../../System/Classes/String/Substr.bi'
 
 function StringObject.ValueOf$ (this as StringObject)
 	dim as _bit condition1, condition2, condition3

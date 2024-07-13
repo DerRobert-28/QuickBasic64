@@ -1,7 +1,7 @@
 $includeonce
 
-'$include:'../Boolean/and.bi'
-'$include:'../Boolean/isTrue.bi'
+'$include:'../../System/Classes/Boolean/and.bi'
+'$include:'../../System/Classes/Boolean/isTrue.bi'
 
 function StringObject.ReferenceOf& (this as StringObject)
 	dim as _bit condition1, condition2
