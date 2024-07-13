@@ -9,8 +9,9 @@ $endif
 '$include:'./Keywords/catch.bi'
 '$include:'./Keywords/finally.bi'
 '$include:'./Keywords/invoke.bi'
+'$include:'./Keywords/isNull.bi'
 '$include:'./Keywords/new.bi'
 '$include:'./Keywords/try.bi'
-'$include:'./Keywords/valueOf.bi'
+'$include:'./Keywords/ValueOf.bi'
 
 $endif

@@ -1,4 +1,3 @@
-$if SYSTEM_BI then
 $includeonce
 
 '$include:'../Boolean/isTrue.bi'
@@ -16,5 +15,3 @@ function File.read$ (this as integer)
 
 	File.read = result
 end function
-
-$endif

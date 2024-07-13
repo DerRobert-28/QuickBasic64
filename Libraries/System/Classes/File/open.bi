@@ -1,4 +1,3 @@
-$if SYSTEM_BI then
 $includeonce
 
 '$include:'../Boolean/isTrue.bi'
@@ -16,5 +15,3 @@ function File.open% (fileName as string, fileAccessType as integer)
 
 	File.open = handle
 end function
-
-$endif
