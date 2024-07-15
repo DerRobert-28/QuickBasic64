@@ -7,7 +7,7 @@ $let STRING_OBJECT_BI=1
 $endif
 
 type StringObject
-	Reference as long
+	internal as Object
 	Length as long
 end type
 

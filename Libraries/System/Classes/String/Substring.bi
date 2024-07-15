@@ -5,6 +5,7 @@ $includeonce
 function String.Substring$ (this as string, index as integer)
 	dim as long position, strLength
 
+	position = index
 	strLength = String.Length(this)
 	do
 		position = position + strLength
