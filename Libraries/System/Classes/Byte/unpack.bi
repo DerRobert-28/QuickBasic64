@@ -1,6 +1,6 @@
 $includeonce
 
-'$include:'./fromChar.bi
+'$include:'./fromChar.bi'
 
 function Byte.unpack%% (byteString as string)
 	Byte.unpack = Byte.fromChar(byteString)

@@ -7,6 +7,7 @@ $let CLASSES_BI=1
 $endif
 
 '$include:'./Classes/Char.bi'
+'$include:'./Classes/CharacterSize.bi'
 '$include:'./Classes/Console.bi'
 '$include:'./Classes/File.bi'
 '$include:'./Classes/FileAccess.bi'
