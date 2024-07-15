@@ -17,6 +17,8 @@ $endif
 '$include:'./String/invoke.bi'
 '$include:'./String/isEmpty.bi'
 '$include:'./String/Length.bi'
+'$include:'./String/of.bi'
+'$include:'./String/replaceAt.bi'
 '$include:'./String/startsWith.bi'
 '$include:'./String/Substr.bi'
 '$include:'./String/Substring.bi'

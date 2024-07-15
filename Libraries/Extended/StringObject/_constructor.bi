@@ -1,4 +1,3 @@
-
 $includeonce
 
 '$include:'../../System/Classes/String/Length.bi'

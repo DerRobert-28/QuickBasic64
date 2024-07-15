@@ -14,6 +14,7 @@ $endif
 '$include:'./Classes/Keycode.bi'
 '$include:'./Classes/Long.bi'
 '$include:'./Classes/Object.bi'
+'$include:'./Classes/Random.bi'
 '$include:'./Classes/String.bi'
 '$include:'./Classes/Strings.bi'
 
