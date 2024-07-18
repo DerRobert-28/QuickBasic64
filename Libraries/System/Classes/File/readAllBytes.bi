@@ -1,5 +1,13 @@
 $includeonce
 
+$if version >= 3.12 then
+
+function File.readAllBytes$ (sourceFile as string)
+	File.readAllBytes = _readfile$(sourceFile)
+end function
+
+$else
+
 '$include:'../FileAccess/Binary.bi'
 '$include:'../String/Empty.bi'
 '$include:'./close.bi'
@@ -24,3 +32,5 @@ function File.readAllBytes$ (sourceFile as string)
 
 	File.readAllBytes = readAllBytes
 end function
+
+$endif
