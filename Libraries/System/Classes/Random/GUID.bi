@@ -13,7 +13,6 @@ function Random.GUID$ (kind as long)
 		exit function
 	endif
 
-
 	for each = 0 to 15
 		guid(each) = String.of(hex$(each), 36)
 		String.replaceAt guid(each), 8, "-"

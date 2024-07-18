@@ -9,6 +9,7 @@ $endif
 '$include:'./Classes/Char.bi'
 '$include:'./Classes/CharacterSize.bi'
 '$include:'./Classes/Console.bi'
+'$include:'./Classes/Environment.bi'
 '$include:'./Classes/File.bi'
 '$include:'./Classes/FileAccess.bi'
 '$include:'./Classes/Integer.bi'

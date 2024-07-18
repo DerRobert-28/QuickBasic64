@@ -1,3 +1,4 @@
 \[Archive\]/
 bin/
 Tests/
+!bin/internal/config.ini

@@ -7,6 +7,7 @@ $let CHAR_BI=1
 $endif
 
 '$include:'./Char/at.bi'
+'$include:'./Char/Backslash.bi'
 '$include:'./Char/Escape.bi'
 '$include:'./Char/from.bi'
 '$include:'./Char/Newline.bi'

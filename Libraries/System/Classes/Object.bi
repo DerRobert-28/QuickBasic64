@@ -8,6 +8,7 @@ $endif
 
 type Object
 	Reference as long
+	Size as long
 end type
 
 '$include:'./Object/_constructor.bi'
