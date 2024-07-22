@@ -1,9 +1,5 @@
 $includeonce
-
-$if SYSTEM_BI then
-$else
 $let SYSTEM_BI=1
-$endif
 
 '$include:'./System/Options.bi'
 '$include:'./System/Constants.bi'

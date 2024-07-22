@@ -1,5 +1,5 @@
-$if KEYWORDS_BI then
 $includeonce
+$if KEYWORDS_BI then
 
 sub invoke (this as _integer64)
 	invokes _mk$(_integer64, this)

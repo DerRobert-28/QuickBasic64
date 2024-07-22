@@ -1,10 +1,6 @@
-$if SYSTEM_BI then
 $includeonce
-
-$if CHAR_BI then
-$else
+$if SYSTEM_BI then
 $let CHAR_BI=1
-$endif
 
 '$include:'./Char/at.bi'
 '$include:'./Char/Backslash.bi'

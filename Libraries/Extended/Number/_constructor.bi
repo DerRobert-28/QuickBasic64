@@ -1,3 +1,4 @@
+$if SYSTEM_BI then
 $includeonce
 
 '$include:'../../System/Classes/Long/pack.bi'
@@ -17,3 +18,5 @@ sub Number (this as Number, mantissa as long, exponent as long)
 	thisRef = new(String.concat(packedMantissa, packedExponent))
 	Object this.internal, thisRef, len(this)
 end sub
+
+$endif

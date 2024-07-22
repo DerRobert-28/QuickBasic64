@@ -1,6 +1,5 @@
-$if MAIN_BI then
-$else
 $includeonce
+$if SYSTEM_BI then
 $let MAIN_BI=1
 
 dim argc as integer

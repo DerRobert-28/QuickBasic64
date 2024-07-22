@@ -1,8 +1,11 @@
-$if KEYWORDS_BI then
 $includeonce
+$if KEYWORDS_BI then
 
-function isNull`(this as long)
-	isNull = (this < 1)
+'$include:'../Classes/Object.bi'
+'$include:'../Classes/Object/isNull.bi'
+
+function isNull` (this as Object)
+	isNull = Object.isNull(this)
 end function
 
 $endif

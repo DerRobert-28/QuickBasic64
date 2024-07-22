@@ -1,5 +1,5 @@
-$if KEYWORDS_BI then
 $includeonce
+$if KEYWORDS_BI then
 
 sub finally ()
 	on error goto 0

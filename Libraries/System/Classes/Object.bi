@@ -1,16 +1,14 @@
-$if SYSTEM_BI then
 $includeonce
-
-$if OBJECT_BI then
-$else
+$if SYSTEM_BI then
 $let OBJECT_BI=1
-$endif
 
 type Object
-	Reference as long
-	Size as long
+	Reference as _unsigned _bit * 32
 end type
 
 '$include:'./Object/_constructor.bi'
+'$include:'./Object/isNull.bi'
+'$include:'./Object/ReferenceOf.bi'
+'$include:'./Object/ValueOf.bi'
 
 $endif

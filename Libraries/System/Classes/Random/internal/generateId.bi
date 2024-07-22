@@ -1,4 +1,5 @@
 $includeonce
+$if SYSTEM_BI then
 
 '$include:'../../String/append.bi'
 '$include:'../../String/Empty.bi'
@@ -28,10 +29,12 @@ function Random.internal.generateId$ (idList16() as string)
 		next
 	loop while shouldRepeat
 	
-	each = internal.malloc(SharedIdBuffer(), newId)
+	each = malloc(SharedIdBuffer(), newId)
 	if each < 1 then
 		Random.internal.generateId = String.Empty
 	else
 		Random.internal.generateId = newID
 	endif
 end function
+
+$endif

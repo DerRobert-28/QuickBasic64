@@ -1,7 +1,7 @@
 $includeonce
 
 '$include:'../../System/Classes/Integer/toString.bi'
-'$include:'./internal/createTempFileName.bi'
+'$include:'./internal/createTempFile.bi'
 '$include:'./internal/readTempFile.bi'
 
 function Format.fromInt$ (formatString as string, value as integer)

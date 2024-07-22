@@ -1,10 +1,12 @@
 $includeonce
+$if SYSTEM_BI then
 
 '$include:'../../Byte/unpack.bi'
 '$include:'../../Char/at.bi'
+'$include:'../../Object.bi'
 '$include:'../../String/Length.bi'
 
-function CharacterSize.internal.SizeAt%% (this as long, index as _byte)
+function CharacterSize.internal.SizeAt%% (this as Object, index as _byte)
 	dim as string packed
 
 	if isNull(this) then
@@ -20,3 +22,5 @@ function CharacterSize.internal.SizeAt%% (this as long, index as _byte)
 
 	CharacterSize.internal.SizeAt = Byte.unpack(Char.at(packed, index))
 end function
+
+$endif

@@ -1,10 +1,6 @@
-$if SYSTEM_BI then
 $includeonce
-
-$if CLASSES_BI then
-$else
+$if SYSTEM_BI then
 $let CLASSES_BI=1
-$endif
 
 '$include:'./Classes/Char.bi'
 '$include:'./Classes/CharacterSize.bi'

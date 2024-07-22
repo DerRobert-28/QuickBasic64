@@ -1,7 +1,7 @@
 $includeonce
 
 '$include:'../../System/Classes/Long/toString.bi'
-'$include:'./internal/createTempFileName.bi'
+'$include:'./internal/createTempFile.bi'
 '$include:'./internal/readTempFile.bi'
 
 function Format.fromLong$ (formatString as string, value as long)

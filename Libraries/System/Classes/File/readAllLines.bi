@@ -11,7 +11,7 @@ function File.readAllLines` (target() as string, sourceFile as string)
 	dim as long lineCounter
 
 	sourceHandle = File.open(sourceFile, FileAccess.Read)
-	if isNull(sourceHandle) then
+	if (sourceHandle = NULL) then
 		File.readAllLines = FALSE
 		exit function
 	endif
