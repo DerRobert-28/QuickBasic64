@@ -1,6 +1,6 @@
 $includeonce
 $if SYSTEM_BI then
-$let MAIN_BI then
+$if MAIN_BI then
 $else
 
 const DEFAULT` = 0
