@@ -4,14 +4,14 @@ $includeonce
 '$include:'../String/Empty.bi'
 
 function File.read$ (this as integer)
-	dim as integer exception
+	dim as integer isException
 	dim as string result
 
 	try
 		input #this, result
 	finally
-		catch exception
-	if Boolean.isTrue(exception) then result = String.Empty
+		catch isException
+	if Boolean.isTrue(isException) then result = String.Empty
 
 	File.read = result
 end function

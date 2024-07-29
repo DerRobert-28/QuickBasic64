@@ -1,8 +1,8 @@
 $includeonce
 $if KEYWORDS_BI then
 
-'$include:'../Classes/String/equals.bi'
-'$include:'../Classes/String/isEmpty.bi'
+'$include:'../../String/equals.bi'
+'$include:'../../String/isEmpty.bi'
 
 function malloc& (redimable() as string, value as string)
 	dim as long each, newItem

@@ -1,7 +1,7 @@
 $includeonce
 $if KEYWORDS_BI then
 
-'$include:'../Classes/Object.bi'
+'$include:'../../Object.bi'
 
 sub set(this as Object, constructor as string)
 	Object this, constructor

@@ -1,8 +1,8 @@
 $includeonce
 $if KEYWORDS_BI then
 
-'$include:'../Classes/Object.bi'
-'$include:'../Classes/Object/isNull.bi'
+'$include:'../../Object.bi'
+'$include:'../../Object/isNull.bi'
 
 function isNull` (this as Object)
 	isNull = Object.isNull(this)
