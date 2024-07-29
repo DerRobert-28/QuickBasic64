@@ -4,6 +4,8 @@ $if MAIN_BI then
 $else
 $let CONSTANTS_BI=1
 
+const DEFAULT` = 0
+
 const FALSE` = 0
 const TRUE` = not FALSE
 

@@ -5,7 +5,7 @@ $includeonce
 '$include:'../CharacterSize/Width.bi'
 '$include:'../Object.bi'
 
-sub Console.Fullscreen (charSize as Object)
+sub Console.Fullscreen (charSize as string)
 	dim as _byte charWidth, charHeight
 	dim as integer xWidth, yHeight
 
