@@ -2,6 +2,6 @@ $includeonce
 
 '$include:'./getMinutes.bi'
 
-function Time.getHours& ()
-	Time.getHours = Time.getMinutes / 60
+function TimeSpan.getHours& ()
+	TimeSpan.getHours = TimeSpan.getMinutes / 60
 end function

@@ -1,6 +1,10 @@
 $includeonce
 
 '$include:'../../Boolean/neither.bi'
+'$include:'../../Char/NoBreak.bi'
+'$include:'../../Char/Null.bi'
+'$include:'../../Char/Space.bi'
+'$include:'../../Char/Tabulator.bi'
 '$include:'../Substr.bi'
 '$include:'../Substring.bi'
 '$include:'../Length.bi'

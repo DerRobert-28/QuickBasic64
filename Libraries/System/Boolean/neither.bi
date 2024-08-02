@@ -1,5 +1,4 @@
 $includeonce
-
 '$include:'./isFalse.bi'
 
 function Boolean.neither` (first as _byte, second as _byte)

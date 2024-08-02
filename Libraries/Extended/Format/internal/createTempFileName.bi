@@ -1,9 +1,9 @@
 $includeonce
 
-'$include:'../../../System/Classes/Environment/getVariable.bi'
-'$include:'../../../System/Classes/Environment/PathSeparator.bi'
-'$include:'../../../System/Classes/Random/GUID.bi'
-'$include:'../../../System/Classes/String/concat.bi'
+'$include:'../../../System/Environment/getVariable.bi'
+'$include:'../../../System/Environment/PathSeparator.bi'
+'$include:'../../../System/Random/GUID.bi'
+'$include:'../../../System/String/concat.bi'
 
 function Format.internal.createTempFileName$ ()
 	dim as string separator, userprofile

@@ -1,7 +1,14 @@
 $includeonce
 
-'$include:'./isTrue.bi'
+'$include:'./equals.bi'
+'$include:'./internal/FalseLiteral.bi'
+'$include:'./internal/illegalBoolean.bi'
+'$include:'./internal/TrueLiteral.bi
 
 function Boolean.isTruthy` (this as _byte)
-	Boolean.isTruthy = Boolean.isTrue(this)
+	if Boolean.equals(this, Boolean.internal.illegalBoolean) then
+		Boolean.isTruthy = Boolean.internal.FalseLiteral
+	else
+		Boolean.isTruthy = Boolean.internal.TrueLiteral
+	endif
 end function

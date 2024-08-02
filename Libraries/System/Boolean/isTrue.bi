@@ -1,5 +1,8 @@
 $includeonce
 
+'$include:'./internal/TrueLiteral.bi'
+'$include:'./equals.bi'
+
 function Boolean.isTrue` (this as _byte)
-	Boolean.isTrue = (this <> 0)
+	Boolean.isTrue = Boolean.equals(this, Boolean.internal.TrueLiteral)
 end function

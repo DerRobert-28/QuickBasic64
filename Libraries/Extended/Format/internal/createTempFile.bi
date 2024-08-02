@@ -1,7 +1,7 @@
 $includeonce
 
-'$include:'../../../System/Classes/Boolean/isTrue.bi'
-'$include:'../../../System/Classes/FileAccess/Write.bi'
+'$include:'../../../System/Boolean/isTrue.bi'
+'$include:'../../../System/FileAccess/Write.bi'
 '$include:'./createTempFileName.bi'
 
 function Format.internal.createTempFile` (outHandle as integer, outFileName as string)

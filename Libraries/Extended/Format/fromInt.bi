@@ -1,6 +1,6 @@
 $includeonce
 
-'$include:'../../System/Classes/Integer/toString.bi'
+'$include:'../../System/Integer/toString.bi'
 '$include:'./internal/createTempFile.bi'
 '$include:'./internal/readTempFile.bi'
 

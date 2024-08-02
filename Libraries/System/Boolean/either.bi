@@ -1,5 +1,4 @@
 $includeonce
-
 '$include:'./isTrue.bi'
 
 function Boolean.either` (first as _byte, second as _byte)
