@@ -1,10 +1,5 @@
-$if SYSTEM_BI then
 $includeonce
-
-$if APPLICATION_BI then
-$else
 $let APPLICATION_BI=1
-$endif
 
 type Application
 	isRunning as integer
@@ -23,5 +18,3 @@ end type
 ' - Application.initialize (... as Application)
 ' - Application.execute (... as Application)
 ' - Application.dispose (... as Application)
-
-$endif

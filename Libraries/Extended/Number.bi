@@ -11,6 +11,7 @@ type Number
 	Exponent as long
 end type
 
+'$include:'./Number/_constructor.bi'
 '$include:'./Number/fromInt.bi'
 
 $endif

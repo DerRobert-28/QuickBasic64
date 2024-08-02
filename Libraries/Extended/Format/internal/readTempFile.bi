@@ -1,8 +1,8 @@
 $includeonce
 
-'$include:'../../../System/Classes/Boolean/isTrue.bi'
-'$include:'../../../System/Classes/File/close.bi'
-'$include:'../../../System/Classes/FileAccess/Read.bi'
+'$include:'../../../System/Boolean/isTrue.bi'
+'$include:'../../../System/File/close.bi'
+'$include:'../../../System/FileAccess/Read.bi'
 
 function Format.internal.readTempFile` (outHandle as integer, fileName as string)
 	File.close outHandle

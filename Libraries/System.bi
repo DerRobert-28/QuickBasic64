@@ -1,13 +1,9 @@
 $includeonce
-
-$if SYSTEM_BI then
-$else
 $let SYSTEM_BI=1
-$endif
 
-'$include:'./System/Options.bi'
-'$include:'./System/Constants.bi'
-'$include:'./System/Shared.bi'
-'$include:'./System/ExceptionHandler.bi'
-'$include:'./System/Main.bi'
-'$include:'./System/Keywords.bi'
+'$include:'./System/_private/Options.bi'
+'$include:'./System/_private/Constants.bi'
+'$include:'./System/_private/Shared.bi'
+'$include:'./System/_private/Main.bi'
+'$include:'./System/_private/ExceptionHandler.bi'
+'$include:'./System/_private/Keywords.bi'

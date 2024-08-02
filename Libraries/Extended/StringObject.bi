@@ -6,11 +6,6 @@ $else
 $let STRING_OBJECT_BI=1
 $endif
 
-type StringObject
-	internal as Object
-	Length as long
-end type
-
 '$include:'./StringObject/_constructor.bi'
 '$include:'./StringObject/empty.bi'
 '$include:'./StringObject/isEmpty.bi'

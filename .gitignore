@@ -1,4 +1,6 @@
 \[Archive\]/
 bin/
+progs/
+_OLD/
 Tests/
 !bin/internal/config.ini

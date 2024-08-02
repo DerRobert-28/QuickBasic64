@@ -1,9 +1,24 @@
 $includeonce
-
-$if SYSTEM_CLASSES_BI then
-$else
 $let SYSTEM_CLASSES_BI=1
-$endif
 
 '$include:'./System.bi'
-'$include:'./System/Classes.bi'
+'$include:'./System/Boolean.bi'
+'$include:'./System/Byte.bi'
+'$include:'./System/Char.bi'
+'$include:'./System/CharacterSize.bi'
+'$include:'./System/Console.bi'
+'$include:'./System/DateTime.bi'
+'$include:'./System/Double.bi'
+'$include:'./System/Environment.bi'
+'$include:'./System/Exception.bi'
+'$include:'./System/File.bi'
+'$include:'./System/FileAccess.bi'
+'$include:'./System/Float.bi'
+'$include:'./System/Integer.bi'
+'$include:'./System/Keycode.bi'
+'$include:'./System/Long.bi'
+'$include:'./System/Object.bi'
+'$include:'./System/Random.bi'
+'$include:'./System/String.bi'
+'$include:'./System/Strings.bi'
+'$include:'./System/TimeSpan.bi'

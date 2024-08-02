@@ -1,6 +1,6 @@
 $includeonce
 
-'$include:'./internal/createTempFileName.bi'
+'$include:'./internal/createTempFile.bi'
 '$include:'./internal/readTempFile.bi'
 
 function Format.fromString$ (formatString as string, value as string)
