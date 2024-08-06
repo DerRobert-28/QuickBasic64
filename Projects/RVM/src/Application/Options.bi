@@ -1,0 +1,2 @@
+option _explicit
+option _explicitarray

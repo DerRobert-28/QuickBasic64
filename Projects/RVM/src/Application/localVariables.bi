@@ -1,0 +1,1 @@
+dim result	as integer
