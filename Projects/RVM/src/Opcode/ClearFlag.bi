@@ -1,7 +1,10 @@
 function Opcode.ClearFlag% (opcode as _unsigned _byte)
-	Cpu.clearFlag opcode and 3
+	dim flag as _unsigned _byte
 	:
-	if (opcode and 3) = CARRYFLAG then
+	flag = opcode mod FLAGCOUNT
+	Cpu.clearFlag flag
+	:
+	if flag = CARRYFLAG then
 		Opcode.ClearFlag = 1
 	else
 		Opcode.ClearFlag = ReservedInstructionException

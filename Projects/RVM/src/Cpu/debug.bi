@@ -7,7 +7,7 @@ function Cpu.debug% (startAddress as _unsigned long)
 	:
 	print "Starting at address: " + Hex.fromWord(startAddress)
 	print "+------+----------+----------------+"
-	print "|  IP  | xx xx-xx | AC XR ?? ?? FL |"
+	print "|  IP  | xx xx-xx | AC XR YR SP FL |"
 	print "+------+----------+----------------+"
 	:
 	InstructionPtr = startAddress

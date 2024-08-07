@@ -37,3 +37,5 @@
 '$include:'./Opcode/SetFlag.bi'
 '$include:'./Opcode/Stop.bi'
 '$include:'./Opcode/StoreRegisterAddress.bi'
+'$include:'./Opcode/TransferFromAccu.bi'
+'$include:'./Opcode/TransferIntoAccu.bi'

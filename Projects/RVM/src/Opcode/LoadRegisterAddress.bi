@@ -14,9 +14,5 @@ function Opcode.LoadRegisterAddress% (opcode as _unsigned _byte, address as _uns
 	Cpu.flagIf ZEROFLAG, value = 0
 	Cpu.flagIf SIGNFLAG, value and 128
 	:
-	if opcode and 2 then
-		Opcode.LoadRegisterAddress = ReservedInstructionException3
-	else
-		Opcode.LoadRegisterAddress = 3
-	endif
+	Opcode.LoadRegisterAddress = 3
 end function
