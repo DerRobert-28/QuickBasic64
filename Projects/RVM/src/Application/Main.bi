@@ -1,18 +1,23 @@
+variables:
+	dim result as integer
+
 begin:
 	screen 0
+	'width 40, 25
 	_fullscreen
+	:
 	print "RVM - Demo CPU"
 	print
 	:
-	invoke Memory.create(65536)
-	invoke Memory.poke(0, &H04)	'LDA #41
-	invoke Memory.poke(1, &H41)
-	invoke Memory.poke(2, &H12)	'TAX
-	invoke Memory.poke(3, &H13)	'TAY
-	invoke Memory.poke(4, &HFF)	'HLT
-	invoke Memory.dump(0)		'for debugging purposes
-	result = Cpu.debug(0)
-	invoke Memory.dump(0)		'for debugging purposes
+	VirtualMemoryChecking = FALSE
+	Memory.loadDefaults Memory.create(MEMORY_SIZE)
+	:
+	Programs.loadProgram3 START_ADDRESS_DEFAULT
+	result = Cpu.debug(START_ADDRESS_DEFAULT)
+	:
+	invoke Memory.dump(StackPagePtr + 240)			'for debugging purposes
+	invoke Memory.dump(START_ADDRESS_DEFAULT)		'for debugging purposes
+	:
 	Memory.release
 	:
 	print

@@ -5,6 +5,9 @@ function Memory.poke% (address as _unsigned long, value as _unsigned _byte)
 	elseif address >= VirtualMemory.size then
 		Memory.poke = IllegalAddressException
 		exit function
+	elseif Memory.checkFailed(VirtualMemoryChecking, address) then
+		Memory.poke = IllegalAddressException
+		exit function
 	endif
 	:
 	_memput VirtualMemory, VirtualMemory.offset + address, value

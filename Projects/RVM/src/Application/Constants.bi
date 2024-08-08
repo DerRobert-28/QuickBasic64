@@ -1,19 +1,46 @@
-const REGISTERCOUNT = 4
-const INDEXCOUNT = 2
-const FLAGCOUNT = 4
+'
+'General Constants:
+'
+const FALSE = 0
+const TRUE = not FALSE
 
-const ACCUREGISTER = 0
 
-const INDEXREGISTER = 1
-const XREGISTER = 1
-const YREGISTER = 2
+'
+'Memory Constants:
+'
+const MEMORY_SIZE = 65536
 
+const STACK_ADDRESS_DEFAULT = &H0100
+const KEYBOARD_BUFFER_DEFAULT = &H0200
+const START_ADDRESS_DEFAULT = &H0300
+
+
+'
+'Zero Page Constants:
+'
+const ZP_REGISTER_INITVALUES = &H00
+const ZP_STACKPOINTER_PAGE = &H10
+const ZP_KEYBOARD_BUFFER_PAGE = &H20
+const ZP_KEYBOARD_BUFFER_READ_OFFSET = &H21
+const ZP_KEYBOARD_BUFFER_WRITE_OFFSET = &H22
+const ZP_FLAGS_INITVALUE = &H80
+
+
+'
+'Register Constants:
+'
+const REGISTER_COUNT = 4
+const FLAGS_COUNT = 4
+
+const INDEX_REGISTER = 1
+const INDEX_COUNT = 2
+
+const ACCU_REGISTER = 0
+const X_REGISTER = 1
+const Y_REGISTER = 2
 const STACKPOINTER = 3
 
-'const RESERVEDREGISTER1 = 2
-'const RESERVEDREGISTER2 = 3
-
-const ZEROFLAG = 0
-const OVERFLOWFLAG = 1
-const SIGNFLAG = 2
-const CARRYFLAG = 3
+const ZERO_FLAG = 0
+const OVERFLOW_FLAG = 1
+const SIGN_FLAG = 2
+const CARRY_FLAG = 3

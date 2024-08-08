@@ -9,8 +9,8 @@ function Opcode.StoreRegisterAddress% (opcode as _unsigned _byte, address as _un
 		exit function
 	endif
 	:
-	Cpu.flagIf ZEROFLAG, value = 0
-	Cpu.flagIf SIGNFLAG, value and 128
+	Cpu.flagIf ZERO_FLAG, value = 0
+	Cpu.flagIf SIGN_FLAG, value and 128
 	:
 	Opcode.StoreRegisterAddress = 3
 end function

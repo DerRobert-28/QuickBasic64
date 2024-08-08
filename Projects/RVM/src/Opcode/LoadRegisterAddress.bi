@@ -11,8 +11,8 @@ function Opcode.LoadRegisterAddress% (opcode as _unsigned _byte, address as _uns
 	value = result and 255
 	CpuRegisters(opcode and 3) = value
 	:
-	Cpu.flagIf ZEROFLAG, value = 0
-	Cpu.flagIf SIGNFLAG, value and 128
+	Cpu.flagIf ZERO_FLAG, value = 0
+	Cpu.flagIf SIGN_FLAG, value and 128
 	:
 	Opcode.LoadRegisterAddress = 3
 end function

@@ -1,11 +1,11 @@
 function Opcode.TransferFromAccu% (opcode as _unsigned _byte)
 	dim value as _unsigned _byte
 	:
-	value = CpuRegisters(ACCUREGISTER)
-	CpuRegisters(INDEXREGISTER + (opcode mod INDEXCOUNT)) = value
+	value = CpuRegisters(ACCU_REGISTER)
+	CpuRegisters(INDEX_REGISTER + (opcode mod INDEX_COUNT)) = value
 	:
-	Cpu.flagIf ZEROFLAG, value = 0
-	Cpu.flagIf SIGNFLAG, value and 128
+	Cpu.flagIf ZERO_FLAG, value = 0
+	Cpu.flagIf SIGN_FLAG, value and 128
 	:
 	Opcode.TransferFromAccu = 1
 end function

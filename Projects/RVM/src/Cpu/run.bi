@@ -4,6 +4,7 @@ function Cpu.run% (startAddress as _unsigned long)
 	dim opcode	as _unsigned _byte
 	dim result	as integer
 	:
+	Cpu.initialize
 	InstructionPtr = startAddress
 	do
 		opcode = Memory.peek(InstructionPtr)

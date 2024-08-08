@@ -6,6 +6,8 @@ function Cpu.debug% (startAddress as _unsigned long)
 	dim result	as integer
 	:
 	print "Starting at address: " + Hex.fromWord(startAddress)
+	Cpu.initialize
+	:
 	print "+------+----------+----------------+"
 	print "|  IP  | xx xx-xx | AC XR YR SP FL |"
 	print "+------+----------+----------------+"

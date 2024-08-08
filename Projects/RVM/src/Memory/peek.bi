@@ -5,6 +5,9 @@ function Memory.peek% (address as _unsigned long)
 	elseif address >= VirtualMemory.size then
 		Memory.peek = IllegalAddressException
 		exit function
+	elseif Memory.checkFailed(VirtualMemoryChecking, address) then
+		Memory.peek = IllegalAddressException
+		exit function
 	endif
 	:
 	Memory.peek = _memget(VirtualMemory, VirtualMemory.offset + address, _unsigned _byte)
