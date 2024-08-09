@@ -1,5 +1,5 @@
 sub invoke (dummy as integer)
-'	nothing to do here ...
+	'nothing to do here ...'
 end sub
 
 function isException` (result as integer)

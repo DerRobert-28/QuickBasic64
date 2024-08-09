@@ -1,34 +1,34 @@
-'
-'General Constants:
-'
+''
+''  General Constants:
+''
 const FALSE = 0
 const TRUE = not FALSE
 
 
-'
-'Memory Constants:
-'
-const MEMORY_SIZE = 65536
+''
+''  General Memory Constants:
+''
+const MEMORY_SIZE& = 65536
 
-const STACK_ADDRESS_DEFAULT = &H0100
-const KEYBOARD_BUFFER_DEFAULT = &H0200
-const START_ADDRESS_DEFAULT = &H0300
-
-
-'
-'Zero Page Constants:
-'
-const ZP_REGISTER_INITVALUES = &H00
-const ZP_STACKPOINTER_PAGE = &H10
-const ZP_KEYBOARD_BUFFER_PAGE = &H20
-const ZP_KEYBOARD_BUFFER_READ_OFFSET = &H21
-const ZP_KEYBOARD_BUFFER_WRITE_OFFSET = &H22
-const ZP_FLAGS_INITVALUE = &H80
+const STACK_ADDRESS_DEFAULT& = 256		'$0100
+const KEYBOARD_BUFFER_DEFAULT& = 512		'$0200
+const START_ADDRESS_DEFAULT& = 32768		'$8000
 
 
-'
-'Register Constants:
-'
+''
+''  Zero Page Constants:
+''
+const ZP_REGISTER_INITVALUES& = 0		'$0000
+const ZP_STACKPOINTER_PAGE& = 16		'$0010
+const ZP_KEYBOARD_BUFFER_PAGE& = 32		'$0020
+const ZP_KEYBOARD_BUFFER_READ_OFFSET& = 33	'$0021
+const ZP_KEYBOARD_BUFFER_WRITE_OFFSET& = 34	'$0022
+const ZP_FLAGS_INITVALUE& = 128			'$0080
+
+
+''
+''  Register Constants:
+''
 const REGISTER_COUNT = 4
 const FLAGS_COUNT = 4
 
