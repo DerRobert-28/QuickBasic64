@@ -7,12 +7,12 @@ sub Cpu.initialize ()
 		CpuRegisters(i) = Memory.peek(ZP_REGISTER_INITVALUES + i)
 	next
 	CpuFlags = Memory.peek(ZP_FLAGS_INITVALUE)
-	StackPagePtr = Memory.peek(ZP_STACKPOINTER_PAGE)
-	if StackPagePtr < 1 then
-		StackPagePtr = 1
+	:
+	StackPagePtr = Cpu.BytesToLong(Memory.peek(ZP_STACKPOINTER_PAGE), 0)
+	if StackPagePtr < 256 then
+		StackPagePtr = 256
 		invoke Memory.poke(ZP_STACKPOINTER_PAGE, 1)
 	endif
-	StackPagePtr = StackPagePtr * 256
 	:
 	invoke Memory.poke(ZP_KEYBOARD_BUFFER_READ_OFFSET, 0)
 	invoke Memory.poke(ZP_KEYBOARD_BUFFER_WRITE_OFFSET, 0)

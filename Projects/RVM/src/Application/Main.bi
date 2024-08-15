@@ -12,7 +12,7 @@ begin:
 	VirtualMemoryChecking = FALSE
 	Memory.loadDefaults Memory.create(MEMORY_SIZE)
 	:
-	Programs.loadProgram3 START_ADDRESS_DEFAULT
+	Programs.loadProgram5 START_ADDRESS_DEFAULT
 	result = Cpu.debug(START_ADDRESS_DEFAULT)
 	:
 	invoke Memory.dump(StackPagePtr + 240)			'for debugging purposes
