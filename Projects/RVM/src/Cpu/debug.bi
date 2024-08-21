@@ -21,6 +21,7 @@ function Cpu.debug% (startAddress as _unsigned long)
 	print Hex.fromByte(CpuFlags) + " |"
 	:
 	do
+		'_delay 1
 		print "| " + Hex.fromWord(InstructionPtr) + " | ";
 		opcode = Memory.peek(InstructionPtr)
 		loByte = Memory.peek(Memory.correct(InstructionPtr + 1))

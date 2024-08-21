@@ -34,9 +34,19 @@ function Cpu.execute% (opcode as _unsigned _byte, loByte as _unsigned _byte, hiB
 		case &H14 to &H17: result = Opcode.PushRegisterToStack(opcode)
 		case &H18 to &H1B: result = Opcode.StoreRegisterAddress(opcode, address)
 		'
-		'Bit arithmetic
+		'Bit arithmetic:
 		'
-		case &H20: result = Opcode.StoreRegisterAddress(opcode, address)
+		case &H20: result = Opcode.BitCompareValue(loByte)
+		case &H21: result = Opcode.BitCompareAddress(address)
+		case &H22: result = Opcode.AndValue(loByte)
+		case &H23: result = Opcode.AndAddress(address)
+		case &H24: result = Opcode.OrValue(loByte)
+		case &H25: result = Opcode.OrAddress(address)
+		case &H26: result = Opcode.XorValue(loByte)
+		case &H27: result = Opcode.XorAddress(address)
+		'
+		'Normal arithmetic:
+		'
 		'
 		'Flag commands:
 		'

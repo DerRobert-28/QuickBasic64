@@ -21,6 +21,10 @@ sub Memory.loadDefaults (dummy as _byte)
 	'Default keyboard buffer:
 	'
 	invoke Memory.poke(ZP_KEYBOARD_BUFFER_PAGE, Cpu.HiByte(KEYBOARD_BUFFER_DEFAULT))
-	invoke Memory.poke(ZP_KEYBOARD_BUFFER_READ_OFFSET, 0)
-	invoke Memory.poke(ZP_KEYBOARD_BUFFER_WRITE_OFFSET, 0)
+	'invoke Memory.poke(ZP_KEYBOARD_BUFFER_READ_OFFSET, 0)
+	'invoke Memory.poke(ZP_KEYBOARD_BUFFER_WRITE_OFFSET, 0)
+	'
+	'Load default routines:
+	'
+	Interrupt.loadKeyboard
 end sub

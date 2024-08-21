@@ -2,7 +2,8 @@ function Opcode.TransferIntoAccu% (opcode as _unsigned _byte)
 	dim source as _unsigned _byte
 	dim value as _unsigned _byte
 	:
-	source = opcode mod INDEX_COUNT
+	'source = opcode mod INDEX_COUNT
+	source = opcode mod REGISTER_COUNT
 	value = CpuRegisters(source)
 	CpuRegisters(ACCU_REGISTER) = value
 	:

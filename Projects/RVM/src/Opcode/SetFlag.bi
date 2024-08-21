@@ -4,10 +4,7 @@ function Opcode.SetFlag% (opcode as _unsigned _byte)
 	'flag = opcode mod FLAGS_COUNT
 	flag = opcode and FLAGS_BITMASK
 	Cpu.setFlag flag
+	Interrupts.checkBreak
 	:
-	if flag = CARRY_FLAG then
-		Opcode.SetFlag = 1
-	else
-		Opcode.SetFlag = ReservedInstructionException
-	endif
+	Opcode.SetFlag = 1
 end function

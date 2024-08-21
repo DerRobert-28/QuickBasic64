@@ -14,6 +14,6 @@ sub Cpu.initialize ()
 		invoke Memory.poke(ZP_STACKPOINTER_PAGE, 1)
 	endif
 	:
-	invoke Memory.poke(ZP_KEYBOARD_BUFFER_READ_OFFSET, 0)
-	invoke Memory.poke(ZP_KEYBOARD_BUFFER_WRITE_OFFSET, 0)
+	'invoke Memory.poke(ZP_KEYBOARD_BUFFER_READ_OFFSET, 0)
+	'invoke Memory.poke(ZP_KEYBOARD_BUFFER_WRITE_OFFSET, 0)
 end sub
