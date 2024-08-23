@@ -1,11 +1,16 @@
 sub Programs.loadProgram1 (address as _unsigned long)
-	'LDA #41
+	'LDA #12
 	Memory.push address, &H08
-	Memory.push address, &H99
+	Memory.push address, &H12
+	'PHA
+	Memory.push address, &H14
+	'LDA #34
+	Memory.push address, &H08
+	Memory.push address, &H34
 	'TAX
 	Memory.push address, &H06
-	'TAY
-	Memory.push address, &H07
+	'PLA
+	Memory.push address, &H18
 	'HLT
 	Memory.push address, &HFF
 end sub

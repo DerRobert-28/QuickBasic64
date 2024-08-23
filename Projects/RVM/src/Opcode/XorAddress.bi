@@ -7,10 +7,10 @@ function Opcode.XorAddress% (address as _unsigned integer)
 		exit function
 	endif
 	:
-	CpuRegisters(ACCU_REGISTER) = CpuRegisters(ACCU_REGISTER) xor result
-	:
+	result = CpuRegisters(ACCU_REGISTER) xor result
 	Cpu.flagIf ZERO_FLAG, result = 0
 	Cpu.flagIf SIGN_FLAG, result and 128
 	:
+	CpuRegisters(ACCU_REGISTER) = result
 	Opcode.XorAddress = 3
 end function

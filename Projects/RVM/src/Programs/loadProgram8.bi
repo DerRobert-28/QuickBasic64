@@ -1,33 +1,33 @@
 sub Programs.loadProgram8 (address as _unsigned long)
-	'LDA #37
+	'LDA #01
 	Memory.push address, &H08
-	Memory.push address, &H37
+	Memory.push address, &H01
 	:
-	'AND #0F
-	Memory.push address, &H22
-	Memory.push address, &H0F
+	'ADD #FF
+	Memory.push address, &H32
+	Memory.push address, &HFF
 	:
 	'TAX
 	Memory.push address, &H05
 	:
-	'LDA #30
+	'LDA #01
 	Memory.push address, &H08
-	Memory.push address, &H30
+	Memory.push address, &H01
 	:
-	'ORA #06
-	Memory.push address, &H24
-	Memory.push address, &H06 
+	'ADD #FE
+	Memory.push address, &H32
+	Memory.push address, &HFE 
 	:
 	'TAY
 	Memory.push address, &H06
 	:
-	'LDA #A5
+	'LDA #7F
 	Memory.push address, &H08
-	Memory.push address, &HA5
+	Memory.push address, &H7F
 	:
-	'EOR #FF
-	Memory.push address, &H26
-	Memory.push address, &HFF
+	'ADD #01
+	Memory.push address, &H32
+	Memory.push address, &H01
 	:
 	'HLT
 	Memory.push address, &HFF

@@ -47,6 +47,12 @@ function Cpu.execute% (opcode as _unsigned _byte, loByte as _unsigned _byte, hiB
 		'
 		'Normal arithmetic:
 		'
+		case &H30: result = Opcode.CompareValue(loByte)
+		case &H31: result = Opcode.CompareAddress(address)
+		case &H32, &H34: result = Opcode.AddValue(loByte, opcode - &H32)
+		'case &H33, &H35: result = Opcode.AddAddress(address, opcode - &H33)
+		'case &H36, &H38: result = Opcode.SubValue(loByte, opcode - &H36)
+		'case &H37, &H39: result = Opcode.SubAddress(address, opcode - &H37)
 		'
 		'Flag commands:
 		'

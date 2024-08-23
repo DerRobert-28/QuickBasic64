@@ -1,51 +1,33 @@
 sub Programs.loadProgram7 (address as _unsigned long)
-	'LDA #00
+	'LDA #37
 	Memory.push address, &H08
-	Memory.push address, &H00
+	Memory.push address, &H37
 	:
-	'BIT #FF
-	Memory.push address, &H20
-	Memory.push address, &HFF
-	:
-	'BNE #02
-	Memory.push address, &HA0
-	Memory.push address, &H02
-	:
-	'LDX #11
-	Memory.push address, &H09
-	Memory.push address, &H11
-	:
-	'LDA #40
-	Memory.push address, &H08
-	Memory.push address, &H40
-	:
-	'BIT #FF
-	Memory.push address, &H20
-	Memory.push address, &HFF
-	:
-	'BVC #02
-	Memory.push address, &HA1
-	Memory.push address, &H02
-	:
-	'LDY #22
-	Memory.push address, &H0A
+	'AND #0F
 	Memory.push address, &H22
+	Memory.push address, &H0F
 	:
-	'LDA #80
+	'TAX
+	Memory.push address, &H05
+	:
+	'LDA #30
 	Memory.push address, &H08
-	Memory.push address, &H80
+	Memory.push address, &H30
 	:
-	'BIT #FF
-	Memory.push address, &H20
+	'ORA #06
+	Memory.push address, &H24
+	Memory.push address, &H06 
+	:
+	'TAY
+	Memory.push address, &H06
+	:
+	'LDA #A5
+	Memory.push address, &H08
+	Memory.push address, &HA5
+	:
+	'EOR #FF
+	Memory.push address, &H26
 	Memory.push address, &HFF
-	:
-	'BPL #02
-	Memory.push address, &HA2
-	Memory.push address, &H02
-	:
-	'LDA #33
-	Memory.push address, &H08
-	Memory.push address, &H33
 	:
 	'HLT
 	Memory.push address, &HFF

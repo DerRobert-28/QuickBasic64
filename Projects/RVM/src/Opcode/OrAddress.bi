@@ -7,10 +7,10 @@ function Opcode.OrAddress% (address as _unsigned integer)
 		exit function
 	endif
 	:
-	CpuRegisters(ACCU_REGISTER) = CpuRegisters(ACCU_REGISTER) or result
-	:
+	result = CpuRegisters(ACCU_REGISTER) or result
 	Cpu.flagIf ZERO_FLAG, result = 0
 	Cpu.flagIf SIGN_FLAG, result and 128
 	:
+	CpuRegisters(ACCU_REGISTER) = result
 	Opcode.OrAddress = 3
 end function

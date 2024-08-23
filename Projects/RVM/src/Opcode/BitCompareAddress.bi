@@ -8,7 +8,6 @@ function Opcode.BitCompareAddress% (address as _unsigned integer)
 	endif
 	:
 	result = CpuRegisters(ACCU_REGISTER) and result
-	:
 	Cpu.flagIf ZERO_FLAG, result = 0
 	Cpu.flagIf OVERFLOW_FLAG, result and 64
 	Cpu.flagIf SIGN_FLAG, result and 128

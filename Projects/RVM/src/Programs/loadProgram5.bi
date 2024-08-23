@@ -1,19 +1,16 @@
 sub Programs.loadProgram5 (address as _unsigned long)
-	'LDA #01
+	'LDA #00
 	Memory.push address, &H08
-	Memory.push address, &H01
+	Memory.push address, &H00
 	:
-	'BNE #02
-	Memory.push address, &HA0
-	Memory.push address, &H02
+	'JSR $0300
+	Memory.push address, &HFA
+	Memory.push address, &H00
+	Memory.push address, &H03
 	:
-	'JMP #02
-	Memory.push address, &HF8
-	Memory.push address, &H02
-	:
-	'LDA #77
-	Memory.push address, &H08
-	Memory.push address, &H77
+	'BEQ #FB
+	Memory.push address, &HA8
+	Memory.push address, &HFB
 	:
 	'HLT
 	Memory.push address, &HFF
